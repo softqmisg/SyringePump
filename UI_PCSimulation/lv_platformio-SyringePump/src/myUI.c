@@ -101,7 +101,7 @@ void createpage1()
     lv_group_t *g = lv_group_create();
     lv_indev_set_group(mykeyboard1, g);
 
-    lv_obj_set_style_bg_grad_color(page1,lv_color_hex(0x000000),LV_PART_MAIN);
+    lv_obj_set_style_bg_color(page1,lv_color_hex(0x000000),LV_PART_MAIN);
     
     lv_obj_t *btn1 = lv_btn_create(page1);
     lv_obj_set_size(btn1, 100, 50);
