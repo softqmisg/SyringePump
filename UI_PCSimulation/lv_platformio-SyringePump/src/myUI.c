@@ -77,10 +77,7 @@ void myInputDevice(void)
 }
 void myUI(void)
 {
-    // page1 = lv_obj_create(NULL);
-    // page2 = lv_obj_create(NULL);
 
- 
     createpage1(page1);
 
 }
@@ -90,9 +87,9 @@ static void gotoscreen2_handler(lv_event_t *e)
     if(code == LV_EVENT_PRESSED)     
     {
         printf("gotoscreen2_handler");
+        createpage2();
 
         lv_obj_del(page1);
-        createpage2();
 
     }
 }
@@ -104,6 +101,8 @@ void createpage1()
     lv_group_t *g = lv_group_create();
     lv_indev_set_group(mykeyboard1, g);
 
+    lv_obj_set_style_bg_grad_color(page1,lv_color_hex(0x000000),LV_PART_MAIN);
+    
     lv_obj_t *btn1 = lv_btn_create(page1);
     lv_obj_set_size(btn1, 100, 50);
     lv_obj_align(btn1, LV_ALIGN_TOP_MID, 0, 20);
@@ -119,6 +118,10 @@ void createpage1()
     lv_obj_set_size(btn3, 100, 50);
     lv_obj_align_to(btn3, btn2, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
     lv_obj_add_event_cb(btn3, gotoscreen2_handler, LV_EVENT_PRESSED, NULL);
+    label1=lv_label_create(btn3);
+    lv_label_set_text(label1,"Next Page");
+    lv_obj_set_align(label1,LV_ALIGN_CENTER);
+
 
     lv_obj_t *slider1 = lv_slider_create(page1);
     lv_obj_set_size(slider1, 200, 30);
@@ -144,9 +147,8 @@ static void gotoscreen1_handler(lv_event_t *e)
     if(code == LV_EVENT_PRESSED) 
     {
         printf("gotoscreen1_handler");
-        
-        lv_obj_del(page2);
         createpage1();
+        lv_obj_del(page2);
     }
 }
 
@@ -160,11 +162,21 @@ void createpage2()
     lv_obj_t *btn1 = lv_btn_create(page2);
     lv_obj_set_size(btn1, 100, 50);
     lv_obj_align(btn1, LV_ALIGN_TOP_MID, 0, 20);
-    lv_obj_add_event_cb(btn1, gotoscreen1_handler, LV_EVENT_PRESSED, NULL);
     lv_obj_t *label1=lv_label_create(btn1);
     lv_label_set_text(label1,"page2");
     lv_obj_set_align(label1,LV_ALIGN_CENTER);
+
+    lv_obj_t *btn2 = lv_btn_create(page2);
+    lv_obj_set_size(btn2, 100, 50);
+    lv_obj_align_to(btn2, btn1, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
+    lv_obj_add_event_cb(btn2, gotoscreen1_handler, LV_EVENT_PRESSED, NULL);
+
+    label1=lv_label_create(btn2);
+    lv_label_set_text(label1,"next");
+    lv_obj_set_align(label1,LV_ALIGN_CENTER);
+
     lv_group_add_obj(g, btn1);
+    lv_group_add_obj(g, btn2);
 
 
 }
