@@ -1,0 +1,4 @@
+../Core/Src/Lvgl_Ui/encoder.c:13:9:TIM4_read	3
+../Core/Src/Lvgl_Ui/encoder.c:40:9:enc_pressed	1
+../Core/Src/Lvgl_Ui/encoder.c:44:6:encoder_init	1
+../Core/Src/Lvgl_Ui/encoder.c:50:7:encoder_read	2

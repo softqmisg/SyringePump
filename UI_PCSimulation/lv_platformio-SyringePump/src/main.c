@@ -12,8 +12,10 @@
 #include "app_hal.h"
 
 #include "demos/lv_demos.h"
-#include "myUI.h"
-
+#include "myInputDevice.h"
+#include "custom.h"
+#include "gui_guider.h"
+lv_ui guider_ui;
 int main(void)
 {
   lv_init();
@@ -22,7 +24,7 @@ int main(void)
 
   // lv_demo_widgets();
   myInputDevice();
-  myUI();
-
+  setup_ui(&guider_ui);
+  
   hal_loop();
 }

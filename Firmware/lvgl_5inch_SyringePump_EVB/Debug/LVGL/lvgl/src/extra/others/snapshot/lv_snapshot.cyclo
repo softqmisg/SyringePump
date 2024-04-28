@@ -1,0 +1,4 @@
+../LVGL/lvgl/src/extra/others/snapshot/lv_snapshot.c:46:10:lv_snapshot_buf_size_needed	5
+../LVGL/lvgl/src/extra/others/snapshot/lv_snapshot.c:84:10:lv_snapshot_take_to_buf	11
+../LVGL/lvgl/src/extra/others/snapshot/lv_snapshot.c:165:16:lv_snapshot_take	7
+../LVGL/lvgl/src/extra/others/snapshot/lv_snapshot.c:199:6:lv_snapshot_free	3

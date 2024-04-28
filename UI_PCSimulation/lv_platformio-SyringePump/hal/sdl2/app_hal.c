@@ -8,7 +8,7 @@
 #include "sdl/sdl.h"
 
 lv_indev_t *mykeyboard;
-lv_indev_t *myencoder;
+// lv_indev_t *myencoder;
 /**
  * A task to measure the elapsed time for LittlevGL
  * @param data unused
@@ -66,11 +66,11 @@ void hal_setup(void)
     indev_drv1.read_cb = sdl_keyboard_read;       /*This function will be called periodically (by the library) to get the mouse position and state*/
     mykeyboard=lv_indev_drv_register(&indev_drv1);
 
-    static lv_indev_drv_t indev_drv2;
-    lv_indev_drv_init(&indev_drv2);            /*Basic initialization*/
-    indev_drv2.type = LV_INDEV_TYPE_ENCODER;
-    indev_drv2.read_cb = sdl_mousewheel_read;       /*This function will be called periodically (by the library) to get the mouse position and state*/
-    myencoder=lv_indev_drv_register(&indev_drv2);
+    // static lv_indev_drv_t indev_drv2;
+    // lv_indev_drv_init(&indev_drv2);            /*Basic initialization*/
+    // indev_drv2.type = LV_INDEV_TYPE_ENCODER;
+    // indev_drv2.read_cb = sdl_mousewheel_read;       /*This function will be called periodically (by the library) to get the mouse position and state*/
+    // myencoder=lv_indev_drv_register(&indev_drv2);
     
     sdl_init();
 
