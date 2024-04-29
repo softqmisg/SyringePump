@@ -1,4 +1,5 @@
-../Core/Src/Lvgl_Ui/encoder.c:13:9:TIM4_read	3
-../Core/Src/Lvgl_Ui/encoder.c:40:9:enc_pressed	1
-../Core/Src/Lvgl_Ui/encoder.c:44:6:encoder_init	1
-../Core/Src/Lvgl_Ui/encoder.c:50:7:encoder_read	2
+../Core/Src/Lvgl_Ui/encoder.c:15:6:HAL_TIM_IC_CaptureCallback	1
+../Core/Src/Lvgl_Ui/encoder.c:25:9:TIM4_read	2
+../Core/Src/Lvgl_Ui/encoder.c:45:9:enc_pressed	1
+../Core/Src/Lvgl_Ui/encoder.c:49:7:encoder_init	1
+../Core/Src/Lvgl_Ui/encoder.c:56:8:encoder_read	2

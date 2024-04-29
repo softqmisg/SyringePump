@@ -27,6 +27,7 @@ typedef struct
 	lv_obj_t *MainScreen_btn_2_label;
 	lv_obj_t *MainScreen_btn_1;
 	lv_obj_t *MainScreen_btn_1_label;
+	lv_obj_t *MainScreen_slider_1;
 	lv_obj_t *SettingScreen;
 	bool SettingScreen_del;
 	lv_obj_t *SettingScreen_btn_2;
@@ -71,6 +72,7 @@ void setup_scr_MainScreen(lv_ui *ui);
 void setup_scr_SettingScreen(lv_ui *ui);
 LV_IMG_DECLARE(_logo_new_color_small_alpha_340x340);
 
+LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
 

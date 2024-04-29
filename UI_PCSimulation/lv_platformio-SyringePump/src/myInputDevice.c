@@ -83,11 +83,11 @@ void myencoder_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
             {
                 case 'M':
                     // code for arrow right
-                    encoder_diff += 1;
+                    encoder_diff = 1;
                     break;
                 case 'K':
                     // code for arrow left
-                        encoder_diff -= 1;
+                        encoder_diff =- 1;
                     break;
             }
         }

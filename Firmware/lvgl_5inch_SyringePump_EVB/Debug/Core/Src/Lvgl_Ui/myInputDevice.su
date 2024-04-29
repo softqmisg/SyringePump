@@ -1,0 +1,3 @@
+../Core/Src/Lvgl_Ui/myInputDevice.c:15:17:keypad_get_key	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:24:13:keypad_read	24	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:52:6:myIndrv	8	static

@@ -138,6 +138,10 @@ RM := rm -rf
 -include LVGL/lvgl/demos/benchmark/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
+-include Core/Src/Lvgl_Ui/generated/images/subdir.mk
+-include Core/Src/Lvgl_Ui/generated/guider_fonts/subdir.mk
+-include Core/Src/Lvgl_Ui/generated/subdir.mk
+-include Core/Src/Lvgl_Ui/custom/subdir.mk
 -include Core/Src/Lvgl_Ui/subdir.mk
 -include Core/Src/Lvgl_Porting/subdir.mk
 -include Core/Src/subdir.mk
@@ -183,8 +187,7 @@ lvgl_5inch_SyringePump_EVB.list \
 
 
 # All Target
-all:
-	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
+all: main-build
 
 # Main-build Target
 main-build: lvgl_5inch_SyringePump_EVB.elf secondary-outputs
@@ -210,10 +213,6 @@ clean:
 	-$(RM) default.size.stdout lvgl_5inch_SyringePump_EVB.elf lvgl_5inch_SyringePump_EVB.list lvgl_5inch_SyringePump_EVB.map
 	-@echo ' '
 
-post-build:
-	arm-none-eabi-objcopy  lvgl_5inch_SyringePump_EVB.elf lvgl_5inch_SyringePump_EVB_DEACTIVEQSPI.elf --remove-section=*FlashSection
-	-@echo ' '
-
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
@@ -223,6 +222,6 @@ fail-specified-linker-script-missing:
 warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
-.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified post-build
+.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
 
 -include ../makefile.targets

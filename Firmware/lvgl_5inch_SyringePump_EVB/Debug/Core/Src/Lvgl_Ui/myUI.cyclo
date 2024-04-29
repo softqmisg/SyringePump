@@ -1,6 +1,0 @@
-E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl/src/core/lv_disp.h:182:26:lv_scr_act	1
-../Core/Src/Lvgl_Ui/myUI.c:14:6:ui_event_spinbox1	1
-../Core/Src/Lvgl_Ui/myUI.c:52:17:keypad_get_key	3
-../Core/Src/Lvgl_Ui/myUI.c:61:13:keypad_read	2
-../Core/Src/Lvgl_Ui/myUI.c:89:6:myIndrv	1
-../Core/Src/Lvgl_Ui/myUI.c:98:6:myUI	1

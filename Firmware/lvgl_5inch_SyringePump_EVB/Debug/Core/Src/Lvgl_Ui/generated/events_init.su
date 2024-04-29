@@ -1,0 +1,7 @@
+../Core/Src/Lvgl_Ui/generated/events_init.c:19:13:InitScreen_event_handler	48	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:33:6:events_init_InitScreen	16	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:37:13:MainScreen_btn_1_event_handler	48	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:51:6:events_init_MainScreen	16	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:55:13:SettingScreen_btn_1_event_handler	48	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:69:6:events_init_SettingScreen	16	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:74:6:events_init	16	static

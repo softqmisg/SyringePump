@@ -36,7 +36,8 @@
 #include "lvgl/lvgl.h"
 #include "lvgl_port_lcd.h"
 //#include "lvgl/demos/lv_demos.h"
-#include "myUI.h"
+
+#include "Lvgl_Ui/generated/gui_guider.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,6 +58,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+lv_ui guider_ui;
 
 /* USER CODE END PV */
 
@@ -87,18 +89,8 @@ PUTCHAR_PROTOTYPE
 
 }
 /***********************************/
-//volatile uint16_t tim4_cnt;
-//volatile int8_t tim4_enc_dir;
 
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
-	if(htim->Instance==TIM4)
-	{
-//		tim4_cnt=__HAL_TIM_GET_COUNTER(htim)/2;
-		//encoder_steps += (TIM4->CR1 & TIM_CR1_DIR ? -1 : 1);
-//		__HAL_TIM_SET_COUNTER(htim,0);
-	}
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -160,24 +152,12 @@ int main(void)
  // lv_demo_benchmark();
   //lv_demo_keypad_encoder();
   myIndrv();
-  myUI();
-  printf("hello world\n\r");
+  setup_ui(&guider_ui);
+printf("hello world\n\r");
 
   while (1)
   {
-//      if(HAL_GPIO_ReadPin (ENCODER_SW_GPIO_Port,ENCODER_SW_Pin))
-//      {
-////          sprintf(MSG, "Encoder Switch Released, Encoder Ticks = %d\n\r", ((TIM2->CNT)>>2));
-////          HAL_UART_Transmit(&huart1, MSG, sizeof(MSG), 100);
-//    	  printf("Encoder Switch Released, Encoder Ticks = %d\n\r",position);
-//      }
-//      else
-//      {
-////          sprintf(MSG, "Encoder Switch Pressed,  Encoder Ticks = %d\n\r", ((TIM2->CNT)>>2));
-////          HAL_UART_Transmit(&huart1, MSG, sizeof(MSG), 100);
-//    	  printf("Encoder Switch Pressed,  Encoder Ticks = %d\n\r",position);
-//      }
-//      HAL_Delay(100);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

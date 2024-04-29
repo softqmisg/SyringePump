@@ -175,7 +175,7 @@ SECTIONS
   .ARM.attributes 0 : { *(.ARM.attributes) }
   /*(NOLOAD):*/
   
-  .ImageFlashSection /*(NOLOAD)*/ : 
+  .ImageFlashSection (NOLOAD) : 
   {
   	*(.ImageFlashSection ImageFlashSection.*)
   	*(.gnu.linkonce.r.*)
