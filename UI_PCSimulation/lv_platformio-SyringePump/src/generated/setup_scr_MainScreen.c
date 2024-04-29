@@ -75,6 +75,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_align(ui->MainScreen_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//The custom code of MainScreen.
+
 	MainScreengroup(ui);
 
 	//Update current screen layout.

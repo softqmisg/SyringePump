@@ -41,13 +41,17 @@ void custom_init(lv_ui *ui)
 }
 void MainScreengroup(lv_ui *ui)
 {
+	static lv_state_t styleOutlineFocused;
+	lv_style_init(&styleOutlineFocused);
+	lv_style_set_outline_color(&styleOutlineFocused,lv_color_hex(0xff0000));
+	lv_style_set_outline_width(&styleOutlineFocused,3);
+	lv_style_set_outline_pad(&styleOutlineFocused,4);
     
+	lv_obj_add_style(ui->MainScreen_btn_2,&styleOutlineFocused,LV_STATE_FOCUS_KEY );
+	lv_obj_add_style(ui->MainScreen_btn_1,&styleOutlineFocused,LV_STATE_FOCUS_KEY );
+
    lv_group_t *g;
-//    g=lv_group_get_default();
-//    if(g)
-//     lv_group_del(g);
     g= lv_group_create();
-    // lv_group_set_default(g);
     lv_indev_t *cur_dev=NULL;
     for(;;)
     {
@@ -66,12 +70,18 @@ void MainScreengroup(lv_ui *ui)
 }
 void SettingScreengroup(lv_ui *ui)
 {
+
+	static lv_state_t styleOutlineFocused;
+	lv_style_init(&styleOutlineFocused);
+	lv_style_set_outline_color(&styleOutlineFocused,lv_color_hex(0xff0000));
+	lv_style_set_outline_width(&styleOutlineFocused,3);
+	lv_style_set_outline_pad(&styleOutlineFocused,4);
+    
+	lv_obj_add_style(ui->SettingScreen_btn_2,&styleOutlineFocused,LV_STATE_FOCUS_KEY );
+	lv_obj_add_style(ui->SettingScreen_btn_1,&styleOutlineFocused,LV_STATE_FOCUS_KEY );
+
     lv_group_t *g;
-//    g=lv_group_get_default();
-//     if(g)
-//         lv_group_del(g);    
     g= lv_group_create();
-    // lv_group_set_default(g);
     lv_indev_t *cur_dev=NULL;
     for(;;)
     {
