@@ -41,7 +41,13 @@ void custom_init(lv_ui *ui)
 }
 void MainScreengroup(lv_ui *ui)
 {
-    lv_group_t *g= lv_group_create();
+    
+   lv_group_t *g;
+//    g=lv_group_get_default();
+//    if(g)
+//     lv_group_del(g);
+    g= lv_group_create();
+    // lv_group_set_default(g);
     lv_indev_t *cur_dev=NULL;
     for(;;)
     {
@@ -49,16 +55,23 @@ void MainScreengroup(lv_ui *ui)
         if(!cur_dev) break;
         if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
         {
-            lv_group_remove_all_objs(g);
             lv_indev_set_group(cur_dev,g);
-            lv_group_add_obj(g,ui->MainScreen_btn_1);
+            lv_group_remove_all_objs(g);
+
             lv_group_add_obj(g,ui->MainScreen_btn_2);
+            lv_group_add_obj(g,ui->MainScreen_btn_1);
         }
     }
+    lv_group_focus_obj(ui->MainScreen_btn_2);
 }
 void SettingScreengroup(lv_ui *ui)
 {
-    lv_group_t *g= lv_group_create();
+    lv_group_t *g;
+//    g=lv_group_get_default();
+//     if(g)
+//         lv_group_del(g);    
+    g= lv_group_create();
+    // lv_group_set_default(g);
     lv_indev_t *cur_dev=NULL;
     for(;;)
     {
@@ -66,12 +79,15 @@ void SettingScreengroup(lv_ui *ui)
         if(!cur_dev) break;
         if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
         {
-            lv_group_remove_all_objs(g);
             lv_indev_set_group(cur_dev,g);
+            lv_group_remove_all_objs(g);
+
+            lv_group_add_obj(g,ui->SettingScreen_btn_2);
             lv_group_add_obj(g,ui->SettingScreen_btn_1);
-            lv_group_add_obj(g,ui->SettingScreen_slider_1);
-            lv_group_add_obj(g,ui->SettingScreen_spinbox_1_btn);
-            lv_group_add_obj(g,ui->SettingScreen_spinbox_1_btn_minus);
+
         }
+
     }
+    lv_group_focus_obj(ui->SettingScreen_btn_2);
+
 }

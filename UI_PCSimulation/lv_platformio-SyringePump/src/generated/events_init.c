@@ -16,8 +16,6 @@
 #endif
 
 
-#include "custom.h"
-#include "custom.h"
 static void InitScreen_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -36,22 +34,7 @@ void events_init_InitScreen(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->InitScreen, InitScreen_event_handler, LV_EVENT_ALL, ui);
 }
-static void MainScreen_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_SCREEN_LOADED:
-	{
-		lv_ui *ui=lv_event_get_user_data(e);
-	MainScreengroup(ui);
-		break;
-	}
-	default:
-		break;
-	}
-}
-static void MainScreen_btn_2_event_handler (lv_event_t *e)
+static void MainScreen_btn_1_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
 
@@ -67,23 +50,7 @@ static void MainScreen_btn_2_event_handler (lv_event_t *e)
 }
 void events_init_MainScreen(lv_ui *ui)
 {
-	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
-	lv_obj_add_event_cb(ui->MainScreen_btn_2, MainScreen_btn_2_event_handler, LV_EVENT_ALL, ui);
-}
-static void SettingScreen_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_SCREEN_LOADED:
-	{
-		lv_ui *ui=lv_event_get_user_data(e);
-	SettingScreengroup(ui);
-		break;
-	}
-	default:
-		break;
-	}
+	lv_obj_add_event_cb(ui->MainScreen_btn_1, MainScreen_btn_1_event_handler, LV_EVENT_ALL, ui);
 }
 static void SettingScreen_btn_1_event_handler (lv_event_t *e)
 {
@@ -101,7 +68,6 @@ static void SettingScreen_btn_1_event_handler (lv_event_t *e)
 }
 void events_init_SettingScreen(lv_ui *ui)
 {
-	lv_obj_add_event_cb(ui->SettingScreen, SettingScreen_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->SettingScreen_btn_1, SettingScreen_btn_1_event_handler, LV_EVENT_ALL, ui);
 }
 

@@ -13,7 +13,7 @@
 #include "events_init.h"
 #include "widgets_init.h"
 #include "custom.h"
-
+#include "custom.h"
 
 
 void setup_scr_MainScreen(lv_ui *ui)
@@ -28,38 +28,15 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_color(ui->MainScreen, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_btn_1
-	ui->MainScreen_btn_1 = lv_btn_create(ui->MainScreen);
-	ui->MainScreen_btn_1_label = lv_label_create(ui->MainScreen_btn_1);
-	lv_label_set_text(ui->MainScreen_btn_1_label, "Button");
-	lv_label_set_long_mode(ui->MainScreen_btn_1_label, LV_LABEL_LONG_WRAP);
-	lv_obj_align(ui->MainScreen_btn_1_label, LV_ALIGN_CENTER, 0, 0);
-	lv_obj_set_style_pad_all(ui->MainScreen_btn_1, 0, LV_STATE_DEFAULT);
-	lv_obj_set_width(ui->MainScreen_btn_1_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btn_1, 313, 207);
-	lv_obj_set_size(ui->MainScreen_btn_1, 100, 50);
-
-	//Write style for MainScreen_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_bg_opa(ui->MainScreen_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_btn_1, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_btn_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_border_width(ui->MainScreen_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_btn_1, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_btn_1, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-
 	//Write codes MainScreen_btn_2
 	ui->MainScreen_btn_2 = lv_btn_create(ui->MainScreen);
 	ui->MainScreen_btn_2_label = lv_label_create(ui->MainScreen_btn_2);
-	lv_label_set_text(ui->MainScreen_btn_2_label, "Button");
+	lv_label_set_text(ui->MainScreen_btn_2_label, "Page1");
 	lv_label_set_long_mode(ui->MainScreen_btn_2_label, LV_LABEL_LONG_WRAP);
 	lv_obj_align(ui->MainScreen_btn_2_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btn_2, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btn_2_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btn_2, 313, 286);
+	lv_obj_set_pos(ui->MainScreen_btn_2, 350, 190);
 	lv_obj_set_size(ui->MainScreen_btn_2, 100, 50);
 
 	//Write style for MainScreen_btn_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -74,8 +51,31 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btn_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btn_2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_btn_1
+	ui->MainScreen_btn_1 = lv_btn_create(ui->MainScreen);
+	ui->MainScreen_btn_1_label = lv_label_create(ui->MainScreen_btn_1);
+	lv_label_set_text(ui->MainScreen_btn_1_label, "Goto2");
+	lv_label_set_long_mode(ui->MainScreen_btn_1_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btn_1_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btn_1, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btn_1_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btn_1, 350, 269);
+	lv_obj_set_size(ui->MainScreen_btn_1, 100, 50);
+
+	//Write style for MainScreen_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_btn_1, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_btn_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btn_1, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btn_1, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//The custom code of MainScreen.
-	
+	MainScreengroup(ui);
 
 	//Update current screen layout.
 	lv_obj_update_layout(ui->MainScreen);

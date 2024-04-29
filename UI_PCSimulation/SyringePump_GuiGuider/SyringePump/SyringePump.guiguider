@@ -285,24 +285,6 @@
 					]
 				}
 			],
-			"style": [
-				{
-					"part": "LV_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#000000",
-					"bg_grad_dir": "LV_GRAD_DIR_NONE",
-					"bg_dither_mode": "LV_DITHER_NONE",
-					"bg_main_stop": 0,
-					"bg_grad_stop": 255,
-					"bg_grad_color": "#2195f6",
-					"bg_opa": 255,
-					"bg_img_src": "",
-					"bg_img_opa": 255,
-					"bg_img_recolor": "#ffffff",
-					"bg_img_recolor_opa": 0
-				}
-			],
 			"event": {
 				"screen_loaded": [
 					{
@@ -480,7 +462,25 @@
 						}
 					}
 				]
-			}
+			},
+			"style": [
+				{
+					"part": "LV_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#000000",
+					"bg_grad_dir": "LV_GRAD_DIR_NONE",
+					"bg_dither_mode": "LV_DITHER_NONE",
+					"bg_main_stop": 0,
+					"bg_grad_stop": 255,
+					"bg_grad_color": "#2195f6",
+					"bg_opa": 255,
+					"bg_img_src": "",
+					"bg_img_opa": 255,
+					"bg_img_recolor": "#ffffff",
+					"bg_img_recolor_opa": 0
+				}
+			]
 		},
 		{
 			"name": "MainScreen",
@@ -489,8 +489,8 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "",
-				"inc_c": "",
+				"code_c": "MainScreengroup(ui);",
+				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
 			},
@@ -500,18 +500,18 @@
 			"flag": [],
 			"list": [
 				{
-					"name": "btn_2",
+					"name": "btn_1",
 					"id": "9buph9ap",
 					"type": "btn",
-					"left": 313,
-					"top": 286,
+					"left": 350,
+					"top": 269,
 					"visible": true,
 					"flag": [],
 					"width": 100,
 					"height": 50,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "Button",
+					"text": "Goto2",
 					"toggle": false,
 					"style": [
 						{
@@ -861,18 +861,18 @@
 					}
 				},
 				{
-					"name": "btn_1",
+					"name": "btn_2",
 					"id": "ovrredj5",
 					"type": "btn",
-					"left": 313,
-					"top": 207,
+					"left": 350,
+					"top": 190,
 					"visible": true,
 					"flag": [],
 					"width": 100,
 					"height": 50,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "Button",
+					"text": "Page1",
 					"toggle": false,
 					"style": [
 						{
@@ -1044,184 +1044,7 @@
 					]
 				}
 			],
-			"event": {
-				"screen_loaded": [
-					{
-						"trigger": "screen_loaded",
-						"dst": "null",
-						"action": {
-							"load_screen": {
-								"ische": false,
-								"duration": 200,
-								"delay": 200,
-								"scrId": "",
-								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-								"is_clean": false,
-								"is_del": true
-							},
-							"bg_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"grad_color": {
-								"ische": false,
-								"value": "#000000",
-								"dir": "LV_GRAD_DIR_HOR"
-							},
-							"bg_opa": {
-								"ische": false,
-								"value": 255
-							},
-							"opacity": {
-								"ische": false,
-								"value": 255
-							},
-							"bg_img_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"bg_img_recolor": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"bg_img_recolor_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_side": {
-								"ische": false,
-								"value": []
-							},
-							"border_width": {
-								"ische": false,
-								"value": 0
-							},
-							"border_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"radius": {
-								"ische": false,
-								"value": 0
-							},
-							"width": {
-								"ische": false,
-								"value": 50
-							},
-							"height": {
-								"ische": false,
-								"value": 50
-							},
-							"set_text": {
-								"ische": false,
-								"value": "default",
-								"font": 12,
-								"font_family": "montserratMedium"
-							},
-							"position": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0
-							},
-							"isVisible": {
-								"ische": false,
-								"flag": ""
-							},
-							"customer_code": {
-								"ische": true,
-								"inc_c": "#include \"custom.h\"",
-								"code_c": "lv_ui *ui=lv_event_get_user_data(e);\nMainScreengroup(ui);",
-								"inc_py": "",
-								"code_py": ""
-							},
-							"freemaster": {
-								"ische": false,
-								"variable": "",
-								"address": "",
-								"type": "",
-								"value": "",
-								"isOrigin": false
-							},
-							"add_state": {
-								"ische": false,
-								"value": "LV_STATE_DEFAULT"
-							},
-							"add_flag": {
-								"ische": false,
-								"value": []
-							},
-							"clear_flag": {
-								"ische": false,
-								"value": []
-							},
-							"move": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"scaleSize": {
-								"ische": false,
-								"width": 0,
-								"height": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"img_zoom": {
-								"ische": false,
-								"zoom": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"rotate": {
-								"ische": false,
-								"rotate": 0,
-								"x": 0,
-								"y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							}
-						}
-					}
-				]
-			},
+			"event": {},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -1239,7 +1062,8 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			]
+			],
+			"layerName": "MainScreen"
 		},
 		{
 			"name": "SettingScreen",
@@ -1248,8 +1072,8 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "",
-				"inc_c": "",
+				"code_c": "SettingScreengroup(ui);",
+				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
 			},
@@ -1262,15 +1086,15 @@
 					"name": "btn_1",
 					"id": "d0tb2mk6",
 					"type": "btn",
-					"left": 398,
-					"top": 360,
+					"left": 350,
+					"top": 257,
 					"visible": true,
 					"flag": [],
 					"width": 100,
 					"height": 50,
 					"default_style": false,
 					"long_mode": "LV_LABEL_LONG_WRAP",
-					"text": "Button",
+					"text": "Goto1",
 					"toggle": false,
 					"style": [
 						{
@@ -1620,26 +1444,26 @@
 					}
 				},
 				{
-					"name": "spinbox_1",
-					"id": "qutlpdby",
-					"type": "spinbox",
-					"left": 353,
-					"top": 271,
+					"name": "btn_2",
+					"id": "efzmubv7",
+					"type": "btn",
+					"left": 350,
+					"top": 144,
 					"visible": true,
 					"flag": [],
-					"width": 160,
-					"height": 40,
+					"width": 100,
+					"height": 50,
 					"default_style": false,
-					"integer_pos": 3,
-					"deci_pos": 1,
+					"long_mode": "LV_LABEL_LONG_WRAP",
+					"text": "Page2",
+					"toggle": false,
 					"style": [
 						{
 							"part": "LV_PART_MAIN",
 							"state": "LV_STATE_DEFAULT",
-							"object": "main",
 							"disable": false,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
 							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
@@ -1648,50 +1472,30 @@
 							"border_side": [
 								"LV_BORDER_SIDE_FULL"
 							],
-							"border_width": 2,
-							"border_color": "#2195f6",
+							"border_width": 0,
 							"border_opa": 255,
-							"padding_top": 0,
-							"padding_right": 0,
-							"padding_bottom": 0,
-							"padding_left": 0,
-							"letter_space": 0,
-							"font": 12,
-							"font_family": "montserratMedium",
-							"text_color": "#000000",
+							"border_color": "#2195f6",
 							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
 							"shadow_spread": 0,
 							"shadow_ofs_x": 0,
-							"shadow_ofs_y": 0
-						},
-						{
-							"part": "LV_PART_CURSOR",
-							"state": "LV_STATE_DEFAULT",
-							"object": "main",
-							"disable": false,
-							"font": 12,
-							"text_color": "#ffffff",
-							"font_family": "montserratMedium",
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255
-						},
-						{
-							"part": "LV_BTN_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"desc": "button",
-							"object": "extra_btns",
-							"disable": false,
-							"font": 12,
+							"shadow_ofs_y": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"font": 16,
 							"font_family": "montserratMedium",
 							"text_color": "#ffffff",
+							"text_opa": 255,
+							"text_align": "LV_TEXT_ALIGN_CENTER"
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
 							"bg_opa": 255,
@@ -1705,17 +1509,26 @@
 							"border_width": 0,
 							"border_color": "#2195f6",
 							"border_opa": 255,
-							"radius": 5
+							"radius": 5,
+							"shadow_color": "#2195f6",
+							"shadow_opa": 255,
+							"shadow_width": 0,
+							"shadow_spread": 0,
+							"shadow_ofs_x": 0,
+							"shadow_ofs_y": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"font": 16,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#ffffff"
 						},
 						{
-							"part": "LV_BTN_PART_MAIN",
+							"part": "LV_PART_MAIN",
 							"state": "LV_STATE_PRESSED",
-							"desc": "button",
-							"object": "extra_btns",
 							"disable": true,
-							"font": 12,
-							"font_family": "montserratMedium",
-							"text_color": "#ffffff",
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
 							"bg_opa": 255,
@@ -1729,193 +1542,92 @@
 							"border_width": 0,
 							"border_color": "#2195f6",
 							"border_opa": 255,
-							"radius": 5
-						}
-					]
-				},
-				{
-					"name": "slider_1",
-					"id": "u04e12wc",
-					"type": "slider",
-					"left": 320,
-					"top": 236,
-					"visible": true,
-					"flag": [],
-					"width": 160,
-					"height": 8,
-					"default_style": false,
-					"range_s": 0,
-					"range_e": 100,
-					"starting_value": 50,
-					"left_value": 0,
-					"slider_mode": "LV_SLIDER_MODE_NORMAL",
-					"custom_attribute": [],
-					"style": [
-						{
-							"part": "LV_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_opa": 60,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"radius": 50,
-							"outline_width": 0,
-							"outline_color": "#2195f6",
-							"outline_opa": 0,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
 							"shadow_spread": 0,
 							"shadow_ofs_x": 0,
-							"shadow_ofs_y": 0
-						},
-						{
-							"part": "LV_PART_MAIN",
-							"state": "LV_STATE_FOCUSED",
-							"disable": true,
-							"outline_color": "#2195f6",
-							"outline_opa": 255,
+							"shadow_ofs_y": 0,
 							"bg_img_src": "",
 							"bg_img_opa": 255,
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
+							"font": 16,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#ffffff"
+						},
+						{
+							"part": "LV_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
 							"shadow_spread": 0,
 							"shadow_ofs_x": 0,
-							"shadow_ofs_y": 0
+							"shadow_ofs_y": 0,
+							"bg_img_src": "",
+							"bg_img_opa": 255,
+							"bg_img_recolor": "#ffffff",
+							"bg_img_recolor_opa": 0,
+							"font": 12,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#000000"
 						},
 						{
 							"part": "LV_PART_MAIN",
 							"state": "LV_STATE_DISABLED",
 							"disable": true,
-							"outline_color": "#2195f6",
-							"outline_opa": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
+							"bg_color": "#2195f6",
+							"bg_grad_color": "#2195f6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"bg_dither_mode": "LV_DITHER_NONE",
+							"bg_main_stop": 0,
+							"bg_grad_stop": 255,
+							"border_side": [
+								"LV_BORDER_SIDE_FULL"
+							],
+							"border_width": 0,
+							"border_opa": 255,
+							"border_color": "#2195f6",
+							"radius": 5,
 							"shadow_color": "#2195f6",
 							"shadow_opa": 255,
 							"shadow_width": 0,
 							"shadow_spread": 0,
 							"shadow_ofs_x": 0,
-							"shadow_ofs_y": 0
-						},
-						{
-							"part": "LV_PART_INDICATOR",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_opa": 255,
+							"shadow_ofs_y": 0,
 							"bg_img_src": "",
 							"bg_img_opa": 255,
 							"bg_img_recolor": "#ffffff",
 							"bg_img_recolor_opa": 0,
-							"radius": 50
-						},
-						{
-							"part": "LV_PART_INDICATOR",
-							"state": "LV_STATE_FOCUSED",
-							"disable": true,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
-							"radius": 50
-						},
-						{
-							"part": "LV_PART_INDICATOR",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_opa": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
-							"radius": 50
-						},
-						{
-							"part": "LV_PART_KNOB",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
-							"radius": 50
-						},
-						{
-							"part": "LV_PART_KNOB",
-							"state": "LV_STATE_FOCUSED",
-							"disable": true,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
-							"radius": 50
-						},
-						{
-							"part": "LV_PART_KNOB",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"bg_color": "#2195f6",
-							"bg_grad_color": "#2195f6",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"bg_dither_mode": "LV_DITHER_NONE",
-							"bg_main_stop": 0,
-							"bg_grad_stop": 255,
-							"bg_img_src": "",
-							"bg_img_opa": 255,
-							"bg_img_recolor": "#ffffff",
-							"bg_img_recolor_opa": 0,
-							"radius": 50
+							"font": 12,
+							"font_family": "montserratMedium",
+							"text_opa": 255,
+							"text_color": "#000000"
 						}
 					]
 				}
 			],
+			"event": {},
 			"style": [
 				{
 					"part": "LV_PART_MAIN",
@@ -1934,184 +1646,7 @@
 					"bg_img_recolor_opa": 0
 				}
 			],
-			"event": {
-				"screen_loaded": [
-					{
-						"trigger": "screen_loaded",
-						"dst": "null",
-						"action": {
-							"load_screen": {
-								"ische": false,
-								"duration": 200,
-								"delay": 200,
-								"scrId": "",
-								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-								"is_clean": false,
-								"is_del": true
-							},
-							"bg_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"grad_color": {
-								"ische": false,
-								"value": "#000000",
-								"dir": "LV_GRAD_DIR_HOR"
-							},
-							"bg_opa": {
-								"ische": false,
-								"value": 255
-							},
-							"opacity": {
-								"ische": false,
-								"value": 255
-							},
-							"bg_img_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"bg_img_recolor": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"bg_img_recolor_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_side": {
-								"ische": false,
-								"value": []
-							},
-							"border_width": {
-								"ische": false,
-								"value": 0
-							},
-							"border_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"radius": {
-								"ische": false,
-								"value": 0
-							},
-							"width": {
-								"ische": false,
-								"value": 50
-							},
-							"height": {
-								"ische": false,
-								"value": 50
-							},
-							"set_text": {
-								"ische": false,
-								"value": "default",
-								"font": 12,
-								"font_family": "montserratMedium"
-							},
-							"position": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0
-							},
-							"isVisible": {
-								"ische": false,
-								"flag": ""
-							},
-							"customer_code": {
-								"ische": true,
-								"inc_c": "#include \"custom.h\"",
-								"code_c": "lv_ui *ui=lv_event_get_user_data(e);\nSettingScreengroup(ui);",
-								"inc_py": "",
-								"code_py": ""
-							},
-							"freemaster": {
-								"ische": false,
-								"variable": "",
-								"address": "",
-								"type": "",
-								"value": "",
-								"isOrigin": false
-							},
-							"add_state": {
-								"ische": false,
-								"value": "LV_STATE_DEFAULT"
-							},
-							"add_flag": {
-								"ische": false,
-								"value": []
-							},
-							"clear_flag": {
-								"ische": false,
-								"value": []
-							},
-							"move": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"scaleSize": {
-								"ische": false,
-								"width": 0,
-								"height": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"img_zoom": {
-								"ische": false,
-								"zoom": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"rotate": {
-								"ische": false,
-								"rotate": 0,
-								"x": 0,
-								"y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							}
-						}
-					}
-				]
-			}
+			"layerName": "SettingScreen"
 		}
 	],
 	"Application": {
@@ -2150,24 +1685,6 @@
 				"height": 480,
 				"visible": true,
 				"flag": [],
-				"style": [
-					{
-						"part": "LV_PART_MAIN",
-						"state": "LV_STATE_DEFAULT",
-						"disable": false,
-						"bg_color": "#000000",
-						"bg_grad_dir": "LV_GRAD_DIR_NONE",
-						"bg_dither_mode": "LV_DITHER_NONE",
-						"bg_main_stop": 0,
-						"bg_grad_stop": 255,
-						"bg_grad_color": "#2195f6",
-						"bg_opa": 255,
-						"bg_img_src": "",
-						"bg_img_opa": 255,
-						"bg_img_recolor": "#ffffff",
-						"bg_img_recolor_opa": 0
-					}
-				],
 				"event": {
 					"screen_loaded": [
 						{
@@ -2186,6 +1703,24 @@
 						}
 					]
 				},
+				"style": [
+					{
+						"part": "LV_PART_MAIN",
+						"state": "LV_STATE_DEFAULT",
+						"disable": false,
+						"bg_color": "#000000",
+						"bg_grad_dir": "LV_GRAD_DIR_NONE",
+						"bg_dither_mode": "LV_DITHER_NONE",
+						"bg_main_stop": 0,
+						"bg_grad_stop": 255,
+						"bg_grad_color": "#2195f6",
+						"bg_opa": 255,
+						"bg_img_src": "",
+						"bg_img_opa": 255,
+						"bg_img_recolor": "#ffffff",
+						"bg_img_recolor_opa": 0
+					}
+				],
 				"size": [
 					800,
 					480
@@ -2234,8 +1769,8 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "",
-					"inc_c": "",
+					"code_c": "MainScreengroup(ui);",
+					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
 				},
@@ -2243,22 +1778,7 @@
 				"height": 480,
 				"visible": true,
 				"flag": [],
-				"event": {
-					"screen_loaded": [
-						{
-							"src": "MainScreen",
-							"trigger": "screen_loaded",
-							"dst": "null",
-							"dst_type": "",
-							"src_screen": "MainScreen",
-							"action": "customer_code",
-							"inc_c": "#include \"custom.h\"",
-							"code_c": "lv_ui *ui=lv_event_get_user_data(e);\nMainScreengroup(ui);",
-							"inc_py": "",
-							"code_py": ""
-						}
-					]
-				},
+				"event": {},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -2284,14 +1804,14 @@
 				],
 				"widgets": [
 					{
-						"name": "MainScreen_btn_1",
+						"name": "MainScreen_btn_2",
 						"id": "ovrredj5",
 						"type": "btn",
 						"visible": true,
 						"flag": [],
 						"pos": [
-							313,
-							207
+							350,
+							190
 						],
 						"size": [
 							100,
@@ -2467,19 +1987,19 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "Button",
+						"text": "Page1",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": false
 					},
 					{
-						"name": "MainScreen_btn_2",
+						"name": "MainScreen_btn_1",
 						"id": "9buph9ap",
 						"type": "btn",
 						"visible": true,
 						"flag": [],
 						"pos": [
-							313,
-							286
+							350,
+							269
 						],
 						"size": [
 							100,
@@ -2489,7 +2009,7 @@
 						"event": {
 							"pressed": [
 								{
-									"src": "MainScreen_btn_2",
+									"src": "MainScreen_btn_1",
 									"trigger": "pressed",
 									"dst": "SettingScreen",
 									"dst_type": "scr",
@@ -2674,7 +2194,7 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "Button",
+						"text": "Goto2",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": false
 					}
@@ -2687,8 +2207,8 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "",
-					"inc_c": "",
+					"code_c": "SettingScreengroup(ui);",
+					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
 				},
@@ -2696,6 +2216,7 @@
 				"height": 480,
 				"visible": true,
 				"flag": [],
+				"event": {},
 				"style": [
 					{
 						"part": "LV_PART_MAIN",
@@ -2714,22 +2235,6 @@
 						"bg_img_recolor_opa": 0
 					}
 				],
-				"event": {
-					"screen_loaded": [
-						{
-							"src": "SettingScreen",
-							"trigger": "screen_loaded",
-							"dst": "null",
-							"dst_type": "",
-							"src_screen": "SettingScreen",
-							"action": "customer_code",
-							"inc_c": "#include \"custom.h\"",
-							"code_c": "lv_ui *ui=lv_event_get_user_data(e);\nSettingScreengroup(ui);",
-							"inc_py": "",
-							"code_py": ""
-						}
-					]
-				},
 				"layerName": "SettingScreen",
 				"size": [
 					800,
@@ -2737,26 +2242,21 @@
 				],
 				"widgets": [
 					{
-						"name": "SettingScreen_slider_1",
-						"id": "u04e12wc",
-						"type": "slider",
+						"name": "SettingScreen_btn_2",
+						"id": "efzmubv7",
+						"type": "btn",
 						"visible": true,
 						"flag": [],
 						"pos": [
-							320,
-							236
+							350,
+							144
 						],
 						"size": [
-							160,
-							8
+							100,
+							50
 						],
 						"default_style": false,
-						"custom_attribute": [],
-						"range_s": 0,
-						"range_e": 100,
-						"slider_mode": "LV_SLIDER_MODE_NORMAL",
-						"starting_value": 50,
-						"left_value": 0,
+						"text_align": "center",
 						"style": [
 							{
 								"part": "LV_PART_MAIN",
@@ -2764,197 +2264,6 @@
 								"disable": false,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
-								"bg_opa": 60,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"radius": 50,
-								"outline_width": 0,
-								"outline_color": "#2195f6",
-								"outline_opa": 0,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"shadow_color": "#2195f6",
-								"shadow_opa": 255,
-								"shadow_width": 0,
-								"shadow_spread": 0,
-								"shadow_ofs_x": 0,
-								"shadow_ofs_y": 0
-							},
-							{
-								"part": "LV_PART_MAIN",
-								"state": "LV_STATE_FOCUSED",
-								"disable": true,
-								"outline_color": "#2195f6",
-								"outline_opa": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"shadow_color": "#2195f6",
-								"shadow_opa": 255,
-								"shadow_width": 0,
-								"shadow_spread": 0,
-								"shadow_ofs_x": 0,
-								"shadow_ofs_y": 0
-							},
-							{
-								"part": "LV_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"outline_color": "#2195f6",
-								"outline_opa": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"shadow_color": "#2195f6",
-								"shadow_opa": 255,
-								"shadow_width": 0,
-								"shadow_spread": 0,
-								"shadow_ofs_x": 0,
-								"shadow_ofs_y": 0
-							},
-							{
-								"part": "LV_PART_INDICATOR",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							},
-							{
-								"part": "LV_PART_INDICATOR",
-								"state": "LV_STATE_FOCUSED",
-								"disable": true,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							},
-							{
-								"part": "LV_PART_INDICATOR",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_opa": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							},
-							{
-								"part": "LV_PART_KNOB",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							},
-							{
-								"part": "LV_PART_KNOB",
-								"state": "LV_STATE_FOCUSED",
-								"disable": true,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							},
-							{
-								"part": "LV_PART_KNOB",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255,
-								"bg_img_src": "",
-								"bg_img_opa": 255,
-								"bg_img_recolor": "#ffffff",
-								"bg_img_recolor_opa": 0,
-								"radius": 50
-							}
-						],
-						"knob_size": [
-							18,
-							18
-						]
-					},
-					{
-						"name": "SettingScreen_spinbox_1",
-						"id": "qutlpdby",
-						"type": "spinbox",
-						"visible": true,
-						"flag": [],
-						"pos": [
-							398,
-							271
-						],
-						"default_style": false,
-						"spinbox_width": 70,
-						"spinbox_height": 40,
-						"digit_format": [
-							4,
-							3
-						],
-						"ranges": [
-							-9999,
-							9999
-						],
-						"style": [
-							{
-								"part": "LV_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"object": "main",
-								"disable": false,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
 								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
@@ -2963,17 +2272,9 @@
 								"border_side": [
 									"LV_BORDER_SIDE_FULL"
 								],
-								"border_width": 2,
-								"border_color": "#2195f6",
+								"border_width": 0,
 								"border_opa": 255,
-								"padding_top": 0,
-								"padding_right": 0,
-								"padding_bottom": 0,
-								"padding_left": 0,
-								"letter_space": 0,
-								"font": 12,
-								"font_family": "montserratMedium",
-								"text_color": "#000000",
+								"border_color": "#2195f6",
 								"radius": 5,
 								"shadow_color": "#2195f6",
 								"shadow_opa": 255,
@@ -2981,33 +2282,20 @@
 								"shadow_spread": 0,
 								"shadow_ofs_x": 0,
 								"shadow_ofs_y": 0,
-								"paddingLeft": 2
-							},
-							{
-								"part": "LV_PART_CURSOR",
-								"state": "LV_STATE_DEFAULT",
-								"object": "main",
-								"disable": false,
-								"font": 12,
-								"text_color": "#ffffff",
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"font": 16,
 								"font_family": "montserratMedium",
-								"bg_color": "#2195f6",
-								"bg_grad_color": "#2195f6",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"bg_dither_mode": "LV_DITHER_NONE",
-								"bg_main_stop": 0,
-								"bg_grad_stop": 255
+								"text_color": "#ffffff",
+								"text_opa": 255,
+								"text_align": "LV_TEXT_ALIGN_CENTER"
 							},
 							{
 								"part": "LV_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"desc": "button",
-								"object": "extra_btns",
-								"disable": false,
-								"font": 12,
-								"font_family": "montserratMedium",
-								"text_color": "#ffffff",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
 								"bg_opa": 255,
@@ -3021,17 +2309,26 @@
 								"border_width": 0,
 								"border_color": "#2195f6",
 								"border_opa": 255,
-								"radius": 5
+								"radius": 5,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"font": 16,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#ffffff"
 							},
 							{
 								"part": "LV_PART_MAIN",
 								"state": "LV_STATE_PRESSED",
-								"desc": "button",
-								"object": "extra_btns",
 								"disable": true,
-								"font": 12,
-								"font_family": "montserratMedium",
-								"text_color": "#ffffff",
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
 								"bg_opa": 255,
@@ -3045,9 +2342,92 @@
 								"border_width": 0,
 								"border_color": "#2195f6",
 								"border_opa": 255,
-								"radius": 5
+								"radius": 5,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"font": 16,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#ffffff"
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 5,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"font": 12,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#000000"
+							},
+							{
+								"part": "LV_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"bg_color": "#2195f6",
+								"bg_grad_color": "#2195f6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"bg_dither_mode": "LV_DITHER_NONE",
+								"bg_main_stop": 0,
+								"bg_grad_stop": 255,
+								"border_side": [
+									"LV_BORDER_SIDE_FULL"
+								],
+								"border_width": 0,
+								"border_opa": 255,
+								"border_color": "#2195f6",
+								"radius": 5,
+								"shadow_color": "#2195f6",
+								"shadow_opa": 255,
+								"shadow_width": 0,
+								"shadow_spread": 0,
+								"shadow_ofs_x": 0,
+								"shadow_ofs_y": 0,
+								"bg_img_src": "",
+								"bg_img_opa": 255,
+								"bg_img_recolor": "#ffffff",
+								"bg_img_recolor_opa": 0,
+								"font": 12,
+								"font_family": "montserratMedium",
+								"text_opa": 255,
+								"text_color": "#000000"
 							}
-						]
+						],
+						"text": "Page2",
+						"long_mode": "LV_LABEL_LONG_WRAP",
+						"toggle": false
 					},
 					{
 						"name": "SettingScreen_btn_1",
@@ -3056,8 +2436,8 @@
 						"visible": true,
 						"flag": [],
 						"pos": [
-							398,
-							360
+							350,
+							257
 						],
 						"size": [
 							100,
@@ -3252,7 +2632,7 @@
 								"text_color": "#000000"
 							}
 						],
-						"text": "Button",
+						"text": "Goto1",
 						"long_mode": "LV_LABEL_LONG_WRAP",
 						"toggle": false
 					}
