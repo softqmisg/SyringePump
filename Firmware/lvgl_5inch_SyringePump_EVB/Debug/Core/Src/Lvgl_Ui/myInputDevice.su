@@ -1,3 +1,6 @@
-../Core/Src/Lvgl_Ui/myInputDevice.c:15:17:keypad_get_key	8	static
-../Core/Src/Lvgl_Ui/myInputDevice.c:24:13:keypad_read	24	static
-../Core/Src/Lvgl_Ui/myInputDevice.c:52:6:myIndrv	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:14:9:enc_pressed	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:18:6:encoder_init	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:23:6:encoder_read	24	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:38:6:myIndrv	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:47:17:keypad_get_key	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:56:13:keypad_read	24	static

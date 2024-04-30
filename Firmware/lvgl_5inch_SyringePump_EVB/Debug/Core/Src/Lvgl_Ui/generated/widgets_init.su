@@ -2,3 +2,5 @@ E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl
 E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl/src/lv_api_map.h:66:20:lv_obj_move_background	16	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:16:30:kb_event_cb	24	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:24:30:ta_event_cb	32	static
+../Core/Src/Lvgl_Ui/generated/widgets_init.c:80:6:lv_MainScreen_spinbox_1_increment_event_cb	24	static
+../Core/Src/Lvgl_Ui/generated/widgets_init.c:87:6:lv_MainScreen_spinbox_1_decrement_event_cb	24	static

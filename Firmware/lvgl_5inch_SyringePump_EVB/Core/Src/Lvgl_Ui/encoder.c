@@ -8,15 +8,13 @@
 #include "encoder.h"
 #include "tim.h"
 #include <stdio.h>
-//volatile int encoder_diff;
-//static  int last_tim4_cnt=0;
+
 
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance==TIM4)
 	{
-		////		int32_t encoder_steps += (TIM4->CR1 & TIM_CR1_DIR ? -1 : 1);
 
 	}
 }
@@ -27,12 +25,6 @@ int16_t TIM4_read(void)
 
 	uint16_t  tim4_cnt = __HAL_TIM_GET_COUNTER(&htim4);
     uint16_t diff = (tim4_cnt - last_tim4_cnt);
-//
-//	 if(diff!=0)
-//	{
-//		printf("1_ENC(%d-%d=%d)\r\n",tim4_cnt,last_tim4_cnt, (int16_t)diff);
-//
-//	}
 	last_tim4_cnt = tim4_cnt;
 	if(last_tim4_cnt==0xffff)
 	{
@@ -55,14 +47,27 @@ uint8_t enc_pressed(void)
 
   void encoder_read(lv_indev_drv_t * drv, lv_indev_data_t*data)
 {
-	  data->enc_diff = (int16_t)TIM4_read();
+//	  data->enc_diff = (int16_t)TIM4_read();
+//
+//	 if(!enc_pressed()){
+//	    data->state = LV_INDEV_STATE_PR;
+//	    __HAL_TIM_SET_COUNTER(&htim4,0);
+//	  }
+//	  else{
+//	    data->state = LV_INDEV_STATE_REL;
+//	  }
 
-	 if(!enc_pressed()){
+
+
+	  static int32_t last_encoder_diff = 0;
+	  int32_t encoder_val = __HAL_TIM_GET_COUNTER(&htim4);
+	  int32_t encoder_diff = encoder_val - last_encoder_diff;
+	  data->enc_diff = encoder_diff;
+	  last_encoder_diff = encoder_val;
+
+	  if (!enc_pressed())
 	    data->state = LV_INDEV_STATE_PR;
-	    __HAL_TIM_SET_COUNTER(&htim4,0);
-	  }
-	  else{
+	  else
 	    data->state = LV_INDEV_STATE_REL;
-	  }
 
 }

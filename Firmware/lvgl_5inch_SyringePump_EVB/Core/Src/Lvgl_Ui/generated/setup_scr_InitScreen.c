@@ -20,6 +20,10 @@ void setup_scr_InitScreen(lv_ui *ui)
 {
 	//Write codes InitScreen
 	ui->InitScreen = lv_obj_create(NULL);
+	ui->g_kb_InitScreen = lv_keyboard_create(ui->InitScreen);
+	lv_obj_add_event_cb(ui->g_kb_InitScreen, kb_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_add_flag(ui->g_kb_InitScreen, LV_OBJ_FLAG_HIDDEN);
+	lv_obj_set_style_text_font(ui->g_kb_InitScreen, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_size(ui->InitScreen, 800, 480);
 	lv_obj_set_scrollbar_mode(ui->InitScreen, LV_SCROLLBAR_MODE_OFF);
 

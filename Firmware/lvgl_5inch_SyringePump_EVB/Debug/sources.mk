@@ -24,10 +24,10 @@ C_DEPS :=
 SUBDIRS := \
 Core/Src/Lvgl_Porting \
 Core/Src/Lvgl_Ui/custom \
-Core/Src/Lvgl_Ui \
 Core/Src/Lvgl_Ui/generated \
 Core/Src/Lvgl_Ui/generated/guider_fonts \
 Core/Src/Lvgl_Ui/generated/images \
+Core/Src/Lvgl_Ui \
 Core/Src \
 Core/Startup \
 Drivers/STM32H7xx_HAL_Driver/Src \

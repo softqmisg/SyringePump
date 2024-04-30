@@ -5,15 +5,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Lvgl_Ui/encoder.c \
 ../Core/Src/Lvgl_Ui/myInputDevice.c 
 
 OBJS += \
-./Core/Src/Lvgl_Ui/encoder.o \
 ./Core/Src/Lvgl_Ui/myInputDevice.o 
 
 C_DEPS += \
-./Core/Src/Lvgl_Ui/encoder.d \
 ./Core/Src/Lvgl_Ui/myInputDevice.d 
 
 
@@ -24,7 +21,7 @@ Core/Src/Lvgl_Ui/%.o Core/Src/Lvgl_Ui/%.su Core/Src/Lvgl_Ui/%.cyclo: ../Core/Src
 clean: clean-Core-2f-Src-2f-Lvgl_Ui
 
 clean-Core-2f-Src-2f-Lvgl_Ui:
-	-$(RM) ./Core/Src/Lvgl_Ui/encoder.cyclo ./Core/Src/Lvgl_Ui/encoder.d ./Core/Src/Lvgl_Ui/encoder.o ./Core/Src/Lvgl_Ui/encoder.su ./Core/Src/Lvgl_Ui/myInputDevice.cyclo ./Core/Src/Lvgl_Ui/myInputDevice.d ./Core/Src/Lvgl_Ui/myInputDevice.o ./Core/Src/Lvgl_Ui/myInputDevice.su
+	-$(RM) ./Core/Src/Lvgl_Ui/myInputDevice.cyclo ./Core/Src/Lvgl_Ui/myInputDevice.d ./Core/Src/Lvgl_Ui/myInputDevice.o ./Core/Src/Lvgl_Ui/myInputDevice.su
 
 .PHONY: clean-Core-2f-Src-2f-Lvgl_Ui
 

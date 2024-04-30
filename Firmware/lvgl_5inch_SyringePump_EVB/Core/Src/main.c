@@ -36,8 +36,7 @@
 #include "lvgl/lvgl.h"
 #include "lvgl_port_lcd.h"
 //#include "lvgl/demos/lv_demos.h"
-
-#include "Lvgl_Ui/generated/gui_guider.h"
+#include "gui_guider.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -162,7 +161,8 @@ printf("hello world\n\r");
 
     /* USER CODE BEGIN 3 */
 		HAL_Delay(1);
-		lv_task_handler();
+	  lv_task_handler();
+
   }
   /* USER CODE END 3 */
 }

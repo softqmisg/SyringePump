@@ -3,4 +3,4 @@ E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl
 E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	24	static
 E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl/src/widgets/lv_slider.h:106:20:lv_slider_set_range	24	static
 E:/Designs/Javad_works/SyringePump/Firmware/lvgl_5inch_SyringePump_EVB/LVGL/lvgl/src/widgets/lv_slider.h:116:20:lv_slider_set_mode	16	static
-../Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.c:19:6:setup_scr_MainScreen	24	static
+../Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.c:19:6:setup_scr_MainScreen	40	static

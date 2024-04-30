@@ -5,16 +5,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.c \
 ../Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.c \
 ../Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.c \
 ../Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.c 
 
 OBJS += \
+./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.o \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.o \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.o \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.o 
 
 C_DEPS += \
+./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.d \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.d \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.d \
 ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.d 
@@ -27,7 +30,7 @@ Core/Src/Lvgl_Ui/generated/guider_fonts/%.o Core/Src/Lvgl_Ui/generated/guider_fo
 clean: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-guider_fonts
 
 clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-guider_fonts:
-	-$(RM) ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.su ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.su ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.su
+	-$(RM) ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_18.su ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_12.su ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.su ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.cyclo ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.d ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.o ./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.su
 
 .PHONY: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-guider_fonts
 

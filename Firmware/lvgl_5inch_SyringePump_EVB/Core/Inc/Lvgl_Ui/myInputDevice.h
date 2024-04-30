@@ -10,7 +10,6 @@
 #include "lvgl/lvgl.h"
 
 void myIndrv(void);
-//void myUI(void);
 
 
 #endif /* SRC_LVGL_UI_MYUI_H_ */

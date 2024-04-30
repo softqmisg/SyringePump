@@ -20,6 +20,10 @@ void setup_scr_SettingScreen(lv_ui *ui)
 {
 	//Write codes SettingScreen
 	ui->SettingScreen = lv_obj_create(NULL);
+	ui->g_kb_SettingScreen = lv_keyboard_create(ui->SettingScreen);
+	lv_obj_add_event_cb(ui->g_kb_SettingScreen, kb_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_add_flag(ui->g_kb_SettingScreen, LV_OBJ_FLAG_HIDDEN);
+	lv_obj_set_style_text_font(ui->g_kb_SettingScreen, &lv_font_SourceHanSerifSC_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_size(ui->SettingScreen, 800, 480);
 	lv_obj_set_scrollbar_mode(ui->SettingScreen, LV_SCROLLBAR_MODE_OFF);
 

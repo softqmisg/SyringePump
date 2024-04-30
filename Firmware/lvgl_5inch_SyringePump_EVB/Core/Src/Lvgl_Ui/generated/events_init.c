@@ -41,7 +41,7 @@ static void MainScreen_btn_1_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_PRESSED:
 	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.SettingScreen, guider_ui.SettingScreen_del, &guider_ui.MainScreen_del, setup_scr_SettingScreen, LV_SCR_LOAD_ANIM_OVER_LEFT, 200, 200, false, true);
+		ui_load_scr_animation(&guider_ui, &guider_ui.SettingScreen, guider_ui.SettingScreen_del, &guider_ui.MainScreen_del, setup_scr_SettingScreen, LV_SCR_LOAD_ANIM_OVER_LEFT, 200, 200, true, true);
 		break;
 	}
 	default:
@@ -59,7 +59,7 @@ static void SettingScreen_btn_1_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_PRESSED:
 	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.MainScreen, guider_ui.MainScreen_del, &guider_ui.SettingScreen_del, setup_scr_MainScreen, LV_SCR_LOAD_ANIM_OVER_RIGHT, 200, 200, false, true);
+		ui_load_scr_animation(&guider_ui, &guider_ui.MainScreen, guider_ui.MainScreen_del, &guider_ui.SettingScreen_del, setup_scr_MainScreen, LV_SCR_LOAD_ANIM_OVER_RIGHT, 200, 200, true, true);
 		break;
 	}
 	default:

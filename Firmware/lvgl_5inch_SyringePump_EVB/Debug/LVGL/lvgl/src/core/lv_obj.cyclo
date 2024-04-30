@@ -24,6 +24,7 @@
 ../LVGL/lvgl/src/core/lv_obj_style_gen.h:559:24:lv_obj_get_style_layout	1
 ../LVGL/lvgl/src/core/lv_obj.c:93:6:lv_is_initialized	1
 ../LVGL/lvgl/src/core/lv_obj.c:98:6:lv_init	4
+../LVGL/lvgl/src/core/lv_obj.c:197:6:lv_deinit	1
 ../LVGL/lvgl/src/core/lv_obj.c:213:12:lv_obj_create	1
 ../LVGL/lvgl/src/core/lv_obj.c:229:6:lv_obj_add_flag	9
 ../LVGL/lvgl/src/core/lv_obj.c:266:6:lv_obj_clear_flag	6

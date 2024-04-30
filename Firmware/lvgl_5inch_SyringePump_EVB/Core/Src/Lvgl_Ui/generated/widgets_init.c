@@ -11,7 +11,7 @@
 #include "gui_guider.h"
 #include "widgets_init.h"
 #include <stdlib.h>
-
+#include "stdio.h"
 
 __attribute__((unused)) void kb_event_cb (lv_event_t *e) {
     lv_event_code_t code = lv_event_get_code(e);
@@ -27,7 +27,9 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
     lv_obj_t *ta = lv_event_get_target(e);
 #endif
     lv_obj_t *kb = lv_event_get_user_data(e);
-    if (code == LV_EVENT_FOCUSED || code == LV_EVENT_CLICKED)
+    if(code<18)
+    	printf("code keyboard event=%d\n\r",code);
+    if ( code == LV_EVENT_CLICKED)
     {
 #if LV_USE_ZH_KEYBOARD != 0
         lv_zh_keyboard_set_textarea(kb, ta);
@@ -75,4 +77,18 @@ void clock_count(int *hour, int *min, int *sec)
 }
 #endif
 
+void lv_MainScreen_spinbox_1_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinbox_1);
+	}
+}
+void lv_MainScreen_spinbox_1_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinbox_1);
+	}
+}
 
