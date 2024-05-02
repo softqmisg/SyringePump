@@ -20,20 +20,28 @@ typedef struct
   
 	lv_obj_t *InitScreen;
 	bool InitScreen_del;
+	lv_obj_t *g_kb_InitScreen;
 	lv_obj_t *InitScreen_img_1;
 	lv_obj_t *MainScreen;
 	bool MainScreen_del;
+	lv_obj_t *g_kb_MainScreen;
 	lv_obj_t *MainScreen_btn_2;
 	lv_obj_t *MainScreen_btn_2_label;
 	lv_obj_t *MainScreen_btn_1;
 	lv_obj_t *MainScreen_btn_1_label;
 	lv_obj_t *MainScreen_slider_1;
+	lv_obj_t *MainScreen_ta_1;
+	lv_obj_t *MainScreen_spinbox_1;
+	lv_obj_t *MainScreen_spinbox_1_btn;
+	lv_obj_t *MainScreen_spinbox_1_btn_minus;
 	lv_obj_t *SettingScreen;
 	bool SettingScreen_del;
+	lv_obj_t *g_kb_SettingScreen;
 	lv_obj_t *SettingScreen_btn_2;
 	lv_obj_t *SettingScreen_btn_2_label;
 	lv_obj_t *SettingScreen_btn_1;
 	lv_obj_t *SettingScreen_btn_1_label;
+	lv_obj_t *SettingScreen_ta_1;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -75,6 +83,7 @@ LV_IMG_DECLARE(_logo_new_color_small_alpha_340x340);
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
+LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 
 #ifdef __cplusplus

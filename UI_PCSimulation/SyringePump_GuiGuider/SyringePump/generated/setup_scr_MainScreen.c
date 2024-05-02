@@ -219,7 +219,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_spinbox_1_btn_minus, &style_MainScreen_spinbox_1_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//The custom code of MainScreen.
-	MainScreengroup(ui);
+	lv_keyboard_set_popovers(ui->g_kb_MainScreen, true);
+MainScreengroup(ui);
 
 	//Update current screen layout.
 	lv_obj_update_layout(ui->MainScreen);

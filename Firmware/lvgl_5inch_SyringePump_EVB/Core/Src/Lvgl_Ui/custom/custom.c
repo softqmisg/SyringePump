@@ -14,7 +14,6 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "custom.h"
-#include "encoder.h"
 /*********************
  *      DEFINES
  *********************/
