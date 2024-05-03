@@ -129,6 +129,7 @@ void setup_scr_SettingScreen(lv_ui *ui)
 	lv_obj_set_style_radius(ui->SettingScreen_ta_1, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
 	//The custom code of SettingScreen.
+	lv_keyboard_set_mode(ui->g_kb_SettingScreen,LV_KEYBOARD_MODE_NUMBER);
 	lv_keyboard_set_popovers(ui->g_kb_SettingScreen, true);
 SettingScreengroup(ui);
 

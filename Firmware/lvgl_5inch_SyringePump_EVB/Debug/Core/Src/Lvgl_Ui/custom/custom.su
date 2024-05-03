@@ -1,3 +1,3 @@
-../Core/Src/Lvgl_Ui/custom/custom.c:38:6:custom_init	16	static
-../Core/Src/Lvgl_Ui/custom/custom.c:42:6:MainScreengroup	24	static
-../Core/Src/Lvgl_Ui/custom/custom.c:91:6:SettingScreengroup	24	static
+../Core/Src/Lvgl_Ui/custom/custom.c:37:6:custom_init	16	static
+../Core/Src/Lvgl_Ui/custom/custom.c:41:6:MainScreengroup	24	static
+../Core/Src/Lvgl_Ui/custom/custom.c:94:6:SettingScreengroup	24	static

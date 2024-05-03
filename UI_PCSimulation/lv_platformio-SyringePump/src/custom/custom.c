@@ -81,9 +81,10 @@ void MainScreengroup(lv_ui *ui)
         {
             lv_indev_set_group(cur_dev,g);
 
+
             lv_group_add_obj(g,ui->MainScreen_btn_2);
-            lv_group_add_obj(g,ui->MainScreen_ta_1);
             lv_group_add_obj(g,ui->MainScreen_slider_1);
+            lv_group_add_obj(g,ui->MainScreen_ta_1);
             lv_group_add_obj(g,ui->MainScreen_spinbox_1);
             lv_group_add_obj(g,ui->MainScreen_btn_1);
             lv_group_add_obj(g,ui->g_kb_MainScreen);
@@ -100,6 +101,7 @@ void SettingScreengroup(lv_ui *ui)
 	lv_style_set_outline_pad(&SettingScreenStyleFocus,4);
 	lv_obj_add_style(ui->SettingScreen_btn_2,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->SettingScreen_btn_1,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	lv_obj_add_style(ui->SettingScreen_ta_1,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
 
 	static lv_style_t SettingScreenStyleEdit;
@@ -109,6 +111,7 @@ void SettingScreengroup(lv_ui *ui)
 	lv_style_set_outline_pad(&SettingScreenStyleEdit,4);
 	lv_obj_add_style(ui->SettingScreen_btn_2,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 	lv_obj_add_style(ui->SettingScreen_btn_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
+	lv_obj_add_style(ui->SettingScreen_ta_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 	lv_group_t *g;
 
     g = lv_group_get_default();

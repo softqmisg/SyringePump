@@ -55,7 +55,7 @@ int main(void)
 
 
 
-  //  lv_demo_keypad_encoder();  
+  // lv_demo_keypad_encoder();  
     //  lv_obj_t *parent=lv_scr_act();
     // lv_obj_set_flex_flow(parent, LV_FLEX_FLOW_COLUMN);
 

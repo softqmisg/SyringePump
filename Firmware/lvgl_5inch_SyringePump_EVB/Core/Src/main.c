@@ -37,6 +37,7 @@
 #include "lvgl_port_lcd.h"
 //#include "lvgl/demos/lv_demos.h"
 #include "gui_guider.h"
+#include "myInputDevice.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

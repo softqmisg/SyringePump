@@ -40,7 +40,6 @@ void custom_init(lv_ui *ui)
 }
 void MainScreengroup(lv_ui *ui)
 {
-	lv_keyboard_set_popovers(ui->g_kb_MainScreen, true);
 	static lv_style_t MainScreenStyleFocus;
 	lv_style_init(&MainScreenStyleFocus);
 	lv_style_set_outline_color(&MainScreenStyleFocus,lv_palette_lighten(LV_PALETTE_RED, 2));
@@ -65,9 +64,15 @@ void MainScreengroup(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleEdit,LV_STATE_PRESSED );
 
 	lv_group_t *g;
-    g= lv_group_create();
-//    lv_group_set_default(g);
+
+    g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g= lv_group_create();
     lv_indev_t *cur_dev=NULL;
+
     for(;;)
     {
         cur_dev=lv_indev_get_next(cur_dev);
@@ -75,7 +80,6 @@ void MainScreengroup(lv_ui *ui)
         if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
         {
             lv_indev_set_group(cur_dev,g);
-            lv_group_remove_all_objs(g);
 
             lv_group_add_obj(g,ui->MainScreen_btn_2);
             lv_group_add_obj(g,ui->MainScreen_ta_1);
@@ -83,7 +87,7 @@ void MainScreengroup(lv_ui *ui)
             lv_group_add_obj(g,ui->MainScreen_spinbox_1);
             lv_group_add_obj(g,ui->MainScreen_btn_1);
             lv_group_add_obj(g,ui->g_kb_MainScreen);
-
+			
         }
     }
 }
@@ -96,6 +100,7 @@ void SettingScreengroup(lv_ui *ui)
 	lv_style_set_outline_pad(&SettingScreenStyleFocus,4);
 	lv_obj_add_style(ui->SettingScreen_btn_2,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->SettingScreen_btn_1,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	lv_obj_add_style(ui->SettingScreen_ta_1,&SettingScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
 
 	static lv_style_t SettingScreenStyleEdit;
@@ -105,11 +110,16 @@ void SettingScreengroup(lv_ui *ui)
 	lv_style_set_outline_pad(&SettingScreenStyleEdit,4);
 	lv_obj_add_style(ui->SettingScreen_btn_2,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 	lv_obj_add_style(ui->SettingScreen_btn_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
+	lv_obj_add_style(ui->SettingScreen_ta_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 
-
-    lv_group_t *g;
-    g= lv_group_create();
-//    lv_group_set_default(g);
+	lv_group_t *g;
+    g = lv_group_get_default();
+	if(g!=NULL)
+	{
+    	lv_group_del(g);
+	}
+	g= lv_group_create();
+   	lv_group_set_default(g);
     lv_indev_t *cur_dev=NULL;
 
     for(;;)
@@ -122,7 +132,9 @@ void SettingScreengroup(lv_ui *ui)
             lv_group_remove_all_objs(g);
 
             lv_group_add_obj(g,ui->SettingScreen_btn_2);
+			lv_group_add_obj(g,ui->SettingScreen_ta_1);
             lv_group_add_obj(g,ui->SettingScreen_btn_1);
+            lv_group_add_obj(g,ui->g_kb_SettingScreen);
 
         }
 
