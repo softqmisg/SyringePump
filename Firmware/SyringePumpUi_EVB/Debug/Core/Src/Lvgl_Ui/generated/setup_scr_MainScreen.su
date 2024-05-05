@@ -1,0 +1,3 @@
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:600:26:lv_color_hex	24	static
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/core/lv_obj_style.h:205:20:lv_obj_set_style_pad_all	24	static
+../Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.c:23:6:setup_scr_MainScreen	24	static

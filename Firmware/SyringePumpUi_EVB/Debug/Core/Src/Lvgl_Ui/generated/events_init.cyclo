@@ -1,0 +1,4 @@
+../Core/Src/Lvgl_Ui/generated/events_init.c:19:13:MainScreen_btnGoSetting_event_handler	2
+../Core/Src/Lvgl_Ui/generated/events_init.c:34:13:MainScreen_btnGoMain_event_handler	2
+../Core/Src/Lvgl_Ui/generated/events_init.c:49:6:events_init_MainScreen	1
+../Core/Src/Lvgl_Ui/generated/events_init.c:55:6:events_init	1

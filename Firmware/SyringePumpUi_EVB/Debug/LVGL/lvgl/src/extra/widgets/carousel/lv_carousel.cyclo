@@ -1,0 +1,10 @@
+../LVGL/lvgl/src/extra/widgets/carousel/../../../core/lv_obj_style.h:92:20:lv_obj_remove_style_all	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:51:12:lv_carousel_create	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:66:12:lv_carousel_add_element	2
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:89:6:lv_carousel_set_element_width	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:95:6:lv_obj_set_element	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:113:6:lv_obj_set_element_id	3
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:135:12:lv_carousel_get_element_act	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:145:13:lv_carousel_constructor	1
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:156:13:lv_carousel_element_constructor	2
+../LVGL/lvgl/src/extra/widgets/carousel/lv_carousel.c:172:13:carousel_event_cb	6

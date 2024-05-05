@@ -1,0 +1,6 @@
+../Core/Src/Lvgl_Ui/myInputDevice.c:14:9:enc_pressed	1
+../Core/Src/Lvgl_Ui/myInputDevice.c:18:6:encoder_init	1
+../Core/Src/Lvgl_Ui/myInputDevice.c:23:6:encoder_read	2
+../Core/Src/Lvgl_Ui/myInputDevice.c:38:15:button_get_pressed_id	3
+../Core/Src/Lvgl_Ui/myInputDevice.c:50:13:button_read	2
+../Core/Src/Lvgl_Ui/myInputDevice.c:70:6:myIndrv	1
