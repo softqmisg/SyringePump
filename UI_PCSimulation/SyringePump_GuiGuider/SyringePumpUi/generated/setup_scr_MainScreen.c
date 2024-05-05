@@ -280,9 +280,9 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->MainScreen_label_InjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_label_InjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_label_InjectionMode, lv_color_hex(0xebff00), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_InjectionMode, &lv_font_Alatsi_Regular_30, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_InjectionMode, &lv_font_arial_33, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_label_InjectionMode, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_InjectionMode, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_InjectionMode, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->MainScreen_label_InjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_label_InjectionMode, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_opa(ui->MainScreen_label_InjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -326,7 +326,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->MainScreen_label_InjectionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_label_InjectionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_label_InjectionRate, lv_color_hex(0xff0027), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_InjectionRate, &lv_font_Alatsi_Regular_30, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_InjectionRate, &lv_font_arial_35, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_label_InjectionRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->MainScreen_label_InjectionRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->MainScreen_label_InjectionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
