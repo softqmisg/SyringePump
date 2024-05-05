@@ -37,6 +37,14 @@ typedef struct
 	lv_obj_t *MainScreen_label_InjectionRate;
 	lv_obj_t *MainScreen_label_Error;
 	lv_obj_t *MainScreen_label_InjectedVolume;
+	lv_obj_t *MainScreen_label_3;
+	lv_obj_t *MainScreen_label_4;
+	lv_obj_t *MainScreen_label_5;
+	lv_obj_t *MainScreen_label_6;
+	lv_obj_t *MainScreen_label_TimeLeft;
+	lv_obj_t *MainScreen_label_RemVolume;
+	lv_obj_t *MainScreen_label_PatientKg;
+	lv_obj_t *MainScreen_label_TotalVolume;
 	lv_obj_t *MainScreen_contHeader;
 	lv_obj_t *MainScreen_digital_clock;
 	lv_obj_t *MainScreen_datetext;
@@ -84,9 +92,9 @@ LV_IMG_DECLARE(_syringe2_512_alpha_400x100);
 LV_IMG_DECLARE(_forbidden_64_alpha_64x64);
 LV_IMG_DECLARE(_droplet_32_alpha_32x32);
 
-LV_IMG_DECLARE(_ledbar_empty_25x95);
+LV_IMG_DECLARE(_ledbar_empty_25x132);
 
-LV_IMG_DECLARE(_ledbar_full_25x95);
+LV_IMG_DECLARE(_ledbar_full_25x132);
 LV_IMG_DECLARE(_network_64_alpha_64x64);
 LV_IMG_DECLARE(_Serial_64_alpha_64x64);
 LV_IMG_DECLARE(_usb_64_alpha_64x64);
@@ -100,6 +108,8 @@ LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_30)
 LV_FONT_DECLARE(lv_font_arial_25)
 LV_FONT_DECLARE(lv_font_arial_100)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_20)
+LV_FONT_DECLARE(lv_font_arial_20)
 LV_FONT_DECLARE(lv_font_montserratMedium_19)
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_18)
