@@ -31,6 +31,12 @@ typedef struct
 	lv_obj_t *MainScreen_imgDroplet;
 	lv_obj_t *MainScreen_contMiddle;
 	lv_obj_t *MainScreen_barOcclusionLevel;
+	lv_obj_t *MainScreen_label_1;
+	lv_obj_t *MainScreen_label_InjectionMode;
+	lv_obj_t *MainScreen_label_2;
+	lv_obj_t *MainScreen_label_InjectionRate;
+	lv_obj_t *MainScreen_label_Error;
+	lv_obj_t *MainScreen_label_InjectedVolume;
 	lv_obj_t *MainScreen_contHeader;
 	lv_obj_t *MainScreen_digital_clock;
 	lv_obj_t *MainScreen_datetext;
@@ -91,6 +97,9 @@ LV_IMG_DECLARE(_battery_64_38x64);
 
 LV_FONT_DECLARE(lv_font_Amiko_Regular_21)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_30)
+LV_FONT_DECLARE(lv_font_arial_25)
+LV_FONT_DECLARE(lv_font_arial_100)
 LV_FONT_DECLARE(lv_font_montserratMedium_19)
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_18)
