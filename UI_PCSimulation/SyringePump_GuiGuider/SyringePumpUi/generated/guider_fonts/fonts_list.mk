@@ -1,0 +1,1 @@
+GEN_CSRCS += lv_font_Amiko_Regular_21.c lv_font_montserratMedium_16.c lv_font_montserratMedium_19.c lv_font_montserratMedium_18.c lv_font_Alatsi_Regular_18.c
