@@ -59,6 +59,28 @@ typedef struct
 	lv_obj_t *MainScreen_contSetting;
 	lv_obj_t *MainScreen_btnGoMain;
 	lv_obj_t *MainScreen_btnGoMain_label;
+	lv_obj_t *MainScreen_img_1;
+	lv_obj_t *MainScreen_img_3;
+	lv_obj_t *MainScreen_img_4;
+	lv_obj_t *MainScreen_img_5;
+	lv_obj_t *MainScreen_img_6;
+	lv_obj_t *MainScreen_img_7;
+	lv_obj_t *MainScreen_label_7;
+	lv_obj_t *MainScreen_label_9;
+	lv_obj_t *MainScreen_label_10;
+	lv_obj_t *MainScreen_label_11;
+	lv_obj_t *MainScreen_label_12;
+	lv_obj_t *MainScreen_label_13;
+	lv_obj_t *MainScreen_img_2;
+	lv_obj_t *MainScreen_img_8;
+	lv_obj_t *MainScreen_img_9;
+	lv_obj_t *MainScreen_img_10;
+	lv_obj_t *MainScreen_img_11;
+	lv_obj_t *MainScreen_label_8;
+	lv_obj_t *MainScreen_label_14;
+	lv_obj_t *MainScreen_label_15;
+	lv_obj_t *MainScreen_label_16;
+	lv_obj_t *MainScreen_label_17;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -107,6 +129,17 @@ LV_IMG_DECLARE(_battery_64_38x64);
 LV_IMG_DECLARE(_ledbar_empty_25x132);
 
 LV_IMG_DECLARE(_ledbar_full_25x132);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Syringe_72_alpha_100x100);
+LV_IMG_DECLARE(_Nurse_72_alpha_100x100);
+LV_IMG_DECLARE(_Nurse_72_alpha_100x100);
+LV_IMG_DECLARE(_droplet_64_alpha_100x100);
+LV_IMG_DECLARE(_syringe1_128_alpha_100x100);
+LV_IMG_DECLARE(_Setting_72_alpha_100x100);
 
 LV_FONT_DECLARE(lv_font_Amiko_Regular_21)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
@@ -122,6 +155,10 @@ LV_FONT_DECLARE(lv_font_arial_100)
 LV_FONT_DECLARE(lv_font_Acme_Regular_20)
 LV_FONT_DECLARE(lv_font_Acme_Regular_22)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
+LV_FONT_DECLARE(lv_font_Acme_Regular_26)
+LV_FONT_DECLARE(lv_font_Acme_Regular_25)
+LV_FONT_DECLARE(lv_font_Acme_Regular_28)
+LV_FONT_DECLARE(lv_font_Acme_Regular_24)
 
 
 #ifdef __cplusplus

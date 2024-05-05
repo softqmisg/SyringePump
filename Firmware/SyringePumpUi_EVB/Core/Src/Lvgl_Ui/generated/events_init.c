@@ -23,8 +23,8 @@ static void MainScreen_btnGoSetting_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		lv_obj_clear_flag(guider_ui.MainScreen_contSetting, LV_OBJ_FLAG_HIDDEN);
-		lv_obj_add_flag(guider_ui.MainScreen_contMain, LV_OBJ_FLAG_HIDDEN);
+		ui_move_animation(guider_ui.MainScreen_contSetting, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, -800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -38,8 +38,8 @@ static void MainScreen_btnGoMain_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		lv_obj_add_flag(guider_ui.MainScreen_contSetting, LV_OBJ_FLAG_HIDDEN);
-		lv_obj_clear_flag(guider_ui.MainScreen_contMain, LV_OBJ_FLAG_HIDDEN);
+		ui_move_animation(guider_ui.MainScreen_contSetting, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:

@@ -763,10 +763,9 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write codes MainScreen_contSetting
 	ui->MainScreen_contSetting = lv_obj_create(ui->MainScreen);
-	lv_obj_set_pos(ui->MainScreen_contSetting, 0, 80);
+	lv_obj_set_pos(ui->MainScreen_contSetting, 800, 80);
 	lv_obj_set_size(ui->MainScreen_contSetting, 800, 300);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_contSetting, LV_SCROLLBAR_MODE_OFF);
-	lv_obj_add_flag(ui->MainScreen_contSetting, LV_OBJ_FLAG_HIDDEN);
 
 	//Write style for MainScreen_contSetting, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_contSetting, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -803,6 +802,391 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_font(ui->MainScreen_btnGoMain, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMain, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnGoMain, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_1
+	ui->MainScreen_img_1 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_1, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_1, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_1, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_1, 0);
+	lv_obj_set_pos(ui->MainScreen_img_1, 25, 0);
+	lv_obj_set_size(ui->MainScreen_img_1, 100, 100);
+
+	//Write style for MainScreen_img_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_3
+	ui->MainScreen_img_3 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_3, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_3, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_3, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_3, 0);
+	lv_obj_set_pos(ui->MainScreen_img_3, 155, 0);
+	lv_obj_set_size(ui->MainScreen_img_3, 100, 100);
+
+	//Write style for MainScreen_img_3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_4
+	ui->MainScreen_img_4 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_4, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_4, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_4, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_4, 0);
+	lv_obj_set_pos(ui->MainScreen_img_4, 285, 0);
+	lv_obj_set_size(ui->MainScreen_img_4, 100, 100);
+
+	//Write style for MainScreen_img_4, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_4, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_5
+	ui->MainScreen_img_5 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_5, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_5, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_5, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_5, 0);
+	lv_obj_set_pos(ui->MainScreen_img_5, 415, 0);
+	lv_obj_set_size(ui->MainScreen_img_5, 100, 100);
+
+	//Write style for MainScreen_img_5, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_5, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_6
+	ui->MainScreen_img_6 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_6, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_6, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_6, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_6, 0);
+	lv_obj_set_pos(ui->MainScreen_img_6, 545, 0);
+	lv_obj_set_size(ui->MainScreen_img_6, 100, 100);
+
+	//Write style for MainScreen_img_6, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_6, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_7
+	ui->MainScreen_img_7 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_7, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_7, &_Syringe_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_7, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_7, 0);
+	lv_obj_set_pos(ui->MainScreen_img_7, 675, 0);
+	lv_obj_set_size(ui->MainScreen_img_7, 100, 100);
+
+	//Write style for MainScreen_img_7, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_7, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_7
+	ui->MainScreen_label_7 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_7, "Syringe");
+	lv_label_set_long_mode(ui->MainScreen_label_7, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_7, 25, 100);
+	lv_obj_set_size(ui->MainScreen_label_7, 100, 50);
+
+	//Write style for MainScreen_label_7, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_7, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_7, &lv_font_Acme_Regular_26, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_7, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_7, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_7, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_7, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_9
+	ui->MainScreen_label_9 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_9, "Drug");
+	lv_label_set_long_mode(ui->MainScreen_label_9, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_9, 155, 100);
+	lv_obj_set_size(ui->MainScreen_label_9, 100, 50);
+
+	//Write style for MainScreen_label_9, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_9, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_9, &lv_font_Acme_Regular_25, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_9, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_9, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_9, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_9, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_10
+	ui->MainScreen_label_10 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_10, "Mode");
+	lv_label_set_long_mode(ui->MainScreen_label_10, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_10, 285, 100);
+	lv_obj_set_size(ui->MainScreen_label_10, 100, 50);
+
+	//Write style for MainScreen_label_10, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_10, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_10, &lv_font_Acme_Regular_28, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_10, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_10, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_10, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_10, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_11
+	ui->MainScreen_label_11 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_11, "OCC. Pressure");
+	lv_label_set_long_mode(ui->MainScreen_label_11, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_11, 415, 100);
+	lv_obj_set_size(ui->MainScreen_label_11, 100, 50);
+
+	//Write style for MainScreen_label_11, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_11, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_11, &lv_font_Acme_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_11, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_11, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_11, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_12
+	ui->MainScreen_label_12 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_12, "KVO");
+	lv_label_set_long_mode(ui->MainScreen_label_12, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_12, 545, 100);
+	lv_obj_set_size(ui->MainScreen_label_12, 100, 50);
+
+	//Write style for MainScreen_label_12, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_12, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_12, &lv_font_Acme_Regular_28, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_12, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_12, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_12, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_12, 11, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_13
+	ui->MainScreen_label_13 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_13, "Intermittent Infusion");
+	lv_label_set_long_mode(ui->MainScreen_label_13, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_13, 668, 100);
+	lv_obj_set_size(ui->MainScreen_label_13, 115, 50);
+
+	//Write style for MainScreen_label_13, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_13, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_13, &lv_font_Acme_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_13, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_13, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_2
+	ui->MainScreen_img_2 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_2, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_2, &_Nurse_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_2, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_2, 0);
+	lv_obj_set_pos(ui->MainScreen_img_2, 25, 150);
+	lv_obj_set_size(ui->MainScreen_img_2, 100, 100);
+
+	//Write style for MainScreen_img_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_8
+	ui->MainScreen_img_8 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_8, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_8, &_Nurse_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_8, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_8, 0);
+	lv_obj_set_pos(ui->MainScreen_img_8, 155, 150);
+	lv_obj_set_size(ui->MainScreen_img_8, 100, 100);
+
+	//Write style for MainScreen_img_8, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_8, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_9
+	ui->MainScreen_img_9 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_9, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_9, &_droplet_64_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_9, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_9, 0);
+	lv_obj_set_pos(ui->MainScreen_img_9, 285, 150);
+	lv_obj_set_size(ui->MainScreen_img_9, 100, 100);
+
+	//Write style for MainScreen_img_9, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_9, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_10
+	ui->MainScreen_img_10 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_10, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_10, &_syringe1_128_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_10, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_10, 900);
+	lv_obj_set_pos(ui->MainScreen_img_10, 415, 150);
+	lv_obj_set_size(ui->MainScreen_img_10, 100, 100);
+
+	//Write style for MainScreen_img_10, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_10, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_img_11
+	ui->MainScreen_img_11 = lv_img_create(ui->MainScreen_contSetting);
+	lv_obj_add_flag(ui->MainScreen_img_11, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->MainScreen_img_11, &_Setting_72_alpha_100x100);
+	lv_img_set_pivot(ui->MainScreen_img_11, 50,50);
+	lv_img_set_angle(ui->MainScreen_img_11, 0);
+	lv_obj_set_pos(ui->MainScreen_img_11, 545, 150);
+	lv_obj_set_size(ui->MainScreen_img_11, 100, 100);
+
+	//Write style for MainScreen_img_11, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_img_11, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_8
+	ui->MainScreen_label_8 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_8, "Rhythmic Infusion");
+	lv_label_set_long_mode(ui->MainScreen_label_8, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_8, 25, 250);
+	lv_obj_set_size(ui->MainScreen_label_8, 100, 50);
+
+	//Write style for MainScreen_label_8, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_8, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_8, &lv_font_Acme_Regular_24, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_8, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_8, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_14
+	ui->MainScreen_label_14 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_14, "Nurse Call");
+	lv_label_set_long_mode(ui->MainScreen_label_14, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_14, 155, 250);
+	lv_obj_set_size(ui->MainScreen_label_14, 100, 50);
+
+	//Write style for MainScreen_label_14, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_14, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_14, &lv_font_Acme_Regular_25, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_14, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_14, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_14, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_15
+	ui->MainScreen_label_15 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_15, "Bolus");
+	lv_label_set_long_mode(ui->MainScreen_label_15, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_15, 285, 250);
+	lv_obj_set_size(ui->MainScreen_label_15, 100, 50);
+
+	//Write style for MainScreen_label_15, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_15, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_15, &lv_font_Acme_Regular_24, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_15, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_15, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_15, 11, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_15, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_16
+	ui->MainScreen_label_16 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_16, "Purge");
+	lv_label_set_long_mode(ui->MainScreen_label_16, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_16, 415, 250);
+	lv_obj_set_size(ui->MainScreen_label_16, 100, 50);
+
+	//Write style for MainScreen_label_16, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_16, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_16, &lv_font_Acme_Regular_24, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_16, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_16, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_16, 11, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_16, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_17
+	ui->MainScreen_label_17 = lv_label_create(ui->MainScreen_contSetting);
+	lv_label_set_text(ui->MainScreen_label_17, "Setting");
+	lv_label_set_long_mode(ui->MainScreen_label_17, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_17, 545, 250);
+	lv_obj_set_size(ui->MainScreen_label_17, 100, 50);
+
+	//Write style for MainScreen_label_17, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_17, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_17, &lv_font_Acme_Regular_24, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_17, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_17, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_17, 11, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//The custom code of MainScreen.
 	lv_obj_clear_flag(ui->MainScreen_datetext,LV_OBJ_FLAG_CLICK_FOCUSABLE);
