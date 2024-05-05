@@ -34,6 +34,7 @@ typedef struct
 	lv_obj_t *MainScreen_spinbox_1;
 	lv_obj_t *MainScreen_spinbox_1_btn;
 	lv_obj_t *MainScreen_spinbox_1_btn_minus;
+	lv_obj_t *MainScreen_slider_2;
 	lv_obj_t *SettingScreen;
 	bool SettingScreen_del;
 	lv_obj_t *g_kb_SettingScreen;

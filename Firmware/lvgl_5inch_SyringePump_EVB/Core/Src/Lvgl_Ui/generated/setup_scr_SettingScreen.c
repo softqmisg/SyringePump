@@ -130,8 +130,8 @@ void setup_scr_SettingScreen(lv_ui *ui)
 
 	//The custom code of SettingScreen.
 	lv_keyboard_set_popovers(ui->g_kb_SettingScreen, true);
-	lv_keyboard_set_mode(ui->g_kb_SettingScreen, LV_KEYBOARD_MODE_NUMBER);
-	SettingScreengroup(ui);
+	SettingScreenSetStyle(ui);
+SettingScreengroup(ui);
 
 	//Update current screen layout.
 	lv_obj_update_layout(ui->SettingScreen);

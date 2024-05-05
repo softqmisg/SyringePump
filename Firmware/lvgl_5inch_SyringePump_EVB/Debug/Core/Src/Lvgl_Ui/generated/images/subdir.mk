@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.c 
+../Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.c \
+../Core/Src/Lvgl_Ui/generated/images/indicator_ver.c 
 
 OBJS += \
-./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.o 
+./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.o \
+./Core/Src/Lvgl_Ui/generated/images/indicator_ver.o 
 
 C_DEPS += \
-./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.d 
+./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.d \
+./Core/Src/Lvgl_Ui/generated/images/indicator_ver.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Core/Src/Lvgl_Ui/generated/images/%.o Core/Src/Lvgl_Ui/generated/images/%.su Cor
 clean: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-images
 
 clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-images:
-	-$(RM) ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.cyclo ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.d ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.o ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.su
+	-$(RM) ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.cyclo ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.d ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.o ./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.su ./Core/Src/Lvgl_Ui/generated/images/indicator_ver.cyclo ./Core/Src/Lvgl_Ui/generated/images/indicator_ver.d ./Core/Src/Lvgl_Ui/generated/images/indicator_ver.o ./Core/Src/Lvgl_Ui/generated/images/indicator_ver.su
 
 .PHONY: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated-2f-images
 

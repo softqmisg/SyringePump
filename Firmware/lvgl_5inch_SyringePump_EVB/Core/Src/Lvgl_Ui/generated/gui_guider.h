@@ -34,6 +34,7 @@ typedef struct
 	lv_obj_t *MainScreen_spinbox_1;
 	lv_obj_t *MainScreen_spinbox_1_btn;
 	lv_obj_t *MainScreen_spinbox_1_btn_minus;
+	lv_obj_t *MainScreen_slider_2;
 	lv_obj_t *SettingScreen;
 	bool SettingScreen_del;
 	lv_obj_t *g_kb_SettingScreen;
@@ -79,6 +80,7 @@ void setup_scr_InitScreen(lv_ui *ui);
 void setup_scr_MainScreen(lv_ui *ui);
 void setup_scr_SettingScreen(lv_ui *ui);
 LV_IMG_DECLARE(_logo_new_color_small_alpha_340x340);
+LV_IMG_DECLARE(indicator_ver);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)

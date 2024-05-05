@@ -38,8 +38,13 @@ void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
 }
-void MainScreengroup(lv_ui *ui)
+void MainScreenSetStyle(lv_ui *ui)
 {
+	static lv_style_t style_indic;
+ 	lv_style_init(&style_indic);
+	lv_style_set_bg_img_src(&style_indic,&indicator_ver);
+	lv_obj_add_style(ui->MainScreen_slider_2,&style_indic,LV_PART_INDICATOR);
+
 	static lv_style_t MainScreenStyleFocus;
 	lv_style_init(&MainScreenStyleFocus);
 	lv_style_set_outline_color(&MainScreenStyleFocus,lv_palette_lighten(LV_PALETTE_RED, 2));
@@ -48,6 +53,7 @@ void MainScreengroup(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_btn_2,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_ta_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_slider_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	lv_obj_add_style(ui->MainScreen_slider_2,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
@@ -60,8 +66,13 @@ void MainScreengroup(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_btn_2,&MainScreenStyleEdit,LV_STATE_PRESSED );
 	lv_obj_add_style(ui->MainScreen_ta_1,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_slider_1,&MainScreenStyleEdit,LV_STATE_EDITED );
+	lv_obj_add_style(ui->MainScreen_slider_2,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleEdit,LV_STATE_EDITED );
-	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleEdit,LV_STATE_PRESSED );
+	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleEdit,LV_STATE_PRESSED );	
+}
+void MainScreengroup(lv_ui *ui)
+{
+
 
 	lv_group_t *g;
 
@@ -84,6 +95,7 @@ void MainScreengroup(lv_ui *ui)
             lv_group_add_obj(g,ui->MainScreen_btn_2);
             lv_group_add_obj(g,ui->MainScreen_ta_1);
             lv_group_add_obj(g,ui->MainScreen_slider_1);
+            lv_group_add_obj(g,ui->MainScreen_slider_2);			
             lv_group_add_obj(g,ui->MainScreen_spinbox_1);
             lv_group_add_obj(g,ui->MainScreen_btn_1);
             lv_group_add_obj(g,ui->g_kb_MainScreen);
@@ -91,9 +103,9 @@ void MainScreengroup(lv_ui *ui)
         }
     }
 }
-void SettingScreengroup(lv_ui *ui)
+void SettingScreenSetStyle(lv_ui *ui)
 {
-	static lv_style_t SettingScreenStyleFocus;
+		static lv_style_t SettingScreenStyleFocus;
 	lv_style_init(&SettingScreenStyleFocus);
 	lv_style_set_outline_color(&SettingScreenStyleFocus,lv_palette_lighten(LV_PALETTE_RED, 2));
 	lv_style_set_outline_width(&SettingScreenStyleFocus,3);
@@ -112,6 +124,10 @@ void SettingScreengroup(lv_ui *ui)
 	lv_obj_add_style(ui->SettingScreen_btn_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 	lv_obj_add_style(ui->SettingScreen_ta_1,&SettingScreenStyleEdit,LV_STATE_PRESSED );
 
+
+}
+void SettingScreengroup(lv_ui *ui)
+{
 	lv_group_t *g;
     g = lv_group_get_default();
 	if(g!=NULL)

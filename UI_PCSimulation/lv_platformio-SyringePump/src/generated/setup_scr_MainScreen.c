@@ -40,7 +40,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btn_2_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btn_2, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btn_2_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btn_2, 645, 254);
+	lv_obj_set_pos(ui->MainScreen_btn_2, 645, 255);
 	lv_obj_set_size(ui->MainScreen_btn_2, 100, 50);
 
 	//Write style for MainScreen_btn_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -93,7 +93,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_slider_set_range(ui->MainScreen_slider_1, 0, 100);
 	lv_slider_set_mode(ui->MainScreen_slider_1, LV_SLIDER_MODE_NORMAL);
 	lv_slider_set_value(ui->MainScreen_slider_1, 50, LV_ANIM_OFF);
-	lv_obj_set_pos(ui->MainScreen_slider_1, 136, 263);
+	lv_obj_set_pos(ui->MainScreen_slider_1, 413, 330);
 	lv_obj_set_size(ui->MainScreen_slider_1, 200, 10);
 
 	//Write style for MainScreen_slider_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -218,8 +218,38 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_spinbox_1_btn, &style_MainScreen_spinbox_1_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_add_style(ui->MainScreen_spinbox_1_btn_minus, &style_MainScreen_spinbox_1_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_slider_2
+	ui->MainScreen_slider_2 = lv_slider_create(ui->MainScreen);
+	lv_slider_set_range(ui->MainScreen_slider_2, 0, 29);
+	lv_slider_set_mode(ui->MainScreen_slider_2, LV_SLIDER_MODE_NORMAL);
+	lv_slider_set_value(ui->MainScreen_slider_2, 10, LV_ANIM_OFF);
+	lv_obj_set_pos(ui->MainScreen_slider_2, 139, 89);
+	lv_obj_set_size(ui->MainScreen_slider_2, 12, 283);
+
+	//Write style for MainScreen_slider_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_slider_2, 60, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_slider_2, lv_color_hex(0x34ffa4), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_slider_2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_slider_2, 50, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_outline_width(ui->MainScreen_slider_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_slider_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_slider_2, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_slider_2, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_slider_2, lv_color_hex(0x34ff98), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_slider_2, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_slider_2, 50, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_slider_2, Part: LV_PART_KNOB, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_slider_2, 255, LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_slider_2, lv_color_hex(0x00ed5c), LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_slider_2, LV_GRAD_DIR_NONE, LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_slider_2, 50, LV_PART_KNOB|LV_STATE_DEFAULT);
+
 	//The custom code of MainScreen.
 	lv_keyboard_set_popovers(ui->g_kb_MainScreen, true);
+lv_obj_set_style_bg_opa(ui->MainScreen_slider_2, 0, LV_PART_KNOB|LV_STATE_DEFAULT);
+MainScreenSetStyle(ui);
 MainScreengroup(ui);
 
 	//Update current screen layout.

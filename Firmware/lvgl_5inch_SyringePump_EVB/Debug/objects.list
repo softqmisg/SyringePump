@@ -11,6 +11,7 @@
 "./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_16.o"
 "./Core/Src/Lvgl_Ui/generated/guider_fonts/lv_font_montserratMedium_18.o"
 "./Core/Src/Lvgl_Ui/generated/images/_logo_new_color_small_alpha_340x340.o"
+"./Core/Src/Lvgl_Ui/generated/images/indicator_ver.o"
 "./Core/Src/Lvgl_Ui/myInputDevice.o"
 "./Core/Src/W25Q256FV_QSPI.o"
 "./Core/Src/crc.o"

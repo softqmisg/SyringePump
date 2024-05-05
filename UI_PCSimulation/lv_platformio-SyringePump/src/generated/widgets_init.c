@@ -18,6 +18,8 @@ __attribute__((unused)) void kb_event_cb (lv_event_t *e) {
     lv_obj_t *kb = lv_event_get_target(e);
     if(code == LV_EVENT_READY || code == LV_EVENT_CANCEL){
 
+        printf("in Kb\n\r");
+        
     }
 }
 
@@ -27,7 +29,6 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
     lv_obj_t *ta = lv_event_get_target(e);
 #endif
     lv_obj_t *kb = lv_event_get_user_data(e);
-    lv_group_t *g=lv_obj_get_group(kb);
     if (code == LV_EVENT_CLICKED)
     {
 #if LV_USE_ZH_KEYBOARD != 0
@@ -39,7 +40,7 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_move_foreground(kb);
         lv_obj_clear_flag(kb, LV_OBJ_FLAG_HIDDEN);
         lv_group_focus_obj(kb);
-        lv_group_set_editing(g, true);
+        lv_group_set_editing(lv_obj_get_group(kb), true);
     }
     if (code == LV_EVENT_CANCEL || code == LV_EVENT_READY)
     {
@@ -48,13 +49,13 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_zh_keyboard_set_textarea(kb, ta);
 #endif
 #if LV_USE_KEYBOARD != 0
-        // lv_keyboard_set_textarea(kb, ta);
+        lv_keyboard_set_textarea(kb, ta);
 #endif
-      
         lv_group_set_editing(lv_obj_get_group(kb), false);
         lv_obj_move_background(kb);
-        lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN); 
+        lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
         lv_group_focus_obj(ta);
+
     }
 }
 
