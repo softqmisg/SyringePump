@@ -1,1 +1,1 @@
-GEN_CSRCS += _logo_new_color_small_alpha_340x340.c
+GEN_CSRCS += batterybg_64.c

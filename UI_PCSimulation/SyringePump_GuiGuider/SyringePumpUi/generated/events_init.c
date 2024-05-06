@@ -16,23 +16,20 @@
 #endif
 
 
+#include "custom.h"
 static void MainScreen_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	switch (code) {
-	default:
-		break;
-	}
-}
-static void MainScreen_imgDroplet_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
+	case LV_EVENT_SCREEN_LOADED:
 	{
 		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
+		lv_obj_clear_flag(guider_ui.MainScreen_btnGoSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+		lv_obj_clear_flag(guider_ui.MainScreen_btnGoMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+		lv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+		lv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);
+		lv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);
 		break;
 	}
 	default:
@@ -48,6 +45,8 @@ static void MainScreen_btnGoSetting_event_handler (lv_event_t *e)
 	{
 		ui_move_animation(guider_ui.MainScreen_contSetting, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, -800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		SettingConSetGroup(&guider_ui);
+		lv_obj_add_state(guider_ui.MainScreen_imgMenuSyringe, LV_STATE_FOCUS_KEY);
 		break;
 	}
 	default:
@@ -63,6 +62,7 @@ static void MainScreen_btnGoMain_event_handler (lv_event_t *e)
 	{
 		ui_move_animation(guider_ui.MainScreen_contSetting, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		MainConSetGroup(&guider_ui);
 		break;
 	}
 	default:
@@ -72,7 +72,6 @@ static void MainScreen_btnGoMain_event_handler (lv_event_t *e)
 void events_init_MainScreen(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
-	lv_obj_add_event_cb(ui->MainScreen_imgDroplet, MainScreen_imgDroplet_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSetting, MainScreen_btnGoSetting_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMain, MainScreen_btnGoMain_event_handler, LV_EVENT_ALL, ui);
 }

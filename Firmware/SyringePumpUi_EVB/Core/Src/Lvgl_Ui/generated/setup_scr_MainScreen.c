@@ -13,7 +13,7 @@
 #include "events_init.h"
 #include "widgets_init.h"
 #include "custom.h"
-
+#include "custom.h"
 
 
 int MainScreen_digital_clock_min_value = 57;
@@ -354,7 +354,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_anim_time(ui->MainScreen_barBatteryLevel, 1000, 0);
 	lv_bar_set_mode(ui->MainScreen_barBatteryLevel, LV_BAR_MODE_NORMAL);
 	lv_bar_set_range(ui->MainScreen_barBatteryLevel, 0, 4);
-	lv_bar_set_value(ui->MainScreen_barBatteryLevel, 1, LV_ANIM_OFF);
+	lv_bar_set_value(ui->MainScreen_barBatteryLevel, 2, LV_ANIM_OFF);
 	lv_obj_set_pos(ui->MainScreen_barBatteryLevel, 751, 5);
 	lv_obj_set_size(ui->MainScreen_barBatteryLevel, 38, 64);
 
@@ -748,7 +748,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btnGoSetting_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btnGoSetting, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btnGoSetting_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btnGoSetting, 730, 247);
+	lv_obj_set_pos(ui->MainScreen_btnGoSetting, 728, 247);
 	lv_obj_set_size(ui->MainScreen_btnGoSetting, 58, 44);
 
 	//Write style for MainScreen_btnGoSetting, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -803,77 +803,83 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMain, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnGoMain, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_1
-	ui->MainScreen_img_1 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_1, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_1, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_1, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_1, 0);
-	lv_obj_set_pos(ui->MainScreen_img_1, 25, 0);
-	lv_obj_set_size(ui->MainScreen_img_1, 100, 100);
+	//Write codes MainScreen_imgMenuSyringe
+	ui->MainScreen_imgMenuSyringe = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuSyringe, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuSyringe, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuSyringe, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuSyringe, 25, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuSyringe, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuSyringe, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuSyringe, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuSyringe, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_3
-	ui->MainScreen_img_3 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_3, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_3, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_3, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_3, 0);
-	lv_obj_set_pos(ui->MainScreen_img_3, 155, 0);
-	lv_obj_set_size(ui->MainScreen_img_3, 100, 100);
+	//Write codes MainScreen_imgMenuDrug
+	ui->MainScreen_imgMenuDrug = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuDrug, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuDrug, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuDrug, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuDrug, 155, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuDrug, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuDrug, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuDrug, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuDrug, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_4
-	ui->MainScreen_img_4 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_4, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_4, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_4, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_4, 0);
-	lv_obj_set_pos(ui->MainScreen_img_4, 285, 0);
-	lv_obj_set_size(ui->MainScreen_img_4, 100, 100);
+	//Write codes MainScreen_imgMenuMode
+	ui->MainScreen_imgMenuMode = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuMode, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuMode, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuMode, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuMode, 285, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuMode, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuMode, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_4, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_4, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuMode, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuMode, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_5
-	ui->MainScreen_img_5 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_5, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_5, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_5, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_5, 0);
-	lv_obj_set_pos(ui->MainScreen_img_5, 415, 0);
-	lv_obj_set_size(ui->MainScreen_img_5, 100, 100);
+	//Write codes MainScreen_imgMenuOCC
+	ui->MainScreen_imgMenuOCC = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuOCC, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuOCC, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuOCC, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuOCC, 415, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuOCC, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuOCC, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuOCC, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_5, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_5, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuOCC, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuOCC, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_6
-	ui->MainScreen_img_6 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_6, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_6, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_6, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_6, 0);
-	lv_obj_set_pos(ui->MainScreen_img_6, 545, 0);
-	lv_obj_set_size(ui->MainScreen_img_6, 100, 100);
+	//Write codes MainScreen_imgMenuKVO
+	ui->MainScreen_imgMenuKVO = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuKVO, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuKVO, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuKVO, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuKVO, 545, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuKVO, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuKVO, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuKVO, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_6, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_6, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuKVO, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuKVO, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_7
-	ui->MainScreen_img_7 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_7, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_7, &_Syringe_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_7, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_7, 0);
-	lv_obj_set_pos(ui->MainScreen_img_7, 675, 0);
-	lv_obj_set_size(ui->MainScreen_img_7, 100, 100);
+	//Write codes MainScreen_imgMenuIntInf
+	ui->MainScreen_imgMenuIntInf = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuIntInf, &_Syringe_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuIntInf, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuIntInf, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuIntInf, 675, 0);
+	lv_obj_set_size(ui->MainScreen_imgMenuIntInf, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuIntInf, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuIntInf, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_7, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_7, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuIntInf, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuIntInf, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_label_7
 	ui->MainScreen_label_7 = lv_label_create(ui->MainScreen_contSetting);
@@ -1013,65 +1019,70 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_pad_left(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_label_13, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_2
-	ui->MainScreen_img_2 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_2, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_2, &_Nurse_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_2, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_2, 0);
-	lv_obj_set_pos(ui->MainScreen_img_2, 25, 150);
-	lv_obj_set_size(ui->MainScreen_img_2, 100, 100);
+	//Write codes MainScreen_imgMenuRhyInf
+	ui->MainScreen_imgMenuRhyInf = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuRhyInf, &_Nurse_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuRhyInf, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuRhyInf, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuRhyInf, 25, 150);
+	lv_obj_set_size(ui->MainScreen_imgMenuRhyInf, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuRhyInf, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuRhyInf, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuRhyInf, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuRhyInf, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_8
-	ui->MainScreen_img_8 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_8, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_8, &_Nurse_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_8, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_8, 0);
-	lv_obj_set_pos(ui->MainScreen_img_8, 155, 150);
-	lv_obj_set_size(ui->MainScreen_img_8, 100, 100);
+	//Write codes MainScreen_imgMenuNurseCall
+	ui->MainScreen_imgMenuNurseCall = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuNurseCall, &_Nurse_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuNurseCall, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuNurseCall, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuNurseCall, 155, 150);
+	lv_obj_set_size(ui->MainScreen_imgMenuNurseCall, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuNurseCall, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuNurseCall, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_8, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_8, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuNurseCall, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_9
-	ui->MainScreen_img_9 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_9, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_9, &_droplet_64_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_9, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_9, 0);
-	lv_obj_set_pos(ui->MainScreen_img_9, 285, 150);
-	lv_obj_set_size(ui->MainScreen_img_9, 100, 100);
+	//Write codes MainScreen_imgMenuBolus
+	ui->MainScreen_imgMenuBolus = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuBolus, &_droplet_64_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuBolus, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuBolus, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuBolus, 285, 150);
+	lv_obj_set_size(ui->MainScreen_imgMenuBolus, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuBolus, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuBolus, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_9, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_9, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuBolus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_10
-	ui->MainScreen_img_10 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_10, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_10, &_syringe1_128_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_10, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_10, 900);
-	lv_obj_set_pos(ui->MainScreen_img_10, 415, 150);
-	lv_obj_set_size(ui->MainScreen_img_10, 100, 100);
+	//Write codes MainScreen_imgMenuPurge
+	ui->MainScreen_imgMenuPurge = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuPurge, &_syringe1_128_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuPurge, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuPurge, 900);
+	lv_obj_set_pos(ui->MainScreen_imgMenuPurge, 415, 150);
+	lv_obj_set_size(ui->MainScreen_imgMenuPurge, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuPurge, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuPurge, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_10, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_10, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuPurge, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuPurge, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_img_11
-	ui->MainScreen_img_11 = lv_img_create(ui->MainScreen_contSetting);
-	lv_obj_add_flag(ui->MainScreen_img_11, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->MainScreen_img_11, &_Setting_72_alpha_100x100);
-	lv_img_set_pivot(ui->MainScreen_img_11, 50,50);
-	lv_img_set_angle(ui->MainScreen_img_11, 0);
-	lv_obj_set_pos(ui->MainScreen_img_11, 545, 150);
-	lv_obj_set_size(ui->MainScreen_img_11, 100, 100);
+	//Write codes MainScreen_imgMenuSetting
+	ui->MainScreen_imgMenuSetting = lv_img_create(ui->MainScreen_contSetting);
+	lv_img_set_src(ui->MainScreen_imgMenuSetting, &_Setting_72_100x100);
+	lv_img_set_pivot(ui->MainScreen_imgMenuSetting, 50,50);
+	lv_img_set_angle(ui->MainScreen_imgMenuSetting, 0);
+	lv_obj_set_pos(ui->MainScreen_imgMenuSetting, 545, 150);
+	lv_obj_set_size(ui->MainScreen_imgMenuSetting, 100, 100);
+	lv_obj_add_flag(ui->MainScreen_imgMenuSetting, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_flag(ui->MainScreen_imgMenuSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 
-	//Write style for MainScreen_img_11, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_img_opa(ui->MainScreen_img_11, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_imgMenuSetting, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->MainScreen_imgMenuSetting, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_label_8
 	ui->MainScreen_label_8 = lv_label_create(ui->MainScreen_contSetting);
@@ -1189,15 +1200,12 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_shadow_width(ui->MainScreen_label_17, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//The custom code of MainScreen.
-	lv_obj_clear_flag(ui->MainScreen_datetext,LV_OBJ_FLAG_CLICK_FOCUSABLE);
-lv_obj_clear_flag(ui->MainScreen_btnGoSetting,LV_OBJ_FLAG_CLICK_FOCUSABLE);
-
-lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);
+	
 lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);
-lv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);
 lv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);
 
 MainScreen_digital_clock_timer(NULL);
+MainScreenSetStyle(ui);
 
 
 	//Update current screen layout.

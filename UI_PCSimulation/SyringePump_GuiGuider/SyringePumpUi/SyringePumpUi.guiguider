@@ -244,8 +244,8 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "lv_obj_clear_flag(ui->MainScreen_datetext,LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoSetting,LV_OBJ_FLAG_CLICK_FOCUSABLE);\n//lv_obj_set_style_base_dir(ui->MainScreen_barSyringeLevel, LV_BASE_DIR_RTL, 0);\n\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\n",
-				"inc_c": "",
+				"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
 			},
@@ -271,8 +271,8 @@
 							"name": "label_17",
 							"id": "3ljblqaq",
 							"type": "label",
-							"left": 545,
-							"top": 250,
+							"left": 544,
+							"top": 249,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -748,24 +748,27 @@
 							]
 						},
 						{
-							"name": "img_11",
+							"name": "imgMenuSetting",
 							"id": "i9jyl3gw",
 							"type": "img",
-							"left": 545,
-							"top": 150,
+							"left": 544,
+							"top": 149,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -778,24 +781,27 @@
 							]
 						},
 						{
-							"name": "img_10",
+							"name": "imgMenuPurge",
 							"id": "tbwbd7fu",
 							"type": "img",
 							"left": 415,
 							"top": 150,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe1_128.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe1_128.png",
 							"rotate": 90,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -808,24 +814,27 @@
 							]
 						},
 						{
-							"name": "img_9",
+							"name": "imgMenuBolus",
 							"id": "ktiygydt",
 							"type": "img",
 							"left": 285,
 							"top": 150,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -838,24 +847,27 @@
 							]
 						},
 						{
-							"name": "img_8",
+							"name": "imgMenuNurseCall",
 							"id": "w61j93lf",
 							"type": "img",
 							"left": 155,
 							"top": 150,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -868,30 +880,33 @@
 							]
 						},
 						{
-							"name": "img_2",
+							"name": "imgMenuRhyInf",
 							"id": "bfti2c45",
 							"type": "img",
 							"left": 25,
 							"top": 150,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
 									"state": "LV_STATE_DEFAULT",
 									"disable": false,
-									"image_recolor": "#ffffff",
+									"image_recolor": "#ff6500",
 									"image_recolor_opa": 0,
 									"image_opa": 255
 								}
@@ -902,7 +917,7 @@
 							"id": "e2cqxtpy",
 							"type": "label",
 							"left": 668,
-							"top": 100,
+							"top": 110,
 							"visible": true,
 							"flag": [],
 							"width": 115,
@@ -998,7 +1013,7 @@
 							"id": "ozgtccvv",
 							"type": "label",
 							"left": 545,
-							"top": 100,
+							"top": 105,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -1094,7 +1109,7 @@
 							"id": "65gi9a20",
 							"type": "label",
 							"left": 415,
-							"top": 100,
+							"top": 105,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -1190,7 +1205,7 @@
 							"id": "ievwh5qc",
 							"type": "label",
 							"left": 285,
-							"top": 100,
+							"top": 105,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -1286,7 +1301,7 @@
 							"id": "oicm2n9m",
 							"type": "label",
 							"left": 155,
-							"top": 100,
+							"top": 105,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -1382,7 +1397,7 @@
 							"id": "0xzui0g7",
 							"type": "label",
 							"left": 25,
-							"top": 100,
+							"top": 105,
 							"visible": true,
 							"flag": [],
 							"width": 100,
@@ -1474,24 +1489,27 @@
 							]
 						},
 						{
-							"name": "img_7",
+							"name": "imgMenuIntInf",
 							"id": "guw2hdom",
 							"type": "img",
 							"left": 675,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -1504,24 +1522,27 @@
 							]
 						},
 						{
-							"name": "img_6",
+							"name": "imgMenuKVO",
 							"id": "p2lrdym5",
 							"type": "img",
 							"left": 545,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -1534,24 +1555,27 @@
 							]
 						},
 						{
-							"name": "img_5",
+							"name": "imgMenuOCC",
 							"id": "32li0a8t",
 							"type": "img",
 							"left": 415,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -1564,24 +1588,27 @@
 							]
 						},
 						{
-							"name": "img_4",
+							"name": "imgMenuMode",
 							"id": "ytk5we3m",
 							"type": "img",
 							"left": 285,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -1594,24 +1621,27 @@
 							]
 						},
 						{
-							"name": "img_3",
+							"name": "imgMenuDrug",
 							"id": "6yqoyxnr",
 							"type": "img",
 							"left": 155,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -1624,24 +1654,27 @@
 							]
 						},
 						{
-							"name": "img_1",
+							"name": "imgMenuSyringe",
 							"id": "bmoxct09",
 							"type": "img",
 							"left": 25,
-							"top": 0,
+							"top": 5,
 							"visible": true,
-							"flag": [],
+							"flag": [
+								"LV_OBJ_FLAG_CLICKABLE",
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							],
 							"width": 100,
 							"height": 100,
 							"default_style": false,
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
-							"color_format": "true-color-alpha",
+							"color_format": "true-color",
 							"style": [
 								{
 									"part": "LV_PART_MAIN",
@@ -2184,6 +2217,180 @@
 												"path_type": "linear"
 											}
 										}
+									},
+									{
+										"trigger": "clicked",
+										"dst": "null",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": true,
+												"inc_c": "#include \"custom.h\"",
+												"code_c": "MainConSetGroup(&guider_ui);",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": false,
+												"value": "LV_STATE_DEFAULT"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
 									}
 								]
 							}
@@ -2223,8 +2430,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contMain",
@@ -2243,7 +2449,7 @@
 							"name": "btnGoSetting",
 							"id": "czq4kain",
 							"type": "btn",
-							"left": 730,
+							"left": 728,
 							"top": 247,
 							"visible": true,
 							"flag": [],
@@ -2715,6 +2921,354 @@
 												"value_y": 80,
 												"delay": 0,
 												"duration": 200,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
+									},
+									{
+										"trigger": "clicked",
+										"dst": "null",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": true,
+												"inc_c": "#include \"custom.h\"",
+												"code_c": "SettingConSetGroup(&guider_ui);",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": false,
+												"value": "LV_STATE_DEFAULT"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
+									},
+									{
+										"trigger": "clicked",
+										"dst": "bmoxct09",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": false,
+												"inc_c": "",
+												"code_c": "",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": true,
+												"value": "LV_STATE_FOCUS_KEY"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
 												"repeat_count": 0,
 												"repeat_delay": 0,
 												"playback_time": 0,
@@ -4156,7 +4710,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -4173,7 +4727,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 255,
 									"radius": 10,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -4215,8 +4769,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contHeader",
@@ -4243,7 +4796,7 @@
 							"height": 64,
 							"default_style": false,
 							"animtime": 1000,
-							"bar_value": 1,
+							"bar_value": 2,
 							"bar_start_value": 30,
 							"range_s": 0,
 							"range_e": 4,
@@ -4269,7 +4822,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -4286,7 +4839,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 0,
 									"radius": 10,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -4307,7 +4860,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -4337,7 +4890,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -4367,7 +4920,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -4801,7 +5354,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -4816,185 +5369,7 @@
 									"image_opa": 255
 								}
 							],
-							"event": {
-								"clicked": [
-									{
-										"trigger": "clicked",
-										"dst": "yhwqw44s",
-										"action": {
-											"load_screen": {
-												"ische": false,
-												"duration": 200,
-												"delay": 200,
-												"scrId": "",
-												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-												"is_clean": false,
-												"is_del": true
-											},
-											"bg_color": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"grad_color": {
-												"ische": false,
-												"value": "#000000",
-												"dir": "LV_GRAD_DIR_HOR"
-											},
-											"bg_opa": {
-												"ische": false,
-												"value": 255
-											},
-											"opacity": {
-												"ische": false,
-												"value": 255
-											},
-											"bg_img_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"bg_img_recolor": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"bg_img_recolor_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"border_side": {
-												"ische": false,
-												"value": []
-											},
-											"border_width": {
-												"ische": false,
-												"value": 0
-											},
-											"border_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"border_color": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"radius": {
-												"ische": false,
-												"value": 0
-											},
-											"width": {
-												"ische": false,
-												"value": 50
-											},
-											"height": {
-												"ische": false,
-												"value": 50
-											},
-											"set_text": {
-												"ische": false,
-												"value": "default",
-												"font": 12,
-												"font_family": "montserratMedium"
-											},
-											"position": {
-												"ische": false,
-												"value_x": 0,
-												"value_y": 0
-											},
-											"isVisible": {
-												"ische": false,
-												"flag": ""
-											},
-											"customer_code": {
-												"ische": false,
-												"inc_c": "",
-												"code_c": "",
-												"inc_py": "",
-												"code_py": ""
-											},
-											"freemaster": {
-												"ische": false,
-												"variable": "",
-												"address": "",
-												"type": "",
-												"value": "",
-												"isOrigin": false
-											},
-											"add_state": {
-												"ische": false,
-												"value": "LV_STATE_DEFAULT"
-											},
-											"add_flag": {
-												"ische": false,
-												"value": []
-											},
-											"clear_flag": {
-												"ische": false,
-												"value": []
-											},
-											"move": {
-												"ische": true,
-												"value_x": 397,
-												"value_y": 100,
-												"delay": 100,
-												"duration": 1500,
-												"repeat_count": -1,
-												"repeat_delay": 200,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "ease_in"
-											},
-											"scaleSize": {
-												"ische": false,
-												"width": 0,
-												"height": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											},
-											"img_zoom": {
-												"ische": false,
-												"zoom": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											},
-											"rotate": {
-												"ische": false,
-												"rotate": 0,
-												"x": 0,
-												"y": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											}
-										}
-									}
-								]
-							},
-							"layerName": "MainScreen"
+							"event": {}
 						},
 						{
 							"name": "imgForbidden",
@@ -5010,7 +5385,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -5486,7 +5861,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -5655,19 +6030,895 @@
 								"value": []
 							},
 							"move": {
-								"ische": false,
+								"ische": true,
 								"value_x": 397,
-								"value_y": 480,
-								"delay": 200,
-								"duration": 3000,
-								"repeat_count": 2000,
+								"value_y": 100,
+								"delay": 100,
+								"duration": 1500,
+								"repeat_count": -1,
 								"repeat_delay": 200,
 								"playback_time": 0,
 								"playback_delay": 0,
 								"start_cb": "",
 								"ready_cb": "",
 								"deleted_cb": "",
-								"path_type": "ease_out"
+								"path_type": "ease_in"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "czq4kain",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": false,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": "hide"
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": true,
+								"value": [
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								]
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "v4q80qkh",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": false,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": "hide"
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": true,
+								"value": [
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								]
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "mznnsdaw",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": false,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": ""
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": true,
+								"value": [
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								]
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "ecbe62q3",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": true,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": ""
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": false,
+								"value": []
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "09oocgw0",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": true,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": ""
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": false,
+								"value": []
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
 							},
 							"scaleSize": {
 								"ische": false,
@@ -5765,8 +7016,8 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "lv_obj_clear_flag(ui->MainScreen_datetext,LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoSetting,LV_OBJ_FLAG_CLICK_FOCUSABLE);\n//lv_obj_set_style_base_dir(ui->MainScreen_barSyringeLevel, LV_BASE_DIR_RTL, 0);\n\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\n",
-					"inc_c": "",
+					"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
 				},
@@ -5775,7 +7026,79 @@
 				"visible": true,
 				"flag": [],
 				"event": {
-					"screen_loaded": []
+					"screen_loaded": [
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_imgDroplet",
+							"dst_type": "img",
+							"src_screen": "MainScreen",
+							"action": "move",
+							"value_x": 397,
+							"value_y": 100,
+							"delay": 100,
+							"duration": 1500,
+							"repeat_count": -1,
+							"repeat_delay": 200,
+							"playback_time": 0,
+							"playback_delay": 0,
+							"start_cb": "",
+							"ready_cb": "",
+							"deleted_cb": "",
+							"path_type": "ease_in"
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_btnGoSetting",
+							"dst_type": "btn",
+							"src_screen": "MainScreen",
+							"action": "clear_flag",
+							"value": [
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							]
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_btnGoMain",
+							"dst_type": "btn",
+							"src_screen": "MainScreen",
+							"action": "clear_flag",
+							"value": [
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							]
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_datetext",
+							"dst_type": "datetext",
+							"src_screen": "MainScreen",
+							"action": "clear_flag",
+							"value": [
+								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+							]
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_barOcclusionLevel",
+							"dst_type": "bar",
+							"src_screen": "MainScreen",
+							"action": "radius",
+							"value": 0
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_barBatteryLevel",
+							"dst_type": "bar",
+							"src_screen": "MainScreen",
+							"action": "radius",
+							"value": 0
+						}
+					]
 				},
 				"style": [
 					{
@@ -5832,7 +7155,7 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6338,7 +7661,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6372,32 +7695,8 @@
 									32
 								],
 								"default_style": false,
-								"event": {
-									"clicked": [
-										{
-											"src": "MainScreen_imgDroplet",
-											"trigger": "clicked",
-											"dst": "MainScreen_imgDroplet",
-											"dst_type": "img",
-											"src_type": "img",
-											"src_screen": "MainScreen",
-											"action": "move",
-											"value_x": 397,
-											"value_y": 100,
-											"delay": 100,
-											"duration": 1500,
-											"repeat_count": -1,
-											"repeat_delay": 200,
-											"playback_time": 0,
-											"playback_delay": 0,
-											"start_cb": "",
-											"ready_cb": "",
-											"deleted_cb": "",
-											"path_type": "ease_in"
-										}
-									]
-								},
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
+								"event": {},
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6855,7 +8154,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6889,7 +8188,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6923,7 +8222,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -6967,7 +8266,7 @@
 								"animtime": 1000,
 								"animValue": [
 									{
-										"bar_value": 1,
+										"bar_value": 2,
 										"anim": "LV_ANIM_OFF"
 									}
 								],
@@ -6990,7 +8289,7 @@
 										"shadow_spread": 0,
 										"shadow_ofs_x": 0,
 										"shadow_ofs_y": 0,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -7007,7 +8306,7 @@
 										"bg_grad_stop": 255,
 										"bg_opa": 0,
 										"radius": 10,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -7116,7 +8415,7 @@
 										"shadow_spread": 0,
 										"shadow_ofs_x": 0,
 										"shadow_ofs_y": 0,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -7133,7 +8432,7 @@
 										"bg_grad_stop": 255,
 										"bg_opa": 255,
 										"radius": 10,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -8547,7 +9846,7 @@
 								"visible": true,
 								"flag": [],
 								"pos": [
-									730,
+									728,
 									247
 								],
 								"size": [
@@ -8598,6 +9897,29 @@
 											"ready_cb": "",
 											"deleted_cb": "",
 											"path_type": "linear"
+										},
+										{
+											"src": "MainScreen_btnGoSetting",
+											"trigger": "clicked",
+											"dst": "null",
+											"dst_type": "",
+											"src_type": "btn",
+											"src_screen": "MainScreen",
+											"action": "customer_code",
+											"inc_c": "#include \"custom.h\"",
+											"code_c": "SettingConSetGroup(&guider_ui);",
+											"inc_py": "",
+											"code_py": ""
+										},
+										{
+											"src": "MainScreen_btnGoSetting",
+											"trigger": "clicked",
+											"dst": "MainScreen_imgMenuSyringe",
+											"dst_type": "img",
+											"src_type": "btn",
+											"src_screen": "MainScreen",
+											"action": "add_state",
+											"value": "LV_STATE_FOCUS_KEY"
 										}
 									]
 								},
@@ -8886,6 +10208,19 @@
 											"ready_cb": "",
 											"deleted_cb": "",
 											"path_type": "linear"
+										},
+										{
+											"src": "MainScreen_btnGoMain",
+											"trigger": "clicked",
+											"dst": "null",
+											"dst_type": "",
+											"src_type": "btn",
+											"src_screen": "MainScreen",
+											"action": "customer_code",
+											"inc_c": "#include \"custom.h\"",
+											"code_c": "MainConSetGroup(&guider_ui);",
+											"inc_py": "",
+											"code_py": ""
 										}
 									]
 								},
@@ -9063,22 +10398,25 @@
 								"toggle": false
 							},
 							{
-								"name": "MainScreen_img_1",
+								"name": "MainScreen_imgMenuSyringe",
 								"id": "bmoxct09",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									25,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9097,22 +10435,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_3",
+								"name": "MainScreen_imgMenuDrug",
 								"id": "6yqoyxnr",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									155,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9131,22 +10472,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_4",
+								"name": "MainScreen_imgMenuMode",
 								"id": "ytk5we3m",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									285,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9165,22 +10509,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_5",
+								"name": "MainScreen_imgMenuOCC",
 								"id": "32li0a8t",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									415,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9199,22 +10546,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_6",
+								"name": "MainScreen_imgMenuKVO",
 								"id": "p2lrdym5",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									545,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9233,22 +10583,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_7",
+								"name": "MainScreen_imgMenuIntInf",
 								"id": "guw2hdom",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									675,
-									0
+									5
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9274,7 +10627,7 @@
 								"flag": [],
 								"pos": [
 									25,
-									100
+									105
 								],
 								"size": [
 									100,
@@ -9374,7 +10727,7 @@
 								"flag": [],
 								"pos": [
 									155,
-									100
+									105
 								],
 								"size": [
 									100,
@@ -9474,7 +10827,7 @@
 								"flag": [],
 								"pos": [
 									285,
-									100
+									105
 								],
 								"size": [
 									100,
@@ -9574,7 +10927,7 @@
 								"flag": [],
 								"pos": [
 									415,
-									100
+									105
 								],
 								"size": [
 									100,
@@ -9674,7 +11027,7 @@
 								"flag": [],
 								"pos": [
 									545,
-									100
+									105
 								],
 								"size": [
 									100,
@@ -9774,7 +11127,7 @@
 								"flag": [],
 								"pos": [
 									668,
-									100
+									110
 								],
 								"size": [
 									115,
@@ -9867,11 +11220,14 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_2",
+								"name": "MainScreen_imgMenuRhyInf",
 								"id": "bfti2c45",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									25,
 									150
@@ -9881,8 +11237,8 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9894,18 +11250,21 @@
 										"part": "LV_PART_MAIN",
 										"state": "LV_STATE_DEFAULT",
 										"disable": false,
-										"image_recolor": "#ffffff",
+										"image_recolor": "#ff6500",
 										"image_recolor_opa": 0,
 										"image_opa": 255
 									}
 								]
 							},
 							{
-								"name": "MainScreen_img_8",
+								"name": "MainScreen_imgMenuNurseCall",
 								"id": "w61j93lf",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									155,
 									150
@@ -9915,8 +11274,8 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9935,11 +11294,14 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_9",
+								"name": "MainScreen_imgMenuBolus",
 								"id": "ktiygydt",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									285,
 									150
@@ -9949,8 +11311,8 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_64.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_64.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -9969,11 +11331,14 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_10",
+								"name": "MainScreen_imgMenuPurge",
 								"id": "tbwbd7fu",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
 									415,
 									150
@@ -9983,8 +11348,8 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe1_128.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe1_128.png",
+								"color_format": "true-color",
 								"rotate": 900,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -10003,22 +11368,25 @@
 								]
 							},
 							{
-								"name": "MainScreen_img_11",
+								"name": "MainScreen_imgMenuSetting",
 								"id": "i9jyl3gw",
 								"type": "img",
 								"visible": true,
-								"flag": [],
+								"flag": [
+									"LV_OBJ_FLAG_CLICKABLE",
+									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
+								],
 								"pos": [
-									545,
-									150
+									544,
+									149
 								],
 								"size": [
 									100,
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_72.png",
-								"color_format": "true-color-alpha",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_72.png",
+								"color_format": "true-color",
 								"rotate": 0,
 								"pivot": "50,50",
 								"use_fs": false,
@@ -10443,8 +11811,8 @@
 								"visible": true,
 								"flag": [],
 								"pos": [
-									545,
-									250
+									544,
+									249
 								],
 								"size": [
 									100,
