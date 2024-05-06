@@ -1191,6 +1191,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	//The custom code of MainScreen.
 	lv_obj_clear_flag(ui->MainScreen_datetext,LV_OBJ_FLAG_CLICK_FOCUSABLE);
 lv_obj_clear_flag(ui->MainScreen_btnGoSetting,LV_OBJ_FLAG_CLICK_FOCUSABLE);
+//lv_obj_set_style_base_dir(ui->MainScreen_barSyringeLevel, LV_BASE_DIR_RTL, 0);
 
 lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_MAIN|LV_STATE_DEFAULT);
 lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);

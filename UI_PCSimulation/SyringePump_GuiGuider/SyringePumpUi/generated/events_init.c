@@ -16,6 +16,29 @@
 #endif
 
 
+static void MainScreen_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	default:
+		break;
+	}
+}
+static void MainScreen_imgDroplet_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
 static void MainScreen_btnGoSetting_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -48,6 +71,8 @@ static void MainScreen_btnGoMain_event_handler (lv_event_t *e)
 }
 void events_init_MainScreen(lv_ui *ui)
 {
+	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_imgDroplet, MainScreen_imgDroplet_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSetting, MainScreen_btnGoSetting_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMain, MainScreen_btnGoMain_event_handler, LV_EVENT_ALL, ui);
 }
