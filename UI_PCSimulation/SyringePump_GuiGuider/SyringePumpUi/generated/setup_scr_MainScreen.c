@@ -1456,6 +1456,48 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_font(ui->MainScreen_btnMenuSetting, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_text_opa(ui->MainScreen_btnMenuSetting, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
 
+	//Write codes MainScreen_contSyringe
+	ui->MainScreen_contSyringe = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contSyringe, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contSyringe, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contSyringe, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contSyringe, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contSyringe, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contSyringe, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contSyringe, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contSyringe, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contSyringe, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contSyringe, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contSyringe, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoSettingSyringe
+	ui->MainScreen_btnGoSettingSyringe = lv_btn_create(ui->MainScreen_contSyringe);
+	ui->MainScreen_btnGoSettingSyringe_label = lv_label_create(ui->MainScreen_btnGoSettingSyringe);
+	lv_label_set_text(ui->MainScreen_btnGoSettingSyringe_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoSettingSyringe_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoSettingSyringe_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoSettingSyringe, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoSettingSyringe_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoSettingSyringe, 732, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoSettingSyringe, 58, 44);
+
+	//Write style for MainScreen_btnGoSettingSyringe, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoSettingSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoSettingSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoSettingSyringe, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoSettingSyringe, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoSettingSyringe, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoSettingSyringe, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoSettingSyringe, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoSettingSyringe, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//The custom code of MainScreen.
 	
 lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);

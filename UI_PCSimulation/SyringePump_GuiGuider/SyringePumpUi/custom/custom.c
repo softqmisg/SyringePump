@@ -128,3 +128,12 @@ void MainConSetGroup(lv_ui *ui)
             lv_group_del(g);
 	}
 }
+void SyringeConSetGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+}

@@ -93,6 +93,9 @@ typedef struct
 	lv_obj_t *MainScreen_btnMenuPurge_label;
 	lv_obj_t *MainScreen_btnMenuSetting;
 	lv_obj_t *MainScreen_btnMenuSetting_label;
+	lv_obj_t *MainScreen_contSyringe;
+	lv_obj_t *MainScreen_btnGoSettingSyringe;
+	lv_obj_t *MainScreen_btnGoSettingSyringe_label;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
