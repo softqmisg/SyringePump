@@ -46,7 +46,6 @@ static void MainScreen_btnGoSetting_event_handler (lv_event_t *e)
 		ui_move_animation(guider_ui.MainScreen_contSetting, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, -800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		SettingConSetGroup(&guider_ui);
-		lv_obj_add_state(guider_ui.MainScreen_imgMenuSyringe, LV_STATE_FOCUS_KEY);
 		break;
 	}
 	default:
