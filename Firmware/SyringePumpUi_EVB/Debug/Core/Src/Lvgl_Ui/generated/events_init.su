@@ -1,4 +1,7 @@
-../Core/Src/Lvgl_Ui/generated/events_init.c:19:13:MainScreen_btnGoSetting_event_handler	64	static
-../Core/Src/Lvgl_Ui/generated/events_init.c:34:13:MainScreen_btnGoMain_event_handler	64	static
-../Core/Src/Lvgl_Ui/generated/events_init.c:49:6:events_init_MainScreen	16	static
-../Core/Src/Lvgl_Ui/generated/events_init.c:55:6:events_init	16	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:20:13:MainScreen_event_handler	64	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:39:13:MainScreen_btnGoSettingMain_event_handler	64	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:56:13:MainScreen_btnGoMainSetting_event_handler	64	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:71:13:MainScreen_btnMenuSyringe_event_handler	64	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:87:13:MainScreen_btnGoSettingSyringe_event_handler	64	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:105:6:events_init_MainScreen	16	static
+../Core/Src/Lvgl_Ui/generated/events_init.c:114:6:events_init	16	static

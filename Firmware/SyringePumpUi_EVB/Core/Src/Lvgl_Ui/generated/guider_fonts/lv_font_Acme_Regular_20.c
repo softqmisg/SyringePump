@@ -9,7 +9,7 @@
 /*******************************************************************************
  * Size: 20 px
  * Bpp: 4
- * Opts: --user-data-dir=C:\Users\Administrator\AppData\Roaming\gui-guider --app-path=C:\NXP\GUI-Guider-1.7.2-GA\resources\app.asar --no-sandbox --no-zygote --lang=en-US --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1714297781246616 --launch-time-ticks=638225976856 --mojo-platform-channel-handle=2960 --field-trial-handle=1820,i,15778435848411585081,8315954571724377048,131072 --disable-features=SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:1
+ * Opts: --user-data-dir=C:\Users\Mofidi\AppData\Roaming\gui-guider --app-path=C:\NXP\GUI-Guider-1.7.2-GA\resources\app.asar --no-sandbox --no-zygote --lang=en-US --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1714208340317960 --launch-time-ticks=950640329239 --mojo-platform-channel-handle=2976 --field-trial-handle=1708,i,3785055476781417339,14459813800778916288,131072 --disable-features=SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:1
  ******************************************************************************/
 
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
@@ -29,7 +29,7 @@
  *----------------*/
 
 /*Store the image of the glyphs*/
-static LV_ATTRIBUTE_LARGE_CONST const uint8_t glyph_bitmap[] LV_ATTRIBUTE_FONT_QSPI= {
+static LV_ATTRIBUTE_LARGE_CONST const uint8_t glyph_bitmap[]LV_ATTRIBUTE_FONT_QSPI = {
     /* U+0020 " " */
 
     /* U+0021 "!" */

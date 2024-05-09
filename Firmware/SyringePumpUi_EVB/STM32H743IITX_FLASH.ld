@@ -182,7 +182,7 @@ SECTIONS
   	. = ALIGN(0x4);
   } >QUADSPI
   
-  .FontFlashSection :
+  .FontFlashSection (NOLOAD):
   {
   	*(.FontFlashSection FontFlashSection.*)
   	*(.gnu.linkonce.r.*)

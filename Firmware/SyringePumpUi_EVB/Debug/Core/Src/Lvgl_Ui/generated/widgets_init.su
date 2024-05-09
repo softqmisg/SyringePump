@@ -2,7 +2,7 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/core
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/lv_api_map.h:55:20:lv_obj_move_foreground	24	static
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/lv_api_map.h:67:20:lv_obj_move_background	16	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:16:30:kb_event_cb	24	static
-../Core/Src/Lvgl_Ui/generated/widgets_init.c:24:30:ta_event_cb	24	static
+../Core/Src/Lvgl_Ui/generated/widgets_init.c:24:30:ta_event_cb	32	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:84:6:MainScreen_digital_clock_timer	32	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:94:6:MainScreen_datetext_event_handler	32	static
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c:106:6:MainScreen_datetext_init_calendar	48	static

@@ -248,7 +248,9 @@ Core/Src/Lvgl_Ui/generated/events_init.o: \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/dclock/../../../misc/lv_txt.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/dclock/../../../draw/lv_draw.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/lv_video.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/custom.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/generated/gui_guider.h
 ../Core/Src/Lvgl_Ui/generated/events_init.h:
 ../Core/Src/Lvgl_Ui/generated/gui_guider.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/lvgl.h:
@@ -498,3 +500,5 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extr
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/dclock/../../../draw/lv_draw.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/lv_video.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/custom.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/generated/gui_guider.h:

@@ -29,7 +29,7 @@
  *----------------*/
 
 /*Store the image of the glyphs*/
-static LV_ATTRIBUTE_LARGE_CONST const uint8_t glyph_bitmap[] LV_ATTRIBUTE_FONT_QSPI = {
+static LV_ATTRIBUTE_LARGE_CONST const uint8_t glyph_bitmap[] LV_ATTRIBUTE_FONT_QSPI= {
     /* U+0020 " " */
 
     /* U+0021 "!" */

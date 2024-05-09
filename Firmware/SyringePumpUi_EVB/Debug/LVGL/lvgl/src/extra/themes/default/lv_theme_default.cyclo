@@ -12,9 +12,9 @@
 ../LVGL/lvgl/src/extra/themes/default/../../../../src/core/lv_disp.h:255:26:lv_disp_dpx	3
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:200:19:dark_color_filter_cb	1
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:206:19:grey_filter_cb	2
-../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:213:13:style_init	88
+../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:213:13:style_init	93
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:691:14:lv_theme_default_init	6
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:726:14:lv_theme_default_get	2
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:735:6:lv_theme_default_is_inited	1
-../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:741:13:theme_apply	58
+../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:741:13:theme_apply	60
 ../LVGL/lvgl/src/extra/themes/default/lv_theme_default.c:1255:13:style_init_reset	2

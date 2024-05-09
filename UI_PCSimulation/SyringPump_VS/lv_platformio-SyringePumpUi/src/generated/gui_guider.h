@@ -21,15 +21,6 @@ typedef struct
 	lv_obj_t *MainScreen;
 	bool MainScreen_del;
 	lv_obj_t *g_kb_MainScreen;
-	lv_obj_t *MainScreen_contFooter;
-	lv_obj_t *MainScreen_imgSyringe;
-	lv_obj_t *MainScreen_labelDrug;
-	lv_obj_t *MainScreen_labelSyringe;
-	lv_obj_t *MainScreen_labelDiameter;
-	lv_obj_t *MainScreen_barSyringeLevel;
-	lv_obj_t *MainScreen_labelSyringeInfo;
-	lv_obj_t *MainScreen_imgForbidden;
-	lv_obj_t *MainScreen_imgDroplet;
 	lv_obj_t *MainScreen_contHeader;
 	lv_obj_t *MainScreen_digital_clock;
 	lv_obj_t *MainScreen_datetext;
@@ -39,6 +30,15 @@ typedef struct
 	lv_obj_t *MainScreen_imgSerialPort;
 	lv_obj_t *MainScreen_imgUsbPort;
 	lv_obj_t *MainScreen_barBatteryLevel;
+	lv_obj_t *MainScreen_contFooter;
+	lv_obj_t *MainScreen_imgSyringe;
+	lv_obj_t *MainScreen_labelDrug;
+	lv_obj_t *MainScreen_labelSyringe;
+	lv_obj_t *MainScreen_labelDiameter;
+	lv_obj_t *MainScreen_barSyringeLevel;
+	lv_obj_t *MainScreen_labelSyringeInfo;
+	lv_obj_t *MainScreen_imgForbidden;
+	lv_obj_t *MainScreen_imgDroplet;
 	lv_obj_t *MainScreen_contMain;
 	lv_obj_t *MainScreen_barOcclusionLevel;
 	lv_obj_t *MainScreen_label_1;
@@ -55,11 +55,11 @@ typedef struct
 	lv_obj_t *MainScreen_labelRemVolume;
 	lv_obj_t *MainScreen_labelPatientKg;
 	lv_obj_t *MainScreen_labelTotalVolume;
-	lv_obj_t *MainScreen_btnGoSetting;
-	lv_obj_t *MainScreen_btnGoSetting_label;
+	lv_obj_t *MainScreen_btnGoSettingMain;
+	lv_obj_t *MainScreen_btnGoSettingMain_label;
 	lv_obj_t *MainScreen_contSetting;
-	lv_obj_t *MainScreen_btnGoMain;
-	lv_obj_t *MainScreen_btnGoMain_label;
+	lv_obj_t *MainScreen_btnGoMainSetting;
+	lv_obj_t *MainScreen_btnGoMainSetting_label;
 	lv_obj_t *MainScreen_label_7;
 	lv_obj_t *MainScreen_label_9;
 	lv_obj_t *MainScreen_label_10;
@@ -130,9 +130,6 @@ extern lv_ui guider_ui;
 
 
 void setup_scr_MainScreen(lv_ui *ui);
-LV_IMG_DECLARE(_syringe2_512_alpha_400x100);
-LV_IMG_DECLARE(_forbidden_64_alpha_64x64);
-LV_IMG_DECLARE(_droplet_32_alpha_32x32);
 LV_IMG_DECLARE(_network_64_alpha_64x64);
 LV_IMG_DECLARE(_Serial_64_alpha_64x64);
 LV_IMG_DECLARE(_usb_64_alpha_64x64);
@@ -140,6 +137,9 @@ LV_IMG_DECLARE(_usb_64_alpha_64x64);
 LV_IMG_DECLARE(_batterybg_64_38x64);
 
 LV_IMG_DECLARE(_battery_64_38x64);
+LV_IMG_DECLARE(_syringe2_512_alpha_400x100);
+LV_IMG_DECLARE(_forbidden_64_alpha_64x64);
+LV_IMG_DECLARE(_droplet_32_alpha_32x32);
 
 LV_IMG_DECLARE(_ledbar_empty_25x132);
 
@@ -189,12 +189,12 @@ LV_IMG_DECLARE(_Setting_100_100x100);
 
 LV_IMG_DECLARE(_Setting_100_100x100);
 
-LV_FONT_DECLARE(lv_font_Amiko_Regular_21)
-LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_arial_17)
 LV_FONT_DECLARE(lv_font_montserratMedium_19)
+LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_18)
+LV_FONT_DECLARE(lv_font_Amiko_Regular_21)
+LV_FONT_DECLARE(lv_font_arial_17)
 LV_FONT_DECLARE(lv_font_Acme_Regular_30)
 LV_FONT_DECLARE(lv_font_arial_33)
 LV_FONT_DECLARE(lv_font_arial_35)

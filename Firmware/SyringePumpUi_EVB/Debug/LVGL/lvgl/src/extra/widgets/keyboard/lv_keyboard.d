@@ -85,7 +85,14 @@ LVGL/lvgl/src/extra/widgets/keyboard/lv_keyboard.o: \
  ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/lv_obj_class.h \
  ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/lv_event.h \
  ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/lv_group.h \
- ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/../misc/lv_ll.h
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/../misc/lv_ll.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/lv_textarea.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/lv_label.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../font/lv_font.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../font/lv_symbol_def.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../misc/lv_txt.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../draw/lv_draw.h \
+ ../LVGL/lvgl/src/extra/widgets/keyboard/../../../misc/lv_assert.h
 ../LVGL/lvgl/src/extra/widgets/keyboard/lv_keyboard.h:
 ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/lv_btnmatrix.h:
 ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../lv_conf_internal.h:
@@ -172,3 +179,10 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/c
 ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/lv_event.h:
 ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/lv_group.h:
 ../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../core/../misc/lv_ll.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/lv_textarea.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/lv_label.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../font/lv_font.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../font/lv_symbol_def.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../misc/lv_txt.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../widgets/../draw/lv_draw.h:
+../LVGL/lvgl/src/extra/widgets/keyboard/../../../misc/lv_assert.h:

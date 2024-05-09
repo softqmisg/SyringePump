@@ -41,10 +41,22 @@ static int8_t button_get_pressed_id(void)
 
     /*Check to buttons see which is being pressed (assume there are 2 buttons)*/
     	if(HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin)==GPIO_PIN_RESET)
-    		return 0;
+    	{
+    		HAL_Delay(50);
+        	if(HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin)==GPIO_PIN_RESET)
+        	{
+        		return 0;
+        	}
+    	}
     	if(HAL_GPIO_ReadPin(KEY2_GPIO_Port, KEY2_Pin)==GPIO_PIN_RESET)
-    		return 1;
-    /*No button pressed*/
+    	{
+    		HAL_Delay(50);
+        	if(HAL_GPIO_ReadPin(KEY2_GPIO_Port, KEY2_Pin)==GPIO_PIN_RESET)
+        	{
+        		return 1;
+        	}
+    	}
+    	/*No button pressed*/
     return -1;
 }
 static void button_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)

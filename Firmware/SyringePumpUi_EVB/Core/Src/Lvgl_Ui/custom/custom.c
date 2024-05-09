@@ -46,23 +46,26 @@ void MainScreenSetStyle(lv_ui *ui)
 	// lv_style_set_bg_img_src(&style_indic,&indicator_ver);
 	// lv_obj_add_style(ui->MainScreen_slider_2,&style_indic,LV_PART_INDICATOR);
 
-	static lv_style_t MainScreenStyleFocus;
-	lv_style_init(&MainScreenStyleFocus);
-	lv_style_set_outline_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_RED, 4));
-	lv_style_set_outline_width(&MainScreenStyleFocus,3);
-	lv_style_set_outline_pad(&MainScreenStyleFocus,1);
+	// static lv_style_t MainScreenStyleFocus;
+	// lv_style_init(&MainScreenStyleFocus);
+	// lv_style_set_outline_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_RED, 4));
+	// lv_style_set_outline_width(&MainScreenStyleFocus,3);
+	// lv_style_set_outline_pad(&MainScreenStyleFocus,1);
+	// // lv_style_set_border_width(&MainScreenStyleFocus,50);
+ //  	lv_style_set_border_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
+ //    lv_style_set_bg_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
 
-	lv_obj_add_style(ui->MainScreen_imgMenuSyringe,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-  	lv_obj_add_style(ui->MainScreen_imgMenuDrug,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-	lv_obj_add_style(ui->MainScreen_imgMenuMode,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-	lv_obj_add_style(ui->MainScreen_imgMenuOCC,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-	lv_obj_add_style(ui->MainScreen_imgMenuKVO,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-	lv_obj_add_style(ui->MainScreen_imgMenuIntInf,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-    lv_obj_add_style(ui->MainScreen_imgMenuRhyInf,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-    lv_obj_add_style(ui->MainScreen_imgMenuNurseCall,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-    lv_obj_add_style(ui->MainScreen_imgMenuBolus,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-    lv_obj_add_style(ui->MainScreen_imgMenuPurge,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-    lv_obj_add_style(ui->MainScreen_imgMenuSetting,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_imgMenuSyringe,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //  	lv_obj_add_style(ui->MainScreen_imgMenuDrug,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_imgMenuMode,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_imgMenuOCC,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_imgMenuKVO,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_imgMenuIntInf,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //    lv_obj_add_style(ui->MainScreen_imgMenuRhyInf,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //    lv_obj_add_style(ui->MainScreen_imgMenuNurseCall,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //    lv_obj_add_style(ui->MainScreen_imgMenuBolus,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //    lv_obj_add_style(ui->MainScreen_imgMenuPurge,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+ //    lv_obj_add_style(ui->MainScreen_imgMenuSetting,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
   
 
 
@@ -99,19 +102,20 @@ void SettingConSetGroup(lv_ui *ui)
         {
             lv_indev_set_group(cur_dev,g);
             //lv_group_add_obj(g,ui->MainScreen_imgDroplet);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuSyringe);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuDrug);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuMode);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuOCC);			
-            lv_group_add_obj(g,ui->MainScreen_imgMenuKVO);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuIntInf);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuRhyInf);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuNurseCall);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuBolus);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuPurge);
-            lv_group_add_obj(g,ui->MainScreen_imgMenuSetting);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuSyringe);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuDrug);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuMode);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuOCC);			
+            lv_group_add_obj(g,ui->MainScreen_btnMenuKVO);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuIntInf);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuRhyInf);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuNurseCall);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuBolus);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuPurge);
+            lv_group_add_obj(g,ui->MainScreen_btnMenuSetting);
+          
             // lv_group_add_obj(g,ui->g_kb_MainScreen);
-			
+			lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);
         }
     }
 }
@@ -123,6 +127,26 @@ void MainConSetGroup(lv_ui *ui)
 	{
             lv_group_del(g);
 	}
-	g= lv_group_create();
-	lv_group_set_default(g);
+}
+void SyringeConSetGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+}
+void animconMain_ready_callback(lv_anim_t * a)
+{
+  MainConSetGroup(&guider_ui);
+}
+void animconSetting_ready_callback(lv_anim_t * a)
+{
+		SettingConSetGroup(&guider_ui);
+ 
+}
+void animconSyringe_ready_callback(lv_anim_t * a)
+{
+  SyringeConSetGroup(&guider_ui);
 }

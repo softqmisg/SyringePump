@@ -137,3 +137,16 @@ void SyringeConSetGroup(lv_ui *ui)
             lv_group_del(g);
 	}
 }
+void animconMain_ready_callback(lv_anim_t * a)
+{
+  MainConSetGroup(&guider_ui);
+}
+void animconSetting_ready_callback(lv_anim_t * a)
+{
+		SettingConSetGroup(&guider_ui);
+ 
+}
+void animconSyringe_ready_callback(lv_anim_t * a)
+{
+  SyringeConSetGroup(&guider_ui);
+}

@@ -2,5 +2,5 @@
 ../Core/Src/Lvgl_Ui/myInputDevice.c:18:6:encoder_init	8	static
 ../Core/Src/Lvgl_Ui/myInputDevice.c:23:6:encoder_read	24	static
 ../Core/Src/Lvgl_Ui/myInputDevice.c:38:15:button_get_pressed_id	8	static
-../Core/Src/Lvgl_Ui/myInputDevice.c:50:13:button_read	24	static
-../Core/Src/Lvgl_Ui/myInputDevice.c:70:6:myIndrv	8	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:62:13:button_read	24	static
+../Core/Src/Lvgl_Ui/myInputDevice.c:82:6:myIndrv	8	static
