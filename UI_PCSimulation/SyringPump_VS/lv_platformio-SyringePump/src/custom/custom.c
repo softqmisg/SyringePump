@@ -59,6 +59,7 @@ void MainScreenSetStyle(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
 
+
 	static lv_style_t MainScreenStyleEdit;
 	lv_style_init(&MainScreenStyleEdit);
 	lv_style_set_outline_color(&MainScreenStyleEdit,lv_palette_lighten(LV_PALETTE_YELLOW, 5));
@@ -70,6 +71,8 @@ void MainScreenSetStyle(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_slider_2,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleEdit,LV_STATE_PRESSED );	
+
+
 }
 void MainScreengroup(lv_ui *ui)
 {
@@ -99,6 +102,22 @@ void MainScreengroup(lv_ui *ui)
             lv_group_add_obj(g,ui->MainScreen_slider_2);			
             lv_group_add_obj(g,ui->MainScreen_spinbox_1);
             lv_group_add_obj(g,ui->MainScreen_btn_1);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item0);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item1);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item2);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item3);									
+			lv_group_add_obj(g,ui->MainScreen_list_1_item4);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item5);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item6);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item7);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item8);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item9);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item10);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item11);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item12);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item13);
+			lv_group_add_obj(g,ui->MainScreen_list_1_item14);
+
             lv_group_add_obj(g,ui->g_kb_MainScreen);
 			
         }

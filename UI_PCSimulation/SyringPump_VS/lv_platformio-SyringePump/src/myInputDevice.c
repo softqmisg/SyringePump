@@ -10,7 +10,7 @@
  */
 static lv_indev_t *myencoder;
 static lv_indev_t *mybuttons;
-#define HIGHBYTE    0//224
+#define HIGHBYTE    224//224
 static bool mybtn_is_pressed(uint8_t id)
 {
     uint16_t last_key;
