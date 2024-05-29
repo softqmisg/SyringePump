@@ -503,14 +503,14 @@
 					"name": "list_1",
 					"id": "q2epyptz",
 					"type": "list",
-					"left": 75,
-					"top": 124,
+					"left": 180,
+					"top": 71,
 					"visible": true,
 					"flag": [],
 					"width": 133,
 					"height": 181,
 					"default_style": false,
-					"scrollbar_mode": "AUTO",
+					"scrollbar_mode": "ON",
 					"items": [
 						{
 							"type": "symbol",
@@ -759,16 +759,15 @@
 							"font": 12,
 							"font_family": "montserratMedium",
 							"radius": 3,
-							"bg_opa": 255,
-							"text_opa": 255
+							"bg_opa": 255
 						},
 						{
 							"part": "LV_BTN_PART_MAIN",
 							"state": "LV_STATE_PRESSED",
 							"desc": "Button",
 							"object": "extra_btns",
-							"disable": true,
-							"bg_color": "#ffffff",
+							"disable": false,
+							"bg_color": "#f00000",
 							"bg_grad_color": "#ffffff",
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
@@ -795,8 +794,8 @@
 							"state": "LV_STATE_FOCUSED",
 							"desc": "Button",
 							"object": "extra_btns",
-							"disable": true,
-							"bg_color": "#ffffff",
+							"disable": false,
+							"bg_color": "#3d00ff",
 							"bg_grad_color": "#ffffff",
 							"bg_grad_dir": "LV_GRAD_DIR_NONE",
 							"bg_dither_mode": "LV_DITHER_NONE",
@@ -3838,11 +3837,11 @@
 						"id": "q2epyptz",
 						"type": "list",
 						"visible": true,
-						"scrollbar_mode": "AUTO",
+						"scrollbar_mode": "ON",
 						"flag": [],
 						"pos": [
-							75,
-							124
+							180,
+							71
 						],
 						"size": [
 							133,
@@ -3851,7 +3850,7 @@
 						"default_style": false,
 						"items": [
 							{
-								"type": "symbol",
+								"type": "text",
 								"img_path": "",
 								"img_width": 20,
 								"img_height": 20,
@@ -4187,16 +4186,15 @@
 								"font": 12,
 								"font_family": "montserratMedium",
 								"radius": 3,
-								"bg_opa": 255,
-								"text_opa": 255
+								"bg_opa": 255
 							},
 							{
 								"part": "LV_PART_MAIN",
 								"state": "LV_STATE_PRESSED",
 								"desc": "Button",
 								"object": "extra_btns",
-								"disable": true,
-								"bg_color": "#ffffff",
+								"disable": false,
+								"bg_color": "#f00000",
 								"bg_grad_color": "#ffffff",
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",
@@ -4223,8 +4221,8 @@
 								"state": "LV_STATE_FOCUSED",
 								"desc": "Button",
 								"object": "extra_btns",
-								"disable": true,
-								"bg_color": "#ffffff",
+								"disable": false,
+								"bg_color": "#3d00ff",
 								"bg_grad_color": "#ffffff",
 								"bg_grad_dir": "LV_GRAD_DIR_NONE",
 								"bg_dither_mode": "LV_DITHER_NONE",

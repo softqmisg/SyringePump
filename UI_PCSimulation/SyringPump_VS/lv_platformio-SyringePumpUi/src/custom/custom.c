@@ -30,7 +30,7 @@
 /**********************
  *  STATIC VARIABLES
  **********************/
-
+lv_group_t *g_syringevalues;
 /**
  * Create a demo application
  */
@@ -83,7 +83,7 @@ void MainScreenSetStyle(lv_ui *ui)
 
 }
 
-void SettingConSetGroup(lv_ui *ui)
+void setcontSettingGroup(lv_ui *ui)
 {
   lv_group_t *g;
   g = lv_group_get_default();
@@ -119,7 +119,7 @@ void SettingConSetGroup(lv_ui *ui)
         }
     }
 }
-void MainConSetGroup(lv_ui *ui)
+void setcontMainGroup(lv_ui *ui)
 {
   lv_group_t *g;
   g = lv_group_get_default();
@@ -128,7 +128,7 @@ void MainConSetGroup(lv_ui *ui)
             lv_group_del(g);
 	}
 }
-void SyringeConSetGroup(lv_ui *ui)
+void setcontSyringeGroup(lv_ui *ui)
 {
   lv_group_t *g;
   g = lv_group_get_default();
@@ -137,16 +137,117 @@ void SyringeConSetGroup(lv_ui *ui)
             lv_group_del(g);
 	}
 }
-void animconMain_ready_callback(lv_anim_t * a)
+void setlistSyringeCompanyGroup(lv_ui *ui)
 {
-  MainConSetGroup(&guider_ui);
-}
-void animconSetting_ready_callback(lv_anim_t * a)
-{
-		SettingConSetGroup(&guider_ui);
+    lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g= lv_group_create();
+	lv_group_set_default(g);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g);
+            lv_obj_t *obj_child;
+            bool has_stat=false;
+            for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
+            {
+              obj_child=lv_obj_get_child(ui->MainScreen_listSyringeCompany,i);
+              lv_group_add_obj(g,obj_child);			
+              if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
+              {
+                has_stat=true;
+                lv_group_focus_obj(obj_child);
+              }
+            }
+            if(!has_stat)
+              lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeCompany,0),LV_STATE_FOCUS_KEY);
+        }
+    }  
  
 }
-void animconSyringe_ready_callback(lv_anim_t * a)
+void setlistSyringeTypeGroup(lv_ui *ui)
 {
-  SyringeConSetGroup(&guider_ui);
+  lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+    lv_group_del(g);
+	}
+	g= lv_group_create();
+	lv_group_set_default(g);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g);
+            lv_obj_t *obj_child;
+            bool has_stat=false;
+            for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
+            {
+              obj_child=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
+              lv_group_add_obj(g,obj_child);			
+              if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
+              {
+                has_stat=true;
+                lv_group_focus_obj(obj_child);
+              }
+            }
+            if(!has_stat)
+			        lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeType,0),LV_STATE_FOCUS_KEY);
+        }
+    }    
+}
+void setcontSyringeValuesGroup(lv_ui *ui)
+{
+    lv_group_t *g;
+    g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g_syringevalues= lv_group_create();
+	lv_group_set_default(g_syringevalues);
+  lv_group_set_wrap(g_syringevalues,false);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g_syringevalues);
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_taSyringeNameValue);
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeVolume);
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeInnerDia);
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeOuterDia);			
+            lv_group_add_obj(g_syringevalues,ui->g_kb_MainScreen);
+			      lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
+        }
+    }  
+}
+
+
+void animcontMain_ready_callback(lv_anim_t * a)
+{
+  setcontMainGroup(&guider_ui);
+}
+void animcontSetting_ready_callback(lv_anim_t * a)
+{
+  setcontSettingGroup(&guider_ui);
+ 
+}
+void animcontSyringe_ready_callback(lv_anim_t * a)
+{
+  setlistSyringeCompanyGroup(&guider_ui);
 }

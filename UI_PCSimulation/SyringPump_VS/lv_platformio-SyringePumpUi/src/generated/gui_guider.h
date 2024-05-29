@@ -96,6 +96,69 @@ typedef struct
 	lv_obj_t *MainScreen_contSyringe;
 	lv_obj_t *MainScreen_btnGoSettingSyringe;
 	lv_obj_t *MainScreen_btnGoSettingSyringe_label;
+	lv_obj_t *MainScreen_listSyringeCompany;
+	lv_obj_t *MainScreen_listSyringeCompany_item0;
+	lv_obj_t *MainScreen_listSyringeCompany_item1;
+	lv_obj_t *MainScreen_listSyringeCompany_item2;
+	lv_obj_t *MainScreen_listSyringeCompany_item3;
+	lv_obj_t *MainScreen_listSyringeCompany_item4;
+	lv_obj_t *MainScreen_listSyringeCompany_item5;
+	lv_obj_t *MainScreen_listSyringeCompany_item6;
+	lv_obj_t *MainScreen_listSyringeCompany_item7;
+	lv_obj_t *MainScreen_listSyringeCompany_item8;
+	lv_obj_t *MainScreen_listSyringeCompany_item9;
+	lv_obj_t *MainScreen_listSyringeCompany_item10;
+	lv_obj_t *MainScreen_listSyringeCompany_item11;
+	lv_obj_t *MainScreen_listSyringeCompany_item12;
+	lv_obj_t *MainScreen_listSyringeCompany_item13;
+	lv_obj_t *MainScreen_listSyringeCompany_item14;
+	lv_obj_t *MainScreen_listSyringeCompany_item15;
+	lv_obj_t *MainScreen_listSyringeCompany_item16;
+	lv_obj_t *MainScreen_listSyringeCompany_item17;
+	lv_obj_t *MainScreen_listSyringeCompany_item18;
+	lv_obj_t *MainScreen_listSyringeCompany_item19;
+	lv_obj_t *MainScreen_listSyringeCompany_item20;
+	lv_obj_t *MainScreen_listSyringeCompany_item21;
+	lv_obj_t *MainScreen_listSyringeCompany_item22;
+	lv_obj_t *MainScreen_listSyringeCompany_item23;
+	lv_obj_t *MainScreen_listSyringeCompany_item24;
+	lv_obj_t *MainScreen_listSyringeCompany_item25;
+	lv_obj_t *MainScreen_listSyringeCompany_item26;
+	lv_obj_t *MainScreen_listSyringeCompany_item27;
+	lv_obj_t *MainScreen_listSyringeCompany_item28;
+	lv_obj_t *MainScreen_listSyringeCompany_item29;
+	lv_obj_t *MainScreen_listSyringeCompany_item30;
+	lv_obj_t *MainScreen_listSyringeType;
+	lv_obj_t *MainScreen_listSyringeType_item0;
+	lv_obj_t *MainScreen_listSyringeType_item1;
+	lv_obj_t *MainScreen_listSyringeType_item2;
+	lv_obj_t *MainScreen_listSyringeType_item3;
+	lv_obj_t *MainScreen_listSyringeType_item4;
+	lv_obj_t *MainScreen_listSyringeType_item5;
+	lv_obj_t *MainScreen_listSyringeType_item6;
+	lv_obj_t *MainScreen_listSyringeType_item7;
+	lv_obj_t *MainScreen_listSyringeType_item8;
+	lv_obj_t *MainScreen_listSyringeType_item9;
+	lv_obj_t *MainScreen_contSyringeValues;
+	lv_obj_t *MainScreen_labelSyringeNameValue;
+	lv_obj_t *MainScreen_labelSyringeVolumeValue;
+	lv_obj_t *MainScreen_labelSyringeInnerDiaValue;
+	lv_obj_t *MainScreen_labelSyringeOuterDiaValue;
+	lv_obj_t *MainScreen_labelSyringeBarrelLenValue;
+	lv_obj_t *MainScreen_labelSyringePlungerLenValue;
+	lv_obj_t *MainScreen_labelSyringeDiaTolValue;
+	lv_obj_t *MainScreen_taSyringeNameValue;
+	lv_obj_t *MainScreen_spinboxSyringeVolume;
+	lv_obj_t *MainScreen_spinboxSyringeVolume_btn;
+	lv_obj_t *MainScreen_spinboxSyringeVolume_btn_minus;
+	lv_obj_t *MainScreen_spinboxSyringeInnerDia;
+	lv_obj_t *MainScreen_spinboxSyringeInnerDia_btn;
+	lv_obj_t *MainScreen_spinboxSyringeInnerDia_btn_minus;
+	lv_obj_t *MainScreen_spinboxSyringeOuterDia;
+	lv_obj_t *MainScreen_spinboxSyringeOuterDia_btn;
+	lv_obj_t *MainScreen_spinboxSyringeOuterDia_btn_minus;
+	lv_obj_t *MainScreen_label_18;
+	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -207,6 +270,12 @@ LV_FONT_DECLARE(lv_font_Acme_Regular_26)
 LV_FONT_DECLARE(lv_font_Acme_Regular_25)
 LV_FONT_DECLARE(lv_font_Acme_Regular_28)
 LV_FONT_DECLARE(lv_font_Acme_Regular_24)
+LV_FONT_DECLARE(lv_font_arial_15)
+LV_FONT_DECLARE(lv_font_arial_14)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_19)
+LV_FONT_DECLARE(lv_font_arial_13)
+LV_FONT_DECLARE(lv_font_arial_12)
+LV_FONT_DECLARE(lv_font_arial_16)
 LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 

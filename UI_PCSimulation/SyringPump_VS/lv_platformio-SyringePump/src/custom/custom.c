@@ -40,11 +40,11 @@ void custom_init(lv_ui *ui)
 }
 void MainScreenSetStyle(lv_ui *ui)
 {
-	static lv_style_t style_indic;
- 	lv_style_init(&style_indic);
-	lv_style_set_bg_img_src(&style_indic,&indicator_ver);
-	lv_obj_add_style(ui->MainScreen_slider_2,&style_indic,LV_PART_INDICATOR);
-	static lv_style_t style_knob;
+	// static lv_style_t style_indic;
+ 	// lv_style_init(&style_indic);
+	// lv_style_set_bg_img_src(&style_indic,&indicator_ver);
+	// lv_obj_add_style(ui->MainScreen_slider_2,&style_indic,LV_PART_INDICATOR);
+	// static lv_style_t style_knob;
 
 	static lv_style_t MainScreenStyleFocus;
 	lv_style_init(&MainScreenStyleFocus);
@@ -55,7 +55,7 @@ void MainScreenSetStyle(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_ta_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_slider_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_slider_2,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
-	lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+	// lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
 
@@ -69,7 +69,7 @@ void MainScreenSetStyle(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_ta_1,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_slider_1,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_slider_2,&MainScreenStyleEdit,LV_STATE_EDITED );
-	lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleEdit,LV_STATE_EDITED );
+	// lv_obj_add_style(ui->MainScreen_spinbox_1,&MainScreenStyleEdit,LV_STATE_EDITED );
 	lv_obj_add_style(ui->MainScreen_btn_1,&MainScreenStyleEdit,LV_STATE_PRESSED );	
 
 

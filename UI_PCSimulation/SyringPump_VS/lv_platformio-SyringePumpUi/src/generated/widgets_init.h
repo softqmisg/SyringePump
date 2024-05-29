@@ -26,7 +26,16 @@ void clock_count(int *hour, int *min, int *sec);
 void MainScreen_digital_clock_timer(lv_timer_t *timer);
 void MainScreen_datetext_event_handler(lv_event_t *e);
 void MainScreen_datetext_calendar_event_handler(lv_event_t *e);
-void MainScreen_datetext_init_calendar(lv_obj_t *obj, char * s);
+void MainScreen_datetext_init_calendar(lv_obj_t *obj, char * s);extern lv_obj_t * MainScreen_spinboxSyringeVolume;
+void lv_MainScreen_spinboxSyringeVolume_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringeVolume_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSyringeInnerDia;
+void lv_MainScreen_spinboxSyringeInnerDia_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringeInnerDia_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSyringeOuterDia;
+void lv_MainScreen_spinboxSyringeOuterDia_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringeOuterDia_decrement_event_cb(lv_event_t * event);
+
 
 #ifdef __cplusplus
 }

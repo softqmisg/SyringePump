@@ -17,12 +17,18 @@ extern "C" {
 
 void custom_init(lv_ui *ui);
 void MainScreenSetStyle(lv_ui *ui);
-void MainConSetGroup(lv_ui *ui);
-void SettingConSetGroup(lv_ui *ui);
-void SyringeConSetGroup(lv_ui *ui);
-void animconMain_ready_callback(lv_anim_t * a);
-void animconSetting_ready_callback(lv_anim_t * a);
-void animconSyringe_ready_callback(lv_anim_t * a);
+
+void setcontSettingGroup(lv_ui *ui);
+void setcontMainGroup(lv_ui *ui);
+void setcontSyringeGroup(lv_ui *ui);
+void setcontSyringeValuesGroup(lv_ui *ui);
+void setlistSyringeCompanyGroup(lv_ui *ui);
+void setlistSyringeTypeGroup(lv_ui *ui);
+
+
+void animcontMain_ready_callback(lv_anim_t * a);
+void animcontSetting_ready_callback(lv_anim_t * a);
+void animcontSyringe_ready_callback(lv_anim_t * a);
 
 #ifdef __cplusplus
 }

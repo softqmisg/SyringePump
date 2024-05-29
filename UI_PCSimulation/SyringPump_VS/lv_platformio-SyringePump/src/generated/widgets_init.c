@@ -96,4 +96,3 @@ void lv_MainScreen_spinbox_1_decrement_event_cb(lv_event_t * event)
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinbox_1);
 	}
 }
-

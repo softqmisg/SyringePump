@@ -16,12 +16,8 @@ extern "C" {
 #include "gui_guider.h"
 
 void custom_init(lv_ui *ui);
-void MainScreenSetStyle(lv_ui *ui);
 void MainScreengroup(lv_ui *ui);
-void SettingScreenSetStyle(lv_ui *ui);
 void SettingScreengroup(lv_ui *ui);
-LV_IMG_DECLARE(indicator_ver);
-
 #ifdef __cplusplus
 }
 #endif

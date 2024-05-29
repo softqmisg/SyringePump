@@ -38,6 +38,14 @@ void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
 }
+void SettingScreenSetStyle(lv_ui *ui)
+{
+
+}
+void MainScreenSetStyle(lv_ui *ui)
+{
+  
+}
 void MainScreengroup(lv_ui *ui)
 {
 	static lv_style_t MainScreenStyleFocus;

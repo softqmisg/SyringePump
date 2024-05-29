@@ -508,7 +508,7 @@
 
 #define LV_USE_LED 0
 
-#define LV_USE_LIST 0
+#define LV_USE_LIST 1
 
 #define LV_USE_MENU 0
 
@@ -524,7 +524,7 @@
 #define LV_SPAN_SNIPPET_STACK_SIZE 64
 #endif    /* LV_USE_SPAN */
 
-#define LV_USE_SPINBOX 0
+#define LV_USE_SPINBOX 1
 
 #define LV_USE_SPINNER 0
 
