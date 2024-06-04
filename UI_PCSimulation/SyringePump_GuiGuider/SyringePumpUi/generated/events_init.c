@@ -18,6 +18,7 @@
 
 #include "custom.h"
 extern lv_group_t *g_syringevalues;
+ uint8_t cur_SyringeManufacture,cur_SyringeType;
 static void MainScreen_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -26,11 +27,7 @@ static void MainScreen_event_handler (lv_event_t *e)
 	case LV_EVENT_SCREEN_LOADED:
 	{
 		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
-		lv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		lv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		lv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		lv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);
-		lv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);
+		loadSyringeCompanyList(&guider_ui);
 		break;
 	}
 	default:
@@ -154,6 +151,7 @@ static void MainScreen_listSyringeCompany_event_handler (lv_event_t *e)
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 	lv_obj_t *obj=lv_event_get_target(e);
+	loadSyringeTypeList(ui,lv_obj_get_child_id(obj));
 	setlistSyringeTypeGroup(ui);
 	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
@@ -177,6 +175,13 @@ static void MainScreen_listSyringeType_event_handler (lv_event_t *e)
 	setcontSyringeValuesGroup(ui);
 	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		lv_obj_add_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
+		break;
+	}
+	case LV_EVENT_VALUE_CHANGED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_obj_t *obj=lv_event_get_target(e);
+	loadSyringeValues(ui,lv_obj_get_child_id(obj));
 		break;
 	}
 	default:

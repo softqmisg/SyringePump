@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "custom.h"
-
+#include "Syring.h"
 /*********************
  *      DEFINES
  *********************/
@@ -31,10 +31,15 @@
  *  STATIC VARIABLES
  **********************/
 lv_group_t *g_syringevalues;
+extern uint8_t cur_SyringeManufacture,cur_SyringeType;
+
 /**
  * Create a demo application
  */
-
+void LoadDefaults(void)
+{
+  loadDefaultSyringesValue();
+}
 void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
@@ -211,19 +216,19 @@ void setlistSyringeTypeGroup(lv_ui *ui)
         {
             lv_indev_set_group(cur_dev,g);
             lv_obj_t *obj_child;
-            bool has_stat=false;
+            // bool has_stat=false;
             for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
             {
               obj_child=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
               lv_group_add_obj(g,obj_child);			
               if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
               {
-                has_stat=true;
+                // has_stat=true;
                 lv_group_focus_obj(obj_child);
               }
             }
-            if(!has_stat)
-			        lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeType,0),LV_STATE_FOCUS_KEY);
+            // if(!has_stat)
+			      //   lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeType,0),LV_STATE_FOCUS_KEY);
         }
     }    
 }
@@ -255,11 +260,43 @@ void setcontSyringeValuesGroup(lv_ui *ui)
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeDiaTolerance);			          
 		
             lv_group_add_obj(g_syringevalues,ui->g_kb_MainScreen);
-			      lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
+			      // lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
         }
     }  
 }
 
+void loadSyringeCompanyList(lv_ui *ui)
+{
+  //load syringe manufacture
+  printf("load company list\n\r");
+  for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
+  {
+    lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeCompany,i);
+    lv_label_set_text(lv_obj_get_child(btn,0),DefaultSyrings[i][0].Manufacture);
+  }
+}
+void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex)
+{
+  printf("select syring company index:%d\n\r",companyindex);
+  for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
+  {
+    lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
+    lv_label_set_text(lv_obj_get_child(btn,0),DefaultSyrings[companyindex][i].Name);
+  }
+
+}
+
+void loadSyringeValues(lv_ui *ui,uint8_t Typeindex)
+{
+  printf("select syring Type Index:%d\n\r",Typeindex);
+  lv_textarea_set_text(ui->MainScreen_taSyringeNameValue,DefaultSyrings[cur_SyringeManufacture][Typeindex].Name);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeVolume,DefaultSyrings[cur_SyringeManufacture][Typeindex].Volume);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeInnerDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].InnerDia10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeOuterDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].OuterDia10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeBarrelLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].BarrelLen10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringePlungerLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].PlungerLen10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeDiaTolerance,DefaultSyrings[cur_SyringeManufacture][Typeindex].DiaTolerance10);
+}
 
 void animcontMain_ready_callback(lv_anim_t * a)
 {

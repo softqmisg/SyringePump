@@ -39,6 +39,10 @@ void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
 }
+void LoadDefaults()
+{
+  
+}
 void MainScreenSetStyle(lv_ui *ui)
 {
  //  	static lv_style_t style_indic;
@@ -258,7 +262,14 @@ void setcontSyringeValuesGroup(lv_ui *ui)
     }  
 }
 
-
+void loadSyringeCompanyList(lv_ui *ui)
+{
+  //load syringe manufacture
+}
+void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex)
+{
+  
+}
 void animcontMain_ready_callback(lv_anim_t * a)
 {
   setcontMainGroup(&guider_ui);

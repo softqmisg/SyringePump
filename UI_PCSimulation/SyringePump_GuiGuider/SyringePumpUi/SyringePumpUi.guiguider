@@ -244,7 +244,7 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+				"code_c": "//level style\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\n// remove flag for hidden button\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n//Load Syringe manufacture\nloadSyringeCompanyList(ui);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
@@ -1600,8 +1600,7 @@
 											"padding_top": 0,
 											"padding_right": 0,
 											"padding_left": 0,
-											"radius": 4,
-											"text_opa": 255
+											"radius": 4
 										},
 										{
 											"part": "LV_PART_SCROLLBAR",
@@ -2335,7 +2334,7 @@
 							"id": "j7xl825t",
 							"type": "list",
 							"left": 401,
-							"top": 30,
+							"top": 29,
 							"visible": true,
 							"flag": [],
 							"width": 400,
@@ -2726,7 +2725,7 @@
 											},
 											"customer_code": {
 												"ische": true,
-												"inc_c": "",
+												"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
 												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetcontSyringeValuesGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 												"inc_py": "",
 												"code_py": ""
@@ -2991,6 +2990,183 @@
 										},
 										"item_index": "widget"
 									}
+								],
+								"value_changed": [
+									{
+										"trigger": "value_changed",
+										"dst": "null",
+										"item_index": "widget",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": true,
+												"inc_c": "",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeValues(ui,lv_obj_get_child_id(obj));",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": false,
+												"value": "LV_STATE_DEFAULT"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
+									}
 								]
 							}
 						},
@@ -3042,14 +3218,6 @@
 								{
 									"type": "image",
 									"text": "Mnfc5",
-									"img_path": "",
-									"img_width": 20,
-									"img_height": 20,
-									"img_symbol": "LV_SYMBOL_SAVE"
-								},
-								{
-									"type": "image",
-									"text": "save_5",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -3249,6 +3417,14 @@
 								},
 								{
 									"type": "image",
+									"text": "save_30",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
 									"text": "save_30",
 									"img_path": "",
 									"img_width": 20,
@@ -3559,7 +3735,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeTypeList(ui,lv_obj_get_child_id(obj));\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -9110,7 +9286,7 @@
 					"id": "55nsf413",
 					"type": "cont",
 					"left": 0,
-					"top": 80,
+					"top": 82,
 					"visible": true,
 					"flag": [],
 					"width": 800,
@@ -12418,359 +12594,7 @@
 					},
 					{
 						"trigger": "screen_loaded",
-						"dst": "czq4kain",
-						"action": {
-							"load_screen": {
-								"ische": false,
-								"duration": 200,
-								"delay": 200,
-								"scrId": "",
-								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-								"is_clean": false,
-								"is_del": true
-							},
-							"bg_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"grad_color": {
-								"ische": false,
-								"value": "#000000",
-								"dir": "LV_GRAD_DIR_HOR"
-							},
-							"bg_opa": {
-								"ische": false,
-								"value": 255
-							},
-							"opacity": {
-								"ische": false,
-								"value": 255
-							},
-							"bg_img_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"bg_img_recolor": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"bg_img_recolor_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_side": {
-								"ische": false,
-								"value": []
-							},
-							"border_width": {
-								"ische": false,
-								"value": 0
-							},
-							"border_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"radius": {
-								"ische": false,
-								"value": 0
-							},
-							"width": {
-								"ische": false,
-								"value": 50
-							},
-							"height": {
-								"ische": false,
-								"value": 50
-							},
-							"set_text": {
-								"ische": false,
-								"value": "default",
-								"font": 12,
-								"font_family": "montserratMedium"
-							},
-							"position": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0
-							},
-							"isVisible": {
-								"ische": false,
-								"flag": "hide"
-							},
-							"customer_code": {
-								"ische": false,
-								"inc_c": "",
-								"code_c": "",
-								"inc_py": "",
-								"code_py": ""
-							},
-							"freemaster": {
-								"ische": false,
-								"variable": "",
-								"address": "",
-								"type": "",
-								"value": "",
-								"isOrigin": false
-							},
-							"add_state": {
-								"ische": false,
-								"value": "LV_STATE_DEFAULT"
-							},
-							"add_flag": {
-								"ische": false,
-								"value": []
-							},
-							"clear_flag": {
-								"ische": true,
-								"value": [
-									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-								]
-							},
-							"move": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"scaleSize": {
-								"ische": false,
-								"width": 0,
-								"height": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"img_zoom": {
-								"ische": false,
-								"zoom": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"rotate": {
-								"ische": false,
-								"rotate": 0,
-								"x": 0,
-								"y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							}
-						}
-					},
-					{
-						"trigger": "screen_loaded",
-						"dst": "v4q80qkh",
-						"action": {
-							"load_screen": {
-								"ische": false,
-								"duration": 200,
-								"delay": 200,
-								"scrId": "",
-								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-								"is_clean": false,
-								"is_del": true
-							},
-							"bg_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"grad_color": {
-								"ische": false,
-								"value": "#000000",
-								"dir": "LV_GRAD_DIR_HOR"
-							},
-							"bg_opa": {
-								"ische": false,
-								"value": 255
-							},
-							"opacity": {
-								"ische": false,
-								"value": 255
-							},
-							"bg_img_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"bg_img_recolor": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"bg_img_recolor_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_side": {
-								"ische": false,
-								"value": []
-							},
-							"border_width": {
-								"ische": false,
-								"value": 0
-							},
-							"border_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"radius": {
-								"ische": false,
-								"value": 0
-							},
-							"width": {
-								"ische": false,
-								"value": 50
-							},
-							"height": {
-								"ische": false,
-								"value": 50
-							},
-							"set_text": {
-								"ische": false,
-								"value": "default",
-								"font": 12,
-								"font_family": "montserratMedium"
-							},
-							"position": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0
-							},
-							"isVisible": {
-								"ische": false,
-								"flag": "hide"
-							},
-							"customer_code": {
-								"ische": false,
-								"inc_c": "",
-								"code_c": "",
-								"inc_py": "",
-								"code_py": ""
-							},
-							"freemaster": {
-								"ische": false,
-								"variable": "",
-								"address": "",
-								"type": "",
-								"value": "",
-								"isOrigin": false
-							},
-							"add_state": {
-								"ische": false,
-								"value": "LV_STATE_DEFAULT"
-							},
-							"add_flag": {
-								"ische": false,
-								"value": []
-							},
-							"clear_flag": {
-								"ische": true,
-								"value": [
-									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-								]
-							},
-							"move": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"scaleSize": {
-								"ische": false,
-								"width": 0,
-								"height": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"img_zoom": {
-								"ische": false,
-								"zoom": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"rotate": {
-								"ische": false,
-								"rotate": 0,
-								"x": 0,
-								"y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							}
-						}
-					},
-					{
-						"trigger": "screen_loaded",
-						"dst": "mznnsdaw",
+						"dst": "null",
 						"action": {
 							"load_screen": {
 								"ische": false,
@@ -12877,182 +12701,6 @@
 								"value": []
 							},
 							"clear_flag": {
-								"ische": true,
-								"value": [
-									"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-								]
-							},
-							"move": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"scaleSize": {
-								"ische": false,
-								"width": 0,
-								"height": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"img_zoom": {
-								"ische": false,
-								"zoom": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							},
-							"rotate": {
-								"ische": false,
-								"rotate": 0,
-								"x": 0,
-								"y": 0,
-								"delay": 0,
-								"duration": 1000,
-								"repeat_count": 0,
-								"repeat_delay": 0,
-								"playback_time": 0,
-								"playback_delay": 0,
-								"start_cb": "",
-								"ready_cb": "",
-								"deleted_cb": "",
-								"path_type": "linear"
-							}
-						}
-					},
-					{
-						"trigger": "screen_loaded",
-						"dst": "ecbe62q3",
-						"action": {
-							"load_screen": {
-								"ische": false,
-								"duration": 200,
-								"delay": 200,
-								"scrId": "",
-								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-								"is_clean": false,
-								"is_del": true
-							},
-							"bg_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"grad_color": {
-								"ische": false,
-								"value": "#000000",
-								"dir": "LV_GRAD_DIR_HOR"
-							},
-							"bg_opa": {
-								"ische": false,
-								"value": 255
-							},
-							"opacity": {
-								"ische": false,
-								"value": 255
-							},
-							"bg_img_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"bg_img_recolor": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"bg_img_recolor_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_side": {
-								"ische": false,
-								"value": []
-							},
-							"border_width": {
-								"ische": false,
-								"value": 0
-							},
-							"border_opa": {
-								"ische": false,
-								"value": 0
-							},
-							"border_color": {
-								"ische": false,
-								"value": "#000000"
-							},
-							"radius": {
-								"ische": true,
-								"value": 0
-							},
-							"width": {
-								"ische": false,
-								"value": 50
-							},
-							"height": {
-								"ische": false,
-								"value": 50
-							},
-							"set_text": {
-								"ische": false,
-								"value": "default",
-								"font": 12,
-								"font_family": "montserratMedium"
-							},
-							"position": {
-								"ische": false,
-								"value_x": 0,
-								"value_y": 0
-							},
-							"isVisible": {
-								"ische": false,
-								"flag": ""
-							},
-							"customer_code": {
-								"ische": false,
-								"inc_c": "",
-								"code_c": "",
-								"inc_py": "",
-								"code_py": ""
-							},
-							"freemaster": {
-								"ische": false,
-								"variable": "",
-								"address": "",
-								"type": "",
-								"value": "",
-								"isOrigin": false
-							},
-							"add_state": {
-								"ische": false,
-								"value": "LV_STATE_DEFAULT"
-							},
-							"add_flag": {
-								"ische": false,
-								"value": []
-							},
-							"clear_flag": {
 								"ische": false,
 								"value": []
 							},
@@ -13120,7 +12768,7 @@
 					},
 					{
 						"trigger": "screen_loaded",
-						"dst": "09oocgw0",
+						"dst": "null",
 						"action": {
 							"load_screen": {
 								"ische": false,
@@ -13177,7 +12825,7 @@
 								"value": "#000000"
 							},
 							"radius": {
-								"ische": true,
+								"ische": false,
 								"value": 0
 							},
 							"width": {
@@ -13204,9 +12852,9 @@
 								"flag": ""
 							},
 							"customer_code": {
-								"ische": false,
+								"ische": true,
 								"inc_c": "",
-								"code_c": "",
+								"code_c": "loadSyringeCompanyList(&guider_ui);",
 								"inc_py": "",
 								"code_py": ""
 							},
@@ -13341,7 +12989,7 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+					"code_c": "//level style\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\n// remove flag for hidden button\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n//Load Syringe manufacture\nloadSyringeCompanyList(ui);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
@@ -13375,53 +13023,14 @@
 						{
 							"src": "MainScreen",
 							"trigger": "screen_loaded",
-							"dst": "MainScreen_btnGoSettingMain",
-							"dst_type": "btn",
+							"dst": "null",
+							"dst_type": "",
 							"src_screen": "MainScreen",
-							"action": "clear_flag",
-							"value": [
-								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-							]
-						},
-						{
-							"src": "MainScreen",
-							"trigger": "screen_loaded",
-							"dst": "MainScreen_btnGoMainSetting",
-							"dst_type": "btn",
-							"src_screen": "MainScreen",
-							"action": "clear_flag",
-							"value": [
-								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-							]
-						},
-						{
-							"src": "MainScreen",
-							"trigger": "screen_loaded",
-							"dst": "MainScreen_datetext",
-							"dst_type": "datetext",
-							"src_screen": "MainScreen",
-							"action": "clear_flag",
-							"value": [
-								"LV_OBJ_FLAG_CLICK_FOCUSABLE"
-							]
-						},
-						{
-							"src": "MainScreen",
-							"trigger": "screen_loaded",
-							"dst": "MainScreen_barOcclusionLevel",
-							"dst_type": "bar",
-							"src_screen": "MainScreen",
-							"action": "radius",
-							"value": 0
-						},
-						{
-							"src": "MainScreen",
-							"trigger": "screen_loaded",
-							"dst": "MainScreen_barBatteryLevel",
-							"dst_type": "bar",
-							"src_screen": "MainScreen",
-							"action": "radius",
-							"value": 0
+							"action": "customer_code",
+							"inc_c": "",
+							"code_c": "loadSyringeCompanyList(&guider_ui);",
+							"inc_py": "",
+							"code_py": ""
 						}
 					]
 				},
@@ -14684,7 +14293,7 @@
 						"flag": [],
 						"pos": [
 							0,
-							80
+							82
 						],
 						"size": [
 							800,
@@ -20257,7 +19866,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeTypeList(ui,lv_obj_get_child_id(obj));\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 											"inc_py": "",
 											"code_py": ""
 										},
@@ -20315,7 +19924,7 @@
 									},
 									{
 										"type": "image",
-										"text": "save_1",
+										"text": "Mnfc2",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20329,7 +19938,7 @@
 									},
 									{
 										"type": "image",
-										"text": "save_2",
+										"text": "Mnfc3",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20343,7 +19952,7 @@
 									},
 									{
 										"type": "image",
-										"text": "save_3",
+										"text": "Mnfc4",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20357,21 +19966,7 @@
 									},
 									{
 										"type": "image",
-										"text": "save_4",
-										"img_path": "",
-										"img_width": 20,
-										"img_height": 20,
-										"img_symbol": "LV_SYMBOL_SAVE",
-										"img_size": [
-											20,
-											20
-										],
-										"img_sd_path": "S://",
-										"img_flash_path": "F:/"
-									},
-									{
-										"type": "image",
-										"text": "save_5",
+										"text": "Mnfc5",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20732,6 +20327,20 @@
 										],
 										"img_sd_path": "S://",
 										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_30",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
 									}
 								],
 								"style": [
@@ -20957,7 +20566,7 @@
 								"flag": [],
 								"pos": [
 									401,
-									30
+									29
 								],
 								"size": [
 									400,
@@ -20975,7 +20584,7 @@
 											"src_type": "list",
 											"src_screen": "MainScreen",
 											"action": "customer_code",
-											"inc_c": "",
+											"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
 											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetcontSyringeValuesGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 											"inc_py": "",
 											"code_py": ""
@@ -20992,6 +20601,22 @@
 											"value": [
 												"LV_OBJ_FLAG_CLICKABLE"
 											]
+										}
+									],
+									"value_changed": [
+										{
+											"src": "MainScreen_listSyringeType",
+											"trigger": "value_changed",
+											"dst": "null",
+											"dst_type": "",
+											"item_index": "widget",
+											"src_type": "list",
+											"src_screen": "MainScreen",
+											"action": "customer_code",
+											"inc_c": "",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeValues(ui,lv_obj_get_child_id(obj));",
+											"inc_py": "",
+											"code_py": ""
 										}
 									]
 								},
@@ -22153,8 +21778,7 @@
 												"padding_top": 0,
 												"padding_right": 0,
 												"padding_left": 0,
-												"radius": 4,
-												"text_opa": 255
+												"radius": 4
 											},
 											{
 												"part": "LV_PART_SCROLLBAR",

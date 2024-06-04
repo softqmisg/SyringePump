@@ -25,10 +25,15 @@ void setcontSyringeValuesGroup(lv_ui *ui);
 void setlistSyringeCompanyGroup(lv_ui *ui);
 void setlistSyringeTypeGroup(lv_ui *ui);
 
+void loadSyringeCompanyList(lv_ui *ui);
+void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex);
+
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontSetting_ready_callback(lv_anim_t * a);
 void animcontSyringe_ready_callback(lv_anim_t * a);
+
+
 
 #ifdef __cplusplus
 }
