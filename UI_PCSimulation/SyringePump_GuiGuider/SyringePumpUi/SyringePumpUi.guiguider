@@ -244,7 +244,7 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+				"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
 				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
@@ -306,8 +306,7 @@
 							"padding_top": 4,
 							"padding_right": 4,
 							"padding_left": 4,
-							"radius": 4,
-							"text_opa": 255
+							"radius": 4
 						},
 						{
 							"part": "LV_PART_MAIN",
@@ -399,9 +398,9 @@
 									"border_color": "#959595",
 									"radius": 0,
 									"text_color": "#ffffff",
-									"font": 16,
+									"font": 19,
 									"text_align": "LV_TEXT_ALIGN_CENTER",
-									"font_family": "arial",
+									"font_family": "montserratMedium",
 									"letter_space": 2,
 									"line_space": 0,
 									"bg_color": "#9ac9e7",
@@ -472,23 +471,543 @@
 							"id": "ixe3exep",
 							"type": "cont",
 							"left": 0,
-							"top": 180,
+							"top": 170,
 							"visible": true,
 							"flag": [],
 							"width": 740,
-							"height": 120,
+							"height": 130,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
 								{
+									"name": "spinboxSyringeDiaTolerance",
+									"id": "n1o0than",
+									"type": "spinbox",
+									"left": 539,
+									"top": 70,
+									"visible": true,
+									"flag": [],
+									"width": 150,
+									"height": 25,
+									"default_style": false,
+									"integer_pos": 2,
+									"deci_pos": 0,
+									"style": [
+										{
+											"part": "LV_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"bg_color": "#ffffff",
+											"bg_grad_color": "#ffffff",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 2,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"padding_top": 0,
+											"padding_right": 0,
+											"padding_bottom": 0,
+											"padding_left": 0,
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
+											"text_color": "#000000",
+											"radius": 5,
+											"shadow_color": "#2195f6",
+											"shadow_opa": 255,
+											"shadow_width": 0,
+											"shadow_spread": 0,
+											"shadow_ofs_x": 0,
+											"shadow_ofs_y": 0
+										},
+										{
+											"part": "LV_PART_CURSOR",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"font": 14,
+											"text_color": "#ffffff",
+											"font_family": "montserratMedium",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#000000",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_PRESSED",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#ffffff",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										}
+									],
+									"event": {
+										"long_pressed": [
+											{
+												"trigger": "long_pressed",
+												"dst": "n1o0than",
+												"action": {
+													"load_screen": {
+														"ische": false,
+														"duration": 200,
+														"delay": 200,
+														"scrId": "",
+														"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+														"is_clean": false,
+														"is_del": true
+													},
+													"bg_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"grad_color": {
+														"ische": false,
+														"value": "#000000",
+														"dir": "LV_GRAD_DIR_HOR"
+													},
+													"bg_opa": {
+														"ische": false,
+														"value": 255
+													},
+													"opacity": {
+														"ische": false,
+														"value": 255
+													},
+													"bg_img_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"bg_img_recolor": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"bg_img_recolor_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_side": {
+														"ische": false,
+														"value": []
+													},
+													"border_width": {
+														"ische": false,
+														"value": 0
+													},
+													"border_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"radius": {
+														"ische": false,
+														"value": 0
+													},
+													"width": {
+														"ische": false,
+														"value": 50
+													},
+													"height": {
+														"ische": false,
+														"value": 50
+													},
+													"set_text": {
+														"ische": false,
+														"value": "default",
+														"font": 12,
+														"font_family": "montserratMedium"
+													},
+													"position": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0
+													},
+													"isVisible": {
+														"ische": false,
+														"flag": ""
+													},
+													"customer_code": {
+														"ische": true,
+														"inc_c": "",
+														"code_c": "lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);",
+														"inc_py": "",
+														"code_py": ""
+													},
+													"freemaster": {
+														"ische": false,
+														"variable": "",
+														"address": "",
+														"type": "",
+														"value": "",
+														"isOrigin": false
+													},
+													"add_state": {
+														"ische": false,
+														"value": "LV_STATE_DEFAULT"
+													},
+													"add_flag": {
+														"ische": false,
+														"value": []
+													},
+													"clear_flag": {
+														"ische": false,
+														"value": []
+													},
+													"move": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"scaleSize": {
+														"ische": false,
+														"width": 0,
+														"height": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"img_zoom": {
+														"ische": false,
+														"zoom": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"rotate": {
+														"ische": false,
+														"rotate": 0,
+														"x": 0,
+														"y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													}
+												}
+											}
+										]
+									}
+								},
+								{
+									"name": "spinboxSyringePlungerLen",
+									"id": "x72icd57",
+									"type": "spinbox",
+									"left": 540,
+									"top": 35,
+									"visible": true,
+									"flag": [],
+									"width": 150,
+									"height": 25,
+									"default_style": false,
+									"integer_pos": 2,
+									"deci_pos": 0,
+									"style": [
+										{
+											"part": "LV_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"bg_color": "#ffffff",
+											"bg_grad_color": "#ffffff",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 2,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"padding_top": 0,
+											"padding_right": 0,
+											"padding_bottom": 0,
+											"padding_left": 0,
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
+											"text_color": "#000000",
+											"radius": 5,
+											"shadow_color": "#2195f6",
+											"shadow_opa": 255,
+											"shadow_width": 0,
+											"shadow_spread": 0,
+											"shadow_ofs_x": 0,
+											"shadow_ofs_y": 0
+										},
+										{
+											"part": "LV_PART_CURSOR",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"font": 14,
+											"text_color": "#ffffff",
+											"font_family": "montserratMedium",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#000000",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_PRESSED",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#ffffff",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										}
+									]
+								},
+								{
+									"name": "spinboxSyringeBarrelLen",
+									"id": "1nue1a0a",
+									"type": "spinbox",
+									"left": 540,
+									"top": 0,
+									"visible": true,
+									"flag": [],
+									"width": 150,
+									"height": 25,
+									"default_style": false,
+									"integer_pos": 3,
+									"deci_pos": 0,
+									"style": [
+										{
+											"part": "LV_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"bg_color": "#ffffff",
+											"bg_grad_color": "#ffffff",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 2,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"padding_top": 0,
+											"padding_right": 0,
+											"padding_bottom": 0,
+											"padding_left": 0,
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
+											"text_color": "#000000",
+											"radius": 5,
+											"shadow_color": "#2195f6",
+											"shadow_opa": 255,
+											"shadow_width": 0,
+											"shadow_spread": 0,
+											"shadow_ofs_x": 0,
+											"shadow_ofs_y": 0
+										},
+										{
+											"part": "LV_PART_CURSOR",
+											"state": "LV_STATE_DEFAULT",
+											"object": "main",
+											"disable": false,
+											"font": 14,
+											"text_color": "#ffffff",
+											"font_family": "montserratMedium",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_DEFAULT",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#000000",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										},
+										{
+											"part": "LV_BTN_PART_MAIN",
+											"state": "LV_STATE_PRESSED",
+											"desc": "button",
+											"object": "extra_btns",
+											"disable": true,
+											"font": 12,
+											"font_family": "montserratMedium",
+											"text_color": "#ffffff",
+											"bg_color": "#2195f6",
+											"bg_grad_color": "#2195f6",
+											"bg_opa": 255,
+											"bg_grad_dir": "LV_GRAD_DIR_NONE",
+											"bg_dither_mode": "LV_DITHER_NONE",
+											"bg_main_stop": 0,
+											"bg_grad_stop": 255,
+											"border_side": [
+												"LV_BORDER_SIDE_FULL"
+											],
+											"border_width": 0,
+											"border_color": "#2195f6",
+											"border_opa": 255,
+											"radius": 5
+										}
+									]
+								},
+								{
 									"name": "spinboxSyringeOuterDia",
 									"id": "pfscosky",
 									"type": "spinbox",
-									"left": 80,
-									"top": 91,
+									"left": 93,
+									"top": 102,
 									"visible": true,
 									"flag": [],
-									"width": 151,
+									"width": 150,
 									"height": 25,
 									"default_style": false,
 									"integer_pos": 2,
@@ -516,9 +1035,9 @@
 											"padding_right": 0,
 											"padding_bottom": 0,
 											"padding_left": 0,
-											"letter_space": 0,
-											"font": 12,
-											"font_family": "arial",
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
 											"text_color": "#000000",
 											"radius": 5,
 											"shadow_color": "#2195f6",
@@ -533,7 +1052,7 @@
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
 											"disable": false,
-											"font": 12,
+											"font": 14,
 											"text_color": "#ffffff",
 											"font_family": "montserratMedium",
 											"bg_color": "#2195f6",
@@ -549,13 +1068,13 @@
 											"state": "LV_STATE_DEFAULT",
 											"desc": "button",
 											"object": "extra_btns",
-											"disable": false,
+											"disable": true,
 											"font": 12,
 											"font_family": "montserratMedium",
 											"text_color": "#000000",
 											"bg_color": "#2195f6",
 											"bg_grad_color": "#2195f6",
-											"bg_opa": 0,
+											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
@@ -566,8 +1085,7 @@
 											"border_width": 0,
 											"border_color": "#2195f6",
 											"border_opa": 255,
-											"radius": 5,
-											"text_opa": 255
+											"radius": 5
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -599,11 +1117,11 @@
 									"name": "spinboxSyringeInnerDia",
 									"id": "gv1m947m",
 									"type": "spinbox",
-									"left": 80,
-									"top": 62,
+									"left": 93,
+									"top": 69,
 									"visible": true,
 									"flag": [],
-									"width": 151,
+									"width": 150,
 									"height": 25,
 									"default_style": false,
 									"integer_pos": 2,
@@ -631,9 +1149,9 @@
 											"padding_right": 0,
 											"padding_bottom": 0,
 											"padding_left": 0,
-											"letter_space": 0,
-											"font": 12,
-											"font_family": "arial",
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
 											"text_color": "#000000",
 											"radius": 5,
 											"shadow_color": "#2195f6",
@@ -647,8 +1165,8 @@
 											"part": "LV_PART_CURSOR",
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
-											"disable": false,
-											"font": 12,
+											"disable": true,
+											"font": 14,
 											"text_color": "#ffffff",
 											"font_family": "montserratMedium",
 											"bg_color": "#2195f6",
@@ -664,13 +1182,13 @@
 											"state": "LV_STATE_DEFAULT",
 											"desc": "button",
 											"object": "extra_btns",
-											"disable": false,
+											"disable": true,
 											"font": 12,
 											"font_family": "montserratMedium",
 											"text_color": "#000000",
 											"bg_color": "#2195f6",
 											"bg_grad_color": "#2195f6",
-											"bg_opa": 0,
+											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
@@ -681,8 +1199,7 @@
 											"border_width": 0,
 											"border_color": "#2195f6",
 											"border_opa": 255,
-											"radius": 5,
-											"text_opa": 255
+											"radius": 5
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -714,11 +1231,11 @@
 									"name": "spinboxSyringeVolume",
 									"id": "1zggep3q",
 									"type": "spinbox",
-									"left": 80,
-									"top": 30,
+									"left": 93,
+									"top": 34,
 									"visible": true,
 									"flag": [],
-									"width": 151,
+									"width": 150,
 									"height": 25,
 									"default_style": false,
 									"integer_pos": 2,
@@ -746,9 +1263,9 @@
 											"padding_right": 0,
 											"padding_bottom": 0,
 											"padding_left": 0,
-											"letter_space": 0,
-											"font": 12,
-											"font_family": "arial",
+											"letter_space": 2,
+											"font": 16,
+											"font_family": "Alatsi_Regular",
 											"text_color": "#000000",
 											"radius": 5,
 											"shadow_color": "#2195f6",
@@ -762,8 +1279,8 @@
 											"part": "LV_PART_CURSOR",
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
-											"disable": false,
-											"font": 12,
+											"disable": true,
+											"font": 14,
 											"text_color": "#ffffff",
 											"font_family": "montserratMedium",
 											"bg_color": "#2195f6",
@@ -779,13 +1296,13 @@
 											"state": "LV_STATE_DEFAULT",
 											"desc": "button",
 											"object": "extra_btns",
-											"disable": false,
+											"disable": true,
 											"font": 12,
 											"font_family": "montserratMedium",
 											"text_color": "#000000",
 											"bg_color": "#2195f6",
 											"bg_grad_color": "#2195f6",
-											"bg_opa": 0,
+											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
@@ -796,8 +1313,7 @@
 											"border_width": 0,
 											"border_color": "#2195f6",
 											"border_opa": 255,
-											"radius": 5,
-											"text_opa": 255
+											"radius": 5
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -823,17 +1339,195 @@
 											"border_opa": 255,
 											"radius": 5
 										}
-									]
+									],
+									"event": {
+										"long_pressed": [
+											{
+												"trigger": "long_pressed",
+												"dst": "null",
+												"action": {
+													"load_screen": {
+														"ische": false,
+														"duration": 200,
+														"delay": 200,
+														"scrId": "",
+														"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+														"is_clean": false,
+														"is_del": true
+													},
+													"bg_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"grad_color": {
+														"ische": false,
+														"value": "#000000",
+														"dir": "LV_GRAD_DIR_HOR"
+													},
+													"bg_opa": {
+														"ische": false,
+														"value": 255
+													},
+													"opacity": {
+														"ische": false,
+														"value": 255
+													},
+													"bg_img_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"bg_img_recolor": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"bg_img_recolor_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_side": {
+														"ische": false,
+														"value": []
+													},
+													"border_width": {
+														"ische": false,
+														"value": 0
+													},
+													"border_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"radius": {
+														"ische": false,
+														"value": 0
+													},
+													"width": {
+														"ische": false,
+														"value": 50
+													},
+													"height": {
+														"ische": false,
+														"value": 50
+													},
+													"set_text": {
+														"ische": false,
+														"value": "default",
+														"font": 12,
+														"font_family": "montserratMedium"
+													},
+													"position": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0
+													},
+													"isVisible": {
+														"ische": false,
+														"flag": ""
+													},
+													"customer_code": {
+														"ische": false,
+														"inc_c": "",
+														"code_c": "",
+														"inc_py": "",
+														"code_py": ""
+													},
+													"freemaster": {
+														"ische": false,
+														"variable": "",
+														"address": "",
+														"type": "",
+														"value": "",
+														"isOrigin": false
+													},
+													"add_state": {
+														"ische": false,
+														"value": "LV_STATE_DEFAULT"
+													},
+													"add_flag": {
+														"ische": false,
+														"value": []
+													},
+													"clear_flag": {
+														"ische": false,
+														"value": []
+													},
+													"move": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"scaleSize": {
+														"ische": false,
+														"width": 0,
+														"height": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"img_zoom": {
+														"ische": false,
+														"zoom": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"rotate": {
+														"ische": false,
+														"rotate": 0,
+														"x": 0,
+														"y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													}
+												}
+											}
+										]
+									}
 								},
 								{
 									"name": "taSyringeNameValue",
 									"id": "bhxnu8xi",
 									"type": "ta",
-									"left": 60,
-									"top": 2,
+									"left": 73,
+									"top": 0,
 									"visible": true,
 									"flag": [],
-									"width": 324,
+									"width": 300,
 									"height": 30,
 									"default_style": false,
 									"text": "MySyringe",
@@ -848,8 +1542,8 @@
 											"part": "LV_PART_MAIN",
 											"state": "LV_STATE_DEFAULT",
 											"disable": false,
-											"font": 15,
-											"font_family": "arial",
+											"font": 18,
+											"font_family": "Alatsi_Regular",
 											"bg_color": "#000000",
 											"bg_grad_color": "#ffffff",
 											"bg_opa": 255,
@@ -872,17 +1566,17 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"padding_top": 4,
-											"padding_right": 4,
-											"padding_left": 4,
+											"padding_top": 0,
+											"padding_right": 0,
+											"padding_left": 0,
 											"radius": 4
 										},
 										{
 											"part": "LV_PART_MAIN",
 											"state": "LV_STATE_FOCUSED",
 											"disable": false,
-											"font": 13,
-											"font_family": "arial",
+											"font": 18,
+											"font_family": "Alatsi_Regular",
 											"bg_color": "#a4e6fd",
 											"bg_grad_color": "#ffffff",
 											"bg_opa": 255,
@@ -896,17 +1590,18 @@
 											"border_width": 0,
 											"border_color": "#e6e6e6",
 											"border_opa": 255,
-											"text_color": "#909090",
+											"text_color": "#000000",
 											"shadow_color": "#2195f6",
 											"shadow_opa": 255,
 											"shadow_width": 0,
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"padding_top": 4,
-											"padding_right": 4,
-											"padding_left": 4,
-											"radius": 4
+											"padding_top": 0,
+											"padding_right": 0,
+											"padding_left": 0,
+											"radius": 4,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_PART_SCROLLBAR",
@@ -931,11 +1626,11 @@
 									"id": "77ztlyha",
 									"type": "label",
 									"left": 400,
-									"top": 60,
+									"top": 70,
 									"visible": true,
 									"flag": [],
 									"width": 150,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Dia Tolerance:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1027,11 +1722,11 @@
 									"id": "6ckrk2r0",
 									"type": "label",
 									"left": 400,
-									"top": 30,
+									"top": 35,
 									"visible": true,
 									"flag": [],
 									"width": 130,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Plunger Len:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1127,7 +1822,7 @@
 									"visible": true,
 									"flag": [],
 									"width": 120,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Barrel Len:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1219,11 +1914,11 @@
 									"id": "5p9yehfr",
 									"type": "label",
 									"left": 0,
-									"top": 90,
+									"top": 105,
 									"visible": true,
 									"flag": [],
 									"width": 110,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Outer Dia:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1315,11 +2010,11 @@
 									"id": "fmu0decu",
 									"type": "label",
 									"left": 0,
-									"top": 60,
+									"top": 70,
 									"visible": true,
 									"flag": [],
 									"width": 100,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Inner Dia:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1411,11 +2106,11 @@
 									"id": "pe9twdxw",
 									"type": "label",
 									"left": 0,
-									"top": 30,
+									"top": 35,
 									"visible": true,
 									"flag": [],
 									"width": 80,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Volume:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1511,7 +2206,7 @@
 									"visible": true,
 									"flag": [],
 									"width": 70,
-									"height": 30,
+									"height": 25,
 									"default_style": false,
 									"text": "Name:",
 									"long_mode": "LV_LABEL_LONG_WRAP",
@@ -1644,7 +2339,7 @@
 							"visible": true,
 							"flag": [],
 							"width": 400,
-							"height": 150,
+							"height": 140,
 							"default_style": false,
 							"scrollbar_mode": "AUTO",
 							"items": [
@@ -1841,10 +2536,10 @@
 									"bg_dither_mode": "LV_DITHER_NONE",
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
-									"padding_top": 5,
-									"padding_left": 5,
-									"padding_right": 5,
-									"padding_bottom": 5,
+									"padding_top": 2,
+									"padding_left": 2,
+									"padding_right": 2,
+									"padding_bottom": 2,
 									"border_color": "#e1e6ee",
 									"border_side": [
 										"LV_BORDER_SIDE_FULL"
@@ -1852,8 +2547,8 @@
 									"border_width": 0,
 									"border_opa": 255,
 									"text_color": "#ffffff",
-									"font": 12,
-									"font_family": "montserratMedium",
+									"font": 19,
+									"font_family": "Alatsi_Regular",
 									"radius": 3,
 									"bg_opa": 255
 								},
@@ -1897,10 +2592,10 @@
 									"bg_dither_mode": "LV_DITHER_NONE",
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
-									"padding_top": 5,
-									"padding_left": 5,
-									"padding_right": 5,
-									"padding_bottom": 5,
+									"padding_top": 2,
+									"padding_left": 2,
+									"padding_right": 2,
+									"padding_bottom": 2,
 									"border_color": "#e1e6ee",
 									"border_side": [
 										"LV_BORDER_SIDE_FULL"
@@ -1909,8 +2604,8 @@
 									"border_opa": 255,
 									"text_color": "#ffffff",
 									"radius": 3,
-									"font": 12,
-									"font_family": "montserratMedium",
+									"font": 19,
+									"font_family": "Alatsi_Regular",
 									"bg_opa": 255
 								},
 								{
@@ -1946,183 +2641,7 @@
 								"clicked": [
 									{
 										"trigger": "clicked",
-										"dst": "puisiyh5",
-										"item_index": "widget",
-										"action": {
-											"load_screen": {
-												"ische": false,
-												"duration": 200,
-												"delay": 200,
-												"scrId": "",
-												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-												"is_clean": false,
-												"is_del": true
-											},
-											"bg_color": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"grad_color": {
-												"ische": false,
-												"value": "#000000",
-												"dir": "LV_GRAD_DIR_HOR"
-											},
-											"bg_opa": {
-												"ische": false,
-												"value": 255
-											},
-											"opacity": {
-												"ische": false,
-												"value": 255
-											},
-											"bg_img_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"bg_img_recolor": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"bg_img_recolor_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"border_side": {
-												"ische": false,
-												"value": []
-											},
-											"border_width": {
-												"ische": false,
-												"value": 0
-											},
-											"border_opa": {
-												"ische": false,
-												"value": 0
-											},
-											"border_color": {
-												"ische": false,
-												"value": "#000000"
-											},
-											"radius": {
-												"ische": false,
-												"value": 0
-											},
-											"width": {
-												"ische": false,
-												"value": 50
-											},
-											"height": {
-												"ische": false,
-												"value": 50
-											},
-											"set_text": {
-												"ische": false,
-												"value": "default",
-												"font": 12,
-												"font_family": "montserratMedium"
-											},
-											"position": {
-												"ische": false,
-												"value_x": 0,
-												"value_y": 0
-											},
-											"isVisible": {
-												"ische": true,
-												"flag": "hide"
-											},
-											"customer_code": {
-												"ische": false,
-												"inc_c": "",
-												"code_c": "",
-												"inc_py": "",
-												"code_py": ""
-											},
-											"freemaster": {
-												"ische": false,
-												"variable": "",
-												"address": "",
-												"type": "",
-												"value": "",
-												"isOrigin": false
-											},
-											"add_state": {
-												"ische": false,
-												"value": "LV_STATE_DEFAULT"
-											},
-											"add_flag": {
-												"ische": false,
-												"value": []
-											},
-											"clear_flag": {
-												"ische": false,
-												"value": []
-											},
-											"move": {
-												"ische": false,
-												"value_x": 0,
-												"value_y": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											},
-											"scaleSize": {
-												"ische": false,
-												"width": 0,
-												"height": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											},
-											"img_zoom": {
-												"ische": false,
-												"zoom": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											},
-											"rotate": {
-												"ische": false,
-												"rotate": 0,
-												"x": 0,
-												"y": 0,
-												"delay": 0,
-												"duration": 1000,
-												"repeat_count": 0,
-												"repeat_delay": 0,
-												"playback_time": 0,
-												"playback_delay": 0,
-												"start_cb": "",
-												"ready_cb": "",
-												"deleted_cb": "",
-												"path_type": "linear"
-											}
-										}
-									},
-									{
-										"trigger": "clicked",
 										"dst": "null",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -2292,12 +2811,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									},
 									{
 										"trigger": "clicked",
 										"dst": "ixe3exep",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -2469,7 +2988,8 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									}
 								]
 							}
@@ -2483,7 +3003,7 @@
 							"visible": true,
 							"flag": [],
 							"width": 400,
-							"height": 150,
+							"height": 140,
 							"default_style": false,
 							"scrollbar_mode": "AUTO",
 							"items": [
@@ -2493,11 +3013,11 @@
 									"img_width": 20,
 									"img_height": 20,
 									"img_symbol": "LV_SYMBOL_SAVE",
-									"text": "save"
+									"text": "Mnfc1"
 								},
 								{
 									"type": "image",
-									"text": "save_1",
+									"text": "Mnfc2",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -2505,7 +3025,7 @@
 								},
 								{
 									"type": "image",
-									"text": "save_2",
+									"text": "Mnfc3",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -2513,7 +3033,7 @@
 								},
 								{
 									"type": "image",
-									"text": "save_3",
+									"text": "Mnfc4",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -2521,7 +3041,7 @@
 								},
 								{
 									"type": "image",
-									"text": "save_4",
+									"text": "Mnfc5",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -2848,10 +3368,10 @@
 									"bg_dither_mode": "LV_DITHER_NONE",
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
-									"padding_top": 5,
-									"padding_left": 5,
-									"padding_right": 5,
-									"padding_bottom": 5,
+									"padding_top": 2,
+									"padding_left": 2,
+									"padding_right": 2,
+									"padding_bottom": 2,
 									"border_color": "#e1e6ee",
 									"border_side": [
 										"LV_BORDER_SIDE_FULL"
@@ -2859,8 +3379,8 @@
 									"border_width": 0,
 									"border_opa": 255,
 									"text_color": "#ffffff",
-									"font": 15,
-									"font_family": "arial",
+									"font": 19,
+									"font_family": "Alatsi_Regular",
 									"radius": 3,
 									"bg_opa": 255
 								},
@@ -2904,10 +3424,10 @@
 									"bg_dither_mode": "LV_DITHER_NONE",
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
-									"padding_top": 5,
-									"padding_left": 5,
-									"padding_right": 5,
-									"padding_bottom": 5,
+									"padding_top": 2,
+									"padding_left": 2,
+									"padding_right": 2,
+									"padding_bottom": 2,
 									"border_color": "#e1e6ee",
 									"border_side": [
 										"LV_BORDER_SIDE_FULL"
@@ -2916,8 +3436,8 @@
 									"border_opa": 255,
 									"text_color": "#ffffff",
 									"radius": 3,
-									"font": 15,
-									"font_family": "arial",
+									"font": 19,
+									"font_family": "Alatsi_Regular",
 									"bg_opa": 255
 								},
 								{
@@ -2925,7 +3445,7 @@
 									"state": "LV_STATE_DEFAULT",
 									"desc": "item text",
 									"object": "extra_texts",
-									"disable": false,
+									"disable": true,
 									"bg_color": "#000000",
 									"bg_grad_color": "#ffffff",
 									"bg_grad_dir": "LV_GRAD_DIR_NONE",
@@ -2954,7 +3474,6 @@
 									{
 										"trigger": "clicked",
 										"dst": "null",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3124,12 +3643,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									},
 									{
 										"trigger": "clicked",
 										"dst": "ixe3exep",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3299,12 +3818,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									},
 									{
 										"trigger": "clicked",
 										"dst": "j7xl825t",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3476,7 +3995,8 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									}
 								]
 							}
@@ -3753,7 +4273,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "extern lv_group_t *g_syringevalues;",
-												"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t\tuint8_t id;\n\t\tid=lv_obj_get_child_id(lv_group_get_focused(g_syringevalues));\n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\t  lv_group_focus_prev(g_syringevalues);\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contSetting,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontSetting_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t}",
+												"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t\tuint8_t id;\n\t\tid=lv_obj_get_child_id(lv_group_get_focused(g_syringevalues));\n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\tlv_obj_t *obj=lv_group_get_focused(g_syringevalues);\n\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\tlv_group_focus_prev(g_syringevalues);\n\t\tobj=lv_group_get_focused(g_syringevalues);\n\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contSetting,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontSetting_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t}",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -11242,7 +11762,7 @@
 							"name": "imgUsbPort",
 							"id": "mrgw79eq",
 							"type": "img",
-							"left": 492,
+							"left": 490,
 							"top": 6,
 							"visible": true,
 							"flag": [],
@@ -12821,7 +13341,7 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
+					"code_c": "\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\n",
 					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
@@ -13390,7 +13910,7 @@
 								"visible": true,
 								"flag": [],
 								"pos": [
-									492,
+									490,
 									6
 								],
 								"size": [
@@ -19530,7 +20050,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "extern lv_group_t *g_syringevalues;",
-											"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t\tuint8_t id;\n\t\tid=lv_obj_get_child_id(lv_group_get_focused(g_syringevalues));\n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\t  lv_group_focus_prev(g_syringevalues);\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contSetting,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontSetting_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t}",
+											"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t\tuint8_t id;\n\t\tid=lv_obj_get_child_id(lv_group_get_focused(g_syringevalues));\n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\tlv_obj_t *obj=lv_group_get_focused(g_syringevalues);\n\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\tlv_group_focus_prev(g_syringevalues);\n\t\tobj=lv_group_get_focused(g_syringevalues);\n\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contSetting,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontSetting_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t}",
 											"inc_py": "",
 											"code_py": ""
 										}
@@ -19722,7 +20242,7 @@
 								],
 								"size": [
 									400,
-									150
+									140
 								],
 								"default_style": false,
 								"event": {
@@ -19785,7 +20305,7 @@
 										"img_width": 20,
 										"img_height": 20,
 										"img_symbol": "LV_SYMBOL_SAVE",
-										"text": "save",
+										"text": "Mnfc1",
 										"img_size": [
 											20,
 											20
@@ -20326,10 +20846,10 @@
 										"bg_dither_mode": "LV_DITHER_NONE",
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
-										"padding_top": 5,
-										"padding_left": 5,
-										"padding_right": 5,
-										"padding_bottom": 5,
+										"padding_top": 2,
+										"padding_left": 2,
+										"padding_right": 2,
+										"padding_bottom": 2,
 										"border_color": "#e1e6ee",
 										"border_side": [
 											"LV_BORDER_SIDE_FULL"
@@ -20337,8 +20857,8 @@
 										"border_width": 0,
 										"border_opa": 255,
 										"text_color": "#ffffff",
-										"font": 15,
-										"font_family": "arial",
+										"font": 19,
+										"font_family": "Alatsi_Regular",
 										"radius": 3,
 										"bg_opa": 255
 									},
@@ -20382,10 +20902,10 @@
 										"bg_dither_mode": "LV_DITHER_NONE",
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
-										"padding_top": 5,
-										"padding_left": 5,
-										"padding_right": 5,
-										"padding_bottom": 5,
+										"padding_top": 2,
+										"padding_left": 2,
+										"padding_right": 2,
+										"padding_bottom": 2,
 										"border_color": "#e1e6ee",
 										"border_side": [
 											"LV_BORDER_SIDE_FULL"
@@ -20394,8 +20914,8 @@
 										"border_opa": 255,
 										"text_color": "#ffffff",
 										"radius": 3,
-										"font": 15,
-										"font_family": "arial",
+										"font": 19,
+										"font_family": "Alatsi_Regular",
 										"bg_opa": 255
 									},
 									{
@@ -20403,7 +20923,7 @@
 										"state": "LV_STATE_DEFAULT",
 										"desc": "item text",
 										"object": "extra_texts",
-										"disable": false,
+										"disable": true,
 										"bg_color": "#000000",
 										"bg_grad_color": "#ffffff",
 										"bg_grad_dir": "LV_GRAD_DIR_NONE",
@@ -20441,22 +20961,11 @@
 								],
 								"size": [
 									400,
-									150
+									140
 								],
 								"default_style": false,
 								"event": {
 									"clicked": [
-										{
-											"src": "MainScreen_listSyringeType",
-											"trigger": "clicked",
-											"dst": "MainScreen_contHeader",
-											"dst_type": "cont",
-											"item_index": "widget",
-											"src_type": "list",
-											"src_screen": "MainScreen",
-											"action": "isVisible",
-											"flag": "hide"
-										},
 										{
 											"src": "MainScreen_listSyringeType",
 											"trigger": "clicked",
@@ -20740,10 +21249,10 @@
 										"bg_dither_mode": "LV_DITHER_NONE",
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
-										"padding_top": 5,
-										"padding_left": 5,
-										"padding_right": 5,
-										"padding_bottom": 5,
+										"padding_top": 2,
+										"padding_left": 2,
+										"padding_right": 2,
+										"padding_bottom": 2,
 										"border_color": "#e1e6ee",
 										"border_side": [
 											"LV_BORDER_SIDE_FULL"
@@ -20751,8 +21260,8 @@
 										"border_width": 0,
 										"border_opa": 255,
 										"text_color": "#ffffff",
-										"font": 12,
-										"font_family": "montserratMedium",
+										"font": 19,
+										"font_family": "Alatsi_Regular",
 										"radius": 3,
 										"bg_opa": 255
 									},
@@ -20796,10 +21305,10 @@
 										"bg_dither_mode": "LV_DITHER_NONE",
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
-										"padding_top": 5,
-										"padding_left": 5,
-										"padding_right": 5,
-										"padding_bottom": 5,
+										"padding_top": 2,
+										"padding_left": 2,
+										"padding_right": 2,
+										"padding_bottom": 2,
 										"border_color": "#e1e6ee",
 										"border_side": [
 											"LV_BORDER_SIDE_FULL"
@@ -20808,8 +21317,8 @@
 										"border_opa": 255,
 										"text_color": "#ffffff",
 										"radius": 3,
-										"font": 12,
-										"font_family": "montserratMedium",
+										"font": 19,
+										"font_family": "Alatsi_Regular",
 										"bg_opa": 255
 									},
 									{
@@ -20851,11 +21360,11 @@
 								"flag": [],
 								"pos": [
 									0,
-									180
+									170
 								],
 								"size": [
 									740,
-									120
+									130
 								],
 								"default_style": false,
 								"child": [
@@ -20871,7 +21380,7 @@
 										],
 										"size": [
 											70,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -20967,11 +21476,11 @@
 										"flag": [],
 										"pos": [
 											0,
-											30
+											35
 										],
 										"size": [
 											80,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21067,11 +21576,11 @@
 										"flag": [],
 										"pos": [
 											0,
-											60
+											70
 										],
 										"size": [
 											100,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21167,11 +21676,11 @@
 										"flag": [],
 										"pos": [
 											0,
-											90
+											105
 										],
 										"size": [
 											110,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21271,7 +21780,7 @@
 										],
 										"size": [
 											120,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21367,11 +21876,11 @@
 										"flag": [],
 										"pos": [
 											400,
-											30
+											35
 										],
 										"size": [
 											130,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21467,11 +21976,11 @@
 										"flag": [],
 										"pos": [
 											400,
-											60
+											70
 										],
 										"size": [
 											150,
-											30
+											25
 										],
 										"default_style": false,
 										"attribute_type": "",
@@ -21566,11 +22075,11 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											60,
-											2
+											73,
+											0
 										],
 										"size": [
-											324,
+											300,
 											30
 										],
 										"default_style": false,
@@ -21586,8 +22095,8 @@
 												"part": "LV_PART_MAIN",
 												"state": "LV_STATE_DEFAULT",
 												"disable": false,
-												"font": 13,
-												"font_family": "arial",
+												"font": 18,
+												"font_family": "Alatsi_Regular",
 												"bg_color": "#000000",
 												"bg_grad_color": "#ffffff",
 												"bg_opa": 255,
@@ -21610,17 +22119,17 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"padding_top": 4,
-												"padding_right": 4,
-												"padding_left": 4,
+												"padding_top": 0,
+												"padding_right": 0,
+												"padding_left": 0,
 												"radius": 4
 											},
 											{
 												"part": "LV_PART_MAIN",
 												"state": "LV_STATE_FOCUSED",
 												"disable": false,
-												"font": 13,
-												"font_family": "arial",
+												"font": 18,
+												"font_family": "Alatsi_Regular",
 												"bg_color": "#a4e6fd",
 												"bg_grad_color": "#ffffff",
 												"bg_opa": 255,
@@ -21634,17 +22143,18 @@
 												"border_width": 0,
 												"border_color": "#e6e6e6",
 												"border_opa": 255,
-												"text_color": "#909090",
+												"text_color": "#000000",
 												"shadow_color": "#2195f6",
 												"shadow_opa": 255,
 												"shadow_width": 0,
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"padding_top": 4,
-												"padding_right": 4,
-												"padding_left": 4,
-												"radius": 4
+												"padding_top": 0,
+												"padding_right": 0,
+												"padding_left": 0,
+												"radius": 4,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_SCROLLBAR",
@@ -21671,11 +22181,14 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											110,
-											30
+											123,
+											34
 										],
 										"default_style": false,
-										"spinbox_width": 91,
+										"event": {
+											"long_pressed": []
+										},
+										"spinbox_width": 90,
 										"spinbox_height": 25,
 										"digit_format": [
 											2,
@@ -21708,9 +22221,9 @@
 												"padding_right": 0,
 												"padding_bottom": 0,
 												"padding_left": 0,
-												"letter_space": 0,
-												"font": 12,
-												"font_family": "arial",
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
 												"text_color": "#000000",
 												"radius": 5,
 												"shadow_color": "#2195f6",
@@ -21725,8 +22238,8 @@
 												"part": "LV_PART_CURSOR",
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
-												"disable": false,
-												"font": 12,
+												"disable": true,
+												"font": 14,
 												"text_color": "#ffffff",
 												"font_family": "montserratMedium",
 												"bg_color": "#2195f6",
@@ -21742,13 +22255,13 @@
 												"state": "LV_STATE_DEFAULT",
 												"desc": "button",
 												"object": "extra_btns",
-												"disable": false,
+												"disable": true,
 												"font": 12,
 												"font_family": "montserratMedium",
 												"text_color": "#000000",
 												"bg_color": "#2195f6",
 												"bg_grad_color": "#2195f6",
-												"bg_opa": 0,
+												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
@@ -21759,8 +22272,7 @@
 												"border_width": 0,
 												"border_color": "#2195f6",
 												"border_opa": 255,
-												"radius": 5,
-												"text_opa": 255
+												"radius": 5
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -21795,11 +22307,11 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											110,
-											62
+											123,
+											69
 										],
 										"default_style": false,
-										"spinbox_width": 91,
+										"spinbox_width": 90,
 										"spinbox_height": 25,
 										"digit_format": [
 											3,
@@ -21832,9 +22344,9 @@
 												"padding_right": 0,
 												"padding_bottom": 0,
 												"padding_left": 0,
-												"letter_space": 0,
-												"font": 12,
-												"font_family": "arial",
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
 												"text_color": "#000000",
 												"radius": 5,
 												"shadow_color": "#2195f6",
@@ -21849,8 +22361,8 @@
 												"part": "LV_PART_CURSOR",
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
-												"disable": false,
-												"font": 12,
+												"disable": true,
+												"font": 14,
 												"text_color": "#ffffff",
 												"font_family": "montserratMedium",
 												"bg_color": "#2195f6",
@@ -21866,13 +22378,13 @@
 												"state": "LV_STATE_DEFAULT",
 												"desc": "button",
 												"object": "extra_btns",
-												"disable": false,
+												"disable": true,
 												"font": 12,
 												"font_family": "montserratMedium",
 												"text_color": "#000000",
 												"bg_color": "#2195f6",
 												"bg_grad_color": "#2195f6",
-												"bg_opa": 0,
+												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
@@ -21883,8 +22395,7 @@
 												"border_width": 0,
 												"border_color": "#2195f6",
 												"border_opa": 255,
-												"radius": 5,
-												"text_opa": 255
+												"radius": 5
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -21919,11 +22430,11 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											110,
-											91
+											123,
+											102
 										],
 										"default_style": false,
-										"spinbox_width": 91,
+										"spinbox_width": 90,
 										"spinbox_height": 25,
 										"digit_format": [
 											3,
@@ -21956,9 +22467,9 @@
 												"padding_right": 0,
 												"padding_bottom": 0,
 												"padding_left": 0,
-												"letter_space": 0,
-												"font": 12,
-												"font_family": "arial",
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
 												"text_color": "#000000",
 												"radius": 5,
 												"shadow_color": "#2195f6",
@@ -21974,7 +22485,7 @@
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
 												"disable": false,
-												"font": 12,
+												"font": 14,
 												"text_color": "#ffffff",
 												"font_family": "montserratMedium",
 												"bg_color": "#2195f6",
@@ -21990,13 +22501,13 @@
 												"state": "LV_STATE_DEFAULT",
 												"desc": "button",
 												"object": "extra_btns",
-												"disable": false,
+												"disable": true,
 												"font": 12,
 												"font_family": "montserratMedium",
 												"text_color": "#000000",
 												"bg_color": "#2195f6",
 												"bg_grad_color": "#2195f6",
-												"bg_opa": 0,
+												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
@@ -22007,8 +22518,393 @@
 												"border_width": 0,
 												"border_color": "#2195f6",
 												"border_opa": 255,
+												"radius": 5
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_PRESSED",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#ffffff",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
+											}
+										]
+									},
+									{
+										"name": "MainScreen_spinboxSyringeBarrelLen",
+										"id": "1nue1a0a",
+										"type": "spinbox",
+										"visible": true,
+										"flag": [],
+										"pos": [
+											570,
+											0
+										],
+										"default_style": false,
+										"spinbox_width": 90,
+										"spinbox_height": 25,
+										"digit_format": [
+											3,
+											3
+										],
+										"ranges": [
+											-999,
+											999
+										],
+										"style": [
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"bg_color": "#ffffff",
+												"bg_grad_color": "#ffffff",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 2,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"padding_top": 0,
+												"padding_right": 0,
+												"padding_bottom": 0,
+												"padding_left": 0,
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
+												"text_color": "#000000",
 												"radius": 5,
-												"text_opa": 255
+												"shadow_color": "#2195f6",
+												"shadow_opa": 255,
+												"shadow_width": 0,
+												"shadow_spread": 0,
+												"shadow_ofs_x": 0,
+												"shadow_ofs_y": 0,
+												"paddingLeft": 2
+											},
+											{
+												"part": "LV_PART_CURSOR",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"font": 14,
+												"text_color": "#ffffff",
+												"font_family": "montserratMedium",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#000000",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_PRESSED",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#ffffff",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
+											}
+										]
+									},
+									{
+										"name": "MainScreen_spinboxSyringePlungerLen",
+										"id": "x72icd57",
+										"type": "spinbox",
+										"visible": true,
+										"flag": [],
+										"pos": [
+											570,
+											35
+										],
+										"default_style": false,
+										"spinbox_width": 90,
+										"spinbox_height": 25,
+										"digit_format": [
+											2,
+											2
+										],
+										"ranges": [
+											-99,
+											99
+										],
+										"style": [
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"bg_color": "#ffffff",
+												"bg_grad_color": "#ffffff",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 2,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"padding_top": 0,
+												"padding_right": 0,
+												"padding_bottom": 0,
+												"padding_left": 0,
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
+												"text_color": "#000000",
+												"radius": 5,
+												"shadow_color": "#2195f6",
+												"shadow_opa": 255,
+												"shadow_width": 0,
+												"shadow_spread": 0,
+												"shadow_ofs_x": 0,
+												"shadow_ofs_y": 0,
+												"paddingLeft": 2
+											},
+											{
+												"part": "LV_PART_CURSOR",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"font": 14,
+												"text_color": "#ffffff",
+												"font_family": "montserratMedium",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#000000",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_PRESSED",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#ffffff",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
+											}
+										]
+									},
+									{
+										"name": "MainScreen_spinboxSyringeDiaTolerance",
+										"id": "n1o0than",
+										"type": "spinbox",
+										"visible": true,
+										"flag": [],
+										"pos": [
+											569,
+											70
+										],
+										"default_style": false,
+										"event": {
+											"long_pressed": [
+												{
+													"src": "MainScreen_spinboxSyringeDiaTolerance",
+													"trigger": "long_pressed",
+													"dst": "MainScreen_spinboxSyringeDiaTolerance",
+													"dst_type": "spinbox",
+													"src_type": "spinbox",
+													"src_screen": "MainScreen",
+													"action": "customer_code",
+													"inc_c": "",
+													"code_c": "lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);",
+													"inc_py": "",
+													"code_py": ""
+												}
+											]
+										},
+										"spinbox_width": 90,
+										"spinbox_height": 25,
+										"digit_format": [
+											2,
+											2
+										],
+										"ranges": [
+											-99,
+											99
+										],
+										"style": [
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"bg_color": "#ffffff",
+												"bg_grad_color": "#ffffff",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 2,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"padding_top": 0,
+												"padding_right": 0,
+												"padding_bottom": 0,
+												"padding_left": 0,
+												"letter_space": 2,
+												"font": 16,
+												"font_family": "Alatsi_Regular",
+												"text_color": "#000000",
+												"radius": 5,
+												"shadow_color": "#2195f6",
+												"shadow_opa": 255,
+												"shadow_width": 0,
+												"shadow_spread": 0,
+												"shadow_ofs_x": 0,
+												"shadow_ofs_y": 0,
+												"paddingLeft": 2
+											},
+											{
+												"part": "LV_PART_CURSOR",
+												"state": "LV_STATE_DEFAULT",
+												"object": "main",
+												"disable": false,
+												"font": 14,
+												"text_color": "#ffffff",
+												"font_family": "montserratMedium",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255
+											},
+											{
+												"part": "LV_PART_MAIN",
+												"state": "LV_STATE_DEFAULT",
+												"desc": "button",
+												"object": "extra_btns",
+												"disable": true,
+												"font": 12,
+												"font_family": "montserratMedium",
+												"text_color": "#000000",
+												"bg_color": "#2195f6",
+												"bg_grad_color": "#2195f6",
+												"bg_opa": 255,
+												"bg_grad_dir": "LV_GRAD_DIR_NONE",
+												"bg_dither_mode": "LV_DITHER_NONE",
+												"bg_main_stop": 0,
+												"bg_grad_stop": 255,
+												"border_side": [
+													"LV_BORDER_SIDE_FULL"
+												],
+												"border_width": 0,
+												"border_color": "#2195f6",
+												"border_opa": 255,
+												"radius": 5
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -22105,9 +23001,9 @@
 										"border_color": "#959595",
 										"radius": 0,
 										"text_color": "#ffffff",
-										"font": 16,
+										"font": 19,
 										"text_align": "LV_TEXT_ALIGN_CENTER",
-										"font_family": "arial",
+										"font_family": "montserratMedium",
 										"letter_space": 2,
 										"line_space": 0,
 										"bg_color": "#9ac9e7",
@@ -22266,8 +23162,7 @@
 								"padding_top": 4,
 								"padding_right": 4,
 								"padding_left": 4,
-								"radius": 4,
-								"text_opa": 255
+								"radius": 4
 							},
 							{
 								"part": "LV_PART_MAIN",

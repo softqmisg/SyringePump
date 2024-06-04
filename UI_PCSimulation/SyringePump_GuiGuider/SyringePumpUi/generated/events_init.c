@@ -114,7 +114,12 @@ static void MainScreen_btnGoSettingSyringe_event_handler (lv_event_t *e)
 		  }
 		  else
 		  {
-			  lv_group_focus_prev(g_syringevalues);
+			lv_obj_t *obj=lv_group_get_focused(g_syringevalues);
+			lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+			lv_group_focus_prev(g_syringevalues);
+			obj=lv_group_get_focused(g_syringevalues);
+			lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	
 		  }
 	
 		}
@@ -167,12 +172,25 @@ static void MainScreen_listSyringeType_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		lv_obj_add_flag(guider_ui.MainScreen_contHeader, LV_OBJ_FLAG_HIDDEN);
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 	lv_obj_t *obj=lv_event_get_target(e);
 	setcontSyringeValuesGroup(ui);
 	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		lv_obj_add_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_spinboxSyringeDiaTolerance_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_LONG_PRESSED:
+	{
+		lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);
 		break;
 	}
 	default:
@@ -188,6 +206,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingSyringe, MainScreen_btnGoSettingSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeCompany, MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeType, MainScreen_listSyringeType_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeDiaTolerance, MainScreen_spinboxSyringeDiaTolerance_event_handler, LV_EVENT_ALL, ui);
 }
 
 void events_init(lv_ui *ui)

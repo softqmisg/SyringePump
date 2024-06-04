@@ -180,7 +180,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_img_set_src(ui->MainScreen_imgUsbPort, &_usb_64_alpha_64x64);
 	lv_img_set_pivot(ui->MainScreen_imgUsbPort, 50,50);
 	lv_img_set_angle(ui->MainScreen_imgUsbPort, 0);
-	lv_obj_set_pos(ui->MainScreen_imgUsbPort, 492, 6);
+	lv_obj_set_pos(ui->MainScreen_imgUsbPort, 490, 6);
 	lv_obj_set_size(ui->MainScreen_imgUsbPort, 64, 64);
 
 	//Write style for MainScreen_imgUsbPort, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -1500,7 +1500,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write codes MainScreen_listSyringeCompany
 	ui->MainScreen_listSyringeCompany = lv_list_create(ui->MainScreen_contSyringe);
-	ui->MainScreen_listSyringeCompany_item0 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save");
+	ui->MainScreen_listSyringeCompany_item0 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "Mnfc1");
 	ui->MainScreen_listSyringeCompany_item1 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_1");
 	ui->MainScreen_listSyringeCompany_item2 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_2");
 	ui->MainScreen_listSyringeCompany_item3 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_3");
@@ -1532,7 +1532,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_listSyringeCompany_item29 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_29");
 	ui->MainScreen_listSyringeCompany_item30 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_30");
 	lv_obj_set_pos(ui->MainScreen_listSyringeCompany, -1, 29);
-	lv_obj_set_size(ui->MainScreen_listSyringeCompany, 400, 150);
+	lv_obj_set_size(ui->MainScreen_listSyringeCompany, 400, 140);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_listSyringeCompany, LV_SCROLLBAR_MODE_AUTO);
 
 	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listSyringeCompany_main_main_default
@@ -1568,13 +1568,13 @@ void setup_scr_MainScreen(lv_ui *ui)
 	static lv_style_t style_MainScreen_listSyringeCompany_extra_btns_main_default;
 	ui_init_style(&style_MainScreen_listSyringeCompany_extra_btns_main_default);
 	
-	lv_style_set_pad_top(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 5);
-	lv_style_set_pad_left(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 5);
-	lv_style_set_pad_right(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 5);
-	lv_style_set_pad_bottom(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 5);
+	lv_style_set_pad_top(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 2);
+	lv_style_set_pad_left(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 2);
+	lv_style_set_pad_right(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 2);
 	lv_style_set_border_width(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 0);
 	lv_style_set_text_color(&style_MainScreen_listSyringeCompany_extra_btns_main_default, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listSyringeCompany_extra_btns_main_default, &lv_font_arial_15);
+	lv_style_set_text_font(&style_MainScreen_listSyringeCompany_extra_btns_main_default, &lv_font_Alatsi_Regular_19);
 	lv_style_set_text_opa(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 255);
 	lv_style_set_radius(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 3);
 	lv_style_set_bg_opa(&style_MainScreen_listSyringeCompany_extra_btns_main_default, 255);
@@ -1616,14 +1616,14 @@ void setup_scr_MainScreen(lv_ui *ui)
 	static lv_style_t style_MainScreen_listSyringeCompany_extra_btns_main_focused;
 	ui_init_style(&style_MainScreen_listSyringeCompany_extra_btns_main_focused);
 	
-	lv_style_set_pad_top(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 5);
-	lv_style_set_pad_left(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 5);
-	lv_style_set_pad_right(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 5);
-	lv_style_set_pad_bottom(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 5);
+	lv_style_set_pad_top(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 2);
+	lv_style_set_pad_left(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 2);
+	lv_style_set_pad_right(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 2);
 	lv_style_set_border_width(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 0);
 	lv_style_set_radius(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 3);
 	lv_style_set_text_color(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, &lv_font_arial_15);
+	lv_style_set_text_font(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, &lv_font_Alatsi_Regular_19);
 	lv_style_set_text_opa(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 255);
 	lv_style_set_bg_opa(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, 255);
 	lv_style_set_bg_color(&style_MainScreen_listSyringeCompany_extra_btns_main_focused, lv_color_hex(0x0016ff));
@@ -1660,21 +1660,6 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_add_style(ui->MainScreen_listSyringeCompany_item1, &style_MainScreen_listSyringeCompany_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_add_style(ui->MainScreen_listSyringeCompany_item0, &style_MainScreen_listSyringeCompany_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
 
-	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listSyringeCompany_extra_texts_main_default
-	static lv_style_t style_MainScreen_listSyringeCompany_extra_texts_main_default;
-	ui_init_style(&style_MainScreen_listSyringeCompany_extra_texts_main_default);
-	
-	lv_style_set_pad_top(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 5);
-	lv_style_set_pad_left(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 5);
-	lv_style_set_pad_right(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 5);
-	lv_style_set_pad_bottom(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 5);
-	lv_style_set_border_width(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 0);
-	lv_style_set_text_color(&style_MainScreen_listSyringeCompany_extra_texts_main_default, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listSyringeCompany_extra_texts_main_default, &lv_font_arial_14);
-	lv_style_set_text_opa(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 255);
-	lv_style_set_radius(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 3);
-	lv_style_set_bg_opa(&style_MainScreen_listSyringeCompany_extra_texts_main_default, 0);
-
 	//Write codes MainScreen_listSyringeType
 	ui->MainScreen_listSyringeType = lv_list_create(ui->MainScreen_contSyringe);
 	ui->MainScreen_listSyringeType_item0 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save");
@@ -1688,7 +1673,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_listSyringeType_item8 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save_8");
 	ui->MainScreen_listSyringeType_item9 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save_9");
 	lv_obj_set_pos(ui->MainScreen_listSyringeType, 401, 30);
-	lv_obj_set_size(ui->MainScreen_listSyringeType, 400, 150);
+	lv_obj_set_size(ui->MainScreen_listSyringeType, 400, 140);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_listSyringeType, LV_SCROLLBAR_MODE_AUTO);
 
 	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listSyringeType_main_main_default
@@ -1724,13 +1709,13 @@ void setup_scr_MainScreen(lv_ui *ui)
 	static lv_style_t style_MainScreen_listSyringeType_extra_btns_main_default;
 	ui_init_style(&style_MainScreen_listSyringeType_extra_btns_main_default);
 	
-	lv_style_set_pad_top(&style_MainScreen_listSyringeType_extra_btns_main_default, 5);
-	lv_style_set_pad_left(&style_MainScreen_listSyringeType_extra_btns_main_default, 5);
-	lv_style_set_pad_right(&style_MainScreen_listSyringeType_extra_btns_main_default, 5);
-	lv_style_set_pad_bottom(&style_MainScreen_listSyringeType_extra_btns_main_default, 5);
+	lv_style_set_pad_top(&style_MainScreen_listSyringeType_extra_btns_main_default, 2);
+	lv_style_set_pad_left(&style_MainScreen_listSyringeType_extra_btns_main_default, 2);
+	lv_style_set_pad_right(&style_MainScreen_listSyringeType_extra_btns_main_default, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listSyringeType_extra_btns_main_default, 2);
 	lv_style_set_border_width(&style_MainScreen_listSyringeType_extra_btns_main_default, 0);
 	lv_style_set_text_color(&style_MainScreen_listSyringeType_extra_btns_main_default, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listSyringeType_extra_btns_main_default, &lv_font_montserratMedium_12);
+	lv_style_set_text_font(&style_MainScreen_listSyringeType_extra_btns_main_default, &lv_font_Alatsi_Regular_19);
 	lv_style_set_text_opa(&style_MainScreen_listSyringeType_extra_btns_main_default, 255);
 	lv_style_set_radius(&style_MainScreen_listSyringeType_extra_btns_main_default, 3);
 	lv_style_set_bg_opa(&style_MainScreen_listSyringeType_extra_btns_main_default, 255);
@@ -1751,14 +1736,14 @@ void setup_scr_MainScreen(lv_ui *ui)
 	static lv_style_t style_MainScreen_listSyringeType_extra_btns_main_focused;
 	ui_init_style(&style_MainScreen_listSyringeType_extra_btns_main_focused);
 	
-	lv_style_set_pad_top(&style_MainScreen_listSyringeType_extra_btns_main_focused, 5);
-	lv_style_set_pad_left(&style_MainScreen_listSyringeType_extra_btns_main_focused, 5);
-	lv_style_set_pad_right(&style_MainScreen_listSyringeType_extra_btns_main_focused, 5);
-	lv_style_set_pad_bottom(&style_MainScreen_listSyringeType_extra_btns_main_focused, 5);
+	lv_style_set_pad_top(&style_MainScreen_listSyringeType_extra_btns_main_focused, 2);
+	lv_style_set_pad_left(&style_MainScreen_listSyringeType_extra_btns_main_focused, 2);
+	lv_style_set_pad_right(&style_MainScreen_listSyringeType_extra_btns_main_focused, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listSyringeType_extra_btns_main_focused, 2);
 	lv_style_set_border_width(&style_MainScreen_listSyringeType_extra_btns_main_focused, 0);
 	lv_style_set_radius(&style_MainScreen_listSyringeType_extra_btns_main_focused, 3);
 	lv_style_set_text_color(&style_MainScreen_listSyringeType_extra_btns_main_focused, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listSyringeType_extra_btns_main_focused, &lv_font_montserratMedium_12);
+	lv_style_set_text_font(&style_MainScreen_listSyringeType_extra_btns_main_focused, &lv_font_Alatsi_Regular_19);
 	lv_style_set_text_opa(&style_MainScreen_listSyringeType_extra_btns_main_focused, 255);
 	lv_style_set_bg_opa(&style_MainScreen_listSyringeType_extra_btns_main_focused, 255);
 	lv_style_set_bg_color(&style_MainScreen_listSyringeType_extra_btns_main_focused, lv_color_hex(0x0016ff));
@@ -1793,8 +1778,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write codes MainScreen_contSyringeValues
 	ui->MainScreen_contSyringeValues = lv_obj_create(ui->MainScreen_contSyringe);
-	lv_obj_set_pos(ui->MainScreen_contSyringeValues, 0, 180);
-	lv_obj_set_size(ui->MainScreen_contSyringeValues, 740, 120);
+	lv_obj_set_pos(ui->MainScreen_contSyringeValues, 0, 170);
+	lv_obj_set_size(ui->MainScreen_contSyringeValues, 740, 130);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_contSyringeValues, LV_SCROLLBAR_MODE_OFF);
 
 	//Write style for MainScreen_contSyringeValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -1814,7 +1799,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_label_set_text(ui->MainScreen_labelSyringeNameValue, "Name:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeNameValue, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->MainScreen_labelSyringeNameValue, 0, 0);
-	lv_obj_set_size(ui->MainScreen_labelSyringeNameValue, 70, 30);
+	lv_obj_set_size(ui->MainScreen_labelSyringeNameValue, 70, 25);
 
 	//Write style for MainScreen_labelSyringeNameValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1836,8 +1821,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_labelSyringeVolumeValue = lv_label_create(ui->MainScreen_contSyringeValues);
 	lv_label_set_text(ui->MainScreen_labelSyringeVolumeValue, "Volume:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeVolumeValue, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelSyringeVolumeValue, 0, 30);
-	lv_obj_set_size(ui->MainScreen_labelSyringeVolumeValue, 80, 30);
+	lv_obj_set_pos(ui->MainScreen_labelSyringeVolumeValue, 0, 35);
+	lv_obj_set_size(ui->MainScreen_labelSyringeVolumeValue, 80, 25);
 
 	//Write style for MainScreen_labelSyringeVolumeValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeVolumeValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1859,8 +1844,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_labelSyringeInnerDiaValue = lv_label_create(ui->MainScreen_contSyringeValues);
 	lv_label_set_text(ui->MainScreen_labelSyringeInnerDiaValue, "Inner Dia:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeInnerDiaValue, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelSyringeInnerDiaValue, 0, 60);
-	lv_obj_set_size(ui->MainScreen_labelSyringeInnerDiaValue, 100, 30);
+	lv_obj_set_pos(ui->MainScreen_labelSyringeInnerDiaValue, 0, 70);
+	lv_obj_set_size(ui->MainScreen_labelSyringeInnerDiaValue, 100, 25);
 
 	//Write style for MainScreen_labelSyringeInnerDiaValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeInnerDiaValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1882,8 +1867,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_labelSyringeOuterDiaValue = lv_label_create(ui->MainScreen_contSyringeValues);
 	lv_label_set_text(ui->MainScreen_labelSyringeOuterDiaValue, "Outer Dia:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeOuterDiaValue, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelSyringeOuterDiaValue, 0, 90);
-	lv_obj_set_size(ui->MainScreen_labelSyringeOuterDiaValue, 110, 30);
+	lv_obj_set_pos(ui->MainScreen_labelSyringeOuterDiaValue, 0, 105);
+	lv_obj_set_size(ui->MainScreen_labelSyringeOuterDiaValue, 110, 25);
 
 	//Write style for MainScreen_labelSyringeOuterDiaValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeOuterDiaValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1906,7 +1891,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_label_set_text(ui->MainScreen_labelSyringeBarrelLenValue, "Barrel Len:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeBarrelLenValue, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->MainScreen_labelSyringeBarrelLenValue, 400, 0);
-	lv_obj_set_size(ui->MainScreen_labelSyringeBarrelLenValue, 120, 30);
+	lv_obj_set_size(ui->MainScreen_labelSyringeBarrelLenValue, 120, 25);
 
 	//Write style for MainScreen_labelSyringeBarrelLenValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeBarrelLenValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1928,8 +1913,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_labelSyringePlungerLenValue = lv_label_create(ui->MainScreen_contSyringeValues);
 	lv_label_set_text(ui->MainScreen_labelSyringePlungerLenValue, "Plunger Len:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringePlungerLenValue, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelSyringePlungerLenValue, 400, 30);
-	lv_obj_set_size(ui->MainScreen_labelSyringePlungerLenValue, 130, 30);
+	lv_obj_set_pos(ui->MainScreen_labelSyringePlungerLenValue, 400, 35);
+	lv_obj_set_size(ui->MainScreen_labelSyringePlungerLenValue, 130, 25);
 
 	//Write style for MainScreen_labelSyringePlungerLenValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringePlungerLenValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1951,8 +1936,8 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_labelSyringeDiaTolValue = lv_label_create(ui->MainScreen_contSyringeValues);
 	lv_label_set_text(ui->MainScreen_labelSyringeDiaTolValue, "Dia Tolerance:");
 	lv_label_set_long_mode(ui->MainScreen_labelSyringeDiaTolValue, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelSyringeDiaTolValue, 400, 60);
-	lv_obj_set_size(ui->MainScreen_labelSyringeDiaTolValue, 150, 30);
+	lv_obj_set_pos(ui->MainScreen_labelSyringeDiaTolValue, 400, 70);
+	lv_obj_set_size(ui->MainScreen_labelSyringeDiaTolValue, 150, 25);
 
 	//Write style for MainScreen_labelSyringeDiaTolValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeDiaTolValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1982,12 +1967,12 @@ void setup_scr_MainScreen(lv_ui *ui)
 	#if LV_USE_KEYBOARD != 0 || LV_USE_ZH_KEYBOARD != 0
 		lv_obj_add_event_cb(ui->MainScreen_taSyringeNameValue, ta_event_cb, LV_EVENT_ALL, ui->g_kb_MainScreen);
 	#endif
-	lv_obj_set_pos(ui->MainScreen_taSyringeNameValue, 60, 2);
-	lv_obj_set_size(ui->MainScreen_taSyringeNameValue, 324, 30);
+	lv_obj_set_pos(ui->MainScreen_taSyringeNameValue, 73, 0);
+	lv_obj_set_size(ui->MainScreen_taSyringeNameValue, 300, 30);
 
 	//Write style for MainScreen_taSyringeNameValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_text_color(ui->MainScreen_taSyringeNameValue, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_taSyringeNameValue, &lv_font_arial_13, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_taSyringeNameValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_taSyringeNameValue, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->MainScreen_taSyringeNameValue, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_taSyringeNameValue, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1996,29 +1981,29 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taSyringeNameValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_border_width(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write style for MainScreen_taSyringeNameValue, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
-	lv_obj_set_style_text_color(ui->MainScreen_taSyringeNameValue, lv_color_hex(0x909090), LV_PART_MAIN|LV_STATE_FOCUSED);
-	lv_obj_set_style_text_font(ui->MainScreen_taSyringeNameValue, &lv_font_arial_13, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_color(ui->MainScreen_taSyringeNameValue, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_font(ui->MainScreen_taSyringeNameValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_text_opa(ui->MainScreen_taSyringeNameValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_bg_opa(ui->MainScreen_taSyringeNameValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_bg_color(ui->MainScreen_taSyringeNameValue, lv_color_hex(0xa4e6fd), LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taSyringeNameValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_border_width(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_shadow_width(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
-	lv_obj_set_style_pad_top(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
-	lv_obj_set_style_pad_right(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
-	lv_obj_set_style_pad_left(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_top(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_right(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_left(ui->MainScreen_taSyringeNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_radius(ui->MainScreen_taSyringeNameValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
 
 	//Write codes MainScreen_spinboxSyringeVolume
 	ui->MainScreen_spinboxSyringeVolume = lv_spinbox_create(ui->MainScreen_contSyringeValues);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 110, 30);
-	lv_obj_set_width(ui->MainScreen_spinboxSyringeVolume, 91);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 123, 34);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringeVolume, 90);
 	lv_obj_set_height(ui->MainScreen_spinboxSyringeVolume, 25);
 	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeVolume, 2, 2);
 	lv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume, -99, 99);
@@ -2033,7 +2018,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align_to(ui->MainScreen_spinboxSyringeVolume_btn_minus, ui->MainScreen_spinboxSyringeVolume, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeVolume_btn_minus, LV_SYMBOL_MINUS, 0);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeVolume_btn_minus, lv_MainScreen_spinboxSyringeVolume_decrement_event_cb, LV_EVENT_ALL, NULL);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 110, 30);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 123, 34);
 
 	//Write style for MainScreen_spinboxSyringeVolume, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2048,37 +2033,16 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringeVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringeVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeVolume, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeVolume, &lv_font_arial_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeVolume, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringeVolume, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringeVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write style for MainScreen_spinboxSyringeVolume, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeVolume, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeVolume, &lv_font_montserratMedium_12, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeVolume, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeVolume, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
-
-	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_spinboxSyringeVolume_extra_btns_main_default
-	static lv_style_t style_MainScreen_spinboxSyringeVolume_extra_btns_main_default;
-	ui_init_style(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default);
-	
-	lv_style_set_text_color(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, lv_color_hex(0x000000));
-	lv_style_set_text_font(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, &lv_font_montserratMedium_12);
-	lv_style_set_text_opa(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, 255);
-	lv_style_set_bg_opa(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, 0);
-	lv_style_set_border_width(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, 0);
-	lv_style_set_radius(&style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, 5);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume_btn, &style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume_btn_minus, &style_MainScreen_spinboxSyringeVolume_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
-
 	//Write codes MainScreen_spinboxSyringeInnerDia
 	ui->MainScreen_spinboxSyringeInnerDia = lv_spinbox_create(ui->MainScreen_contSyringeValues);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeInnerDia, 110, 62);
-	lv_obj_set_width(ui->MainScreen_spinboxSyringeInnerDia, 91);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeInnerDia, 123, 69);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringeInnerDia, 90);
 	lv_obj_set_height(ui->MainScreen_spinboxSyringeInnerDia, 25);
 	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeInnerDia, 3, 2);
 	lv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia, -999, 999);
@@ -2093,7 +2057,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align_to(ui->MainScreen_spinboxSyringeInnerDia_btn_minus, ui->MainScreen_spinboxSyringeInnerDia, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeInnerDia_btn_minus, LV_SYMBOL_MINUS, 0);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeInnerDia_btn_minus, lv_MainScreen_spinboxSyringeInnerDia_decrement_event_cb, LV_EVENT_ALL, NULL);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeInnerDia, 110, 62);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeInnerDia, 123, 69);
 
 	//Write style for MainScreen_spinboxSyringeInnerDia, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeInnerDia, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2108,37 +2072,16 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringeInnerDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringeInnerDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeInnerDia, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeInnerDia, &lv_font_arial_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeInnerDia, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeInnerDia, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeInnerDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeInnerDia, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringeInnerDia, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringeInnerDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write style for MainScreen_spinboxSyringeInnerDia, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeInnerDia, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeInnerDia, &lv_font_montserratMedium_12, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeInnerDia, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeInnerDia, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeInnerDia, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeInnerDia, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
-
-	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default
-	static lv_style_t style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default;
-	ui_init_style(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default);
-	
-	lv_style_set_text_color(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, lv_color_hex(0x000000));
-	lv_style_set_text_font(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, &lv_font_montserratMedium_12);
-	lv_style_set_text_opa(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, 255);
-	lv_style_set_bg_opa(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, 0);
-	lv_style_set_border_width(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, 0);
-	lv_style_set_radius(&style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, 5);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia_btn, &style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia_btn_minus, &style_MainScreen_spinboxSyringeInnerDia_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
-
 	//Write codes MainScreen_spinboxSyringeOuterDia
 	ui->MainScreen_spinboxSyringeOuterDia = lv_spinbox_create(ui->MainScreen_contSyringeValues);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeOuterDia, 110, 91);
-	lv_obj_set_width(ui->MainScreen_spinboxSyringeOuterDia, 91);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeOuterDia, 123, 102);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringeOuterDia, 90);
 	lv_obj_set_height(ui->MainScreen_spinboxSyringeOuterDia, 25);
 	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeOuterDia, 3, 2);
 	lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia, -999, 999);
@@ -2153,7 +2096,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align_to(ui->MainScreen_spinboxSyringeOuterDia_btn_minus, ui->MainScreen_spinboxSyringeOuterDia, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeOuterDia_btn_minus, LV_SYMBOL_MINUS, 0);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeOuterDia_btn_minus, lv_MainScreen_spinboxSyringeOuterDia_decrement_event_cb, LV_EVENT_ALL, NULL);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeOuterDia, 110, 91);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeOuterDia, 123, 102);
 
 	//Write style for MainScreen_spinboxSyringeOuterDia, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeOuterDia, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2168,32 +2111,160 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringeOuterDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringeOuterDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeOuterDia, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeOuterDia, &lv_font_arial_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeOuterDia, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeOuterDia, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeOuterDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeOuterDia, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringeOuterDia, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringeOuterDia, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write style for MainScreen_spinboxSyringeOuterDia, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeOuterDia, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeOuterDia, &lv_font_montserratMedium_12, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeOuterDia, &lv_font_montserratMedium_14, LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeOuterDia, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeOuterDia, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeOuterDia, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeOuterDia, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
 
-	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default
-	static lv_style_t style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default;
-	ui_init_style(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default);
-	
-	lv_style_set_text_color(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, lv_color_hex(0x000000));
-	lv_style_set_text_font(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, &lv_font_montserratMedium_12);
-	lv_style_set_text_opa(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, 255);
-	lv_style_set_bg_opa(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, 0);
-	lv_style_set_border_width(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, 0);
-	lv_style_set_radius(&style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, 5);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia_btn, &style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia_btn_minus, &style_MainScreen_spinboxSyringeOuterDia_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write codes MainScreen_spinboxSyringeBarrelLen
+	ui->MainScreen_spinboxSyringeBarrelLen = lv_spinbox_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 570, 0);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringeBarrelLen, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxSyringeBarrelLen, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeBarrelLen, 3, 3);
+	lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen, -999, 999);
+	lv_coord_t MainScreen_spinboxSyringeBarrelLen_h = lv_obj_get_height(ui->MainScreen_spinboxSyringeBarrelLen);
+	ui->MainScreen_spinboxSyringeBarrelLen_btn = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringeBarrelLen_btn, MainScreen_spinboxSyringeBarrelLen_h, MainScreen_spinboxSyringeBarrelLen_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringeBarrelLen_btn, ui->MainScreen_spinboxSyringeBarrelLen, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeBarrelLen_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeBarrelLen_btn, lv_MainScreen_spinboxSyringeBarrelLen_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxSyringeBarrelLen_btn_minus = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, MainScreen_spinboxSyringeBarrelLen_h, MainScreen_spinboxSyringeBarrelLen_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, ui->MainScreen_spinboxSyringeBarrelLen, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, lv_MainScreen_spinboxSyringeBarrelLen_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 570, 0);
+
+	//Write style for MainScreen_spinboxSyringeBarrelLen, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeBarrelLen, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeBarrelLen, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxSyringeBarrelLen, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxSyringeBarrelLen, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxSyringeBarrelLen, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxSyringeBarrelLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxSyringeBarrelLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringeBarrelLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringeBarrelLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeBarrelLen, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeBarrelLen, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeBarrelLen, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringeBarrelLen, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringeBarrelLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxSyringeBarrelLen, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeBarrelLen, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeBarrelLen, &lv_font_montserratMedium_14, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeBarrelLen, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeBarrelLen, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxSyringePlungerLen
+	ui->MainScreen_spinboxSyringePlungerLen = lv_spinbox_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringePlungerLen, 570, 35);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringePlungerLen, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxSyringePlungerLen, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringePlungerLen, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen, -99, 99);
+	lv_coord_t MainScreen_spinboxSyringePlungerLen_h = lv_obj_get_height(ui->MainScreen_spinboxSyringePlungerLen);
+	ui->MainScreen_spinboxSyringePlungerLen_btn = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringePlungerLen_btn, MainScreen_spinboxSyringePlungerLen_h, MainScreen_spinboxSyringePlungerLen_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringePlungerLen_btn, ui->MainScreen_spinboxSyringePlungerLen, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringePlungerLen_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringePlungerLen_btn, lv_MainScreen_spinboxSyringePlungerLen_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxSyringePlungerLen_btn_minus = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringePlungerLen_btn_minus, MainScreen_spinboxSyringePlungerLen_h, MainScreen_spinboxSyringePlungerLen_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringePlungerLen_btn_minus, ui->MainScreen_spinboxSyringePlungerLen, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringePlungerLen_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringePlungerLen_btn_minus, lv_MainScreen_spinboxSyringePlungerLen_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringePlungerLen, 570, 35);
+
+	//Write style for MainScreen_spinboxSyringePlungerLen, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringePlungerLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringePlungerLen, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringePlungerLen, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxSyringePlungerLen, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxSyringePlungerLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxSyringePlungerLen, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxSyringePlungerLen, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxSyringePlungerLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxSyringePlungerLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringePlungerLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringePlungerLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringePlungerLen, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringePlungerLen, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringePlungerLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringePlungerLen, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringePlungerLen, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringePlungerLen, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxSyringePlungerLen, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringePlungerLen, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringePlungerLen, &lv_font_montserratMedium_14, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringePlungerLen, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringePlungerLen, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringePlungerLen, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringePlungerLen, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxSyringeDiaTolerance
+	ui->MainScreen_spinboxSyringeDiaTolerance = lv_spinbox_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeDiaTolerance, 569, 70);
+	lv_obj_set_width(ui->MainScreen_spinboxSyringeDiaTolerance, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxSyringeDiaTolerance, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeDiaTolerance, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance, -99, 99);
+	lv_coord_t MainScreen_spinboxSyringeDiaTolerance_h = lv_obj_get_height(ui->MainScreen_spinboxSyringeDiaTolerance);
+	ui->MainScreen_spinboxSyringeDiaTolerance_btn = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringeDiaTolerance_btn, MainScreen_spinboxSyringeDiaTolerance_h, MainScreen_spinboxSyringeDiaTolerance_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringeDiaTolerance_btn, ui->MainScreen_spinboxSyringeDiaTolerance, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeDiaTolerance_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeDiaTolerance_btn, lv_MainScreen_spinboxSyringeDiaTolerance_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus = lv_btn_create(ui->MainScreen_contSyringeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus, MainScreen_spinboxSyringeDiaTolerance_h, MainScreen_spinboxSyringeDiaTolerance_h);
+	lv_obj_align_to(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus, ui->MainScreen_spinboxSyringeDiaTolerance, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus, lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeDiaTolerance, 569, 70);
+
+	//Write style for MainScreen_spinboxSyringeDiaTolerance, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeDiaTolerance, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeDiaTolerance, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxSyringeDiaTolerance, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxSyringeDiaTolerance, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxSyringeDiaTolerance, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxSyringeDiaTolerance, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxSyringeDiaTolerance, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxSyringeDiaTolerance, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxSyringeDiaTolerance, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeDiaTolerance, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeDiaTolerance, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxSyringeDiaTolerance, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxSyringeDiaTolerance, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxSyringeDiaTolerance, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxSyringeDiaTolerance, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxSyringeDiaTolerance, &lv_font_montserratMedium_14, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxSyringeDiaTolerance, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeDiaTolerance, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0x2195f6), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeDiaTolerance, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_label_18
 	ui->MainScreen_label_18 = lv_label_create(ui->MainScreen_contSyringe);
@@ -2206,7 +2277,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_label_18, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_18, &lv_font_arial_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_18, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->MainScreen_label_18, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->MainScreen_label_18, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2266,6 +2337,34 @@ void setup_scr_MainScreen(lv_ui *ui)
 	
 lv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);
 lv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+//spinbox styles
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);
+
 
 MainScreen_digital_clock_timer(NULL);
 MainScreenSetStyle(ui);

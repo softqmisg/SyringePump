@@ -157,6 +157,15 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxSyringeOuterDia;
 	lv_obj_t *MainScreen_spinboxSyringeOuterDia_btn;
 	lv_obj_t *MainScreen_spinboxSyringeOuterDia_btn_minus;
+	lv_obj_t *MainScreen_spinboxSyringeBarrelLen;
+	lv_obj_t *MainScreen_spinboxSyringeBarrelLen_btn;
+	lv_obj_t *MainScreen_spinboxSyringeBarrelLen_btn_minus;
+	lv_obj_t *MainScreen_spinboxSyringePlungerLen;
+	lv_obj_t *MainScreen_spinboxSyringePlungerLen_btn;
+	lv_obj_t *MainScreen_spinboxSyringePlungerLen_btn_minus;
+	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance;
+	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn;
+	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn_minus;
 	lv_obj_t *MainScreen_label_18;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
@@ -270,12 +279,10 @@ LV_FONT_DECLARE(lv_font_Acme_Regular_26)
 LV_FONT_DECLARE(lv_font_Acme_Regular_25)
 LV_FONT_DECLARE(lv_font_Acme_Regular_28)
 LV_FONT_DECLARE(lv_font_Acme_Regular_24)
-LV_FONT_DECLARE(lv_font_arial_15)
-LV_FONT_DECLARE(lv_font_arial_14)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_19)
-LV_FONT_DECLARE(lv_font_arial_13)
-LV_FONT_DECLARE(lv_font_arial_12)
-LV_FONT_DECLARE(lv_font_arial_16)
+LV_FONT_DECLARE(lv_font_arial_14)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_16)
+LV_FONT_DECLARE(lv_font_montserratMedium_14)
 LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 

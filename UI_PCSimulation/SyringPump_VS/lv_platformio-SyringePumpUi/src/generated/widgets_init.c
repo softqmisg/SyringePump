@@ -71,7 +71,9 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_add_flag(guider_ui.MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
         lv_obj_move_background(kb);
         lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
-        lv_group_focus_obj(ta);
+       if(code == LV_EVENT_READY)
+			lv_obj_clear_state(ta,LV_STATE_EDITED);
+		lv_group_focus_obj(ta);
 
     }
 }
@@ -213,4 +215,45 @@ void lv_MainScreen_spinboxSyringeOuterDia_decrement_event_cb(lv_event_t * event)
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringeOuterDia);
 	}
 }
-
+void lv_MainScreen_spinboxSyringeBarrelLen_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSyringeBarrelLen);
+	}
+}
+void lv_MainScreen_spinboxSyringeBarrelLen_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringeBarrelLen);
+	}
+}
+void lv_MainScreen_spinboxSyringePlungerLen_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSyringePlungerLen);
+	}
+}
+void lv_MainScreen_spinboxSyringePlungerLen_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringePlungerLen);
+	}
+}
+void lv_MainScreen_spinboxSyringeDiaTolerance_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSyringeDiaTolerance);
+	}
+}
+void lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringeDiaTolerance);
+	}
+}

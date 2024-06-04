@@ -35,6 +35,15 @@ void lv_MainScreen_spinboxSyringeInnerDia_decrement_event_cb(lv_event_t * event)
 extern lv_obj_t * MainScreen_spinboxSyringeOuterDia;
 void lv_MainScreen_spinboxSyringeOuterDia_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxSyringeOuterDia_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSyringeBarrelLen;
+void lv_MainScreen_spinboxSyringeBarrelLen_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringeBarrelLen_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSyringePlungerLen;
+void lv_MainScreen_spinboxSyringePlungerLen_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringePlungerLen_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSyringeDiaTolerance;
+void lv_MainScreen_spinboxSyringeDiaTolerance_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus

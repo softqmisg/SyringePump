@@ -46,13 +46,30 @@ void MainScreenSetStyle(lv_ui *ui)
 	// lv_style_set_bg_img_src(&style_indic,&indicator_ver);
 	// lv_obj_add_style(ui->MainScreen_slider_2,&style_indic,LV_PART_INDICATOR);
 
-	// static lv_style_t MainScreenStyleFocus;
-	// lv_style_init(&MainScreenStyleFocus);
+
+	static lv_style_t MainScreenStyleFocus;
+	lv_style_init(&MainScreenStyleFocus);
+  lv_style_set_bg_color(&MainScreenStyleFocus,lv_color_hex(0xc2ff00));
 	// lv_style_set_outline_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_RED, 4));
 	// lv_style_set_outline_width(&MainScreenStyleFocus,3);
 	// lv_style_set_outline_pad(&MainScreenStyleFocus,1);
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+  lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+
+      lv_obj_add_style(ui->MainScreen_taSyringeNameValue,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleFocus,LV_STATE_EDITED );
+  
 	// // lv_style_set_border_width(&MainScreenStyleFocus,50);
- //  	lv_style_set_border_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
+  	//lv_style_set_border_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
  //    lv_style_set_bg_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
 
 	// lv_obj_add_style(ui->MainScreen_imgMenuSyringe,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
@@ -231,8 +248,12 @@ void setcontSyringeValuesGroup(lv_ui *ui)
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeVolume);
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeInnerDia);
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeOuterDia);			
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeBarrelLen);			
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringePlungerLen);			
+            lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeDiaTolerance);			          
+        
             lv_group_add_obj(g_syringevalues,ui->g_kb_MainScreen);
-			      lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
+            lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
         }
     }  
 }
