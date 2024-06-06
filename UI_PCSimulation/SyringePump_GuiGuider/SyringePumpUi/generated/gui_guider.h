@@ -128,6 +128,25 @@ typedef struct
 	lv_obj_t *MainScreen_listSyringeCompany_item28;
 	lv_obj_t *MainScreen_listSyringeCompany_item29;
 	lv_obj_t *MainScreen_listSyringeCompany_item30;
+	lv_obj_t *MainScreen_listSyringeCompany_item31;
+	lv_obj_t *MainScreen_listSyringeCompany_item32;
+	lv_obj_t *MainScreen_listSyringeCompany_item33;
+	lv_obj_t *MainScreen_listSyringeCompany_item34;
+	lv_obj_t *MainScreen_listSyringeCompany_item35;
+	lv_obj_t *MainScreen_listSyringeCompany_item36;
+	lv_obj_t *MainScreen_listSyringeCompany_item37;
+	lv_obj_t *MainScreen_listSyringeCompany_item38;
+	lv_obj_t *MainScreen_listSyringeCompany_item39;
+	lv_obj_t *MainScreen_listSyringeCompany_item40;
+	lv_obj_t *MainScreen_listSyringeCompany_item41;
+	lv_obj_t *MainScreen_listSyringeCompany_item42;
+	lv_obj_t *MainScreen_listSyringeCompany_item43;
+	lv_obj_t *MainScreen_listSyringeCompany_item44;
+	lv_obj_t *MainScreen_listSyringeCompany_item45;
+	lv_obj_t *MainScreen_listSyringeCompany_item46;
+	lv_obj_t *MainScreen_listSyringeCompany_item47;
+	lv_obj_t *MainScreen_listSyringeCompany_item48;
+	lv_obj_t *MainScreen_listSyringeCompany_item49;
 	lv_obj_t *MainScreen_listSyringeType;
 	lv_obj_t *MainScreen_listSyringeType_item0;
 	lv_obj_t *MainScreen_listSyringeType_item1;
@@ -139,6 +158,16 @@ typedef struct
 	lv_obj_t *MainScreen_listSyringeType_item7;
 	lv_obj_t *MainScreen_listSyringeType_item8;
 	lv_obj_t *MainScreen_listSyringeType_item9;
+	lv_obj_t *MainScreen_listSyringeType_item10;
+	lv_obj_t *MainScreen_listSyringeType_item11;
+	lv_obj_t *MainScreen_listSyringeType_item12;
+	lv_obj_t *MainScreen_listSyringeType_item13;
+	lv_obj_t *MainScreen_listSyringeType_item14;
+	lv_obj_t *MainScreen_listSyringeType_item15;
+	lv_obj_t *MainScreen_listSyringeType_item16;
+	lv_obj_t *MainScreen_listSyringeType_item17;
+	lv_obj_t *MainScreen_listSyringeType_item18;
+	lv_obj_t *MainScreen_listSyringeType_item19;
 	lv_obj_t *MainScreen_contSyringeValues;
 	lv_obj_t *MainScreen_labelSyringeNameValue;
 	lv_obj_t *MainScreen_labelSyringeVolumeValue;
@@ -282,7 +311,6 @@ LV_FONT_DECLARE(lv_font_Acme_Regular_24)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_19)
 LV_FONT_DECLARE(lv_font_arial_14)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_16)
-LV_FONT_DECLARE(lv_font_montserratMedium_14)
 LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 

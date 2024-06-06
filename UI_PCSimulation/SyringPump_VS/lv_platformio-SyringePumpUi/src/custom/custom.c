@@ -15,6 +15,7 @@
 #include "lvgl.h"
 #include "custom.h"
 #include "Syring.h"
+#include "Drug.h"
 /*********************
  *      DEFINES
  *********************/
@@ -39,6 +40,7 @@ extern uint8_t cur_SyringeManufacture,cur_SyringeType;
 void LoadDefaults(void)
 {
   loadDefaultSyringesValue();
+  loadDefaultDrugValue();
 }
 void custom_init(lv_ui *ui)
 {
@@ -55,8 +57,9 @@ void MainScreenSetStyle(lv_ui *ui)
 	lv_style_init(&MainScreenStyleFocus);
   lv_style_set_bg_color(&MainScreenStyleFocus,lv_color_hex(0xc2ff00));
 	lv_style_set_outline_color(&MainScreenStyleFocus,lv_color_hex(0xc2ff00));//lv_palette_lighten(LV_PALETTE_YELLOW, 4));
-	lv_style_set_outline_width(&MainScreenStyleFocus,4);
+   lv_style_set_outline_width(&MainScreenStyleFocus,4);
 	 lv_style_set_outline_pad(&MainScreenStyleFocus,2);
+    
     lv_obj_add_style(ui->MainScreen_taSyringeNameValue,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
@@ -65,14 +68,45 @@ void MainScreenSetStyle(lv_ui *ui)
     lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
+	static lv_style_t MainScreenStyleEdit;
+	lv_style_init(&MainScreenStyleEdit);
+  lv_style_set_bg_color(&MainScreenStyleEdit,lv_color_hex(0xc2ff00));
+	lv_style_set_outline_color(&MainScreenStyleEdit,lv_color_hex(0xff0000));//lv_palette_lighten(LV_PALETTE_YELLOW, 4));
+   lv_style_set_outline_width(&MainScreenStyleEdit,4);
+	 lv_style_set_outline_pad(&MainScreenStyleEdit,2);
 
-    lv_obj_add_style(ui->MainScreen_taSyringeNameValue,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleFocus,LV_STATE_EDITED );
-    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleFocus,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_taSyringeNameValue,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleEdit,LV_STATE_EDITED );
+
+  
+	  static lv_style_t MainScreenStyleCursor;
+  	lv_style_init(&MainScreenStyleCursor);
+    lv_style_set_text_color(&MainScreenStyleCursor,lv_color_black());
+    lv_style_set_bg_color(&MainScreenStyleCursor,lv_color_white());
+    lv_style_set_opa(&MainScreenStyleCursor,255);
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
+    
+	  static lv_style_t MainScreenStyleCursorFocus;
+  	lv_style_init(&MainScreenStyleCursorFocus);
+    lv_style_set_text_color(&MainScreenStyleCursor,lv_color_white());
+    lv_style_set_bg_color(&MainScreenStyleCursorFocus,lv_color_hex(0x2195f6));
+//    lv_style_set_opa(&MainScreenStyleCursor,255);
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeVolume,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY|LV_STATE_FOCUSED);
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeInnerDia,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeOuterDia,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
 
   
 	// // lv_style_set_border_width(&MainScreenStyleFocus,50);
@@ -258,44 +292,46 @@ void setcontSyringeValuesGroup(lv_ui *ui)
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeBarrelLen);			
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringePlungerLen);			
             lv_group_add_obj(g_syringevalues,ui->MainScreen_spinboxSyringeDiaTolerance);			          
-		
-            lv_group_add_obj(g_syringevalues,ui->g_kb_MainScreen);
+		        lv_group_add_obj(g_syringevalues,ui->g_kb_MainScreen);
 			      // lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
         }
     }  
 }
 
-void loadSyringeCompanyList(lv_ui *ui)
+void updateSyringeCompanyList(lv_ui *ui)
 {
   //load syringe manufacture
   printf("load company list\n\r");
   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
   {
     lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeCompany,i);
-    lv_label_set_text(lv_obj_get_child(btn,0),DefaultSyrings[i][0].Manufacture);
+    lv_label_set_text(lv_obj_get_child(btn,1),DefaultSyrings[i][0].Manufacture);
+    lv_obj_del(lv_obj_get_child(btn,0));
   }
 }
-void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex)
+void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex)
 {
   printf("select syring company index:%d\n\r",companyindex);
   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
   {
     lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
-    lv_label_set_text(lv_obj_get_child(btn,0),DefaultSyrings[companyindex][i].Name);
+    lv_label_set_text(lv_obj_get_child(btn,1),DefaultSyrings[companyindex][i].Name);
+    lv_obj_del(lv_obj_get_child(btn,0));
+
   }
 
 }
 
-void loadSyringeValues(lv_ui *ui,uint8_t Typeindex)
+void updateSyringeValues(lv_ui *ui,uint8_t Typeindex)
 {
   printf("select syring Type Index:%d\n\r",Typeindex);
   lv_textarea_set_text(ui->MainScreen_taSyringeNameValue,DefaultSyrings[cur_SyringeManufacture][Typeindex].Name);
   lv_spinbox_set_value(ui->MainScreen_spinboxSyringeVolume,DefaultSyrings[cur_SyringeManufacture][Typeindex].Volume);
-  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeInnerDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].InnerDia10);
-  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeOuterDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].OuterDia10);
-  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeBarrelLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].BarrelLen10);
-  lv_spinbox_set_value(ui->MainScreen_spinboxSyringePlungerLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].PlungerLen10);
-  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeDiaTolerance,DefaultSyrings[cur_SyringeManufacture][Typeindex].DiaTolerance10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeInnerDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].InnerDia10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeOuterDia,DefaultSyrings[cur_SyringeManufacture][Typeindex].OuterDia10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeBarrelLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].BarrelLen10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringePlungerLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].PlungerLen10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSyringeDiaTolerance,DefaultSyrings[cur_SyringeManufacture][Typeindex].DiaTolerance10/10.0);
 }
 
 void animcontMain_ready_callback(lv_anim_t * a)

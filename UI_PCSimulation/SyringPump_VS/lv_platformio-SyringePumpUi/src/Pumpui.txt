@@ -1,3 +1,4 @@
+
 __attribute__((unused)) void kb_event_cb (lv_event_t *e) {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t *kb = lv_event_get_target(e);
@@ -56,15 +57,23 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_add_flag(guider_ui.MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
         lv_obj_move_background(kb);
         lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
-        lv_group_focus_obj(ta);
+       if(code == LV_EVENT_READY)
+			lv_obj_clear_state(ta,LV_STATE_EDITED);
+		lv_group_focus_obj(ta);
 
     }
 }
 
 #####################################################################
 
+	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingMain, MainScreen_btnGoSettingMain_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoMainSetting, MainScreen_btnGoMainSetting_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnMenuSyringe, MainScreen_btnMenuSyringe_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingSyringe, MainScreen_btnGoSettingSyringe_event_handler, LV_EVENT_ALL, ui);
     for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany,i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
 
     for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeType,i), MainScreen_listSyringeType_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeDiaTolerance, MainScreen_spinboxSyringeDiaTolerance_event_handler, LV_EVENT_ALL, ui);

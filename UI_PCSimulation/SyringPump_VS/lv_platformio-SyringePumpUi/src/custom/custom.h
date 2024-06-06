@@ -26,9 +26,9 @@ void setcontSyringeValuesGroup(lv_ui *ui);
 void setlistSyringeCompanyGroup(lv_ui *ui);
 void setlistSyringeTypeGroup(lv_ui *ui);
 
-void loadSyringeCompanyList(lv_ui *ui);
-void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex);
-void loadSyringeValues(lv_ui *ui,uint8_t Typeindex);
+void updateSyringeCompanyList(lv_ui *ui);
+void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex);
+void updateSyringeValues(lv_ui *ui,uint8_t Typeindex);
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontSetting_ready_callback(lv_anim_t * a);

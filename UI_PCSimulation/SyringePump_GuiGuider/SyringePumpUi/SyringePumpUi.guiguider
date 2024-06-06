@@ -244,7 +244,7 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "//level style\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\n// remove flag for hidden button\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n//Load Syringe manufacture\nloadSyringeCompanyList(ui);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
+				"code_c": "//level style\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
@@ -483,7 +483,7 @@
 									"name": "spinboxSyringeDiaTolerance",
 									"id": "n1o0than",
 									"type": "spinbox",
-									"left": 539,
+									"left": 537,
 									"top": 70,
 									"visible": true,
 									"flag": [],
@@ -532,16 +532,17 @@
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
 											"disable": false,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -592,184 +593,7 @@
 											"radius": 5
 										}
 									],
-									"event": {
-										"long_pressed": [
-											{
-												"trigger": "long_pressed",
-												"dst": "n1o0than",
-												"action": {
-													"load_screen": {
-														"ische": false,
-														"duration": 200,
-														"delay": 200,
-														"scrId": "",
-														"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-														"is_clean": false,
-														"is_del": true
-													},
-													"bg_color": {
-														"ische": false,
-														"value": "#000000"
-													},
-													"grad_color": {
-														"ische": false,
-														"value": "#000000",
-														"dir": "LV_GRAD_DIR_HOR"
-													},
-													"bg_opa": {
-														"ische": false,
-														"value": 255
-													},
-													"opacity": {
-														"ische": false,
-														"value": 255
-													},
-													"bg_img_opa": {
-														"ische": false,
-														"value": 0
-													},
-													"bg_img_recolor": {
-														"ische": false,
-														"value": "#000000"
-													},
-													"bg_img_recolor_opa": {
-														"ische": false,
-														"value": 0
-													},
-													"border_side": {
-														"ische": false,
-														"value": []
-													},
-													"border_width": {
-														"ische": false,
-														"value": 0
-													},
-													"border_opa": {
-														"ische": false,
-														"value": 0
-													},
-													"border_color": {
-														"ische": false,
-														"value": "#000000"
-													},
-													"radius": {
-														"ische": false,
-														"value": 0
-													},
-													"width": {
-														"ische": false,
-														"value": 50
-													},
-													"height": {
-														"ische": false,
-														"value": 50
-													},
-													"set_text": {
-														"ische": false,
-														"value": "default",
-														"font": 12,
-														"font_family": "montserratMedium"
-													},
-													"position": {
-														"ische": false,
-														"value_x": 0,
-														"value_y": 0
-													},
-													"isVisible": {
-														"ische": false,
-														"flag": ""
-													},
-													"customer_code": {
-														"ische": true,
-														"inc_c": "",
-														"code_c": "lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);",
-														"inc_py": "",
-														"code_py": ""
-													},
-													"freemaster": {
-														"ische": false,
-														"variable": "",
-														"address": "",
-														"type": "",
-														"value": "",
-														"isOrigin": false
-													},
-													"add_state": {
-														"ische": false,
-														"value": "LV_STATE_DEFAULT"
-													},
-													"add_flag": {
-														"ische": false,
-														"value": []
-													},
-													"clear_flag": {
-														"ische": false,
-														"value": []
-													},
-													"move": {
-														"ische": false,
-														"value_x": 0,
-														"value_y": 0,
-														"delay": 0,
-														"duration": 1000,
-														"repeat_count": 0,
-														"repeat_delay": 0,
-														"playback_time": 0,
-														"playback_delay": 0,
-														"start_cb": "",
-														"ready_cb": "",
-														"deleted_cb": "",
-														"path_type": "linear"
-													},
-													"scaleSize": {
-														"ische": false,
-														"width": 0,
-														"height": 0,
-														"delay": 0,
-														"duration": 1000,
-														"repeat_count": 0,
-														"repeat_delay": 0,
-														"playback_time": 0,
-														"playback_delay": 0,
-														"start_cb": "",
-														"ready_cb": "",
-														"deleted_cb": "",
-														"path_type": "linear"
-													},
-													"img_zoom": {
-														"ische": false,
-														"zoom": 0,
-														"delay": 0,
-														"duration": 1000,
-														"repeat_count": 0,
-														"repeat_delay": 0,
-														"playback_time": 0,
-														"playback_delay": 0,
-														"start_cb": "",
-														"ready_cb": "",
-														"deleted_cb": "",
-														"path_type": "linear"
-													},
-													"rotate": {
-														"ische": false,
-														"rotate": 0,
-														"x": 0,
-														"y": 0,
-														"delay": 0,
-														"duration": 1000,
-														"repeat_count": 0,
-														"repeat_delay": 0,
-														"playback_time": 0,
-														"playback_delay": 0,
-														"start_cb": "",
-														"ready_cb": "",
-														"deleted_cb": "",
-														"path_type": "linear"
-													}
-												}
-											}
-										]
-									}
+									"event": {}
 								},
 								{
 									"name": "spinboxSyringePlungerLen",
@@ -824,16 +648,17 @@
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
 											"disable": false,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -889,7 +714,7 @@
 									"name": "spinboxSyringeBarrelLen",
 									"id": "1nue1a0a",
 									"type": "spinbox",
-									"left": 540,
+									"left": 538,
 									"top": 0,
 									"visible": true,
 									"flag": [],
@@ -938,16 +763,17 @@
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
 											"disable": false,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -1052,16 +878,17 @@
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
 											"disable": false,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -1165,17 +992,18 @@
 											"part": "LV_PART_CURSOR",
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
-											"disable": true,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"disable": false,
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -1279,17 +1107,18 @@
 											"part": "LV_PART_CURSOR",
 											"state": "LV_STATE_DEFAULT",
 											"object": "main",
-											"disable": true,
-											"font": 14,
-											"text_color": "#ffffff",
-											"font_family": "montserratMedium",
-											"bg_color": "#2195f6",
+											"disable": false,
+											"font": 16,
+											"text_color": "#000000",
+											"font_family": "Alatsi_Regular",
+											"bg_color": "#ffffff",
 											"bg_grad_color": "#2195f6",
 											"bg_opa": 255,
 											"bg_grad_dir": "LV_GRAD_DIR_NONE",
 											"bg_dither_mode": "LV_DITHER_NONE",
 											"bg_main_stop": 0,
-											"bg_grad_stop": 255
+											"bg_grad_stop": 255,
+											"text_opa": 255
 										},
 										{
 											"part": "LV_BTN_PART_MAIN",
@@ -1431,6 +1260,182 @@
 														"ische": false,
 														"inc_c": "",
 														"code_c": "",
+														"inc_py": "",
+														"code_py": ""
+													},
+													"freemaster": {
+														"ische": false,
+														"variable": "",
+														"address": "",
+														"type": "",
+														"value": "",
+														"isOrigin": false
+													},
+													"add_state": {
+														"ische": false,
+														"value": "LV_STATE_DEFAULT"
+													},
+													"add_flag": {
+														"ische": false,
+														"value": []
+													},
+													"clear_flag": {
+														"ische": false,
+														"value": []
+													},
+													"move": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"scaleSize": {
+														"ische": false,
+														"width": 0,
+														"height": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"img_zoom": {
+														"ische": false,
+														"zoom": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													},
+													"rotate": {
+														"ische": false,
+														"rotate": 0,
+														"x": 0,
+														"y": 0,
+														"delay": 0,
+														"duration": 1000,
+														"repeat_count": 0,
+														"repeat_delay": 0,
+														"playback_time": 0,
+														"playback_delay": 0,
+														"start_cb": "",
+														"ready_cb": "",
+														"deleted_cb": "",
+														"path_type": "linear"
+													}
+												}
+											}
+										],
+										"defocused": [
+											{
+												"trigger": "defocused",
+												"dst": "null",
+												"action": {
+													"load_screen": {
+														"ische": false,
+														"duration": 200,
+														"delay": 200,
+														"scrId": "",
+														"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+														"is_clean": false,
+														"is_del": true
+													},
+													"bg_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"grad_color": {
+														"ische": false,
+														"value": "#000000",
+														"dir": "LV_GRAD_DIR_HOR"
+													},
+													"bg_opa": {
+														"ische": false,
+														"value": 255
+													},
+													"opacity": {
+														"ische": false,
+														"value": 255
+													},
+													"bg_img_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"bg_img_recolor": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"bg_img_recolor_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_side": {
+														"ische": false,
+														"value": []
+													},
+													"border_width": {
+														"ische": false,
+														"value": 0
+													},
+													"border_opa": {
+														"ische": false,
+														"value": 0
+													},
+													"border_color": {
+														"ische": false,
+														"value": "#000000"
+													},
+													"radius": {
+														"ische": false,
+														"value": 0
+													},
+													"width": {
+														"ische": false,
+														"value": 50
+													},
+													"height": {
+														"ische": false,
+														"value": 50
+													},
+													"set_text": {
+														"ische": false,
+														"value": "default",
+														"font": 12,
+														"font_family": "montserratMedium"
+													},
+													"position": {
+														"ische": false,
+														"value_x": 0,
+														"value_y": 0
+													},
+													"isVisible": {
+														"ische": false,
+														"flag": ""
+													},
+													"customer_code": {
+														"ische": true,
+														"inc_c": "",
+														"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_MAIN);\nlv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_CURSOR);\nlv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeDiaTolerance,0,LV_PART_CURSOR);",
 														"inc_py": "",
 														"code_py": ""
 													},
@@ -2327,7 +2332,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeType",
@@ -2342,14 +2348,6 @@
 							"default_style": false,
 							"scrollbar_mode": "AUTO",
 							"items": [
-								{
-									"type": "image",
-									"img_path": "",
-									"img_width": 20,
-									"img_height": 20,
-									"img_symbol": "LV_SYMBOL_SAVE",
-									"text": "save"
-								},
 								{
 									"type": "image",
 									"text": "save_1",
@@ -2417,6 +2415,94 @@
 								{
 									"type": "image",
 									"text": "save_9",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_10",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_11",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_12",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_13",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_14",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_15",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_16",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_17",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_18",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_19",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_20",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -2725,7 +2811,7 @@
 											},
 											"customer_code": {
 												"ische": true,
-												"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
+												"inc_c": "",
 												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetcontSyringeValuesGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 												"inc_py": "",
 												"code_py": ""
@@ -2991,11 +3077,10 @@
 										"item_index": "widget"
 									}
 								],
-								"value_changed": [
+								"focused": [
 									{
-										"trigger": "value_changed",
+										"trigger": "focused",
 										"dst": "null",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3080,8 +3165,8 @@
 											},
 											"customer_code": {
 												"ische": true,
-												"inc_c": "",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeValues(ui,lv_obj_get_child_id(obj));",
+												"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\ncur_SyringeType=lv_obj_get_child_id(obj);\nupdateSyringeValues(ui,cur_SyringeType);",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -3165,10 +3250,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									}
 								]
-							}
+							},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeCompany",
@@ -3184,47 +3271,47 @@
 							"scrollbar_mode": "AUTO",
 							"items": [
 								{
-									"type": "image",
-									"img_path": "",
-									"img_width": 20,
-									"img_height": 20,
-									"img_symbol": "LV_SYMBOL_SAVE",
-									"text": "Mnfc1"
-								},
-								{
-									"type": "image",
-									"text": "Mnfc2",
+									"type": "symbol",
+									"text": "save_1",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
-									"text": "Mnfc3",
+									"type": "symbol",
+									"text": "save_2",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
-									"text": "Mnfc4",
+									"type": "symbol",
+									"text": "save_3",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
-									"text": "Mnfc5",
+									"type": "symbol",
+									"text": "save_4",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
+									"text": "save_5",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
 									"text": "save_6",
 									"img_path": "",
 									"img_width": 20,
@@ -3232,7 +3319,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_7",
 									"img_path": "",
 									"img_width": 20,
@@ -3240,7 +3327,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_8",
 									"img_path": "",
 									"img_width": 20,
@@ -3248,7 +3335,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_9",
 									"img_path": "",
 									"img_width": 20,
@@ -3256,7 +3343,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_10",
 									"img_path": "",
 									"img_width": 20,
@@ -3264,7 +3351,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_11",
 									"img_path": "",
 									"img_width": 20,
@@ -3272,7 +3359,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_12",
 									"img_path": "",
 									"img_width": 20,
@@ -3280,7 +3367,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_13",
 									"img_path": "",
 									"img_width": 20,
@@ -3288,7 +3375,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_14",
 									"img_path": "",
 									"img_width": 20,
@@ -3296,7 +3383,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_15",
 									"img_path": "",
 									"img_width": 20,
@@ -3304,7 +3391,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_16",
 									"img_path": "",
 									"img_width": 20,
@@ -3312,7 +3399,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_17",
 									"img_path": "",
 									"img_width": 20,
@@ -3320,7 +3407,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_18",
 									"img_path": "",
 									"img_width": 20,
@@ -3328,7 +3415,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_19",
 									"img_path": "",
 									"img_width": 20,
@@ -3336,7 +3423,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_20",
 									"img_path": "",
 									"img_width": 20,
@@ -3344,7 +3431,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_21",
 									"img_path": "",
 									"img_width": 20,
@@ -3352,7 +3439,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_22",
 									"img_path": "",
 									"img_width": 20,
@@ -3360,7 +3447,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_23",
 									"img_path": "",
 									"img_width": 20,
@@ -3368,7 +3455,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_24",
 									"img_path": "",
 									"img_width": 20,
@@ -3376,7 +3463,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_25",
 									"img_path": "",
 									"img_width": 20,
@@ -3384,7 +3471,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_26",
 									"img_path": "",
 									"img_width": 20,
@@ -3392,7 +3479,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_27",
 									"img_path": "",
 									"img_width": 20,
@@ -3400,7 +3487,7 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_28",
 									"img_path": "",
 									"img_width": 20,
@@ -3408,16 +3495,8 @@
 									"img_symbol": "LV_SYMBOL_SAVE"
 								},
 								{
-									"type": "image",
+									"type": "symbol",
 									"text": "save_29",
-									"img_path": "",
-									"img_width": 20,
-									"img_height": 20,
-									"img_symbol": "LV_SYMBOL_SAVE"
-								},
-								{
-									"type": "image",
-									"text": "save_30",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -3426,6 +3505,166 @@
 								{
 									"type": "symbol",
 									"text": "save_30",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_31",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_32",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_33",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_34",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_35",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_36",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_37",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_38",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_39",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_40",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_41",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_42",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_43",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_44",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_45",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_46",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_47",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_48",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_49",
+									"img_path": "",
+									"img_width": 20,
+									"img_height": 20,
+									"img_symbol": "LV_SYMBOL_SAVE"
+								},
+								{
+									"type": "symbol",
+									"text": "save_50",
 									"img_path": "",
 									"img_width": 20,
 									"img_height": 20,
@@ -3735,7 +3974,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeTypeList(ui,lv_obj_get_child_id(obj));\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\ncur_SyringeManufacture=lv_obj_get_child_id(obj);\nupdateSyringeTypeList(ui,cur_SyringeManufacture);\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -4573,7 +4812,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contSetting",
@@ -9279,7 +9519,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMain",
@@ -11270,7 +11511,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contFooter",
@@ -11314,7 +11556,8 @@
 									"image_opa": 255
 								}
 							],
-							"event": {}
+							"event": {},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "imgForbidden",
@@ -12854,7 +13097,7 @@
 							"customer_code": {
 								"ische": true,
 								"inc_c": "",
-								"code_c": "loadSyringeCompanyList(&guider_ui);",
+								"code_c": "updateSyringeCompanyList(&guider_ui);\nupdateSyringeDrugList(&guider_ui);",
 								"inc_py": "",
 								"code_py": ""
 							},
@@ -12989,7 +13232,7 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "//level style\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\n// remove flag for hidden button\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n//Load Syringe manufacture\nloadSyringeCompanyList(ui);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
+					"code_c": "//level style\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoMainSetting, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(guider_ui.MainScreen_btnGoSettingSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(guider_ui.MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(guider_ui.MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(guider_ui.MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
@@ -13028,7 +13271,7 @@
 							"src_screen": "MainScreen",
 							"action": "customer_code",
 							"inc_c": "",
-							"code_c": "loadSyringeCompanyList(&guider_ui);",
+							"code_c": "updateSyringeCompanyList(&guider_ui);\nupdateSyringeDrugList(&guider_ui);",
 							"inc_py": "",
 							"code_py": ""
 						}
@@ -19866,7 +20109,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeTypeList(ui,lv_obj_get_child_id(obj));\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\ncur_SyringeManufacture=lv_obj_get_child_id(obj);\nupdateSyringeTypeList(ui,cur_SyringeManufacture);\nsetlistSyringeTypeGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 											"inc_py": "",
 											"code_py": ""
 										},
@@ -19909,22 +20152,8 @@
 								},
 								"items": [
 									{
-										"type": "image",
-										"img_path": "",
-										"img_width": 20,
-										"img_height": 20,
-										"img_symbol": "LV_SYMBOL_SAVE",
-										"text": "Mnfc1",
-										"img_size": [
-											20,
-											20
-										],
-										"img_sd_path": "S://",
-										"img_flash_path": "F:/"
-									},
-									{
-										"type": "image",
-										"text": "Mnfc2",
+										"type": "symbol",
+										"text": "save_1",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -19937,8 +20166,8 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
-										"text": "Mnfc3",
+										"type": "symbol",
+										"text": "save_2",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -19951,8 +20180,8 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
-										"text": "Mnfc4",
+										"type": "symbol",
+										"text": "save_3",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -19965,8 +20194,8 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
-										"text": "Mnfc5",
+										"type": "symbol",
+										"text": "save_4",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -19979,7 +20208,21 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
+										"text": "save_5",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
 										"text": "save_6",
 										"img_path": "",
 										"img_width": 20,
@@ -19993,7 +20236,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_7",
 										"img_path": "",
 										"img_width": 20,
@@ -20007,7 +20250,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_8",
 										"img_path": "",
 										"img_width": 20,
@@ -20021,7 +20264,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_9",
 										"img_path": "",
 										"img_width": 20,
@@ -20035,7 +20278,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_10",
 										"img_path": "",
 										"img_width": 20,
@@ -20049,7 +20292,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_11",
 										"img_path": "",
 										"img_width": 20,
@@ -20063,7 +20306,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_12",
 										"img_path": "",
 										"img_width": 20,
@@ -20077,7 +20320,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_13",
 										"img_path": "",
 										"img_width": 20,
@@ -20091,7 +20334,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_14",
 										"img_path": "",
 										"img_width": 20,
@@ -20105,7 +20348,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_15",
 										"img_path": "",
 										"img_width": 20,
@@ -20119,7 +20362,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_16",
 										"img_path": "",
 										"img_width": 20,
@@ -20133,7 +20376,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_17",
 										"img_path": "",
 										"img_width": 20,
@@ -20147,7 +20390,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_18",
 										"img_path": "",
 										"img_width": 20,
@@ -20161,7 +20404,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_19",
 										"img_path": "",
 										"img_width": 20,
@@ -20175,7 +20418,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_20",
 										"img_path": "",
 										"img_width": 20,
@@ -20189,7 +20432,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_21",
 										"img_path": "",
 										"img_width": 20,
@@ -20203,7 +20446,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_22",
 										"img_path": "",
 										"img_width": 20,
@@ -20217,7 +20460,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_23",
 										"img_path": "",
 										"img_width": 20,
@@ -20231,7 +20474,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_24",
 										"img_path": "",
 										"img_width": 20,
@@ -20245,7 +20488,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_25",
 										"img_path": "",
 										"img_width": 20,
@@ -20259,7 +20502,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_26",
 										"img_path": "",
 										"img_width": 20,
@@ -20273,7 +20516,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_27",
 										"img_path": "",
 										"img_width": 20,
@@ -20287,7 +20530,7 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_28",
 										"img_path": "",
 										"img_width": 20,
@@ -20301,22 +20544,8 @@
 										"img_flash_path": "F:/"
 									},
 									{
-										"type": "image",
+										"type": "symbol",
 										"text": "save_29",
-										"img_path": "",
-										"img_width": 20,
-										"img_height": 20,
-										"img_symbol": "LV_SYMBOL_SAVE",
-										"img_size": [
-											20,
-											20
-										],
-										"img_sd_path": "S://",
-										"img_flash_path": "F:/"
-									},
-									{
-										"type": "image",
-										"text": "save_30",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20331,6 +20560,286 @@
 									{
 										"type": "symbol",
 										"text": "save_30",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_31",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_32",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_33",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_34",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_35",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_36",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_37",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_38",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_39",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_40",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_41",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_42",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_43",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_44",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_45",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_46",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_47",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_48",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_49",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_50",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -20584,7 +21093,7 @@
 											"src_type": "list",
 											"src_screen": "MainScreen",
 											"action": "customer_code",
-											"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
+											"inc_c": "",
 											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nsetcontSyringeValuesGroup(ui);\nlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);",
 											"inc_py": "",
 											"code_py": ""
@@ -20603,38 +21112,24 @@
 											]
 										}
 									],
-									"value_changed": [
+									"focused": [
 										{
 											"src": "MainScreen_listSyringeType",
-											"trigger": "value_changed",
+											"trigger": "focused",
 											"dst": "null",
 											"dst_type": "",
 											"item_index": "widget",
 											"src_type": "list",
 											"src_screen": "MainScreen",
 											"action": "customer_code",
-											"inc_c": "",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nloadSyringeValues(ui,lv_obj_get_child_id(obj));",
+											"inc_c": " uint8_t cur_SyringeManufacture,cur_SyringeType;",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\ncur_SyringeType=lv_obj_get_child_id(obj);\nupdateSyringeValues(ui,cur_SyringeType);",
 											"inc_py": "",
 											"code_py": ""
 										}
 									]
 								},
 								"items": [
-									{
-										"type": "image",
-										"img_path": "",
-										"img_width": 20,
-										"img_height": 20,
-										"img_symbol": "LV_SYMBOL_SAVE",
-										"text": "save",
-										"img_size": [
-											20,
-											20
-										],
-										"img_sd_path": "S://",
-										"img_flash_path": "F:/"
-									},
 									{
 										"type": "image",
 										"text": "save_1",
@@ -20750,6 +21245,160 @@
 									{
 										"type": "image",
 										"text": "save_9",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_10",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_11",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_12",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_13",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_14",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_15",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_16",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_17",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_18",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_19",
+										"img_path": "",
+										"img_width": 20,
+										"img_height": 20,
+										"img_symbol": "LV_SYMBOL_SAVE",
+										"img_size": [
+											20,
+											20
+										],
+										"img_sd_path": "S://",
+										"img_flash_path": "F:/"
+									},
+									{
+										"type": "symbol",
+										"text": "save_20",
 										"img_path": "",
 										"img_width": 20,
 										"img_height": 20,
@@ -21810,7 +22459,22 @@
 										],
 										"default_style": false,
 										"event": {
-											"long_pressed": []
+											"long_pressed": [],
+											"defocused": [
+												{
+													"src": "MainScreen_spinboxSyringeVolume",
+													"trigger": "defocused",
+													"dst": "null",
+													"dst_type": "",
+													"src_type": "spinbox",
+													"src_screen": "MainScreen",
+													"action": "customer_code",
+													"inc_c": "",
+													"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_MAIN);\nlv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_CURSOR);\nlv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeDiaTolerance,0,LV_PART_CURSOR);",
+													"inc_py": "",
+													"code_py": ""
+												}
+											]
 										},
 										"spinbox_width": 90,
 										"spinbox_height": 25,
@@ -21862,17 +22526,18 @@
 												"part": "LV_PART_CURSOR",
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
-												"disable": true,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"disable": false,
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -21985,17 +22650,18 @@
 												"part": "LV_PART_CURSOR",
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
-												"disable": true,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"disable": false,
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -22109,16 +22775,17 @@
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
 												"disable": false,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -22177,7 +22844,7 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											570,
+											568,
 											0
 										],
 										"default_style": false,
@@ -22232,16 +22899,17 @@
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
 												"disable": false,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -22355,16 +23023,17 @@
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
 												"disable": false,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",
@@ -22423,27 +23092,11 @@
 										"visible": true,
 										"flag": [],
 										"pos": [
-											569,
+											567,
 											70
 										],
 										"default_style": false,
-										"event": {
-											"long_pressed": [
-												{
-													"src": "MainScreen_spinboxSyringeDiaTolerance",
-													"trigger": "long_pressed",
-													"dst": "MainScreen_spinboxSyringeDiaTolerance",
-													"dst_type": "spinbox",
-													"src_type": "spinbox",
-													"src_screen": "MainScreen",
-													"action": "customer_code",
-													"inc_c": "",
-													"code_c": "lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);",
-													"inc_py": "",
-													"code_py": ""
-												}
-											]
-										},
+										"event": {},
 										"spinbox_width": 90,
 										"spinbox_height": 25,
 										"digit_format": [
@@ -22495,16 +23148,17 @@
 												"state": "LV_STATE_DEFAULT",
 												"object": "main",
 												"disable": false,
-												"font": 14,
-												"text_color": "#ffffff",
-												"font_family": "montserratMedium",
-												"bg_color": "#2195f6",
+												"font": 16,
+												"text_color": "#000000",
+												"font_family": "Alatsi_Regular",
+												"bg_color": "#ffffff",
 												"bg_grad_color": "#2195f6",
 												"bg_opa": 255,
 												"bg_grad_dir": "LV_GRAD_DIR_NONE",
 												"bg_dither_mode": "LV_DITHER_NONE",
 												"bg_main_stop": 0,
-												"bg_grad_stop": 255
+												"bg_grad_stop": 255,
+												"text_opa": 255
 											},
 											{
 												"part": "LV_PART_MAIN",

@@ -27,7 +27,8 @@ static void MainScreen_event_handler (lv_event_t *e)
 	case LV_EVENT_SCREEN_LOADED:
 	{
 		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
-		loadSyringeCompanyList(&guider_ui);
+		updateSyringeCompanyList(&guider_ui);
+	updateSyringeDrugList(&guider_ui);
 		break;
 	}
 	default:
@@ -151,7 +152,8 @@ static void MainScreen_listSyringeCompany_event_handler (lv_event_t *e)
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 	lv_obj_t *obj=lv_event_get_target(e);
-	loadSyringeTypeList(ui,lv_obj_get_child_id(obj));
+	cur_SyringeManufacture=lv_obj_get_child_id(obj);
+	updateSyringeTypeList(ui,cur_SyringeManufacture);
 	setlistSyringeTypeGroup(ui);
 	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
@@ -177,25 +179,29 @@ static void MainScreen_listSyringeType_event_handler (lv_event_t *e)
 		lv_obj_add_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
 		break;
 	}
-	case LV_EVENT_VALUE_CHANGED:
+	case LV_EVENT_FOCUSED:
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 	lv_obj_t *obj=lv_event_get_target(e);
-	loadSyringeValues(ui,lv_obj_get_child_id(obj));
+	cur_SyringeType=lv_obj_get_child_id(obj);
+	updateSyringeValues(ui,cur_SyringeType);
 		break;
 	}
 	default:
 		break;
 	}
 }
-static void MainScreen_spinboxSyringeDiaTolerance_event_handler (lv_event_t *e)
+static void MainScreen_spinboxSyringeVolume_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	switch (code) {
-	case LV_EVENT_LONG_PRESSED:
+	case LV_EVENT_DEFOCUSED:
 	{
-		lv_spinbox_set_cursor_pos(guider_ui.MainScreen_spinboxSyringeDiaTolerance,-1);
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_MAIN);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxSyringeDiaTolerance,lv_color_black(),LV_PART_CURSOR);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeDiaTolerance,0,LV_PART_CURSOR);
 		break;
 	}
 	default:
@@ -211,7 +217,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingSyringe, MainScreen_btnGoSettingSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeCompany, MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeType, MainScreen_listSyringeType_event_handler, LV_EVENT_ALL, ui);
-	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeDiaTolerance, MainScreen_spinboxSyringeDiaTolerance_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeVolume, MainScreen_spinboxSyringeVolume_event_handler, LV_EVENT_ALL, ui);
 }
 
 void events_init(lv_ui *ui)
