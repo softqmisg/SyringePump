@@ -21,19 +21,25 @@ void MainScreenSetStyle(lv_ui *ui);
 
 void setcontSettingGroup(lv_ui *ui);
 void setcontMainGroup(lv_ui *ui);
-void setcontSyringeGroup(lv_ui *ui);
 void setcontSyringeValuesGroup(lv_ui *ui);
 void setlistSyringeCompanyGroup(lv_ui *ui);
 void setlistSyringeTypeGroup(lv_ui *ui);
+void setlistDrugBrandGroup(lv_ui  *ui);
+void setcontDrugValuesGroup(lv_ui  *ui);
 
-void loadSyringeCompanyList(lv_ui *ui);
-void loadSyringeTypeList(lv_ui *ui,uint8_t companyindex);
-void loadSyringeValues(lv_ui *ui,uint8_t Typeindex);
+
+void updateSyringeCompanyList(lv_ui *ui);
+void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex);
+void updateSyringeValues(lv_ui *ui,uint8_t Typeindex);
+void updateDrugList(lv_ui *ui);
+void updateDrugValues(lv_ui *ui,uint8_t drugindex);
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontSetting_ready_callback(lv_anim_t * a);
 void animcontSyringe_ready_callback(lv_anim_t * a);
+void animcontDrug_ready_callback(lv_anim_t * a);
 
+int randi(int lower_bound,int upper_bound);
 #ifdef __cplusplus
 }
 #endif

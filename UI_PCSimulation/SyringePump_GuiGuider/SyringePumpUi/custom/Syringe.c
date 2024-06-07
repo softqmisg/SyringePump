@@ -1,14 +1,8 @@
 #include "Syring.h"
-#include "time.h"
+#include "custom.h"
 syringe_t DefaultSyrings[50][20]; //50 Companies,20 Types
-int randi(int lower_bound,int upper_bound)
-{
-    return  rand() % (upper_bound - lower_bound + 1) 
-                    + lower_bound;
-}
 void loadDefaultSyringesValue(void)
 {
-    srand(time(NULL));
     for(uint8_t mfg=0;mfg<50;mfg++)
     {
         for(uint8_t sy=0;sy<20;sy++)

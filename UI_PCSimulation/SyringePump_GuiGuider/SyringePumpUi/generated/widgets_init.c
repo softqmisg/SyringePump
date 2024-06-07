@@ -231,4 +231,88 @@ void lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb(lv_event_t * ev
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringeDiaTolerance);
 	}
 }
+void lv_MainScreen_spinboxDrugmgml_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugmgml);
+	}
+}
+void lv_MainScreen_spinboxDrugmgml_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugmgml);
+	}
+}
+void lv_MainScreen_spinboxDruguml_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDruguml);
+	}
+}
+void lv_MainScreen_spinboxDruguml_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDruguml);
+	}
+}
+void lv_MainScreen_spinboxDrugperkg_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugperkg);
+	}
+}
+void lv_MainScreen_spinboxDrugperkg_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugperkg);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMin_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateMin);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMin_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateMin);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMax_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateMax);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMax_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateMax);
+	}
+}
+void lv_MainScreen_spinboxDrugRateDef_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateDef);
+	}
+}
+void lv_MainScreen_spinboxDrugRateDef_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateDef);
+	}
+}
 

@@ -1,8 +1,8 @@
 #include "Drug.h"
-#include "main.h"
+#include "custom.h"
 drug_t DefaultDrugs[50]; //50 Types
 
-void loadDefaultSyringesValue(void)
+void loadDefaultDrugValue(void)
 {
     for(uint8_t brands=0;brands<50;brands++)
     {

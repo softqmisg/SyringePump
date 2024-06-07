@@ -1550,7 +1550,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_listSyringeCompany_item47 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_48");
 	ui->MainScreen_listSyringeCompany_item48 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_49");
 	ui->MainScreen_listSyringeCompany_item49 = lv_list_add_btn(ui->MainScreen_listSyringeCompany, LV_SYMBOL_SAVE, "save_50");
-	lv_obj_set_pos(ui->MainScreen_listSyringeCompany, -1, 29);
+	lv_obj_set_pos(ui->MainScreen_listSyringeCompany, 0, 29);
 	lv_obj_set_size(ui->MainScreen_listSyringeCompany, 400, 140);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_listSyringeCompany, LV_SCROLLBAR_MODE_AUTO);
 
@@ -2089,7 +2089,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write codes MainScreen_spinboxSyringeVolume
 	ui->MainScreen_spinboxSyringeVolume = lv_spinbox_create(ui->MainScreen_contSyringeValues);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 123, 34);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 119, 34);
 	lv_obj_set_width(ui->MainScreen_spinboxSyringeVolume, 90);
 	lv_obj_set_height(ui->MainScreen_spinboxSyringeVolume, 25);
 	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeVolume, 2, 2);
@@ -2105,7 +2105,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align_to(ui->MainScreen_spinboxSyringeVolume_btn_minus, ui->MainScreen_spinboxSyringeVolume, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeVolume_btn_minus, LV_SYMBOL_MINUS, 0);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeVolume_btn_minus, lv_MainScreen_spinboxSyringeVolume_decrement_event_cb, LV_EVENT_ALL, NULL);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 123, 34);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeVolume, 119, 34);
 
 	//Write style for MainScreen_spinboxSyringeVolume, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2230,7 +2230,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write codes MainScreen_spinboxSyringeBarrelLen
 	ui->MainScreen_spinboxSyringeBarrelLen = lv_spinbox_create(ui->MainScreen_contSyringeValues);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 570, 0);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 568, 0);
 	lv_obj_set_width(ui->MainScreen_spinboxSyringeBarrelLen, 90);
 	lv_obj_set_height(ui->MainScreen_spinboxSyringeBarrelLen, 25);
 	lv_spinbox_set_digit_format(ui->MainScreen_spinboxSyringeBarrelLen, 3, 3);
@@ -2246,7 +2246,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align_to(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, ui->MainScreen_spinboxSyringeBarrelLen, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, LV_SYMBOL_MINUS, 0);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus, lv_MainScreen_spinboxSyringeBarrelLen_decrement_event_cb, LV_EVENT_ALL, NULL);
-	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 570, 0);
+	lv_obj_set_pos(ui->MainScreen_spinboxSyringeBarrelLen, 568, 0);
 
 	//Write style for MainScreen_spinboxSyringeBarrelLen, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxSyringeBarrelLen, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2386,13 +2386,961 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_line_space(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_label_18, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_opa(ui->MainScreen_label_18, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_label_18, lv_color_hex(0x9ac9e7), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_18, lv_color_hex(0x1d77f5), LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_18, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_top(ui->MainScreen_label_18, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_right(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_bottom(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_left(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contDrug
+	ui->MainScreen_contDrug = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contDrug, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contDrug, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contDrug, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contDrug, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contDrug, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contDrug, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contDrug, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contDrug, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contDrug, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contDrug, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contDrug, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoSettingDrug
+	ui->MainScreen_btnGoSettingDrug = lv_btn_create(ui->MainScreen_contDrug);
+	ui->MainScreen_btnGoSettingDrug_label = lv_label_create(ui->MainScreen_btnGoSettingDrug);
+	lv_label_set_text(ui->MainScreen_btnGoSettingDrug_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoSettingDrug_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoSettingDrug_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoSettingDrug, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoSettingDrug_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoSettingDrug, 727, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoSettingDrug, 58, 44);
+
+	//Write style for MainScreen_btnGoSettingDrug, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoSettingDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoSettingDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoSettingDrug, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoSettingDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoSettingDrug, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoSettingDrug, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoSettingDrug, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoSettingDrug, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_listDrugBrand
+	ui->MainScreen_listDrugBrand = lv_list_create(ui->MainScreen_contDrug);
+	ui->MainScreen_listDrugBrand_item0 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_1");
+	ui->MainScreen_listDrugBrand_item1 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_2");
+	ui->MainScreen_listDrugBrand_item2 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_3");
+	ui->MainScreen_listDrugBrand_item3 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_4");
+	ui->MainScreen_listDrugBrand_item4 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_5");
+	ui->MainScreen_listDrugBrand_item5 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_6");
+	ui->MainScreen_listDrugBrand_item6 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_7");
+	ui->MainScreen_listDrugBrand_item7 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_8");
+	ui->MainScreen_listDrugBrand_item8 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_9");
+	ui->MainScreen_listDrugBrand_item9 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_10");
+	ui->MainScreen_listDrugBrand_item10 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_11");
+	ui->MainScreen_listDrugBrand_item11 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_12");
+	ui->MainScreen_listDrugBrand_item12 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_13");
+	ui->MainScreen_listDrugBrand_item13 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_14");
+	ui->MainScreen_listDrugBrand_item14 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_15");
+	ui->MainScreen_listDrugBrand_item15 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_16");
+	ui->MainScreen_listDrugBrand_item16 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_17");
+	ui->MainScreen_listDrugBrand_item17 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_18");
+	ui->MainScreen_listDrugBrand_item18 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_19");
+	ui->MainScreen_listDrugBrand_item19 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_20");
+	ui->MainScreen_listDrugBrand_item20 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_21");
+	ui->MainScreen_listDrugBrand_item21 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_22");
+	ui->MainScreen_listDrugBrand_item22 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_23");
+	ui->MainScreen_listDrugBrand_item23 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_24");
+	ui->MainScreen_listDrugBrand_item24 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_25");
+	ui->MainScreen_listDrugBrand_item25 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_26");
+	ui->MainScreen_listDrugBrand_item26 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_27");
+	ui->MainScreen_listDrugBrand_item27 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_28");
+	ui->MainScreen_listDrugBrand_item28 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_29");
+	ui->MainScreen_listDrugBrand_item29 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_30");
+	ui->MainScreen_listDrugBrand_item30 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_31");
+	ui->MainScreen_listDrugBrand_item31 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_32");
+	ui->MainScreen_listDrugBrand_item32 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_33");
+	ui->MainScreen_listDrugBrand_item33 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_34");
+	ui->MainScreen_listDrugBrand_item34 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_35");
+	ui->MainScreen_listDrugBrand_item35 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_36");
+	ui->MainScreen_listDrugBrand_item36 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_37");
+	ui->MainScreen_listDrugBrand_item37 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_38");
+	ui->MainScreen_listDrugBrand_item38 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_39");
+	ui->MainScreen_listDrugBrand_item39 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_40");
+	ui->MainScreen_listDrugBrand_item40 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_41");
+	ui->MainScreen_listDrugBrand_item41 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_42");
+	ui->MainScreen_listDrugBrand_item42 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_43");
+	ui->MainScreen_listDrugBrand_item43 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_44");
+	ui->MainScreen_listDrugBrand_item44 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_45");
+	ui->MainScreen_listDrugBrand_item45 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_46");
+	ui->MainScreen_listDrugBrand_item46 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_47");
+	ui->MainScreen_listDrugBrand_item47 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_48");
+	ui->MainScreen_listDrugBrand_item48 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_49");
+	ui->MainScreen_listDrugBrand_item49 = lv_list_add_btn(ui->MainScreen_listDrugBrand, LV_SYMBOL_SAVE, "save_50");
+	lv_obj_set_pos(ui->MainScreen_listDrugBrand, 0, 29);
+	lv_obj_set_size(ui->MainScreen_listDrugBrand, 350, 270);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_listDrugBrand, LV_SCROLLBAR_MODE_AUTO);
+
+	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listDrugBrand_main_main_default
+	static lv_style_t style_MainScreen_listDrugBrand_main_main_default;
+	ui_init_style(&style_MainScreen_listDrugBrand_main_main_default);
+	
+	lv_style_set_pad_top(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_style_set_pad_left(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_style_set_pad_right(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_style_set_pad_bottom(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_style_set_bg_opa(&style_MainScreen_listDrugBrand_main_main_default, 255);
+	lv_style_set_bg_color(&style_MainScreen_listDrugBrand_main_main_default, lv_color_hex(0x000000));
+	lv_style_set_bg_grad_dir(&style_MainScreen_listDrugBrand_main_main_default, LV_GRAD_DIR_NONE);
+	lv_style_set_border_width(&style_MainScreen_listDrugBrand_main_main_default, 2);
+	lv_style_set_border_opa(&style_MainScreen_listDrugBrand_main_main_default, 255);
+	lv_style_set_border_color(&style_MainScreen_listDrugBrand_main_main_default, lv_color_hex(0x008dff));
+	lv_style_set_border_side(&style_MainScreen_listDrugBrand_main_main_default, LV_BORDER_SIDE_FULL);
+	lv_style_set_radius(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_style_set_shadow_width(&style_MainScreen_listDrugBrand_main_main_default, 0);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand, &style_MainScreen_listDrugBrand_main_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listDrugBrand_main_scrollbar_default
+	static lv_style_t style_MainScreen_listDrugBrand_main_scrollbar_default;
+	ui_init_style(&style_MainScreen_listDrugBrand_main_scrollbar_default);
+	
+	lv_style_set_radius(&style_MainScreen_listDrugBrand_main_scrollbar_default, 3);
+	lv_style_set_bg_opa(&style_MainScreen_listDrugBrand_main_scrollbar_default, 255);
+	lv_style_set_bg_color(&style_MainScreen_listDrugBrand_main_scrollbar_default, lv_color_hex(0x9e9e9e));
+	lv_style_set_bg_grad_dir(&style_MainScreen_listDrugBrand_main_scrollbar_default, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand, &style_MainScreen_listDrugBrand_main_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_listDrugBrand_extra_btns_main_default
+	static lv_style_t style_MainScreen_listDrugBrand_extra_btns_main_default;
+	ui_init_style(&style_MainScreen_listDrugBrand_extra_btns_main_default);
+	
+	lv_style_set_pad_top(&style_MainScreen_listDrugBrand_extra_btns_main_default, 2);
+	lv_style_set_pad_left(&style_MainScreen_listDrugBrand_extra_btns_main_default, 2);
+	lv_style_set_pad_right(&style_MainScreen_listDrugBrand_extra_btns_main_default, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listDrugBrand_extra_btns_main_default, 2);
+	lv_style_set_border_width(&style_MainScreen_listDrugBrand_extra_btns_main_default, 0);
+	lv_style_set_text_color(&style_MainScreen_listDrugBrand_extra_btns_main_default, lv_color_hex(0xffffff));
+	lv_style_set_text_font(&style_MainScreen_listDrugBrand_extra_btns_main_default, &lv_font_Alatsi_Regular_19);
+	lv_style_set_text_opa(&style_MainScreen_listDrugBrand_extra_btns_main_default, 255);
+	lv_style_set_radius(&style_MainScreen_listDrugBrand_extra_btns_main_default, 3);
+	lv_style_set_bg_opa(&style_MainScreen_listDrugBrand_extra_btns_main_default, 255);
+	lv_style_set_bg_color(&style_MainScreen_listDrugBrand_extra_btns_main_default, lv_color_hex(0x000000));
+	lv_style_set_bg_grad_dir(&style_MainScreen_listDrugBrand_extra_btns_main_default, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item49, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item48, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item47, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item46, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item45, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item44, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item43, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item42, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item41, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item40, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item39, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item38, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item37, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item36, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item35, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item34, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item33, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item32, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item31, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item30, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item29, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item28, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item27, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item26, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item25, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item24, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item23, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item22, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item21, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item20, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item19, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item18, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item17, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item16, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item15, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item14, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item13, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item12, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item11, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item10, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item9, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item8, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item7, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item6, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item5, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item4, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item3, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item2, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item1, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item0, &style_MainScreen_listDrugBrand_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style state: LV_STATE_FOCUSED for &style_MainScreen_listDrugBrand_extra_btns_main_focused
+	static lv_style_t style_MainScreen_listDrugBrand_extra_btns_main_focused;
+	ui_init_style(&style_MainScreen_listDrugBrand_extra_btns_main_focused);
+	
+	lv_style_set_pad_top(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 2);
+	lv_style_set_pad_left(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 2);
+	lv_style_set_pad_right(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 2);
+	lv_style_set_pad_bottom(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 2);
+	lv_style_set_border_width(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 0);
+	lv_style_set_radius(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 3);
+	lv_style_set_text_color(&style_MainScreen_listDrugBrand_extra_btns_main_focused, lv_color_hex(0xffffff));
+	lv_style_set_text_font(&style_MainScreen_listDrugBrand_extra_btns_main_focused, &lv_font_Alatsi_Regular_19);
+	lv_style_set_text_opa(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 255);
+	lv_style_set_bg_opa(&style_MainScreen_listDrugBrand_extra_btns_main_focused, 255);
+	lv_style_set_bg_color(&style_MainScreen_listDrugBrand_extra_btns_main_focused, lv_color_hex(0x0016ff));
+	lv_style_set_bg_grad_dir(&style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item49, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item48, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item47, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item46, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item45, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item44, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item43, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item42, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item41, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item40, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item39, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item38, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item37, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item36, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item35, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item34, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item33, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item32, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item31, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item30, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item29, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item28, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item27, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item26, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item25, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item24, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item23, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item22, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item21, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item20, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item19, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item18, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item17, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item16, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item15, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item14, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item13, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item12, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item11, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item10, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item9, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item8, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item7, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item6, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item5, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item4, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item3, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item2, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item1, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_add_style(ui->MainScreen_listDrugBrand_item0, &style_MainScreen_listDrugBrand_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+	//Write codes MainScreen_contDrugValues
+	ui->MainScreen_contDrugValues = lv_obj_create(ui->MainScreen_contDrug);
+	lv_obj_set_pos(ui->MainScreen_contDrugValues, 350, 29);
+	lv_obj_set_size(ui->MainScreen_contDrugValues, 388, 270);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contDrugValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contDrugValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contDrugValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contDrugValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contDrugValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contDrugValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_26
+	ui->MainScreen_label_26 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_26, "Name:");
+	lv_label_set_long_mode(ui->MainScreen_label_26, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_26, 4, 0);
+	lv_obj_set_size(ui->MainScreen_label_26, 70, 25);
+
+	//Write style for MainScreen_label_26, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_26, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_26, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_26, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_26, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_26, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_26, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_26, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_25
+	ui->MainScreen_label_25 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_25, "Brand:");
+	lv_label_set_long_mode(ui->MainScreen_label_25, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_25, 4, 30);
+	lv_obj_set_size(ui->MainScreen_label_25, 80, 25);
+
+	//Write style for MainScreen_label_25, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_25, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_25, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_25, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_25, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_25, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_25, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_25, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_24
+	ui->MainScreen_label_24 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_24, "Id.:");
+	lv_label_set_long_mode(ui->MainScreen_label_24, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_24, 4, 60);
+	lv_obj_set_size(ui->MainScreen_label_24, 100, 25);
+
+	//Write style for MainScreen_label_24, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_24, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_24, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_24, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_24, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_24, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_24, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_24, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_23
+	ui->MainScreen_label_23 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_23, "mg/ml:");
+	lv_label_set_long_mode(ui->MainScreen_label_23, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_23, 4, 90);
+	lv_obj_set_size(ui->MainScreen_label_23, 110, 25);
+
+	//Write style for MainScreen_label_23, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_23, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_23, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_23, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_23, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_23, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_23, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_23, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_22
+	ui->MainScreen_label_22 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_22, "U/ml:");
+	lv_label_set_long_mode(ui->MainScreen_label_22, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_22, 4, 120);
+	lv_obj_set_size(ui->MainScreen_label_22, 120, 25);
+
+	//Write style for MainScreen_label_22, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_22, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_22, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_22, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_22, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_22, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_22, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_22, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_21
+	ui->MainScreen_label_21 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_21, "Per/Kg:");
+	lv_label_set_long_mode(ui->MainScreen_label_21, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_21, 4, 150);
+	lv_obj_set_size(ui->MainScreen_label_21, 130, 25);
+
+	//Write style for MainScreen_label_21, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_21, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_21, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_21, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_21, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_21, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_21, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_21, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_20
+	ui->MainScreen_label_20 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_20, "Rate Min:");
+	lv_label_set_long_mode(ui->MainScreen_label_20, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_20, 4, 180);
+	lv_obj_set_size(ui->MainScreen_label_20, 150, 25);
+
+	//Write style for MainScreen_label_20, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_20, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_20, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_20, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_20, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_20, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_20, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_20, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_28
+	ui->MainScreen_label_28 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_28, "Rate Max:");
+	lv_label_set_long_mode(ui->MainScreen_label_28, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_28, 4, 210);
+	lv_obj_set_size(ui->MainScreen_label_28, 150, 25);
+
+	//Write style for MainScreen_label_28, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_28, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_28, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_28, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_28, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_28, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_28, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_28, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_27
+	ui->MainScreen_label_27 = lv_label_create(ui->MainScreen_contDrugValues);
+	lv_label_set_text(ui->MainScreen_label_27, "Rate Def.:");
+	lv_label_set_long_mode(ui->MainScreen_label_27, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_27, 4, 240);
+	lv_obj_set_size(ui->MainScreen_label_27, 150, 25);
+
+	//Write style for MainScreen_label_27, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_27, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_27, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_27, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_27, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_27, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_27, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_27, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_taDrugNameValue
+	ui->MainScreen_taDrugNameValue = lv_textarea_create(ui->MainScreen_contDrugValues);
+	lv_textarea_set_text(ui->MainScreen_taDrugNameValue, "MySyringe");
+	lv_textarea_set_placeholder_text(ui->MainScreen_taDrugNameValue, "");
+	lv_textarea_set_password_bullet(ui->MainScreen_taDrugNameValue, "*");
+	lv_textarea_set_password_mode(ui->MainScreen_taDrugNameValue, false);
+	lv_textarea_set_one_line(ui->MainScreen_taDrugNameValue, true);
+	lv_textarea_set_accepted_chars(ui->MainScreen_taDrugNameValue, "");
+	lv_textarea_set_max_length(ui->MainScreen_taDrugNameValue, 20);
+	#if LV_USE_KEYBOARD != 0 || LV_USE_ZH_KEYBOARD != 0
+		lv_obj_add_event_cb(ui->MainScreen_taDrugNameValue, ta_event_cb, LV_EVENT_ALL, ui->g_kb_MainScreen);
+	#endif
+	lv_obj_set_pos(ui->MainScreen_taDrugNameValue, 73, 0);
+	lv_obj_set_size(ui->MainScreen_taDrugNameValue, 280, 32);
+
+	//Write style for MainScreen_taDrugNameValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_taDrugNameValue, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_taDrugNameValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_taDrugNameValue, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_taDrugNameValue, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_taDrugNameValue, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_taDrugNameValue, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_taDrugNameValue, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taDrugNameValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_taDrugNameValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_taDrugNameValue, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+	lv_obj_set_style_text_color(ui->MainScreen_taDrugNameValue, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_font(ui->MainScreen_taDrugNameValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_opa(ui->MainScreen_taDrugNameValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_opa(ui->MainScreen_taDrugNameValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_color(ui->MainScreen_taDrugNameValue, lv_color_hex(0xa4e6fd), LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taDrugNameValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_border_width(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_shadow_width(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_top(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_right(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_left(ui->MainScreen_taDrugNameValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_radius(ui->MainScreen_taDrugNameValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+	//Write codes MainScreen_taDrugBrandValue
+	ui->MainScreen_taDrugBrandValue = lv_textarea_create(ui->MainScreen_contDrugValues);
+	lv_textarea_set_text(ui->MainScreen_taDrugBrandValue, "MySyringe");
+	lv_textarea_set_placeholder_text(ui->MainScreen_taDrugBrandValue, "");
+	lv_textarea_set_password_bullet(ui->MainScreen_taDrugBrandValue, "*");
+	lv_textarea_set_password_mode(ui->MainScreen_taDrugBrandValue, false);
+	lv_textarea_set_one_line(ui->MainScreen_taDrugBrandValue, true);
+	lv_textarea_set_accepted_chars(ui->MainScreen_taDrugBrandValue, "");
+	lv_textarea_set_max_length(ui->MainScreen_taDrugBrandValue, 20);
+	#if LV_USE_KEYBOARD != 0 || LV_USE_ZH_KEYBOARD != 0
+		lv_obj_add_event_cb(ui->MainScreen_taDrugBrandValue, ta_event_cb, LV_EVENT_ALL, ui->g_kb_MainScreen);
+	#endif
+	lv_obj_set_pos(ui->MainScreen_taDrugBrandValue, 73, 28);
+	lv_obj_set_size(ui->MainScreen_taDrugBrandValue, 280, 30);
+
+	//Write style for MainScreen_taDrugBrandValue, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_taDrugBrandValue, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_taDrugBrandValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_taDrugBrandValue, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_taDrugBrandValue, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_taDrugBrandValue, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_taDrugBrandValue, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_taDrugBrandValue, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taDrugBrandValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_taDrugBrandValue, 4, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_taDrugBrandValue, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+	lv_obj_set_style_text_color(ui->MainScreen_taDrugBrandValue, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_font(ui->MainScreen_taDrugBrandValue, &lv_font_Alatsi_Regular_18, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_text_opa(ui->MainScreen_taDrugBrandValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_opa(ui->MainScreen_taDrugBrandValue, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_color(ui->MainScreen_taDrugBrandValue, lv_color_hex(0xa4e6fd), LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_taDrugBrandValue, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_border_width(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_shadow_width(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_top(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_right(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_pad_left(ui->MainScreen_taDrugBrandValue, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_radius(ui->MainScreen_taDrugBrandValue, 4, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+	//Write codes MainScreen_ddlistDrugId
+	ui->MainScreen_ddlistDrugId = lv_dropdown_create(ui->MainScreen_contDrugValues);
+	lv_dropdown_set_options(ui->MainScreen_ddlistDrugId, "ml\nug\nmg\nunit");
+	lv_obj_set_pos(ui->MainScreen_ddlistDrugId, 54, 62);
+	lv_obj_set_size(ui->MainScreen_ddlistDrugId, 100, 24);
+
+	//Write style for MainScreen_ddlistDrugId, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_ddlistDrugId, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_ddlistDrugId, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_ddlistDrugId, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_ddlistDrugId, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_ddlistDrugId, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_ddlistDrugId, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_ddlistDrugId, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_ddlistDrugId, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_ddlistDrugId, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_ddlistDrugId, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_ddlistDrugId, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_ddlistDrugId, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_ddlistDrugId, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_ddlistDrugId, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_ddlistDrugId, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style state: LV_STATE_CHECKED for &style_MainScreen_ddlistDrugId_extra_list_selected_checked
+	static lv_style_t style_MainScreen_ddlistDrugId_extra_list_selected_checked;
+	ui_init_style(&style_MainScreen_ddlistDrugId_extra_list_selected_checked);
+	
+	lv_style_set_border_width(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, 1);
+	lv_style_set_border_opa(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, 255);
+	lv_style_set_border_color(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+	lv_style_set_border_side(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+	lv_style_set_radius(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, 3);
+	lv_style_set_bg_opa(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, 255);
+	lv_style_set_bg_color(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+	lv_style_set_bg_grad_dir(&style_MainScreen_ddlistDrugId_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(lv_dropdown_get_list(ui->MainScreen_ddlistDrugId), &style_MainScreen_ddlistDrugId_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_ddlistDrugId_extra_list_main_default
+	static lv_style_t style_MainScreen_ddlistDrugId_extra_list_main_default;
+	ui_init_style(&style_MainScreen_ddlistDrugId_extra_list_main_default);
+	
+	lv_style_set_max_height(&style_MainScreen_ddlistDrugId_extra_list_main_default, 90);
+	lv_style_set_text_color(&style_MainScreen_ddlistDrugId_extra_list_main_default, lv_color_hex(0x0D3055));
+	lv_style_set_text_font(&style_MainScreen_ddlistDrugId_extra_list_main_default, &lv_font_Alatsi_Regular_19);
+	lv_style_set_text_opa(&style_MainScreen_ddlistDrugId_extra_list_main_default, 255);
+	lv_style_set_border_width(&style_MainScreen_ddlistDrugId_extra_list_main_default, 1);
+	lv_style_set_border_opa(&style_MainScreen_ddlistDrugId_extra_list_main_default, 255);
+	lv_style_set_border_color(&style_MainScreen_ddlistDrugId_extra_list_main_default, lv_color_hex(0xe1e6ee));
+	lv_style_set_border_side(&style_MainScreen_ddlistDrugId_extra_list_main_default, LV_BORDER_SIDE_FULL);
+	lv_style_set_radius(&style_MainScreen_ddlistDrugId_extra_list_main_default, 3);
+	lv_style_set_bg_opa(&style_MainScreen_ddlistDrugId_extra_list_main_default, 255);
+	lv_style_set_bg_color(&style_MainScreen_ddlistDrugId_extra_list_main_default, lv_color_hex(0xffffff));
+	lv_style_set_bg_grad_dir(&style_MainScreen_ddlistDrugId_extra_list_main_default, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(lv_dropdown_get_list(ui->MainScreen_ddlistDrugId), &style_MainScreen_ddlistDrugId_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style state: LV_STATE_DEFAULT for &style_MainScreen_ddlistDrugId_extra_list_scrollbar_default
+	static lv_style_t style_MainScreen_ddlistDrugId_extra_list_scrollbar_default;
+	ui_init_style(&style_MainScreen_ddlistDrugId_extra_list_scrollbar_default);
+	
+	lv_style_set_radius(&style_MainScreen_ddlistDrugId_extra_list_scrollbar_default, 3);
+	lv_style_set_bg_opa(&style_MainScreen_ddlistDrugId_extra_list_scrollbar_default, 255);
+	lv_style_set_bg_color(&style_MainScreen_ddlistDrugId_extra_list_scrollbar_default, lv_color_hex(0x00ff00));
+	lv_style_set_bg_grad_dir(&style_MainScreen_ddlistDrugId_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(lv_dropdown_get_list(ui->MainScreen_ddlistDrugId), &style_MainScreen_ddlistDrugId_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDrugmgml
+	ui->MainScreen_spinboxDrugmgml = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugmgml, 102, 90);
+	lv_obj_set_width(ui->MainScreen_spinboxDrugmgml, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDrugmgml, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDrugmgml, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml, -99, 99);
+	lv_coord_t MainScreen_spinboxDrugmgml_h = lv_obj_get_height(ui->MainScreen_spinboxDrugmgml);
+	ui->MainScreen_spinboxDrugmgml_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugmgml_btn, MainScreen_spinboxDrugmgml_h, MainScreen_spinboxDrugmgml_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugmgml_btn, ui->MainScreen_spinboxDrugmgml, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugmgml_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugmgml_btn, lv_MainScreen_spinboxDrugmgml_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDrugmgml_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugmgml_btn_minus, MainScreen_spinboxDrugmgml_h, MainScreen_spinboxDrugmgml_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugmgml_btn_minus, ui->MainScreen_spinboxDrugmgml, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugmgml_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugmgml_btn_minus, lv_MainScreen_spinboxDrugmgml_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugmgml, 102, 90);
+
+	//Write style for MainScreen_spinboxDrugmgml, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugmgml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugmgml, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugmgml, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDrugmgml, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDrugmgml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDrugmgml, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDrugmgml, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDrugmgml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDrugmgml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDrugmgml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDrugmgml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugmgml, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugmgml, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugmgml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDrugmgml, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDrugmgml, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDrugmgml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDrugmgml, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugmgml, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugmgml, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugmgml, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugmgml, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugmgml, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugmgml, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDruguml
+	ui->MainScreen_spinboxDruguml = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDruguml, 102, 120);
+	lv_obj_set_width(ui->MainScreen_spinboxDruguml, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDruguml, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDruguml, 3, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDruguml, -999, 999);
+	lv_coord_t MainScreen_spinboxDruguml_h = lv_obj_get_height(ui->MainScreen_spinboxDruguml);
+	ui->MainScreen_spinboxDruguml_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDruguml_btn, MainScreen_spinboxDruguml_h, MainScreen_spinboxDruguml_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDruguml_btn, ui->MainScreen_spinboxDruguml, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDruguml_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDruguml_btn, lv_MainScreen_spinboxDruguml_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDruguml_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDruguml_btn_minus, MainScreen_spinboxDruguml_h, MainScreen_spinboxDruguml_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDruguml_btn_minus, ui->MainScreen_spinboxDruguml, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDruguml_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDruguml_btn_minus, lv_MainScreen_spinboxDruguml_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDruguml, 102, 120);
+
+	//Write style for MainScreen_spinboxDruguml, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDruguml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDruguml, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDruguml, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDruguml, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDruguml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDruguml, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDruguml, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDruguml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDruguml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDruguml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDruguml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDruguml, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDruguml, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDruguml, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDruguml, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDruguml, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDruguml, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDruguml, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDruguml, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDruguml, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDruguml, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDruguml, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDruguml, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDruguml, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDrugperkg
+	ui->MainScreen_spinboxDrugperkg = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugperkg, 102, 150);
+	lv_obj_set_width(ui->MainScreen_spinboxDrugperkg, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDrugperkg, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDrugperkg, 3, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg, -999, 999);
+	lv_coord_t MainScreen_spinboxDrugperkg_h = lv_obj_get_height(ui->MainScreen_spinboxDrugperkg);
+	ui->MainScreen_spinboxDrugperkg_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugperkg_btn, MainScreen_spinboxDrugperkg_h, MainScreen_spinboxDrugperkg_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugperkg_btn, ui->MainScreen_spinboxDrugperkg, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugperkg_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugperkg_btn, lv_MainScreen_spinboxDrugperkg_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDrugperkg_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugperkg_btn_minus, MainScreen_spinboxDrugperkg_h, MainScreen_spinboxDrugperkg_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugperkg_btn_minus, ui->MainScreen_spinboxDrugperkg, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugperkg_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugperkg_btn_minus, lv_MainScreen_spinboxDrugperkg_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugperkg, 102, 150);
+
+	//Write style for MainScreen_spinboxDrugperkg, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugperkg, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugperkg, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugperkg, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDrugperkg, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDrugperkg, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDrugperkg, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDrugperkg, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDrugperkg, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDrugperkg, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDrugperkg, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDrugperkg, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugperkg, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugperkg, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugperkg, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDrugperkg, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDrugperkg, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDrugperkg, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDrugperkg, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugperkg, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugperkg, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugperkg, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugperkg, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugperkg, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugperkg, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDrugRateMin
+	ui->MainScreen_spinboxDrugRateMin = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateMin, 115, 180);
+	lv_obj_set_width(ui->MainScreen_spinboxDrugRateMin, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDrugRateMin, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDrugRateMin, 3, 3);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin, -999, 999);
+	lv_coord_t MainScreen_spinboxDrugRateMin_h = lv_obj_get_height(ui->MainScreen_spinboxDrugRateMin);
+	ui->MainScreen_spinboxDrugRateMin_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateMin_btn, MainScreen_spinboxDrugRateMin_h, MainScreen_spinboxDrugRateMin_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateMin_btn, ui->MainScreen_spinboxDrugRateMin, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateMin_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateMin_btn, lv_MainScreen_spinboxDrugRateMin_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDrugRateMin_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateMin_btn_minus, MainScreen_spinboxDrugRateMin_h, MainScreen_spinboxDrugRateMin_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateMin_btn_minus, ui->MainScreen_spinboxDrugRateMin, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateMin_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateMin_btn_minus, lv_MainScreen_spinboxDrugRateMin_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateMin, 115, 180);
+
+	//Write style for MainScreen_spinboxDrugRateMin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateMin, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateMin, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateMin, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDrugRateMin, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDrugRateMin, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDrugRateMin, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDrugRateMin, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDrugRateMin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDrugRateMin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDrugRateMin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDrugRateMin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateMin, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateMin, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateMin, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDrugRateMin, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDrugRateMin, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDrugRateMin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDrugRateMin, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateMin, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateMin, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateMin, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateMin, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateMin, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateMin, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDrugRateMax
+	ui->MainScreen_spinboxDrugRateMax = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateMax, 115, 210);
+	lv_obj_set_width(ui->MainScreen_spinboxDrugRateMax, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDrugRateMax, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDrugRateMax, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax, -99, 99);
+	lv_coord_t MainScreen_spinboxDrugRateMax_h = lv_obj_get_height(ui->MainScreen_spinboxDrugRateMax);
+	ui->MainScreen_spinboxDrugRateMax_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateMax_btn, MainScreen_spinboxDrugRateMax_h, MainScreen_spinboxDrugRateMax_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateMax_btn, ui->MainScreen_spinboxDrugRateMax, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateMax_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateMax_btn, lv_MainScreen_spinboxDrugRateMax_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDrugRateMax_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateMax_btn_minus, MainScreen_spinboxDrugRateMax_h, MainScreen_spinboxDrugRateMax_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateMax_btn_minus, ui->MainScreen_spinboxDrugRateMax, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateMax_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateMax_btn_minus, lv_MainScreen_spinboxDrugRateMax_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateMax, 115, 210);
+
+	//Write style for MainScreen_spinboxDrugRateMax, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateMax, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateMax, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateMax, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDrugRateMax, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDrugRateMax, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDrugRateMax, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDrugRateMax, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDrugRateMax, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDrugRateMax, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDrugRateMax, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDrugRateMax, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateMax, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateMax, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateMax, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDrugRateMax, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDrugRateMax, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDrugRateMax, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDrugRateMax, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateMax, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateMax, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateMax, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateMax, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateMax, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateMax, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxDrugRateDef
+	ui->MainScreen_spinboxDrugRateDef = lv_spinbox_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateDef, 115, 240);
+	lv_obj_set_width(ui->MainScreen_spinboxDrugRateDef, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxDrugRateDef, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxDrugRateDef, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef, -99, 99);
+	lv_coord_t MainScreen_spinboxDrugRateDef_h = lv_obj_get_height(ui->MainScreen_spinboxDrugRateDef);
+	ui->MainScreen_spinboxDrugRateDef_btn = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateDef_btn, MainScreen_spinboxDrugRateDef_h, MainScreen_spinboxDrugRateDef_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateDef_btn, ui->MainScreen_spinboxDrugRateDef, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateDef_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateDef_btn, lv_MainScreen_spinboxDrugRateDef_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxDrugRateDef_btn_minus = lv_btn_create(ui->MainScreen_contDrugValues);
+	lv_obj_set_size(ui->MainScreen_spinboxDrugRateDef_btn_minus, MainScreen_spinboxDrugRateDef_h, MainScreen_spinboxDrugRateDef_h);
+	lv_obj_align_to(ui->MainScreen_spinboxDrugRateDef_btn_minus, ui->MainScreen_spinboxDrugRateDef, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxDrugRateDef_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugRateDef_btn_minus, lv_MainScreen_spinboxDrugRateDef_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxDrugRateDef, 115, 240);
+
+	//Write style for MainScreen_spinboxDrugRateDef, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateDef, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateDef, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxDrugRateDef, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxDrugRateDef, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxDrugRateDef, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxDrugRateDef, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxDrugRateDef, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxDrugRateDef, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxDrugRateDef, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateDef, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateDef, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxDrugRateDef, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxDrugRateDef, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxDrugRateDef, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxDrugRateDef, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxDrugRateDef, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxDrugRateDef, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxDrugRateDef, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateDef, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_19
+	ui->MainScreen_label_19 = lv_label_create(ui->MainScreen_contDrug);
+	lv_label_set_text(ui->MainScreen_label_19, "Select Drug");
+	lv_label_set_long_mode(ui->MainScreen_label_19, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_19, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_19, 800, 30);
+
+	//Write style for MainScreen_label_19, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_19, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_19, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_19, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_19, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_19, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_19, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_19, lv_color_hex(0x1d77f5), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_19, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_19, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
@@ -2474,6 +3422,34 @@ lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);
+
+
+lv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10);
+lv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,1800);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,1800);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,1800);
+
+
 
 MainScreen_digital_clock_timer(NULL);
 MainScreenSetStyle(ui);

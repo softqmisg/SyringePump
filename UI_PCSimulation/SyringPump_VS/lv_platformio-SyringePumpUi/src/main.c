@@ -43,11 +43,7 @@ lv_ui guider_ui;
 //         // lv_obj_set_height(tv, LV_VER_RES);
 //     }
 // }
-int randi(int lower_bound,int upper_bound)
-{
-    return  rand() % (upper_bound - lower_bound + 1) 
-                    + lower_bound;
-}
+
 int main(void)
 {
   lv_init();

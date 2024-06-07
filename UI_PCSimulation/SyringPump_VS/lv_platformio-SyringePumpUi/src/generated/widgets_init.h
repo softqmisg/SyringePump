@@ -44,6 +44,24 @@ void lv_MainScreen_spinboxSyringePlungerLen_decrement_event_cb(lv_event_t * even
 extern lv_obj_t * MainScreen_spinboxSyringeDiaTolerance;
 void lv_MainScreen_spinboxSyringeDiaTolerance_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDrugmgml;
+void lv_MainScreen_spinboxDrugmgml_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDrugmgml_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDruguml;
+void lv_MainScreen_spinboxDruguml_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDruguml_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDrugperkg;
+void lv_MainScreen_spinboxDrugperkg_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDrugperkg_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDrugRateMin;
+void lv_MainScreen_spinboxDrugRateMin_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDrugRateMin_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDrugRateMax;
+void lv_MainScreen_spinboxDrugRateMax_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDrugRateMax_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxDrugRateDef;
+void lv_MainScreen_spinboxDrugRateDef_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxDrugRateDef_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus

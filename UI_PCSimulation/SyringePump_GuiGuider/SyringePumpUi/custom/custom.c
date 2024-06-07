@@ -31,12 +31,17 @@
 /**********************
  *  STATIC VARIABLES
  **********************/
-lv_group_t *g_syringevalues;
+lv_group_t *g_syringevalues,*g_drugvalues;
 extern uint8_t cur_SyringeManufacture,cur_SyringeType;
-
+extern uint8_t cur_Drug;
 /**
  * Create a demo application
  */
+int randi(int lower_bound,int upper_bound)
+{
+    return  rand() % (upper_bound - lower_bound + 1) 
+                    + lower_bound;
+}
 void LoadDefaults(void)
 {
   loadDefaultSyringesValue();
@@ -67,7 +72,18 @@ void MainScreenSetStyle(lv_ui *ui)
     lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_taDrugNameValue,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_taDrugBrandValue,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_ddlistDrugId,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugmgml,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDruguml,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugperkg,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMin,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMax,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateDef,&MainScreenStyleFocus,LV_STATE_FOCUS_KEY );
 
+  
+  
 	static lv_style_t MainScreenStyleEdit;
 	lv_style_init(&MainScreenStyleEdit);
   lv_style_set_bg_color(&MainScreenStyleEdit,lv_color_hex(0xc2ff00));
@@ -82,6 +98,15 @@ void MainScreenSetStyle(lv_ui *ui)
     lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleEdit,LV_STATE_EDITED );
     lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleEdit,LV_STATE_EDITED );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_taDrugNameValue,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_taDrugBrandValue,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_ddlistDrugId,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugmgml,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDruguml,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugperkg,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMin,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMax,&MainScreenStyleEdit,LV_STATE_EDITED );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateDef,&MainScreenStyleEdit,LV_STATE_EDITED );
 
   
 	  static lv_style_t MainScreenStyleCursor;
@@ -95,7 +120,13 @@ void MainScreenSetStyle(lv_ui *ui)
     lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
     lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT );
-    
+    lv_obj_add_style(ui->MainScreen_spinboxDrugmgml,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+    lv_obj_add_style(ui->MainScreen_spinboxDruguml,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugperkg,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMin,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMax,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateDef,&MainScreenStyleCursor,LV_PART_CURSOR | LV_STATE_DEFAULT  );
+  
 	  static lv_style_t MainScreenStyleCursorFocus;
   	lv_style_init(&MainScreenStyleCursorFocus);
     lv_style_set_text_color(&MainScreenStyleCursor,lv_color_white());
@@ -107,7 +138,12 @@ void MainScreenSetStyle(lv_ui *ui)
     lv_obj_add_style(ui->MainScreen_spinboxSyringeBarrelLen,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringePlungerLen,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
     lv_obj_add_style(ui->MainScreen_spinboxSyringeDiaTolerance,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY );
-
+    lv_obj_add_style(ui->MainScreen_spinboxDrugmgml,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
+    lv_obj_add_style(ui->MainScreen_spinboxDruguml,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugperkg,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMin,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateMax,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
+    lv_obj_add_style(ui->MainScreen_spinboxDrugRateDef,&MainScreenStyleCursorFocus,LV_PART_CURSOR | LV_STATE_FOCUS_KEY  );
   
 	// // lv_style_set_border_width(&MainScreenStyleFocus,50);
   	//lv_style_set_border_color(&MainScreenStyleFocus,lv_palette_darken(LV_PALETTE_BLUE, 4));
@@ -178,15 +214,6 @@ void setcontSettingGroup(lv_ui *ui)
     }
 }
 void setcontMainGroup(lv_ui *ui)
-{
-  lv_group_t *g;
-  g = lv_group_get_default();
-	if(g!=NULL)
-	{
-            lv_group_del(g);
-	}
-}
-void setcontSyringeGroup(lv_ui *ui)
 {
   lv_group_t *g;
   g = lv_group_get_default();
@@ -297,7 +324,75 @@ void setcontSyringeValuesGroup(lv_ui *ui)
         }
     }  
 }
-
+void setlistDrugBrandGroup(lv_ui  *ui)
+{
+    lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g= lv_group_create();
+	lv_group_set_default(g);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g);
+            lv_obj_t *obj_child;
+            bool has_stat=false;
+            for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listDrugBrand);i++)
+            {
+              obj_child=lv_obj_get_child(ui->MainScreen_listDrugBrand,i);
+              lv_group_add_obj(g,obj_child);			
+              if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
+              {
+                has_stat=true;
+                lv_group_focus_obj(obj_child);
+              }
+            }
+            if(!has_stat)
+              lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listDrugBrand,0),LV_STATE_FOCUS_KEY);
+        }
+    }  
+}
+void setcontDrugValuesGroup(lv_ui  *ui)
+{
+   lv_group_t *g;
+    g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g_drugvalues= lv_group_create();
+	lv_group_set_default(g_drugvalues);
+  lv_group_set_wrap(g_drugvalues,false);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g_drugvalues);
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_taDrugNameValue);
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_taDrugBrandValue);
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_ddlistDrugId);
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDrugmgml);			
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDruguml);			
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDrugperkg);			
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDrugRateMin);			          
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDrugRateMax);			          
+            lv_group_add_obj(g_drugvalues,ui->MainScreen_spinboxDrugRateDef);			          
+            lv_group_add_obj(g_drugvalues,ui->g_kb_MainScreen);
+			//lv_obj_add_state(ui->MainScreen_taSyringeNameValue,LV_STATE_FOCUS_KEY);
+        }
+    }    
+}
+//=======================================
 void updateSyringeCompanyList(lv_ui *ui)
 {
   //load syringe manufacture
@@ -333,7 +428,30 @@ void updateSyringeValues(lv_ui *ui,uint8_t Typeindex)
   lv_spinbox_set_value(ui->MainScreen_spinboxSyringePlungerLen,DefaultSyrings[cur_SyringeManufacture][Typeindex].PlungerLen10/10.0);
   lv_spinbox_set_value(ui->MainScreen_spinboxSyringeDiaTolerance,DefaultSyrings[cur_SyringeManufacture][Typeindex].DiaTolerance10/10.0);
 }
-
+void updateDrugList(lv_ui *ui)
+{
+  //load syringe manufacture
+  printf("load Drug list\n\r");
+  for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listDrugBrand);i++)
+  {
+    lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listDrugBrand,i);
+    lv_label_set_text_fmt(lv_obj_get_child(btn,1), "%s(%s)",DefaultDrugs[i].Name,DefaultDrugs[i].Brand);
+    lv_obj_del(lv_obj_get_child(btn,0));
+  }   
+}
+void updateDrugValues(lv_ui *ui,uint8_t drugindex)
+{
+    printf("select Drug Type Index:%d\n\r",drugindex);
+  lv_textarea_set_text(ui->MainScreen_taDrugNameValue,DefaultDrugs[drugindex].Name);
+  lv_textarea_set_text(ui->MainScreen_taDrugBrandValue,DefaultDrugs[drugindex].Brand);
+  lv_dropdown_set_selected(ui->MainScreen_ddlistDrugId,DefaultDrugs[drugindex].Id);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDrugmgml,DefaultDrugs[drugindex].mg_ml_1000/1000.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDruguml,DefaultDrugs[drugindex].u_ml_1000/1000.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDrugperkg,DefaultDrugs[drugindex].per_kg_1000/1000.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDrugRateMin,DefaultDrugs[drugindex].RateMin10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDrugRateMax,DefaultDrugs[drugindex].RateMax10/10.0);
+  lv_spinbox_set_value(ui->MainScreen_spinboxDrugRateDef,DefaultDrugs[drugindex].RateDef10/10.0);  
+}
 void animcontMain_ready_callback(lv_anim_t * a)
 {
   setcontMainGroup(&guider_ui);
@@ -346,4 +464,9 @@ void animcontSetting_ready_callback(lv_anim_t * a)
 void animcontSyringe_ready_callback(lv_anim_t * a)
 {
   setlistSyringeCompanyGroup(&guider_ui);
+}
+void animcontDrug_ready_callback(lv_anim_t * a)
+{
+   setlistDrugBrandGroup(&guider_ui);
+  
 }
