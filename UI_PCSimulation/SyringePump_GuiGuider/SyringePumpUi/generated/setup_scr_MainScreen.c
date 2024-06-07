@@ -1068,7 +1068,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btnMenuSyringe_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btnMenuSyringe, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btnMenuSyringe_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btnMenuSyringe, 23, 5);
+	lv_obj_set_pos(ui->MainScreen_btnMenuSyringe, 22, 5);
 	lv_obj_set_size(ui->MainScreen_btnMenuSyringe, 100, 100);
 
 	//Write style for MainScreen_btnMenuSyringe, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -1112,7 +1112,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->MainScreen_btnMenuDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->MainScreen_btnMenuDrug, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_btnMenuDrug, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_img_src(ui->MainScreen_btnMenuDrug, &_Syringe_100_100x100, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_btnMenuDrug, &_Drug_100_100x100, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_img_opa(ui->MainScreen_btnMenuDrug, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->MainScreen_btnMenuDrug, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_font(ui->MainScreen_btnMenuDrug, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1126,7 +1126,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->MainScreen_btnMenuDrug, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_radius(ui->MainScreen_btnMenuDrug, 5, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_shadow_width(ui->MainScreen_btnMenuDrug, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
-	lv_obj_set_style_bg_img_src(ui->MainScreen_btnMenuDrug, &_Syringe_100_100x100, LV_PART_MAIN|LV_STATE_FOCUSED);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_btnMenuDrug, &_Drug_100_100x100, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_bg_img_opa(ui->MainScreen_btnMenuDrug, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_text_color(ui->MainScreen_btnMenuDrug, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_set_style_text_font(ui->MainScreen_btnMenuDrug, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
@@ -1461,7 +1461,6 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_pos(ui->MainScreen_contSyringe, 800, 80);
 	lv_obj_set_size(ui->MainScreen_contSyringe, 800, 300);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_contSyringe, LV_SCROLLBAR_MODE_OFF);
-	lv_obj_add_flag(ui->MainScreen_contSyringe, LV_OBJ_FLAG_HIDDEN);
 
 	//Write style for MainScreen_contSyringe, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_contSyringe, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -2400,7 +2399,6 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_pos(ui->MainScreen_contDrug, 800, 80);
 	lv_obj_set_size(ui->MainScreen_contDrug, 800, 300);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_contDrug, LV_SCROLLBAR_MODE_OFF);
-	lv_obj_add_flag(ui->MainScreen_contDrug, LV_OBJ_FLAG_HIDDEN);
 
 	//Write style for MainScreen_contDrug, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_contDrug, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
