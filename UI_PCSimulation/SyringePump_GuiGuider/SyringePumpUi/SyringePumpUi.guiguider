@@ -475,7 +475,7 @@
 							"visible": true,
 							"flag": [],
 							"width": 388,
-							"height": 270,
+							"height": 269,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -2475,8 +2475,7 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							],
-							"layerName": "MainScreen"
+							]
 						},
 						{
 							"name": "listDrugBrand",
@@ -3110,7 +3109,6 @@
 									{
 										"trigger": "clicked",
 										"dst": "null",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3280,12 +3278,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									},
 									{
 										"trigger": "clicked",
 										"dst": "5jkobowc",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3455,12 +3453,12 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									},
 									{
 										"trigger": "clicked",
 										"dst": "5jkobowc",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3632,14 +3630,14 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									}
 								],
 								"focused": [
 									{
 										"trigger": "focused",
 										"dst": "null",
-										"item_index": "widget",
 										"action": {
 											"load_screen": {
 												"ische": false,
@@ -3809,7 +3807,8 @@
 												"deleted_cb": "",
 												"path_type": "linear"
 											}
-										}
+										},
+										"item_index": "widget"
 									}
 								]
 							}
@@ -4210,8 +4209,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contSyringe",
@@ -4331,7 +4329,7 @@
 							"visible": true,
 							"flag": [],
 							"width": 740,
-							"height": 130,
+							"height": 128,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -5829,14 +5827,13 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							],
-							"layerName": "MainScreen"
+							]
 						},
 						{
 							"name": "listSyringeType",
 							"id": "j7xl825t",
 							"type": "list",
-							"left": 401,
+							"left": 399,
 							"top": 29,
 							"visible": true,
 							"flag": [],
@@ -6751,8 +6748,7 @@
 										"item_index": "widget"
 									}
 								]
-							},
-							"layerName": "MainScreen"
+							}
 						},
 						{
 							"name": "listSyringeCompany",
@@ -6762,7 +6758,7 @@
 							"top": 29,
 							"visible": true,
 							"flag": [],
-							"width": 400,
+							"width": 399,
 							"height": 140,
 							"default_style": false,
 							"scrollbar_mode": "AUTO",
@@ -8309,8 +8305,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contSetting",
@@ -8364,7 +8359,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8398,7 +8393,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8547,7 +8542,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8581,7 +8576,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8730,7 +8725,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8764,7 +8759,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8913,7 +8908,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -8947,7 +8942,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9096,7 +9091,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9130,7 +9125,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9279,7 +9274,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9313,7 +9308,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9462,7 +9457,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9496,7 +9491,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9645,7 +9640,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9679,7 +9674,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9828,7 +9823,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -9862,7 +9857,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -10011,7 +10006,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -10045,7 +10040,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -10546,7 +10541,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -10580,7 +10575,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -13368,8 +13363,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contMain",
@@ -15301,7 +15295,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -15318,7 +15312,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 255,
 									"radius": 10,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -15360,8 +15354,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contFooter",
@@ -15390,7 +15383,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -15405,8 +15398,7 @@
 									"image_opa": 255
 								}
 							],
-							"event": {},
-							"layerName": "MainScreen"
+							"event": {}
 						},
 						{
 							"name": "imgForbidden",
@@ -15422,7 +15414,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -15898,7 +15890,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -16002,7 +15994,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -16019,7 +16011,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 0,
 									"radius": 10,
-									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
+									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -16040,7 +16032,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -16070,7 +16062,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -16100,7 +16092,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
+							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
