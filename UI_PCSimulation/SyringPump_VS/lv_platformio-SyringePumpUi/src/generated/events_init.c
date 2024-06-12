@@ -28,9 +28,10 @@ static void MainScreen_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_SCREEN_LOADED:
 	{
+
 		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
 		updateSyringeCompanyList(&guider_ui);
-	updateDrugList(&guider_ui);
+		updateDrugList(&guider_ui);
 		break;
 	}
 	default:
@@ -112,7 +113,7 @@ static void MainScreen_btnGoSettingSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 		lv_obj_t *obj=lv_event_get_target(e);	
 		if(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))
 		{
@@ -125,6 +126,7 @@ static void MainScreen_btnGoSettingSyringe_event_handler (lv_event_t *e)
 		    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);
 		    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
 		    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+
 		    setlistSyringeTypeGroup(ui);
 		  }
 		  else
@@ -244,7 +246,7 @@ static void MainScreen_btnGoSettingDrug_event_handler (lv_event_t *e)
 			  ui_move_animation(ui->MainScreen_contSetting,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontSetting_ready_callback,NULL);
 			  ui_move_animation(ui->MainScreen_contDrug,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 			}
-	
+
 		break;
 	}
 	default:
@@ -286,11 +288,13 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuSyringe, MainScreen_btnMenuSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuDrug, MainScreen_btnMenuDrug_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingSyringe, MainScreen_btnGoSettingSyringe_event_handler, LV_EVENT_ALL, ui);
-   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
-		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany,i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingDrug, MainScreen_btnGoSettingDrug_event_handler, LV_EVENT_ALL, ui);
 
+	for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
+		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany,i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
     for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
-		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeType,i), MainScreen_listSyringeType_event_handler, LV_EVENT_ALL, ui);	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingDrug, MainScreen_btnGoSettingDrug_event_handler, LV_EVENT_ALL, ui);
+		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeType,i), MainScreen_listSyringeType_event_handler, LV_EVENT_ALL, ui);	
+	
     for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listDrugBrand);i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listDrugBrand,i), MainScreen_listDrugBrand_event_handler, LV_EVENT_ALL, ui);	
 }

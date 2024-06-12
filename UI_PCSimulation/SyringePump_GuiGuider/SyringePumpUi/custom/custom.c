@@ -16,6 +16,7 @@
 #include "custom.h"
 #include "Syring.h"
 #include "Drug.h"
+#include "InfusionMode.h"
 /*********************
  *      DEFINES
  *********************/
@@ -34,6 +35,7 @@
 lv_group_t *g_syringevalues,*g_drugvalues;
 extern uint8_t cur_SyringeManufacture,cur_SyringeType;
 extern uint8_t cur_Drug;
+ extern uint8_t cur_InfusionMode,cur_InfusionUnit;
 /**
  * Create a demo application
  */
@@ -46,6 +48,7 @@ void LoadDefaults(void)
 {
   loadDefaultSyringesValue();
   loadDefaultDrugValue();
+  loadDefaultInfusionModeValue();
 }
 void custom_init(lv_ui *ui)
 {
@@ -256,8 +259,7 @@ void setlistSyringeCompanyGroup(lv_ui *ui)
               lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeCompany,0),LV_STATE_FOCUS_KEY);
         }
     }  
- 
-}
+ }
 void setlistSyringeTypeGroup(lv_ui *ui)
 {
   lv_group_t *g;
@@ -392,7 +394,80 @@ void setcontDrugValuesGroup(lv_ui  *ui)
         }
     }    
 }
-//=======================================
+
+void setlistInfusionModeGroup(lv_ui *ui)
+{
+    lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+            lv_group_del(g);
+	}
+	g= lv_group_create();
+	lv_group_set_default(g);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g);
+            lv_obj_t *obj_child;
+            bool has_stat=false;
+            for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listInfusionMode);i++)
+            {
+              obj_child=lv_obj_get_child(ui->MainScreen_listInfusionMode,i);
+              lv_group_add_obj(g,obj_child);			
+              if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
+              {
+                has_stat=true;
+                lv_group_focus_obj(obj_child);
+              }
+            }
+            if(!has_stat)
+              lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listInfusionMode,0),LV_STATE_FOCUS_KEY);
+        }
+    } 
+}
+
+void setlistInfusionUnitGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+	if(g!=NULL)
+	{
+    lv_group_del(g);
+	}
+	g= lv_group_create();
+	lv_group_set_default(g);
+    lv_indev_t *cur_dev=NULL;  
+   for(;;)
+    {
+        cur_dev=lv_indev_get_next(cur_dev);
+        if(!cur_dev) break;
+        if(lv_indev_get_type(cur_dev)==LV_INDEV_TYPE_ENCODER)
+        {
+            lv_indev_set_group(cur_dev,g);
+            lv_obj_t *obj_child;
+            // bool has_stat=false;
+            for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
+            {
+              obj_child=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
+              lv_group_add_obj(g,obj_child);			
+              if(lv_obj_has_state(obj_child,LV_STATE_FOCUS_KEY)) 
+              {
+                // has_stat=true;
+                lv_group_focus_obj(obj_child);
+              }
+            }
+            // if(!has_stat)
+			      //   lv_obj_add_state(lv_obj_get_child(ui->MainScreen_listSyringeType,0),LV_STATE_FOCUS_KEY);
+        }
+    }   
+}
+//=======================================//=======================================//=======================================
+//=======================================//=======================================//=======================================
 void updateSyringeCompanyList(lv_ui *ui)
 {
   //load syringe manufacture
@@ -400,8 +475,8 @@ void updateSyringeCompanyList(lv_ui *ui)
   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany);i++)
   {
     lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeCompany,i);
-    lv_label_set_text(lv_obj_get_child(btn,1),DefaultSyrings[i][0].Manufacture);
-    lv_obj_del(lv_obj_get_child(btn,0));
+    lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[i][0].Manufacture);
+    if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
   }
 }
 void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex)
@@ -410,8 +485,8 @@ void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex)
   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listSyringeType);i++)
   {
     lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
-    lv_label_set_text(lv_obj_get_child(btn,1),DefaultSyrings[companyindex][i].Name);
-    lv_obj_del(lv_obj_get_child(btn,0));
+    lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
+    if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
 
   }
 
@@ -435,8 +510,8 @@ void updateDrugList(lv_ui *ui)
   for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listDrugBrand);i++)
   {
     lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listDrugBrand,i);
-    lv_label_set_text_fmt(lv_obj_get_child(btn,1), "%s(%s)",DefaultDrugs[i].Name,DefaultDrugs[i].Brand);
-    lv_obj_del(lv_obj_get_child(btn,0));
+    lv_label_set_text_fmt(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1), "%s(%s)",DefaultDrugs[i].Name,DefaultDrugs[i].Brand);
+    if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
   }   
 }
 void updateDrugValues(lv_ui *ui,uint8_t drugindex)
@@ -452,6 +527,61 @@ void updateDrugValues(lv_ui *ui,uint8_t drugindex)
   lv_spinbox_set_value(ui->MainScreen_spinboxDrugRateMax,DefaultDrugs[drugindex].RateMax10/10.0);
   lv_spinbox_set_value(ui->MainScreen_spinboxDrugRateDef,DefaultDrugs[drugindex].RateDef10/10.0);  
 }
+void updateInfusionModeList(lv_ui *ui)
+{
+  for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listInfusionMode);i++)
+  {
+    lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listInfusionMode,i);
+    if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
+
+  }
+}
+void updateInfusionUnitList(lv_ui *ui,uint8_t modeindex)
+{
+  char *unit_texts[]={"ml,"ug","mg,"unit"};
+  switch(modeinex)
+  {
+    case 0:
+      for(uint8_t i=0;i<8;i++)
+        {
+          lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listInfusionUnit,i);
+          lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
+          if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));          
+        }
+    break;
+    case 1:
+    break;
+    case 2:
+    break;
+    case 3:
+    break;
+    case 4:
+    break;
+    case 5:
+    break;
+      
+  }
+  // for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listInfusionUnit);i++)
+  // {
+  //   lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
+  //   lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
+  //   if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
+
+  // }
+}
+void updateInfusionValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex)
+{
+  //   printf("select syring company index:%d\n\r",companyindex);
+  // for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listInfusion);i++)
+  // {
+  //   lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
+  //   lv_label_set_text(lv_obj_get_child(btn,1),DefaultSyrings[companyindex][i].Name);
+  //   lv_obj_del(lv_obj_get_child(btn,0));
+
+  // }
+}
+//=======================================//=======================================//=======================================
+//=======================================//=======================================//=======================================
 void animcontMain_ready_callback(lv_anim_t * a)
 {
   setcontMainGroup(&guider_ui);
@@ -469,4 +599,8 @@ void animcontDrug_ready_callback(lv_anim_t * a)
 {
    setlistDrugBrandGroup(&guider_ui);
   
+}
+void animcontMode_ready_callback(lv_anim_t * a)
+{
+   setlistInfusionModeGroup(&guider_ui);
 }

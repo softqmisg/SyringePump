@@ -26,6 +26,7 @@ void setlistSyringeCompanyGroup(lv_ui *ui);
 void setlistSyringeTypeGroup(lv_ui *ui);
 void setlistDrugBrandGroup(lv_ui  *ui);
 void setcontDrugValuesGroup(lv_ui  *ui);
+void setlistInfusionUnitGroup(lv_ui *ui);
 
 
 void updateSyringeCompanyList(lv_ui *ui);
@@ -33,11 +34,15 @@ void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex);
 void updateSyringeValues(lv_ui *ui,uint8_t Typeindex);
 void updateDrugList(lv_ui *ui);
 void updateDrugValues(lv_ui *ui,uint8_t drugindex);
+void updateInfusionModeList(lv_ui *ui);
+void updateInfusionUnitList(lv_ui *ui,uint8_t modeindex);
+void updateInfusionValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex);
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontSetting_ready_callback(lv_anim_t * a);
 void animcontSyringe_ready_callback(lv_anim_t * a);
 void animcontDrug_ready_callback(lv_anim_t * a);
+void animcontMode_ready_callback(lv_anim_t * a);
 
 int randi(int lower_bound,int upper_bound);
 #ifdef __cplusplus
