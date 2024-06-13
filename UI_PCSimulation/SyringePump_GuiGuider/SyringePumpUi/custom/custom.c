@@ -538,36 +538,29 @@ void updateInfusionModeList(lv_ui *ui)
 }
 void updateInfusionUnitList(lv_ui *ui,uint8_t modeindex)
 {
-  char *unit_texts[]={"ml,"ug","mg,"unit"};
-  switch(modeinex)
-  {
-    case 0:
-      for(uint8_t i=0;i<8;i++)
-        {
-          lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listInfusionUnit,i);
-          lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
-          if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));          
-        }
-    break;
-    case 1:
-    break;
-    case 2:
-    break;
-    case 3:
-    break;
-    case 4:
-    break;
-    case 5:
-    break;
+ //  char *unit_texts[]={"ml  ","ug  ","mg  ","unit"};
+ //  switch((modeinex)
+ //  {
+ //    case 0:
+ //      for(uint8_t i=0;i<8;i++)
+ //        {
+ //          lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listInfusionUnit,i);
+ // //         lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
+ //          if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));          
+ //        }
+ //    break;
+ //    case 1:
+ //    break;
+ //    case 2:
+ //    break;
+ //    case 3:
+ //    break;
+ //    case 4:
+ //    break;
+ //    case 5:
+ //    break;
       
-  }
-  // for(int i=0;i<lv_obj_get_child_cnt(ui->MainScreen_listInfusionUnit);i++)
-  // {
-  //   lv_obj_t *btn=lv_obj_get_child(ui->MainScreen_listSyringeType,i);
-  //   lv_label_set_text(lv_obj_get_child(btn,lv_obj_get_child_cnt(btn)-1),DefaultSyrings[companyindex][i].Name);
-  //   if(lv_obj_get_child_cnt(btn)>1) lv_obj_del(lv_obj_get_child(btn,0));
-
-  // }
+ //  }
 }
 void updateInfusionValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex)
 {

@@ -23,6 +23,9 @@ void loadDefaultInfusionModeValue(void)
         }
       }
     }
-            if(modes==linearScale)
+    // if(modes==modeLinear)
+    // {
+      
+    // }
 
 }

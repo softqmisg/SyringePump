@@ -325,6 +325,7 @@ static void MainScreen_listInfusionMode_event_handler (lv_event_t *e)
 	  lv_obj_t *obj=lv_event_get_target(e);
 	  cur_InfusionMode=lv_obj_get_child_id(obj);
 	  updateInfusionUnitList(ui,cur_InfusionMode);
+	  updateInfusionValues(ui,cur_InfusionMode,0);
 	
 		break;
 	}
