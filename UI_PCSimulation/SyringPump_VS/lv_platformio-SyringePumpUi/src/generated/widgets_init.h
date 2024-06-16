@@ -62,6 +62,24 @@ void lv_MainScreen_spinboxDrugRateMax_decrement_event_cb(lv_event_t * event);
 extern lv_obj_t * MainScreen_spinboxDrugRateDef;
 void lv_MainScreen_spinboxDrugRateDef_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxDrugRateDef_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeBodyWeight;
+void lv_MainScreen_spinboxModeBodyWeight_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeBodyWeight_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeInfusionRate;
+void lv_MainScreen_spinboxModeInfusionRate_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeInfusionRate_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeTotalTimeHour;
+void lv_MainScreen_spinboxModeTotalTimeHour_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeTotalTimeHour_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeTotalTimeMinute;
+void lv_MainScreen_spinboxModeTotalTimeMinute_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeTotalTimeMinute_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeTotalTimeSecond;
+void lv_MainScreen_spinboxModeTotalTimeSecond_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeTotalTimeSecond_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxModeTotalVolume;
+void lv_MainScreen_spinboxModeTotalVolume_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxModeTotalVolume_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus

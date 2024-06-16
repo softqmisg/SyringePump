@@ -142,6 +142,7 @@ void ui_img_rotate_animation(void * var, int32_t duration, int32_t delay, lv_coo
 void init_scr_del_flag(lv_ui *ui)
 {
   
+	ui->LogoScreen_del = true;
 	ui->MainScreen_del = true;
 }
 

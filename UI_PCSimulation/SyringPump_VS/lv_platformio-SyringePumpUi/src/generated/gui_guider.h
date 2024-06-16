@@ -18,6 +18,10 @@ extern "C" {
 typedef struct
 {
   
+	lv_obj_t *LogoScreen;
+	bool LogoScreen_del;
+	lv_obj_t *g_kb_LogoScreen;
+	lv_obj_t *LogoScreen_img_1;
 	lv_obj_t *MainScreen;
 	bool MainScreen_del;
 	lv_obj_t *g_kb_MainScreen;
@@ -282,6 +286,57 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn;
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn_minus;
 	lv_obj_t *MainScreen_label_19;
+	lv_obj_t *MainScreen_contMode;
+	lv_obj_t *MainScreen_btnGoSettingMode;
+	lv_obj_t *MainScreen_btnGoSettingMode_label;
+	lv_obj_t *MainScreen_listInfusionMode;
+	lv_obj_t *MainScreen_listInfusionMode_item0;
+	lv_obj_t *MainScreen_listInfusionMode_item1;
+	lv_obj_t *MainScreen_listInfusionMode_item2;
+	lv_obj_t *MainScreen_listInfusionMode_item3;
+	lv_obj_t *MainScreen_listInfusionMode_item4;
+	lv_obj_t *MainScreen_listInfusionMode_item5;
+	lv_obj_t *MainScreen_listInfusionUnit;
+	lv_obj_t *MainScreen_listInfusionUnit_item0;
+	lv_obj_t *MainScreen_listInfusionUnit_item1;
+	lv_obj_t *MainScreen_listInfusionUnit_item2;
+	lv_obj_t *MainScreen_listInfusionUnit_item3;
+	lv_obj_t *MainScreen_listInfusionUnit_item4;
+	lv_obj_t *MainScreen_listInfusionUnit_item5;
+	lv_obj_t *MainScreen_listInfusionUnit_item6;
+	lv_obj_t *MainScreen_contModeValue;
+	lv_obj_t *MainScreen_contModeValueWeight;
+	lv_obj_t *MainScreen_label_33;
+	lv_obj_t *MainScreen_label_38;
+	lv_obj_t *MainScreen_spinboxModeBodyWeight;
+	lv_obj_t *MainScreen_spinboxModeBodyWeight_btn;
+	lv_obj_t *MainScreen_spinboxModeBodyWeight_btn_minus;
+	lv_obj_t *MainScreen_contModeValueInfusionRate;
+	lv_obj_t *MainScreen_label_39;
+	lv_obj_t *MainScreen_labelModeInfusionRateUnit;
+	lv_obj_t *MainScreen_spinboxModeInfusionRate;
+	lv_obj_t *MainScreen_spinboxModeInfusionRate_btn;
+	lv_obj_t *MainScreen_spinboxModeInfusionRate_btn_minus;
+	lv_obj_t *MainScreen_contModeValueTotalTime;
+	lv_obj_t *MainScreen_label_41;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeHour;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeHour_btn;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeHour_btn_minus;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeMinute;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeMinute_btn;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeMinute_btn_minus;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeSecond;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeSecond_btn;
+	lv_obj_t *MainScreen_spinboxModeTotalTimeSecond_btn_minus;
+	lv_obj_t *MainScreen_label_43;
+	lv_obj_t *MainScreen_label_44;
+	lv_obj_t *MainScreen_contModeValueTotalVolume;
+	lv_obj_t *MainScreen_label_35;
+	lv_obj_t *MainScreen_labelModeVolumeUnit;
+	lv_obj_t *MainScreen_spinboxModeTotalVolume;
+	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn;
+	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn_minus;
+	lv_obj_t *MainScreen_label_29;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 
@@ -316,7 +371,9 @@ void setup_ui(lv_ui *ui);
 extern lv_ui guider_ui;
 
 
+void setup_scr_LogoScreen(lv_ui *ui);
 void setup_scr_MainScreen(lv_ui *ui);
+LV_IMG_DECLARE(_lirana_logo_alpha_454x340);
 LV_IMG_DECLARE(_network_64_alpha_64x64);
 LV_IMG_DECLARE(_Serial_64_alpha_64x64);
 LV_IMG_DECLARE(_usb_64_alpha_64x64);
@@ -338,27 +395,27 @@ LV_IMG_DECLARE(_Syringe_100_100x100);
 
 LV_IMG_DECLARE(_Drug_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Drug_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Mode_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Mode_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_OCC_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_OCC_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_KVO_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_KVO_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Intermittent_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Intermittent_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Rhythmic_100_100x100);
 
-LV_IMG_DECLARE(_Syringe_100_100x100);
+LV_IMG_DECLARE(_Rhythmic_100_100x100);
 
 LV_IMG_DECLARE(_Nurse_100_100x100);
 
@@ -397,6 +454,8 @@ LV_FONT_DECLARE(lv_font_Acme_Regular_24)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_19)
 LV_FONT_DECLARE(lv_font_arial_14)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_16)
+LV_FONT_DECLARE(lv_font_calibrib_18)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_21)
 LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 

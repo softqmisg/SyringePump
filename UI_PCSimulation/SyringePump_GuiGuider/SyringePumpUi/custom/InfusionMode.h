@@ -9,7 +9,7 @@ typedef struct{
     modeid_t mode;
     modeunit_t unit;
     modeper_t per;
-    uint16_t TotalVolume;
+    uint16_t TotalVolume10;
     uint16_t InfusionRate10;
     time_t TotalTime;
     uint16_t BodyWeight;

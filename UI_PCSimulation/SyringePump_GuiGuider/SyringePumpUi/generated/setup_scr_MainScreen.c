@@ -3435,7 +3435,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_pad_bottom(&style_MainScreen_listInfusionMode_extra_btns_main_default, 2);
 	lv_style_set_border_width(&style_MainScreen_listInfusionMode_extra_btns_main_default, 0);
 	lv_style_set_text_color(&style_MainScreen_listInfusionMode_extra_btns_main_default, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listInfusionMode_extra_btns_main_default, &lv_font_Amiko_Regular_17);
+	lv_style_set_text_font(&style_MainScreen_listInfusionMode_extra_btns_main_default, &lv_font_calibrib_18);
 	lv_style_set_text_opa(&style_MainScreen_listInfusionMode_extra_btns_main_default, 255);
 	lv_style_set_radius(&style_MainScreen_listInfusionMode_extra_btns_main_default, 3);
 	lv_style_set_bg_opa(&style_MainScreen_listInfusionMode_extra_btns_main_default, 255);
@@ -3459,7 +3459,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_border_width(&style_MainScreen_listInfusionMode_extra_btns_main_focused, 0);
 	lv_style_set_radius(&style_MainScreen_listInfusionMode_extra_btns_main_focused, 3);
 	lv_style_set_text_color(&style_MainScreen_listInfusionMode_extra_btns_main_focused, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listInfusionMode_extra_btns_main_focused, &lv_font_Alatsi_Regular_19);
+	lv_style_set_text_font(&style_MainScreen_listInfusionMode_extra_btns_main_focused, &lv_font_calibrib_18);
 	lv_style_set_text_opa(&style_MainScreen_listInfusionMode_extra_btns_main_focused, 255);
 	lv_style_set_bg_opa(&style_MainScreen_listInfusionMode_extra_btns_main_focused, 255);
 	lv_style_set_bg_color(&style_MainScreen_listInfusionMode_extra_btns_main_focused, lv_color_hex(0x0016ff));
@@ -3523,7 +3523,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_pad_bottom(&style_MainScreen_listInfusionUnit_extra_btns_main_default, 2);
 	lv_style_set_border_width(&style_MainScreen_listInfusionUnit_extra_btns_main_default, 0);
 	lv_style_set_text_color(&style_MainScreen_listInfusionUnit_extra_btns_main_default, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listInfusionUnit_extra_btns_main_default, &lv_font_Alatsi_Regular_17);
+	lv_style_set_text_font(&style_MainScreen_listInfusionUnit_extra_btns_main_default, &lv_font_calibrib_18);
 	lv_style_set_text_opa(&style_MainScreen_listInfusionUnit_extra_btns_main_default, 255);
 	lv_style_set_radius(&style_MainScreen_listInfusionUnit_extra_btns_main_default, 3);
 	lv_style_set_bg_opa(&style_MainScreen_listInfusionUnit_extra_btns_main_default, 255);
@@ -3548,7 +3548,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_border_width(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, 0);
 	lv_style_set_radius(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, 3);
 	lv_style_set_text_color(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, lv_color_hex(0xffffff));
-	lv_style_set_text_font(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, &lv_font_Alatsi_Regular_19);
+	lv_style_set_text_font(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, &lv_font_calibrib_18);
 	lv_style_set_text_opa(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, 255);
 	lv_style_set_bg_opa(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, 255);
 	lv_style_set_bg_color(&style_MainScreen_listInfusionUnit_extra_btns_main_focused, lv_color_hex(0x0016ff));

@@ -53,6 +53,9 @@ static void MainScreen_event_handler (lv_event_t *e)
 		updateSyringeCompanyList(&guider_ui);
 	updateDrugList(&guider_ui);
 	updateInfusionModeList(&guider_ui);
+	updateInfusionUnitList(&guider_ui,0);
+	updateInfusionValues(&guider_ui,0,0);
+	
 		break;
 	}
 	default:

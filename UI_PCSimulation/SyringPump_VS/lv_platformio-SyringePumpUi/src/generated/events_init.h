@@ -18,6 +18,7 @@ extern "C" {
 
 void events_init(lv_ui *ui);
 
+void events_init_LogoScreen(lv_ui *ui);
 void events_init_MainScreen(lv_ui *ui);
 
 #ifdef __cplusplus
