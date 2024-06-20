@@ -587,7 +587,7 @@ static void MainScreen_btnGoMenuKVO_event_handler (lv_event_t *e)
 				uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
 						
 					  printf("@KVO id=%d\n",id);
-					  if(id==3) 
+					  if(id==2) 
 					  {
 						ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 						ui_move_animation(ui->MainScreen_contKVO,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);

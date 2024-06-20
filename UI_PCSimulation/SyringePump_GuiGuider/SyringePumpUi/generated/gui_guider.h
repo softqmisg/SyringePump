@@ -351,6 +351,7 @@ typedef struct
 	lv_obj_t *MainScreen_sliderOcclusionOcc;
 	lv_obj_t *MainScreen_contKVO;
 	lv_obj_t *MainScreen_label_46;
+	lv_obj_t *MainScreen_contKVOValues;
 	lv_obj_t *MainScreen_label_47;
 	lv_obj_t *MainScreen_label_48;
 	lv_obj_t *MainScreen_swKVOMode;
