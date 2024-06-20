@@ -428,3 +428,17 @@ void lv_MainScreen_spinboxModeTotalVolume_decrement_event_cb(lv_event_t * event)
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalVolume);
 	}
 }
+void lv_MainScreen_spinboxKVORate_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxKVORate);
+	}
+}
+void lv_MainScreen_spinboxKVORate_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxKVORate);
+	}
+}

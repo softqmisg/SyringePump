@@ -80,7 +80,9 @@ void lv_MainScreen_spinboxModeTotalTimeSecond_decrement_event_cb(lv_event_t * ev
 extern lv_obj_t * MainScreen_spinboxModeTotalVolume;
 void lv_MainScreen_spinboxModeTotalVolume_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxModeTotalVolume_decrement_event_cb(lv_event_t * event);
-
+extern lv_obj_t * MainScreen_spinboxKVORate;
+void lv_MainScreen_spinboxKVORate_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxKVORate_decrement_event_cb(lv_event_t * event);
 
 #ifdef __cplusplus
 }

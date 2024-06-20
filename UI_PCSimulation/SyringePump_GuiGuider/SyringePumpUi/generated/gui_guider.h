@@ -201,6 +201,8 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn;
 	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn_minus;
 	lv_obj_t *MainScreen_label_18;
+	lv_obj_t *MainScreen_btnDummySyringe;
+	lv_obj_t *MainScreen_btnDummySyringe_label;
 	lv_obj_t *MainScreen_contDrug;
 	lv_obj_t *MainScreen_btnGoMenuDrug;
 	lv_obj_t *MainScreen_btnGoMenuDrug_label;
@@ -287,6 +289,8 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn;
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn_minus;
 	lv_obj_t *MainScreen_label_19;
+	lv_obj_t *MainScreen_btnDummyDrug;
+	lv_obj_t *MainScreen_btnDummyDrug_label;
 	lv_obj_t *MainScreen_contMode;
 	lv_obj_t *MainScreen_btnGoMenuMode;
 	lv_obj_t *MainScreen_btnGoMenuMode_label;
@@ -338,6 +342,28 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn;
 	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn_minus;
 	lv_obj_t *MainScreen_label_29;
+	lv_obj_t *MainScreen_btnDummyMode;
+	lv_obj_t *MainScreen_btnDummyMode_label;
+	lv_obj_t *MainScreen_contOcclusion;
+	lv_obj_t *MainScreen_btnGoMenuOcclusion;
+	lv_obj_t *MainScreen_btnGoMenuOcclusion_label;
+	lv_obj_t *MainScreen_label_45;
+	lv_obj_t *MainScreen_sliderOcclusionOcc;
+	lv_obj_t *MainScreen_contKVO;
+	lv_obj_t *MainScreen_label_46;
+	lv_obj_t *MainScreen_label_47;
+	lv_obj_t *MainScreen_label_48;
+	lv_obj_t *MainScreen_swKVOMode;
+	lv_obj_t *MainScreen_labelswKVOModeEnable;
+	lv_obj_t *MainScreen_labelswKVOModeDisable;
+	lv_obj_t *MainScreen_labelKVORate;
+	lv_obj_t *MainScreen_spinboxKVORate;
+	lv_obj_t *MainScreen_spinboxKVORate_btn;
+	lv_obj_t *MainScreen_spinboxKVORate_btn_minus;
+	lv_obj_t *MainScreen_btnGoMenuKVO;
+	lv_obj_t *MainScreen_btnGoMenuKVO_label;
+	lv_obj_t *MainScreen_btnDummyKVO;
+	lv_obj_t *MainScreen_btnDummyKVO_label;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 
@@ -386,9 +412,9 @@ LV_IMG_DECLARE(_syringe2_512_alpha_400x100);
 LV_IMG_DECLARE(_forbidden_64_alpha_64x64);
 LV_IMG_DECLARE(_droplet_32_alpha_32x32);
 
-LV_IMG_DECLARE(_ledbar_empty_25x132);
+LV_IMG_DECLARE(_ledbar_empty_26x132);
 
-LV_IMG_DECLARE(_ledbar_full_25x132);
+LV_IMG_DECLARE(_ledbar_full_26x132);
 
 LV_IMG_DECLARE(_Syringe_100_100x100);
 
@@ -433,6 +459,12 @@ LV_IMG_DECLARE(_Purge_100_100x100);
 LV_IMG_DECLARE(_Setting_100_100x100);
 
 LV_IMG_DECLARE(_Setting_100_100x100);
+
+LV_IMG_DECLARE(_ledbar_empty_26x132);
+
+LV_IMG_DECLARE(_ledbar_full_26x132);
+
+LV_IMG_DECLARE(_ledbar_full_26x132);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_19)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
@@ -457,6 +489,7 @@ LV_FONT_DECLARE(lv_font_arial_14)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_16)
 LV_FONT_DECLARE(lv_font_calibrib_18)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_21)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_14)
 LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_18)
 
 

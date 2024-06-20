@@ -460,9 +460,9 @@
 #define LV_ROLLER_INF_PAGES 7
 #endif    /* LV_USE_ROLLER */
 
-#define LV_USE_SLIDER 0
+#define LV_USE_SLIDER 1
 
-#define LV_USE_SWITCH 0
+#define LV_USE_SWITCH 1
 
 #define LV_USE_TEXTAREA 1
 #if LV_USE_TEXTAREA

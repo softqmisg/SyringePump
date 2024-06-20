@@ -29,6 +29,8 @@ void setcontDrugValuesGroup(lv_ui  *ui);
 void setlistModeModeGroup(lv_ui *ui);
 void setlistModeUnitGroup(lv_ui *ui);
 void setcontModeValuesGroup(lv_ui *ui);
+void setbarOcclusionOccGroup(lv_ui *ui);
+void setKVOModeGroup(lv_ui *ui);
 
 
 void updateSyringeCompanyList(lv_ui *ui);
@@ -39,12 +41,17 @@ void updateDrugValues(lv_ui *ui,uint8_t drugindex);
 void updateModeModeList(lv_ui *ui);
 void updateModeUnitList(lv_ui *ui,uint8_t modeindex);
 void updateModeValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex);
+void updateOcclusionValues(lv_ui *ui);
+void updateKVOModeValues(lv_ui *ui);
 
 void animcontMain_ready_callback(lv_anim_t * a);
-void animcontSetting_ready_callback(lv_anim_t * a);
+void animcontMenu_ready_callback(lv_anim_t * a);
 void animcontSyringe_ready_callback(lv_anim_t * a);
 void animcontDrug_ready_callback(lv_anim_t * a);
 void animcontMode_ready_callback(lv_anim_t * a);
+void animcontOcclusion_ready_callback(lv_anim_t *a);
+void animcontKVO_ready_callback(lv_anim_t *a);
+
 
 int randi(int lower_bound,int upper_bound);
 #ifdef __cplusplus
