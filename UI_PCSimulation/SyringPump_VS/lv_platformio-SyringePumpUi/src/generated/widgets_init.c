@@ -11,19 +11,21 @@
 #include "gui_guider.h"
 #include "widgets_init.h"
 #include <stdlib.h>
-
+char cur_textofarea[25];
 
 __attribute__((unused)) void kb_event_cb (lv_event_t *e) {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t *kb = lv_event_get_target(e);
+	lv_obj_t *ta=lv_keyboard_get_textarea(kb);
+
 	if(code==LV_EVENT_VALUE_CHANGED)
 	{
-		lv_obj_t *ta=lv_keyboard_get_textarea(kb);
 		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
 
 	}
-    if(code == LV_EVENT_READY || code == LV_EVENT_CANCEL){
-        //lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
+    if( code == LV_EVENT_CANCEL)
+	{
+		lv_textarea_set_text(ta,cur_textofarea);
     }
 }
 
@@ -36,7 +38,6 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
     lv_obj_t *kb = lv_event_get_user_data(e);
 	if( code == LV_EVENT_VALUE_CHANGED)
 	{
-		// lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
 	}
     if ( code == LV_EVENT_CLICKED)
     {
@@ -46,8 +47,8 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
 #if LV_USE_KEYBOARD != 0
         lv_keyboard_set_textarea(kb, ta);
 #endif
-		lv_obj_align_to(guider_ui.MainScreen_ta_keybard,kb,LV_ALIGN_OUT_TOP_MID,0,0);
-		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
+		lv_snprintf(cur_textofarea,20,"%s",lv_textarea_get_text(ta));
+		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,cur_textofarea);
         lv_obj_move_foreground(guider_ui.MainScreen_ta_keybard);
         lv_obj_clear_flag(guider_ui.MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
 
@@ -55,8 +56,8 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_clear_flag(kb, LV_OBJ_FLAG_HIDDEN);
         lv_group_focus_obj(kb);
         lv_group_set_editing(lv_obj_get_group(kb), true);
-
     }
+
     if (code == LV_EVENT_CANCEL || code == LV_EVENT_READY)
     {
 
@@ -72,7 +73,9 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_move_background(kb);
         lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
        if(code == LV_EVENT_READY)
+	   {
 			lv_obj_clear_state(ta,LV_STATE_EDITED);
+	   }
 		lv_group_focus_obj(ta);
 
     }
@@ -425,4 +428,3 @@ void lv_MainScreen_spinboxModeTotalVolume_decrement_event_cb(lv_event_t * event)
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalVolume);
 	}
 }
-

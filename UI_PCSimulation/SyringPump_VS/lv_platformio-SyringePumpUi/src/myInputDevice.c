@@ -9,7 +9,7 @@
  * @brief variable define
  */
 
-#define HIGHBYTE    0//224
+#define HIGHBYTE    224
 static lv_indev_t *myencoder;
 static lv_indev_t *mybuttons;
 static bool mybtn_is_pressed(uint8_t id)
@@ -79,7 +79,7 @@ void myencoder_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data)
         if (last_key == HIGHBYTE)//0
         {
             last_key = getch();
-           printf("enc:%d(%c)\n\r",last_key,last_key);
+        //    printf("enc:%d(%c)\n\r",last_key,last_key);
 
             switch (last_key)
             {
