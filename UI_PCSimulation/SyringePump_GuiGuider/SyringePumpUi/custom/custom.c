@@ -16,6 +16,7 @@
 #include "Syring.h"
 #include "Drug.h"
 #include "InfusionMode.h"
+#include "MachineState.h"
 /*********************
  *      DEFINES
  *********************/
@@ -72,6 +73,7 @@ void LoadDefaults(void)
   loadDefaultSyringesValue();
   loadDefaultDrugValue();
   loadDefaultInfusionModeValue();
+  LoadCurrentMachinValue();
 }
 void custom_init(lv_ui *ui)
 {
@@ -84,27 +86,25 @@ void setStyleEdittableObj(lv_obj_t *obj)
   lv_style_init(&MainScreenStyleFocus);
   lv_style_set_bg_color(&MainScreenStyleFocus, lv_color_hex(0xc2ff00));
   lv_style_set_outline_color(&MainScreenStyleFocus, lv_color_hex(0xc2ff00)); // lv_palette_lighten(LV_PALETTE_YELLOW, 4));
-  lv_style_set_outline_width(&MainScreenStyleFocus, 0);//
-  lv_style_set_outline_pad(&MainScreenStyleFocus, 0);//
-  lv_obj_add_style(obj,&MainScreenStyleFocus, LV_STATE_FOCUS_KEY);
-
+  lv_style_set_outline_width(&MainScreenStyleFocus, 0);                      //
+  lv_style_set_outline_pad(&MainScreenStyleFocus, 0);                        //
+  lv_obj_add_style(obj, &MainScreenStyleFocus, LV_STATE_FOCUS_KEY);
 
   static lv_style_t MainScreenStyleEdit;
   lv_style_init(&MainScreenStyleEdit);
   lv_style_set_bg_color(&MainScreenStyleEdit, lv_color_hex(0xc2ff00));
   lv_style_set_outline_color(&MainScreenStyleEdit, lv_color_hex(0xff0000)); // lv_palette_lighten(LV_PALETTE_YELLOW, 4));
-  lv_style_set_outline_width(&MainScreenStyleEdit, 0);//4
-  lv_style_set_outline_pad(&MainScreenStyleEdit, 0);//2
-  lv_obj_add_style(obj,&MainScreenStyleEdit, LV_STATE_EDITED);
+  lv_style_set_outline_width(&MainScreenStyleEdit, 0);                      // 4
+  lv_style_set_outline_pad(&MainScreenStyleEdit, 0);                        // 2
+  lv_obj_add_style(obj, &MainScreenStyleEdit, LV_STATE_EDITED);
 
-  if(lv_obj_check_type(obj,&lv_spinbox_class))
+  if (lv_obj_check_type(obj, &lv_spinbox_class))
   {
     static lv_style_t MainScreenStyleCursor;
     lv_style_init(&MainScreenStyleCursor);
     lv_style_set_text_color(&MainScreenStyleCursor, lv_color_black());
     lv_style_set_bg_color(&MainScreenStyleCursor, lv_color_white());
     lv_style_set_opa(&MainScreenStyleCursor, 255);
-
 
     static lv_style_t MainScreenStyleCursorFocus;
     lv_style_init(&MainScreenStyleCursorFocus);
@@ -117,9 +117,9 @@ void setStyleEdittableObj(lv_obj_t *obj)
     lv_style_set_text_color(&MainScreenStyleCursor, lv_color_white());
     lv_style_set_bg_color(&MainScreenStyleCursorEdit, lv_color_hex(0x2195f6));
     //    lv_style_set_opa(&MainScreenStyleCursor,255);
-    lv_obj_add_style(obj,&MainScreenStyleCursor, LV_PART_CURSOR | LV_STATE_DEFAULT);
-    lv_obj_add_style(obj,&MainScreenStyleCursorFocus, LV_PART_CURSOR |LV_STATE_FOCUS_KEY);
-    lv_obj_add_style(obj,&MainScreenStyleCursorEdit, LV_PART_CURSOR |LV_STATE_EDITED);
+    lv_obj_add_style(obj, &MainScreenStyleCursor, LV_PART_CURSOR | LV_STATE_DEFAULT);
+    lv_obj_add_style(obj, &MainScreenStyleCursorFocus, LV_PART_CURSOR | LV_STATE_FOCUS_KEY);
+    lv_obj_add_style(obj, &MainScreenStyleCursorEdit, LV_PART_CURSOR | LV_STATE_EDITED);
   }
 }
 void MainScreenSetStyle(lv_ui *ui)
@@ -148,7 +148,19 @@ void MainScreenSetStyle(lv_ui *ui)
   setStyleEdittableObj(ui->MainScreen_spinboxModeBodyWeight);
   setStyleEdittableObj(ui->MainScreen_sliderOcclusionOcc);
   setStyleEdittableObj(ui->MainScreen_spinboxKVORate);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationHour);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationMinute);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationSecond);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentBackgroundRate);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepHour);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepMinute);
+  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepSecond);
 
+  lv_obj_set_style_outline_color(ui->MainScreen_swKVOMode, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
+  lv_obj_set_style_outline_pad(ui->MainScreen_swKVOMode, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
+  lv_obj_set_style_outline_width(ui->MainScreen_swKVOMode, 4, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
 }
 /************************************************************/
 void setcontMenuGroup(lv_ui *ui)
@@ -176,19 +188,18 @@ void setcontMenuGroup(lv_ui *ui)
       for (int i = 0; i < lv_obj_get_child_cnt(ui->MainScreen_contMenuButtons); i++)
       {
         obj_child = lv_obj_get_child(ui->MainScreen_contMenuButtons, i);
-        if(lv_obj_check_type(obj_child,&lv_btn_class))
+        if (lv_obj_check_type(obj_child, &lv_btn_class))
         {
-             lv_group_add_obj(g, obj_child);
-            //  printf("state:%d\n\r",lv_obj_get_state(obj_child));
-            if (lv_obj_has_state(obj_child, LV_STATE_FOCUS_KEY))
-            {
-              has_stat = true;
-              lv_group_focus_obj(obj_child);
-            }
+          lv_group_add_obj(g, obj_child);
+          if (lv_obj_has_state(obj_child, LV_STATE_FOCUS_KEY))
+          {
+            has_stat = true;
+            lv_group_focus_obj(obj_child);
+          }
         }
       }
-        if (!has_stat)
-          lv_obj_add_state(lv_obj_get_child(ui->MainScreen_contMenuButtons, 0), LV_STATE_FOCUS_KEY);
+      if (!has_stat)
+        lv_obj_add_state(lv_obj_get_child(ui->MainScreen_contMenuButtons, 0), LV_STATE_FOCUS_KEY);
     }
   }
 }
@@ -484,7 +495,7 @@ void setcontModeValuesGroup(lv_ui *ui)
         lv_group_add_obj(g, ui->MainScreen_spinboxModeTotalTimeSecond);
         break;
       case 2: // Weight
-        lv_group_add_obj(g, ui->MainScreen_spinboxModeTotalVolume);        
+        lv_group_add_obj(g, ui->MainScreen_spinboxModeTotalVolume);
         lv_group_add_obj(g, ui->MainScreen_spinboxModeInfusionRate);
         lv_group_add_obj(g, ui->MainScreen_spinboxModeBodyWeight);
         break;
@@ -500,14 +511,13 @@ void setcontModeValuesGroup(lv_ui *ui)
         break;
       }
       lv_group_add_obj(g, ui->MainScreen_btnDummyMode);
-
     }
   }
 }
 
 void setbarOcclusionOccGroup(lv_ui *ui)
 {
- lv_group_t *g;
+  lv_group_t *g;
   g = lv_group_get_default();
   if (g != NULL)
   {
@@ -526,15 +536,14 @@ void setbarOcclusionOccGroup(lv_ui *ui)
       lv_indev_set_group(cur_dev, g);
       lv_group_add_obj(g, ui->MainScreen_sliderOcclusionOcc);
       lv_group_add_obj(g, ui->MainScreen_btnGoMenuOcclusion);
-      lv_group_set_editing(g,true);
-      lv_obj_add_state(ui->MainScreen_sliderOcclusionOcc,LV_STATE_FOCUS_KEY);//LV_STATE_EDITED|LV_STATE_FOCUS_KEY|LV_STATE_PRESSED);
-
+      lv_group_set_editing(g, true);
+      lv_obj_add_state(ui->MainScreen_sliderOcclusionOcc, LV_STATE_FOCUS_KEY); // LV_STATE_EDITED|LV_STATE_FOCUS_KEY|LV_STATE_PRESSED);
     }
-  }  
+  }
 }
 void setKVOModeGroup(lv_ui *ui)
 {
- lv_group_t *g;
+  lv_group_t *g;
   g = lv_group_get_default();
   if (g != NULL)
   {
@@ -557,12 +566,86 @@ void setKVOModeGroup(lv_ui *ui)
       lv_group_add_obj(g, ui->MainScreen_spinboxKVORate);
       lv_group_add_obj(g, ui->MainScreen_btnDummyKVO);
       lv_group_focus_obj(ui->MainScreen_swKVOMode);
-   
     }
-  }  
+  }
+}
+void setIntermittentGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
+  lv_group_set_wrap(g, false);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentInfusionRate);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentDurationHour);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentDurationMinute);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentDurationSecond);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentBackgroundRate);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentSleepHour);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentSleepMinute);
+      lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentSleepSecond);
+      lv_group_add_obj(g, ui->MainScreen_btnDummyIntermittent);
+      lv_group_focus_obj(ui->MainScreen_spinboxIntermittentInfusionRate);
+    }
+  }
 }
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
+void updateMain(lv_ui *ui)
+{
+  printf("Mode=%d\n\r",currentMachineState.Mode.mode);
+  printf("Mode=%d\n\r",DefaultModes[2][3].mode);
+  #if 1
+  switch ((uint8_t)currentMachineState.Mode.mode)
+  {
+  case 0:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Mode: Volume / Mass / Dosage");
+    lv_label_set_text_fmt(ui->MainScreen_labelInjectionRate, "Rate: %.1f %s", currentMachineState.Mode.InfusionRate10,
+                          unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);
+    break;
+  case 1:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Mode: Time");
+    lv_label_set_text_fmt(ui->MainScreen_labelInjectionRate, "Total Time: %02d:%02d:%02d",
+                          currentMachineState.Mode.TotalTime / 3600,
+                          (currentMachineState.Mode.TotalTime % 3600) / 60,
+                          (currentMachineState.Mode.TotalTime % 3600) % 60);
+    break;
+  case 2:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Mode: Body Weight");
+    lv_label_set_text_fmt(ui->MainScreen_labelInjectionRate, "Rate: %d.%d %s", 
+                          currentMachineState.Mode.InfusionRate10/10,
+                          currentMachineState.Mode.InfusionRate10%10,
+                          unitMode_BodyWeight[currentMachineState.Mode.unit]);    
+
+    break;
+  case 3:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Intermittent");
+    break;
+  case 4:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Rhythmic");
+    break;
+  case 5:
+    lv_label_set_text(ui->MainScreen_labelInjectionMode, "Linear Scale");
+    break;
+  }
+  #endif
+
+  lv_bar_set_value(ui->MainScreen_barOcclusionLevel, currentMachineState.OcclusionLevel, LV_ANIM_OFF);
+}
 void updateSyringeCompanyList(lv_ui *ui)
 {
   // load syringe manufacture
@@ -750,8 +833,8 @@ void updateModeValues(lv_ui *ui, uint8_t modeindex, uint8_t unitindex)
     lv_obj_clear_flag(ui->MainScreen_contModeValueInfusionRate, LV_OBJ_FLAG_HIDDEN);
     lv_obj_add_flag(ui->MainScreen_contModeValueTotalTime, LV_OBJ_FLAG_HIDDEN);
     lv_obj_add_flag(ui->MainScreen_contModeValueWeight, LV_OBJ_FLAG_HIDDEN);
-    
-    lv_spinbox_set_value(ui->MainScreen_spinboxModeTotalVolume, DefaultModes[modeindex][unitindex].TotalVolume10 / 10.0);    
+
+    lv_spinbox_set_value(ui->MainScreen_spinboxModeTotalVolume, DefaultModes[modeindex][unitindex].TotalVolume10 / 10.0);
     lv_label_set_text_fmt(ui->MainScreen_labelModeVolumeUnit, "mm");
     lv_spinbox_set_value(ui->MainScreen_spinboxModeInfusionRate, DefaultModes[modeindex][unitindex].InfusionRate10 / 10.0);
     lv_label_set_text_fmt(ui->MainScreen_labelModeInfusionRateUnit, "%s", unitMode_linear[unitindex]);
@@ -762,20 +845,65 @@ void updateModeValues(lv_ui *ui, uint8_t modeindex, uint8_t unitindex)
 
 void updateOcclusionValues(lv_ui *ui)
 {
-  lv_slider_set_value(ui->MainScreen_sliderOcclusionOcc,9,LV_ANIM_OFF);
+  lv_slider_set_value(ui->MainScreen_sliderOcclusionOcc, currentMachineState.OcclusionLevel, LV_ANIM_OFF);
 }
 void updateKVOModeValues(lv_ui *ui)
 {
-  lv_obj_add_state(ui->MainScreen_swKVOMode,LV_STATE_CHECKED);
-  lv_obj_add_flag(ui->MainScreen_labelswKVOModeDisable,LV_OBJ_FLAG_HIDDEN);
-    // lv_label_set_text_fmt(ui->MainScreen_labelKVORate,"%s",lv_label_get_text(ui->MainScreen_labelInjectionRate) );
-  lv_spinbox_set_value(ui->MainScreen_spinboxKVORate,18);
+  if(currentMachineState.KvoMode)
+  {
+    lv_obj_add_state(ui->MainScreen_swKVOMode, LV_STATE_CHECKED);
+    lv_obj_add_flag(ui->MainScreen_labelswKVOModeDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_clear_flag(ui->MainScreen_labelswKVOModeEnable, LV_OBJ_FLAG_HIDDEN);
+  }
+  else
+  {
+    lv_obj_clear_state(ui->MainScreen_swKVOMode, LV_STATE_CHECKED);
+    lv_obj_clear_flag(ui->MainScreen_labelswKVOModeDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_add_flag(ui->MainScreen_labelswKVOModeEnable, LV_OBJ_FLAG_HIDDEN);    
+  }
+  switch(currentMachineState.Mode.mode)
+  {
+    case 0://volume
+    case 3://intermittent
+    case 4://rhythmic
+      lv_label_set_text_fmt(ui->MainScreen_labelKVORate, "%s", unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);    
+    break;
+    case 1://time
+      lv_label_set_text_fmt(ui->MainScreen_labelKVORate, "%s", unitMode_time[currentMachineState.Mode.unit]);    
+    break;
+    case 2://weight
+    lv_label_set_text_fmt(ui->MainScreen_labelKVORate, "%s", unitMode_BodyWeight[currentMachineState.Mode.unit]);    
+    break;
+    case 5://linear
+    lv_label_set_text_fmt(ui->MainScreen_labelKVORate, "%s", unitMode_linear[currentMachineState.Mode.unit]);    
+    break;
+  }
+  lv_spinbox_set_value(ui->MainScreen_spinboxKVORate, currentMachineState.KvoRate10);
+}
+
+void updateIntermittentValues(lv_ui *ui)
+{
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentInfusionRate,currentMachineState.IntermittentInfusionRate10);
+  lv_label_set_text_fmt(ui->MainScreen_labelIntermittentInfusionRate,"%s",
+                          unitMode_volume_intermittent_rhythmic[currentMachineState.IntermittentInfusionRateUnit]);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentDurationHour,currentMachineState.IntermittentDuration/3600);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentDurationMinute,(currentMachineState.IntermittentDuration%3600)/60);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentDurationSecond,(currentMachineState.IntermittentDuration%3600)%60);
+
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentBackgroundRate,currentMachineState.IntermittentBackgroundRate10);
+  lv_label_set_text_fmt(ui->MainScreen_labelIntermittentBackGroundRate,"%s",
+                          unitMode_volume_intermittent_rhythmic[currentMachineState.IntermittentInfusionRateUnit]);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepHour,currentMachineState.IntermittentSleep/3600);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepMinute,(currentMachineState.IntermittentSleep%3600)/60);
+  lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepSecond,(currentMachineState.IntermittentSleep%3600)%60);
+
 }
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
 {
   setcontMainGroup(&guider_ui);
+  updateMain(&guider_ui);
 }
 void animcontMenu_ready_callback(lv_anim_t *a)
 {
@@ -800,5 +928,9 @@ void animcontOcclusion_ready_callback(lv_anim_t *a)
 void animcontKVO_ready_callback(lv_anim_t *a)
 {
   setKVOModeGroup(&guider_ui);
+}
+void animcontIntermittent_ready_callback(lv_anim_t *a)
+{
+  setIntermittentGroup(&guider_ui);
 }
 /************************************/

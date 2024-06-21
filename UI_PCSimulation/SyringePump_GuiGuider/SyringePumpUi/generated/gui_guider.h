@@ -45,9 +45,7 @@ typedef struct
 	lv_obj_t *MainScreen_imgDroplet;
 	lv_obj_t *MainScreen_contMain;
 	lv_obj_t *MainScreen_barOcclusionLevel;
-	lv_obj_t *MainScreen_label_1;
 	lv_obj_t *MainScreen_labelInjectionMode;
-	lv_obj_t *MainScreen_label_2;
 	lv_obj_t *MainScreen_labelInjectionRate;
 	lv_obj_t *MainScreen_label_Error;
 	lv_obj_t *MainScreen_labelInjectedVolume;
@@ -200,7 +198,7 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance;
 	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn;
 	lv_obj_t *MainScreen_spinboxSyringeDiaTolerance_btn_minus;
-	lv_obj_t *MainScreen_label_18;
+	lv_obj_t *MainScreen_labelSyringeHeader;
 	lv_obj_t *MainScreen_btnDummySyringe;
 	lv_obj_t *MainScreen_btnDummySyringe_label;
 	lv_obj_t *MainScreen_contDrug;
@@ -288,7 +286,7 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxDrugRateDef;
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn;
 	lv_obj_t *MainScreen_spinboxDrugRateDef_btn_minus;
-	lv_obj_t *MainScreen_label_19;
+	lv_obj_t *MainScreen_labelDrugHeader;
 	lv_obj_t *MainScreen_btnDummyDrug;
 	lv_obj_t *MainScreen_btnDummyDrug_label;
 	lv_obj_t *MainScreen_contMode;
@@ -309,6 +307,7 @@ typedef struct
 	lv_obj_t *MainScreen_listModeUnit_item4;
 	lv_obj_t *MainScreen_listModeUnit_item5;
 	lv_obj_t *MainScreen_listModeUnit_item6;
+	lv_obj_t *MainScreen_listModeUnit_item7;
 	lv_obj_t *MainScreen_contModeValues;
 	lv_obj_t *MainScreen_contModeValueWeight;
 	lv_obj_t *MainScreen_label_33;
@@ -341,7 +340,7 @@ typedef struct
 	lv_obj_t *MainScreen_spinboxModeTotalVolume;
 	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn;
 	lv_obj_t *MainScreen_spinboxModeTotalVolume_btn_minus;
-	lv_obj_t *MainScreen_label_29;
+	lv_obj_t *MainScreen_labelModeHeader;
 	lv_obj_t *MainScreen_btnDummyMode;
 	lv_obj_t *MainScreen_btnDummyMode_label;
 	lv_obj_t *MainScreen_contOcclusion;
@@ -365,6 +364,49 @@ typedef struct
 	lv_obj_t *MainScreen_btnGoMenuKVO_label;
 	lv_obj_t *MainScreen_btnDummyKVO;
 	lv_obj_t *MainScreen_btnDummyKVO_label;
+	lv_obj_t *MainScreen_contIntermittent;
+	lv_obj_t *MainScreen_label_54;
+	lv_obj_t *MainScreen_contIntermittentValues;
+	lv_obj_t *MainScreen_label_53;
+	lv_obj_t *MainScreen_label_52;
+	lv_obj_t *MainScreen_label_55;
+	lv_obj_t *MainScreen_label_56;
+	lv_obj_t *MainScreen_labelIntermittentInfusionRate;
+	lv_obj_t *MainScreen_labelIntermittentBackGroundRate;
+	lv_obj_t *MainScreen_spinboxIntermittentInfusionRate;
+	lv_obj_t *MainScreen_spinboxIntermittentInfusionRate_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentInfusionRate_btn_minus;
+	lv_obj_t *MainScreen_contIntermittentDuration;
+	lv_obj_t *MainScreen_label_58;
+	lv_obj_t *MainScreen_label_57;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationHour;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationHour_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationHour_btn_minus;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationMinute;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationMinute_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationMinute_btn_minus;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationSecond;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationSecond_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentDurationSecond_btn_minus;
+	lv_obj_t *MainScreen_spinboxIntermittentBackgroundRate;
+	lv_obj_t *MainScreen_spinboxIntermittentBackgroundRate_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentBackgroundRate_btn_minus;
+	lv_obj_t *MainScreen_contIntermittentSleep;
+	lv_obj_t *MainScreen_label_60;
+	lv_obj_t *MainScreen_label_59;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepHour;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepHour_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepHour_btn_minus;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepMinute;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepMinute_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepMinute_btn_minus;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepSecond;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepSecond_btn;
+	lv_obj_t *MainScreen_spinboxIntermittentSleepSecond_btn_minus;
+	lv_obj_t *MainScreen_btnGOMenuIntermittent;
+	lv_obj_t *MainScreen_btnGOMenuIntermittent_label;
+	lv_obj_t *MainScreen_btnDummyIntermittent;
+	lv_obj_t *MainScreen_btnDummyIntermittent_label;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 
@@ -473,7 +515,6 @@ LV_FONT_DECLARE(lv_font_montserratMedium_18)
 LV_FONT_DECLARE(lv_font_Alatsi_Regular_18)
 LV_FONT_DECLARE(lv_font_Amiko_Regular_21)
 LV_FONT_DECLARE(lv_font_arial_17)
-LV_FONT_DECLARE(lv_font_Acme_Regular_30)
 LV_FONT_DECLARE(lv_font_arial_33)
 LV_FONT_DECLARE(lv_font_arial_35)
 LV_FONT_DECLARE(lv_font_arial_25)

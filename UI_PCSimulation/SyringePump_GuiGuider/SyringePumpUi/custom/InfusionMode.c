@@ -4,28 +4,21 @@
 infusionmode_t DefaultModes[6][8]; //6 mode with maximum 8 unit
 void loadDefaultInfusionModeValue(void)
 {
-    for(modeid_t modes=modeVol;modes<modeLinear;modes++)
+    for(modeid_t modes=modeVol;modes<=modeLinear;modes++)
     {
-      for(modeunit_t per=perHour;per<=perMin;per++)
-      { 
-        for(modeunit_t units=unitMl;units<=unitUnit;units++)
+        for(uint8_t units=0;units<8;units++)
         {
-          DefaultModes[modes][per*(unitUnit+1)+units].mode=modes;
-          DefaultModes[modes][per*(unitUnit+1)+units].unit=units;
-          if(modes==modeTime)
-            DefaultModes[modes][per*(unitUnit+1)+units].per=perNone;
+          DefaultModes[modes][units].mode=modes;
+          if(modes==modeLinear)
+            DefaultModes[modes][units].unit=units%2;
           else
-            DefaultModes[modes][per*(unitUnit+1)+units].per=per;
-          DefaultModes[modes][per*(unitUnit+1)+units].TotalVolume10=(uint16_t)randi(0,18000);
-          DefaultModes[modes][per*(unitUnit+1)+units].InfusionRate10=(uint16_t)randi(0,990);
-          DefaultModes[modes][per*(unitUnit+1)+units].TotalTime=(time_t)randi(0,36000);
-          DefaultModes[modes][per*(unitUnit+1)+units].BodyWeight=(int16_t)randi(0,900);
+            DefaultModes[modes][units].unit=units;
+          DefaultModes[modes][units].TotalVolume10=(uint16_t)randi(0,18000);
+          DefaultModes[modes][units].InfusionRate10=(uint16_t)randi(0,990);
+          DefaultModes[modes][units].TotalTime=(time_t)randi(0,36000);
+          DefaultModes[modes][units].BodyWeight=(int16_t)randi(0,300);
         }
-      }
     }
-    // if(modes==modeLinear)
-    // {
-      
-    // }
+    // printf("%d\n\r",DefaultModes[2][3].mode);
 
 }

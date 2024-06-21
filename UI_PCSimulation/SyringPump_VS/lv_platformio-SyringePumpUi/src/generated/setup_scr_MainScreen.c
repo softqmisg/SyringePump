@@ -422,35 +422,12 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_img_src(ui->MainScreen_barOcclusionLevel, &_ledbar_full_26x132, LV_PART_INDICATOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_img_opa(ui->MainScreen_barOcclusionLevel, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_label_1
-	ui->MainScreen_label_1 = lv_label_create(ui->MainScreen_contMain);
-	lv_label_set_text(ui->MainScreen_label_1, "Mode:\n");
-	lv_label_set_long_mode(ui->MainScreen_label_1, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_label_1, 5, 4);
-	lv_obj_set_size(ui->MainScreen_label_1, 100, 35);
-
-	//Write style for MainScreen_label_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_border_width(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_label_1, lv_color_hex(0xebff00), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_1, &lv_font_Acme_Regular_30, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_label_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_line_space(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_label_1, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_bottom(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
 	//Write codes MainScreen_labelInjectionMode
 	ui->MainScreen_labelInjectionMode = lv_label_create(ui->MainScreen_contMain);
-	lv_label_set_text(ui->MainScreen_labelInjectionMode, "Volume / Mass / Dosage\n");
+	lv_label_set_text(ui->MainScreen_labelInjectionMode, "Mode: Volume / Mass / Dosage\n");
 	lv_label_set_long_mode(ui->MainScreen_labelInjectionMode, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelInjectionMode, 121, 3);
-	lv_obj_set_size(ui->MainScreen_labelInjectionMode, 400, 35);
+	lv_obj_set_pos(ui->MainScreen_labelInjectionMode, 5, 3);
+	lv_obj_set_size(ui->MainScreen_labelInjectionMode, 550, 35);
 
 	//Write style for MainScreen_labelInjectionMode, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelInjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -468,35 +445,12 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_pad_left(ui->MainScreen_labelInjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->MainScreen_labelInjectionMode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_label_2
-	ui->MainScreen_label_2 = lv_label_create(ui->MainScreen_contMain);
-	lv_label_set_text(ui->MainScreen_label_2, "Rate:\n");
-	lv_label_set_long_mode(ui->MainScreen_label_2, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_label_2, 5, 45);
-	lv_obj_set_size(ui->MainScreen_label_2, 100, 35);
-
-	//Write style for MainScreen_label_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_border_width(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_label_2, lv_color_hex(0xff0027), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_2, &lv_font_Acme_Regular_30, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_label_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_2, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_line_space(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_label_2, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_bottom(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
 	//Write codes MainScreen_labelInjectionRate
 	ui->MainScreen_labelInjectionRate = lv_label_create(ui->MainScreen_contMain);
-	lv_label_set_text(ui->MainScreen_labelInjectionRate, "100.0 ml/min\n\n");
+	lv_label_set_text(ui->MainScreen_labelInjectionRate, "Rate: 100.0 ml/min\n\n");
 	lv_label_set_long_mode(ui->MainScreen_labelInjectionRate, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_labelInjectionRate, 121, 44);
-	lv_obj_set_size(ui->MainScreen_labelInjectionRate, 400, 35);
+	lv_obj_set_pos(ui->MainScreen_labelInjectionRate, 5, 43);
+	lv_obj_set_size(ui->MainScreen_labelInjectionRate, 550, 35);
 
 	//Write style for MainScreen_labelInjectionRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelInjectionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1757,7 +1711,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_listSyringeType_item17 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save_18");
 	ui->MainScreen_listSyringeType_item18 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save_19");
 	ui->MainScreen_listSyringeType_item19 = lv_list_add_btn(ui->MainScreen_listSyringeType, LV_SYMBOL_SAVE, "save_20");
-	lv_obj_set_pos(ui->MainScreen_listSyringeType, 399, 29);
+	lv_obj_set_pos(ui->MainScreen_listSyringeType, 395, 29);
 	lv_obj_set_size(ui->MainScreen_listSyringeType, 400, 140);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_listSyringeType, LV_SCROLLBAR_MODE_AUTO);
 
@@ -2387,30 +2341,30 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_color(ui->MainScreen_spinboxSyringeDiaTolerance, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxSyringeDiaTolerance, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_label_18
-	ui->MainScreen_label_18 = lv_label_create(ui->MainScreen_contSyringe);
-	lv_label_set_text(ui->MainScreen_label_18, "Select Company");
-	lv_label_set_long_mode(ui->MainScreen_label_18, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_label_18, 0, 0);
-	lv_obj_set_size(ui->MainScreen_label_18, 800, 30);
+	//Write codes MainScreen_labelSyringeHeader
+	ui->MainScreen_labelSyringeHeader = lv_label_create(ui->MainScreen_contSyringe);
+	lv_label_set_text(ui->MainScreen_labelSyringeHeader, "Select Company");
+	lv_label_set_long_mode(ui->MainScreen_labelSyringeHeader, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelSyringeHeader, 0, 0);
+	lv_obj_set_size(ui->MainScreen_labelSyringeHeader, 800, 30);
 
-	//Write style for MainScreen_label_18, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_border_width(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_label_18, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_18, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_label_18, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_18, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_line_space(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_label_18, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_label_18, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_label_18, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_18, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_label_18, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_bottom(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_label_18, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_labelSyringeHeader, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelSyringeHeader, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelSyringeHeader, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelSyringeHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelSyringeHeader, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelSyringeHeader, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelSyringeHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_labelSyringeHeader, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_labelSyringeHeader, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelSyringeHeader, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelSyringeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_btnDummySyringe
 	ui->MainScreen_btnDummySyringe = lv_btn_create(ui->MainScreen_contSyringe);
@@ -3012,7 +2966,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	//Write codes MainScreen_ddlistDrugId
 	ui->MainScreen_ddlistDrugId = lv_dropdown_create(ui->MainScreen_contDrugValues);
 	lv_dropdown_set_options(ui->MainScreen_ddlistDrugId, "ml\nug\nmg\nunit");
-	lv_obj_set_pos(ui->MainScreen_ddlistDrugId, 54, 62);
+	lv_obj_set_pos(ui->MainScreen_ddlistDrugId, 51, 62);
 	lv_obj_set_size(ui->MainScreen_ddlistDrugId, 100, 24);
 
 	//Write style for MainScreen_ddlistDrugId, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -3356,30 +3310,30 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_color(ui->MainScreen_spinboxDrugRateDef, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxDrugRateDef, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_label_19
-	ui->MainScreen_label_19 = lv_label_create(ui->MainScreen_contDrug);
-	lv_label_set_text(ui->MainScreen_label_19, "Select Drug");
-	lv_label_set_long_mode(ui->MainScreen_label_19, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_label_19, 0, 0);
-	lv_obj_set_size(ui->MainScreen_label_19, 800, 30);
+	//Write codes MainScreen_labelDrugHeader
+	ui->MainScreen_labelDrugHeader = lv_label_create(ui->MainScreen_contDrug);
+	lv_label_set_text(ui->MainScreen_labelDrugHeader, "Select Drug");
+	lv_label_set_long_mode(ui->MainScreen_labelDrugHeader, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelDrugHeader, 0, 0);
+	lv_obj_set_size(ui->MainScreen_labelDrugHeader, 800, 30);
 
-	//Write style for MainScreen_label_19, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_border_width(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_label_19, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_19, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_label_19, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_19, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_line_space(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_label_19, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_label_19, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_label_19, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_19, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_label_19, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_bottom(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_label_19, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_labelDrugHeader, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelDrugHeader, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelDrugHeader, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelDrugHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelDrugHeader, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelDrugHeader, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelDrugHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_labelDrugHeader, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_labelDrugHeader, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelDrugHeader, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelDrugHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_btnDummyDrug
 	ui->MainScreen_btnDummyDrug = lv_btn_create(ui->MainScreen_contDrug);
@@ -3540,6 +3494,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	ui->MainScreen_listModeUnit_item4 = lv_list_add_btn(ui->MainScreen_listModeUnit, LV_SYMBOL_SAVE, "save_5");
 	ui->MainScreen_listModeUnit_item5 = lv_list_add_btn(ui->MainScreen_listModeUnit, LV_SYMBOL_SAVE, "save_6");
 	ui->MainScreen_listModeUnit_item6 = lv_list_add_btn(ui->MainScreen_listModeUnit, LV_SYMBOL_SAVE, "save_7");
+	ui->MainScreen_listModeUnit_item7 = lv_list_add_btn(ui->MainScreen_listModeUnit, LV_SYMBOL_SAVE, "save_8");
 	lv_obj_set_pos(ui->MainScreen_listModeUnit, 399, 28);
 	lv_obj_set_size(ui->MainScreen_listModeUnit, 400, 160);
 	lv_obj_set_scrollbar_mode(ui->MainScreen_listModeUnit, LV_SCROLLBAR_MODE_AUTO);
@@ -3589,6 +3544,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_bg_opa(&style_MainScreen_listModeUnit_extra_btns_main_default, 255);
 	lv_style_set_bg_color(&style_MainScreen_listModeUnit_extra_btns_main_default, lv_color_hex(0x000000));
 	lv_style_set_bg_grad_dir(&style_MainScreen_listModeUnit_extra_btns_main_default, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(ui->MainScreen_listModeUnit_item7, &style_MainScreen_listModeUnit_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item6, &style_MainScreen_listModeUnit_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item5, &style_MainScreen_listModeUnit_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item4, &style_MainScreen_listModeUnit_extra_btns_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -3613,6 +3569,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_style_set_bg_opa(&style_MainScreen_listModeUnit_extra_btns_main_focused, 255);
 	lv_style_set_bg_color(&style_MainScreen_listModeUnit_extra_btns_main_focused, lv_color_hex(0x0016ff));
 	lv_style_set_bg_grad_dir(&style_MainScreen_listModeUnit_extra_btns_main_focused, LV_GRAD_DIR_NONE);
+	lv_obj_add_style(ui->MainScreen_listModeUnit_item7, &style_MainScreen_listModeUnit_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item6, &style_MainScreen_listModeUnit_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item5, &style_MainScreen_listModeUnit_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
 	lv_obj_add_style(ui->MainScreen_listModeUnit_item4, &style_MainScreen_listModeUnit_extra_btns_main_focused, LV_PART_MAIN|LV_STATE_FOCUSED);
@@ -3813,7 +3770,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_label_set_text(ui->MainScreen_labelModeInfusionRateUnit, "Unit/Kg/h\n");
 	lv_label_set_long_mode(ui->MainScreen_labelModeInfusionRateUnit, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->MainScreen_labelModeInfusionRateUnit, 255, 5);
-	lv_obj_set_size(ui->MainScreen_labelModeInfusionRateUnit, 110, 25);
+	lv_obj_set_size(ui->MainScreen_labelModeInfusionRateUnit, 130, 23);
 
 	//Write style for MainScreen_labelModeInfusionRateUnit, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelModeInfusionRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -4217,30 +4174,30 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_bg_color(ui->MainScreen_spinboxModeTotalVolume, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxModeTotalVolume, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
 
-	//Write codes MainScreen_label_29
-	ui->MainScreen_label_29 = lv_label_create(ui->MainScreen_contMode);
-	lv_label_set_text(ui->MainScreen_label_29, "Select Infusion Type");
-	lv_label_set_long_mode(ui->MainScreen_label_29, LV_LABEL_LONG_WRAP);
-	lv_obj_set_pos(ui->MainScreen_label_29, 0, 0);
-	lv_obj_set_size(ui->MainScreen_label_29, 800, 30);
+	//Write codes MainScreen_labelModeHeader
+	ui->MainScreen_labelModeHeader = lv_label_create(ui->MainScreen_contMode);
+	lv_label_set_text(ui->MainScreen_labelModeHeader, "Select Operating Mode");
+	lv_label_set_long_mode(ui->MainScreen_labelModeHeader, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelModeHeader, 0, 0);
+	lv_obj_set_size(ui->MainScreen_labelModeHeader, 800, 30);
 
-	//Write style for MainScreen_label_29, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-	lv_obj_set_style_border_width(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_radius(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(ui->MainScreen_label_29, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->MainScreen_label_29, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_opa(ui->MainScreen_label_29, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_letter_space(ui->MainScreen_label_29, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_line_space(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_align(ui->MainScreen_label_29, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_opa(ui->MainScreen_label_29, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_color(ui->MainScreen_label_29, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_29, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_top(ui->MainScreen_label_29, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_right(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_bottom(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_pad_left(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_shadow_width(ui->MainScreen_label_29, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	//Write style for MainScreen_labelModeHeader, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelModeHeader, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelModeHeader, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelModeHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelModeHeader, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelModeHeader, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelModeHeader, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_labelModeHeader, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_labelModeHeader, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelModeHeader, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelModeHeader, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//Write codes MainScreen_btnDummyMode
 	ui->MainScreen_btnDummyMode = lv_btn_create(ui->MainScreen_contMode);
@@ -4500,7 +4457,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 
 	//Write style for MainScreen_swKVOMode, Part: LV_PART_INDICATOR, State: LV_STATE_CHECKED.
 	lv_obj_set_style_bg_opa(ui->MainScreen_swKVOMode, 255, LV_PART_INDICATOR|LV_STATE_CHECKED);
-	lv_obj_set_style_bg_color(ui->MainScreen_swKVOMode, lv_color_hex(0xf3ff05), LV_PART_INDICATOR|LV_STATE_CHECKED);
+	lv_obj_set_style_bg_color(ui->MainScreen_swKVOMode, lv_color_hex(0x1bc52e), LV_PART_INDICATOR|LV_STATE_CHECKED);
 	lv_obj_set_style_bg_grad_dir(ui->MainScreen_swKVOMode, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_CHECKED);
 	lv_obj_set_style_border_width(ui->MainScreen_swKVOMode, 0, LV_PART_INDICATOR|LV_STATE_CHECKED);
 
@@ -4669,6 +4626,754 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyKVO, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummyKVO, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contIntermittent
+	ui->MainScreen_contIntermittent = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contIntermittent, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contIntermittent, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contIntermittent, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contIntermittent, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contIntermittent, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contIntermittent, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contIntermittent, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contIntermittent, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contIntermittent, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_54
+	ui->MainScreen_label_54 = lv_label_create(ui->MainScreen_contIntermittent);
+	lv_label_set_text(ui->MainScreen_label_54, "Intermittent Infusion\n");
+	lv_label_set_long_mode(ui->MainScreen_label_54, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_54, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_54, 800, 30);
+
+	//Write style for MainScreen_label_54, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_54, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_54, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_54, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_54, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_54, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_54, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_54, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_54, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_54, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contIntermittentValues
+	ui->MainScreen_contIntermittentValues = lv_obj_create(ui->MainScreen_contIntermittent);
+	lv_obj_set_pos(ui->MainScreen_contIntermittentValues, 89, 32);
+	lv_obj_set_size(ui->MainScreen_contIntermittentValues, 579, 266);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contIntermittentValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contIntermittentValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contIntermittentValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contIntermittentValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contIntermittentValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contIntermittentValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_53
+	ui->MainScreen_label_53 = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_label_53, "Infusion Rate:\n");
+	lv_label_set_long_mode(ui->MainScreen_label_53, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_53, 142, 34);
+	lv_obj_set_size(ui->MainScreen_label_53, 155, 21);
+
+	//Write style for MainScreen_label_53, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_53, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_53, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_53, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_53, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_53, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_53, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_52
+	ui->MainScreen_label_52 = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_label_52, "Duration:\n");
+	lv_label_set_long_mode(ui->MainScreen_label_52, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_52, 142, 94);
+	lv_obj_set_size(ui->MainScreen_label_52, 155, 21);
+
+	//Write style for MainScreen_label_52, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_52, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_52, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_52, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_52, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_52, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_52, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_55
+	ui->MainScreen_label_55 = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_label_55, "Background Rate:");
+	lv_label_set_long_mode(ui->MainScreen_label_55, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_55, 116, 154);
+	lv_obj_set_size(ui->MainScreen_label_55, 207, 20);
+
+	//Write style for MainScreen_label_55, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_55, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_55, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_55, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_55, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_55, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_56
+	ui->MainScreen_label_56 = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_label_56, "Sleep:");
+	lv_label_set_long_mode(ui->MainScreen_label_56, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_56, 142, 213);
+	lv_obj_set_size(ui->MainScreen_label_56, 155, 21);
+
+	//Write style for MainScreen_label_56, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_56, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_56, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_56, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_56, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_56, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_56, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelIntermittentInfusionRate
+	ui->MainScreen_labelIntermittentInfusionRate = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_labelIntermittentInfusionRate, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelIntermittentInfusionRate, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelIntermittentInfusionRate, 417, 35);
+	lv_obj_set_size(ui->MainScreen_labelIntermittentInfusionRate, 115, 21);
+
+	//Write style for MainScreen_labelIntermittentInfusionRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelIntermittentInfusionRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelIntermittentInfusionRate, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelIntermittentInfusionRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelIntermittentInfusionRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelIntermittentInfusionRate, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelIntermittentBackGroundRate
+	ui->MainScreen_labelIntermittentBackGroundRate = lv_label_create(ui->MainScreen_contIntermittentValues);
+	lv_label_set_text(ui->MainScreen_labelIntermittentBackGroundRate, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelIntermittentBackGroundRate, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelIntermittentBackGroundRate, 365, 156);
+	lv_obj_set_size(ui->MainScreen_labelIntermittentBackGroundRate, 115, 21);
+
+	//Write style for MainScreen_labelIntermittentBackGroundRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelIntermittentBackGroundRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelIntermittentBackGroundRate, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelIntermittentBackGroundRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelIntermittentBackGroundRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelIntermittentBackGroundRate, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelIntermittentBackGroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentInfusionRate
+	ui->MainScreen_spinboxIntermittentInfusionRate = lv_spinbox_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentInfusionRate, 315, 31);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentInfusionRate, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentInfusionRate, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentInfusionRate, 5, 4);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate, -99999, 99999);
+	lv_coord_t MainScreen_spinboxIntermittentInfusionRate_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentInfusionRate);
+	ui->MainScreen_spinboxIntermittentInfusionRate_btn = lv_btn_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentInfusionRate_btn, MainScreen_spinboxIntermittentInfusionRate_h, MainScreen_spinboxIntermittentInfusionRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentInfusionRate_btn, ui->MainScreen_spinboxIntermittentInfusionRate, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentInfusionRate_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentInfusionRate_btn, lv_MainScreen_spinboxIntermittentInfusionRate_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus, MainScreen_spinboxIntermittentInfusionRate_h, MainScreen_spinboxIntermittentInfusionRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus, ui->MainScreen_spinboxIntermittentInfusionRate, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus, lv_MainScreen_spinboxIntermittentInfusionRate_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentInfusionRate, 315, 31);
+
+	//Write style for MainScreen_spinboxIntermittentInfusionRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentInfusionRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentInfusionRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentInfusionRate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentInfusionRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentInfusionRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentInfusionRate, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentInfusionRate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentInfusionRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentInfusionRate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentInfusionRate, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentInfusionRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentInfusionRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentInfusionRate, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentInfusionRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentInfusionRate, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentInfusionRate, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentInfusionRate, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentInfusionRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentInfusionRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentInfusionRate, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentInfusionRate, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contIntermittentDuration
+	ui->MainScreen_contIntermittentDuration = lv_obj_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_pos(ui->MainScreen_contIntermittentDuration, 281, 87);
+	lv_obj_set_size(ui->MainScreen_contIntermittentDuration, 150, 36);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contIntermittentDuration, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contIntermittentDuration, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contIntermittentDuration, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contIntermittentDuration, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contIntermittentDuration, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contIntermittentDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_58
+	ui->MainScreen_label_58 = lv_label_create(ui->MainScreen_contIntermittentDuration);
+	lv_label_set_text(ui->MainScreen_label_58, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_58, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_58, 50, 4);
+	lv_obj_set_size(ui->MainScreen_label_58, 7, 25);
+
+	//Write style for MainScreen_label_58, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_58, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_58, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_58, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_58, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_58, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_58, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_58, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_57
+	ui->MainScreen_label_57 = lv_label_create(ui->MainScreen_contIntermittentDuration);
+	lv_label_set_text(ui->MainScreen_label_57, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_57, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_57, 100, 6);
+	lv_obj_set_size(ui->MainScreen_label_57, 7, 25);
+
+	//Write style for MainScreen_label_57, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_57, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_57, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_57, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_57, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_57, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_57, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_57, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentDurationHour
+	ui->MainScreen_spinboxIntermittentDurationHour = lv_spinbox_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationHour, 10, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentDurationHour, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentDurationHour, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentDurationHour, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentDurationHour_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentDurationHour);
+	ui->MainScreen_spinboxIntermittentDurationHour_btn = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationHour_btn, MainScreen_spinboxIntermittentDurationHour_h, MainScreen_spinboxIntermittentDurationHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationHour_btn, ui->MainScreen_spinboxIntermittentDurationHour, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationHour_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationHour_btn, lv_MainScreen_spinboxIntermittentDurationHour_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentDurationHour_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus, MainScreen_spinboxIntermittentDurationHour_h, MainScreen_spinboxIntermittentDurationHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus, ui->MainScreen_spinboxIntermittentDurationHour, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus, lv_MainScreen_spinboxIntermittentDurationHour_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationHour, 10, 5);
+
+	//Write style for MainScreen_spinboxIntermittentDurationHour, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationHour, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationHour, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentDurationHour, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentDurationHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentDurationHour, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentDurationHour, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentDurationHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentDurationHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentDurationHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentDurationHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationHour, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationHour, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentDurationHour, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentDurationHour, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentDurationHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentDurationHour, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationHour, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationHour, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationHour, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationHour, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentDurationMinute
+	ui->MainScreen_spinboxIntermittentDurationMinute = lv_spinbox_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationMinute, 60, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentDurationMinute, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentDurationMinute, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentDurationMinute, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentDurationMinute_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentDurationMinute);
+	ui->MainScreen_spinboxIntermittentDurationMinute_btn = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationMinute_btn, MainScreen_spinboxIntermittentDurationMinute_h, MainScreen_spinboxIntermittentDurationMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationMinute_btn, ui->MainScreen_spinboxIntermittentDurationMinute, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationMinute_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationMinute_btn, lv_MainScreen_spinboxIntermittentDurationMinute_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus, MainScreen_spinboxIntermittentDurationMinute_h, MainScreen_spinboxIntermittentDurationMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus, ui->MainScreen_spinboxIntermittentDurationMinute, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus, lv_MainScreen_spinboxIntermittentDurationMinute_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationMinute, 60, 5);
+
+	//Write style for MainScreen_spinboxIntermittentDurationMinute, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationMinute, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationMinute, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentDurationMinute, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentDurationMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentDurationMinute, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentDurationMinute, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentDurationMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentDurationMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentDurationMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentDurationMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationMinute, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationMinute, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentDurationMinute, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentDurationMinute, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentDurationMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentDurationMinute, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationMinute, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationMinute, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationMinute, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationMinute, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentDurationSecond
+	ui->MainScreen_spinboxIntermittentDurationSecond = lv_spinbox_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationSecond, 110, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentDurationSecond, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentDurationSecond, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentDurationSecond, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentDurationSecond_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentDurationSecond);
+	ui->MainScreen_spinboxIntermittentDurationSecond_btn = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationSecond_btn, MainScreen_spinboxIntermittentDurationSecond_h, MainScreen_spinboxIntermittentDurationSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationSecond_btn, ui->MainScreen_spinboxIntermittentDurationSecond, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationSecond_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationSecond_btn, lv_MainScreen_spinboxIntermittentDurationSecond_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentDuration);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus, MainScreen_spinboxIntermittentDurationSecond_h, MainScreen_spinboxIntermittentDurationSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus, ui->MainScreen_spinboxIntermittentDurationSecond, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus, lv_MainScreen_spinboxIntermittentDurationSecond_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentDurationSecond, 110, 5);
+
+	//Write style for MainScreen_spinboxIntermittentDurationSecond, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationSecond, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationSecond, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentDurationSecond, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentDurationSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentDurationSecond, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentDurationSecond, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentDurationSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentDurationSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentDurationSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentDurationSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationSecond, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationSecond, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentDurationSecond, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentDurationSecond, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentDurationSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentDurationSecond, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentDurationSecond, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentDurationSecond, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentDurationSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentDurationSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentDurationSecond, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentDurationSecond, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentBackgroundRate
+	ui->MainScreen_spinboxIntermittentBackgroundRate = lv_spinbox_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentBackgroundRate, 320, 152);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentBackgroundRate, 40);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentBackgroundRate, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentBackgroundRate, 2, 1);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentBackgroundRate_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentBackgroundRate);
+	ui->MainScreen_spinboxIntermittentBackgroundRate_btn = lv_btn_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentBackgroundRate_btn, MainScreen_spinboxIntermittentBackgroundRate_h, MainScreen_spinboxIntermittentBackgroundRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentBackgroundRate_btn, ui->MainScreen_spinboxIntermittentBackgroundRate, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentBackgroundRate_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentBackgroundRate_btn, lv_MainScreen_spinboxIntermittentBackgroundRate_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus, MainScreen_spinboxIntermittentBackgroundRate_h, MainScreen_spinboxIntermittentBackgroundRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus, ui->MainScreen_spinboxIntermittentBackgroundRate, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus, lv_MainScreen_spinboxIntermittentBackgroundRate_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentBackgroundRate, 320, 152);
+
+	//Write style for MainScreen_spinboxIntermittentBackgroundRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentBackgroundRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentBackgroundRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentBackgroundRate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentBackgroundRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentBackgroundRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentBackgroundRate, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentBackgroundRate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentBackgroundRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentBackgroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentBackgroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentBackgroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentBackgroundRate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentBackgroundRate, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentBackgroundRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentBackgroundRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentBackgroundRate, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentBackgroundRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentBackgroundRate, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentBackgroundRate, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentBackgroundRate, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentBackgroundRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentBackgroundRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentBackgroundRate, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentBackgroundRate, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contIntermittentSleep
+	ui->MainScreen_contIntermittentSleep = lv_obj_create(ui->MainScreen_contIntermittentValues);
+	lv_obj_set_pos(ui->MainScreen_contIntermittentSleep, 281, 205.5);
+	lv_obj_set_size(ui->MainScreen_contIntermittentSleep, 150, 36);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contIntermittentSleep, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contIntermittentSleep, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contIntermittentSleep, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contIntermittentSleep, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contIntermittentSleep, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contIntermittentSleep, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_60
+	ui->MainScreen_label_60 = lv_label_create(ui->MainScreen_contIntermittentSleep);
+	lv_label_set_text(ui->MainScreen_label_60, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_60, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_60, 50, 4);
+	lv_obj_set_size(ui->MainScreen_label_60, 7, 25);
+
+	//Write style for MainScreen_label_60, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_60, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_60, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_60, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_60, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_60, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_60, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_59
+	ui->MainScreen_label_59 = lv_label_create(ui->MainScreen_contIntermittentSleep);
+	lv_label_set_text(ui->MainScreen_label_59, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_59, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_59, 100, 6);
+	lv_obj_set_size(ui->MainScreen_label_59, 7, 25);
+
+	//Write style for MainScreen_label_59, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_59, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_59, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_59, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_59, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_59, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_59, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentSleepHour
+	ui->MainScreen_spinboxIntermittentSleepHour = lv_spinbox_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepHour, 10, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentSleepHour, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentSleepHour, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentSleepHour, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentSleepHour_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentSleepHour);
+	ui->MainScreen_spinboxIntermittentSleepHour_btn = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepHour_btn, MainScreen_spinboxIntermittentSleepHour_h, MainScreen_spinboxIntermittentSleepHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepHour_btn, ui->MainScreen_spinboxIntermittentSleepHour, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepHour_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepHour_btn, lv_MainScreen_spinboxIntermittentSleepHour_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentSleepHour_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus, MainScreen_spinboxIntermittentSleepHour_h, MainScreen_spinboxIntermittentSleepHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus, ui->MainScreen_spinboxIntermittentSleepHour, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus, lv_MainScreen_spinboxIntermittentSleepHour_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepHour, 10, 5);
+
+	//Write style for MainScreen_spinboxIntermittentSleepHour, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepHour, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepHour, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentSleepHour, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentSleepHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentSleepHour, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentSleepHour, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentSleepHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentSleepHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentSleepHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentSleepHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepHour, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepHour, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentSleepHour, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentSleepHour, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentSleepHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentSleepHour, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepHour, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepHour, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepHour, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepHour, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentSleepMinute
+	ui->MainScreen_spinboxIntermittentSleepMinute = lv_spinbox_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepMinute, 60, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentSleepMinute, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentSleepMinute, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentSleepMinute, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentSleepMinute_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentSleepMinute);
+	ui->MainScreen_spinboxIntermittentSleepMinute_btn = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepMinute_btn, MainScreen_spinboxIntermittentSleepMinute_h, MainScreen_spinboxIntermittentSleepMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepMinute_btn, ui->MainScreen_spinboxIntermittentSleepMinute, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepMinute_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepMinute_btn, lv_MainScreen_spinboxIntermittentSleepMinute_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus, MainScreen_spinboxIntermittentSleepMinute_h, MainScreen_spinboxIntermittentSleepMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus, ui->MainScreen_spinboxIntermittentSleepMinute, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus, lv_MainScreen_spinboxIntermittentSleepMinute_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepMinute, 60, 5);
+
+	//Write style for MainScreen_spinboxIntermittentSleepMinute, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepMinute, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepMinute, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentSleepMinute, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentSleepMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentSleepMinute, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentSleepMinute, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentSleepMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentSleepMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentSleepMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentSleepMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepMinute, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepMinute, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentSleepMinute, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentSleepMinute, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentSleepMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentSleepMinute, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepMinute, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepMinute, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepMinute, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepMinute, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxIntermittentSleepSecond
+	ui->MainScreen_spinboxIntermittentSleepSecond = lv_spinbox_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepSecond, 110, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxIntermittentSleepSecond, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxIntermittentSleepSecond, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxIntermittentSleepSecond, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond, -99, 99);
+	lv_coord_t MainScreen_spinboxIntermittentSleepSecond_h = lv_obj_get_height(ui->MainScreen_spinboxIntermittentSleepSecond);
+	ui->MainScreen_spinboxIntermittentSleepSecond_btn = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepSecond_btn, MainScreen_spinboxIntermittentSleepSecond_h, MainScreen_spinboxIntermittentSleepSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepSecond_btn, ui->MainScreen_spinboxIntermittentSleepSecond, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepSecond_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepSecond_btn, lv_MainScreen_spinboxIntermittentSleepSecond_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus = lv_btn_create(ui->MainScreen_contIntermittentSleep);
+	lv_obj_set_size(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus, MainScreen_spinboxIntermittentSleepSecond_h, MainScreen_spinboxIntermittentSleepSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus, ui->MainScreen_spinboxIntermittentSleepSecond, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus, lv_MainScreen_spinboxIntermittentSleepSecond_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxIntermittentSleepSecond, 110, 5);
+
+	//Write style for MainScreen_spinboxIntermittentSleepSecond, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepSecond, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepSecond, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxIntermittentSleepSecond, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxIntermittentSleepSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxIntermittentSleepSecond, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxIntermittentSleepSecond, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxIntermittentSleepSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxIntermittentSleepSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxIntermittentSleepSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxIntermittentSleepSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepSecond, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepSecond, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxIntermittentSleepSecond, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxIntermittentSleepSecond, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxIntermittentSleepSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxIntermittentSleepSecond, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxIntermittentSleepSecond, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxIntermittentSleepSecond, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxIntermittentSleepSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxIntermittentSleepSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxIntermittentSleepSecond, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxIntermittentSleepSecond, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGOMenuIntermittent
+	ui->MainScreen_btnGOMenuIntermittent = lv_btn_create(ui->MainScreen_contIntermittent);
+	ui->MainScreen_btnGOMenuIntermittent_label = lv_label_create(ui->MainScreen_btnGOMenuIntermittent);
+	lv_label_set_text(ui->MainScreen_btnGOMenuIntermittent_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGOMenuIntermittent_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGOMenuIntermittent_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGOMenuIntermittent, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGOMenuIntermittent_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGOMenuIntermittent, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGOMenuIntermittent, 58, 44);
+
+	//Write style for MainScreen_btnGOMenuIntermittent, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGOMenuIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGOMenuIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGOMenuIntermittent, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGOMenuIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGOMenuIntermittent, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGOMenuIntermittent, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGOMenuIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGOMenuIntermittent, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummyIntermittent
+	ui->MainScreen_btnDummyIntermittent = lv_btn_create(ui->MainScreen_contIntermittent);
+	ui->MainScreen_btnDummyIntermittent_label = lv_label_create(ui->MainScreen_btnDummyIntermittent);
+	lv_label_set_text(ui->MainScreen_btnDummyIntermittent_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummyIntermittent_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummyIntermittent_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyIntermittent, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummyIntermittent_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummyIntermittent, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummyIntermittent, 8, 10);
+
+	//Write style for MainScreen_btnDummyIntermittent, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummyIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummyIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummyIntermittent, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummyIntermittent, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummyIntermittent, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummyIntermittent, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummyIntermittent, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
 	lv_textarea_set_text(ui->MainScreen_ta_keybard, "hckdsjclsd");
@@ -4681,7 +5386,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	#if LV_USE_KEYBOARD != 0 || LV_USE_ZH_KEYBOARD != 0
 		lv_obj_add_event_cb(ui->MainScreen_ta_keybard, ta_event_cb, LV_EVENT_ALL, ui->g_kb_MainScreen);
 	#endif
-	lv_obj_set_pos(ui->MainScreen_ta_keybard, 319, 77);
+	lv_obj_set_pos(ui->MainScreen_ta_keybard, 294, -43);
 	lv_obj_set_size(ui->MainScreen_ta_keybard, 400, 40);
 	lv_obj_add_flag(ui->MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
 
@@ -4711,7 +5416,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_radius(ui->MainScreen_ta_keybard, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
 	//The custom code of MainScreen.
-	//level style
+		//level style
 	lv_obj_set_size(ui->g_kb_MainScreen,800,200);
 	lv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);
 	lv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -4751,11 +5456,11 @@ lv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN
 lv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);
-lv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,50);
-lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,50);
-lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,200);
-lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,60);
-lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-10,10);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);
+lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);
 
 
 lv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);
@@ -4776,12 +5481,12 @@ lv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
-lv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10);
-lv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10);
-lv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20);
-lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,1800);
-lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,1800);
-lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,1800);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);
+lv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);
+lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);
 
 
 
@@ -4804,13 +5509,12 @@ lv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_
 lv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
-lv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,900);
-lv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,99);
+lv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);
+lv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);
-lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,1800);
-lv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);
+lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);
 
 
 lv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);
@@ -4822,6 +5526,40 @@ lv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|
 
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);
+lv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);
+lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);
 
 MainScreen_digital_clock_timer(NULL);
 MainScreenSetStyle(ui);

@@ -19,8 +19,8 @@ void custom_init(lv_ui *ui);
 void LoadDefaults();
 void MainScreenSetStyle(lv_ui *ui);
 
-void setcontSettingGroup(lv_ui *ui);
 void setcontMainGroup(lv_ui *ui);
+void setcontMenuGroup(lv_ui *ui);
 void setlistSyringeCompanyGroup(lv_ui *ui);
 void setlistSyringeTypeGroup(lv_ui *ui);
 void setcontSyringeValuesGroup(lv_ui *ui);
@@ -31,8 +31,9 @@ void setlistModeUnitGroup(lv_ui *ui);
 void setcontModeValuesGroup(lv_ui *ui);
 void setbarOcclusionOccGroup(lv_ui *ui);
 void setKVOModeGroup(lv_ui *ui);
+void setIntermittentGroup(lv_ui *ui);
 
-
+void updateMain(lv_ui *ui);
 void updateSyringeCompanyList(lv_ui *ui);
 void updateSyringeTypeList(lv_ui *ui,uint8_t companyindex);
 void updateSyringeValues(lv_ui *ui,uint8_t Manufactureindex,uint8_t Typeindex);
@@ -43,6 +44,7 @@ void updateModeUnitList(lv_ui *ui,uint8_t modeindex);
 void updateModeValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex);
 void updateOcclusionValues(lv_ui *ui);
 void updateKVOModeValues(lv_ui *ui);
+void updateIntermittentValues(lv_ui *ui);
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontMenu_ready_callback(lv_anim_t * a);
@@ -51,6 +53,8 @@ void animcontDrug_ready_callback(lv_anim_t * a);
 void animcontMode_ready_callback(lv_anim_t * a);
 void animcontOcclusion_ready_callback(lv_anim_t *a);
 void animcontKVO_ready_callback(lv_anim_t *a);
+void animcontIntermittent_ready_callback(lv_anim_t *a);
+
 
 
 int randi(int lower_bound,int upper_bound);

@@ -1,5 +1,6 @@
-build/object/generated/custom.o: \
- e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\custom.c \
+build/object/generated/MachineState.o: \
+ e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\machinestate.c \
+ e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\MachineState.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\lvgl.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/misc/lv_log.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lv_conf_internal.h \
@@ -246,12 +247,11 @@ build/object/generated/custom.o: \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\draw\lv_draw.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/extra/widgets/video/lv_video.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h \
- e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\custom.h \
- e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\generated\gui_guider.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\Syring.h \
  e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\Drug.h \
- e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\InfusionMode.h \
- e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\MachineState.h
+ e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\InfusionMode.h
+
+e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\MachineState.h:
 
 e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\lvgl.h:
 
@@ -745,14 +745,8 @@ e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringe
 
 e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h:
 
-e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\custom.h:
-
-e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\generated\gui_guider.h:
-
 e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\Syring.h:
 
 e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\Drug.h:
 
 e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\InfusionMode.h:
-
-e:\designs\javad_works\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\MachineState.h:
