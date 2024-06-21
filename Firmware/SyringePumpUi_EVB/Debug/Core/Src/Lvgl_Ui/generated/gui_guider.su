@@ -20,4 +20,4 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/core
 ../Core/Src/Lvgl_Ui/generated/gui_guider.c:97:6:ui_img_zoom_animation	96	static
 ../Core/Src/Lvgl_Ui/generated/gui_guider.c:119:6:ui_img_rotate_animation	96	static
 ../Core/Src/Lvgl_Ui/generated/gui_guider.c:142:6:init_scr_del_flag	16	static
-../Core/Src/Lvgl_Ui/generated/gui_guider.c:148:6:setup_ui	16	static
+../Core/Src/Lvgl_Ui/generated/gui_guider.c:149:6:setup_ui	16	static

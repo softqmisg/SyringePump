@@ -289,7 +289,7 @@ Core/Src/Lvgl_Porting/lvgl_port_lcd.o: \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/lv_video.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h \
  ../Core/Inc/lvgl_port_lcd.h ../Core/Inc/dma2d.h ../Core/Inc/main.h \
- ../Core/Inc/Mehdi_Image.h ../Core/Inc/ltdc.h
+ ../Core/Inc/ltdc.h
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../Core/Inc/stm32h7xx_hal_conf.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
@@ -581,5 +581,4 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extr
 ../Core/Inc/lvgl_port_lcd.h:
 ../Core/Inc/dma2d.h:
 ../Core/Inc/main.h:
-../Core/Inc/Mehdi_Image.h:
 ../Core/Inc/ltdc.h:

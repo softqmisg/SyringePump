@@ -145,7 +145,9 @@ RM := rm -rf
 -include LVGL/lvgl/demos/benchmark/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
+-include Core/Src/Lvgl_Ui/generated/images/xxx/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/images/subdir.mk
+-include Core/Src/Lvgl_Ui/generated/guider_fonts/xx/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/guider_fonts/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/subdir.mk
 -include Core/Src/Lvgl_Ui/custom/subdir.mk

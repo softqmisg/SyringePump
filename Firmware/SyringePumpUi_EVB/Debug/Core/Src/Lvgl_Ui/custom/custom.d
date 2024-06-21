@@ -1,4 +1,5 @@
 Core/Src/Lvgl_Ui/custom/custom.o: ../Core/Src/Lvgl_Ui/custom/custom.c \
+ ../Core/Inc/Drug.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/lvgl.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/misc/lv_log.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/misc/../lv_conf_internal.h \
@@ -246,8 +247,10 @@ Core/Src/Lvgl_Ui/custom/custom.o: ../Core/Src/Lvgl_Ui/custom/custom.c \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/dclock/../../../draw/lv_draw.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/lv_video.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h \
- ../Core/Src/Lvgl_Ui/custom/custom.h \
+ ../Core/Inc/InfusionMode.h ../Core/Inc/MachineState.h \
+ ../Core/Inc/Syring.h ../Core/Src/Lvgl_Ui/custom/custom.h \
  E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/generated/gui_guider.h
+../Core/Inc/Drug.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/lvgl.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/misc/lv_log.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/misc/../lv_conf_internal.h:
@@ -495,5 +498,8 @@ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extr
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/dclock/../../../draw/lv_draw.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/lv_video.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/extra/widgets/video/../../../lvgl.h:
+../Core/Inc/InfusionMode.h:
+../Core/Inc/MachineState.h:
+../Core/Inc/Syring.h:
 ../Core/Src/Lvgl_Ui/custom/custom.h:
 E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/generated/gui_guider.h:

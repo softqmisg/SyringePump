@@ -40,7 +40,7 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c ../Core/Inc/quadspi.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- ../Core/Inc/Mehdi_Image.h ../Core/Inc/W25Q256FV_QSPI.h
+ ../Core/Inc/W25Q256FV_QSPI.h
 ../Core/Inc/quadspi.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
@@ -84,5 +84,4 @@ Core/Src/quadspi.o: ../Core/Src/quadspi.c ../Core/Inc/quadspi.h \
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-../Core/Inc/Mehdi_Image.h:
 ../Core/Inc/W25Q256FV_QSPI.h:

@@ -11,19 +11,21 @@
 #include "gui_guider.h"
 #include "widgets_init.h"
 #include <stdlib.h>
-
+char cur_textofarea[25];
 
 __attribute__((unused)) void kb_event_cb (lv_event_t *e) {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t *kb = lv_event_get_target(e);
+	lv_obj_t *ta=lv_keyboard_get_textarea(kb);
+
 	if(code==LV_EVENT_VALUE_CHANGED)
 	{
-		lv_obj_t *ta=lv_keyboard_get_textarea(kb);
 		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
 
 	}
-    if(code == LV_EVENT_READY || code == LV_EVENT_CANCEL){
-        //lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
+    if( code == LV_EVENT_CANCEL)
+	{
+		lv_textarea_set_text(ta,cur_textofarea);
     }
 }
 
@@ -36,7 +38,6 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
     lv_obj_t *kb = lv_event_get_user_data(e);
 	if( code == LV_EVENT_VALUE_CHANGED)
 	{
-		// lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
 	}
     if ( code == LV_EVENT_CLICKED)
     {
@@ -46,8 +47,8 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
 #if LV_USE_KEYBOARD != 0
         lv_keyboard_set_textarea(kb, ta);
 #endif
-		lv_obj_align_to(guider_ui.MainScreen_ta_keybard,kb,LV_ALIGN_OUT_TOP_MID,0,0);
-		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,lv_textarea_get_text(ta));
+		lv_snprintf(cur_textofarea,20,"%s",lv_textarea_get_text(ta));
+		lv_textarea_set_text(guider_ui.MainScreen_ta_keybard,cur_textofarea);
         lv_obj_move_foreground(guider_ui.MainScreen_ta_keybard);
         lv_obj_clear_flag(guider_ui.MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
 
@@ -55,8 +56,8 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_clear_flag(kb, LV_OBJ_FLAG_HIDDEN);
         lv_group_focus_obj(kb);
         lv_group_set_editing(lv_obj_get_group(kb), true);
-
     }
+
     if (code == LV_EVENT_CANCEL || code == LV_EVENT_READY)
     {
 
@@ -71,11 +72,14 @@ __attribute__((unused)) void ta_event_cb (lv_event_t *e) {
         lv_obj_add_flag(guider_ui.MainScreen_ta_keybard, LV_OBJ_FLAG_HIDDEN);
         lv_obj_move_background(kb);
         lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
-        lv_group_focus_obj(ta);
+       if(code == LV_EVENT_READY)
+	   {
+			lv_obj_clear_state(ta,LV_STATE_EDITED);
+	   }
+		lv_group_focus_obj(ta);
 
     }
 }
-
 #if LV_USE_ANALOGCLOCK != 0
 void clock_count(int *hour, int *min, int *sec)
 {
@@ -253,5 +257,299 @@ void lv_MainScreen_spinboxSyringeDiaTolerance_decrement_event_cb(lv_event_t * ev
 	lv_event_code_t code = lv_event_get_code(event);
 	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSyringeDiaTolerance);
+	}
+}
+void lv_MainScreen_spinboxDrugmgml_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugmgml);
+	}
+}
+void lv_MainScreen_spinboxDrugmgml_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugmgml);
+	}
+}
+void lv_MainScreen_spinboxDruguml_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDruguml);
+	}
+}
+void lv_MainScreen_spinboxDruguml_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDruguml);
+	}
+}
+void lv_MainScreen_spinboxDrugperkg_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugperkg);
+	}
+}
+void lv_MainScreen_spinboxDrugperkg_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugperkg);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMin_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateMin);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMin_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateMin);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMax_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateMax);
+	}
+}
+void lv_MainScreen_spinboxDrugRateMax_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateMax);
+	}
+}
+void lv_MainScreen_spinboxDrugRateDef_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxDrugRateDef);
+	}
+}
+void lv_MainScreen_spinboxDrugRateDef_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxDrugRateDef);
+	}
+}
+void lv_MainScreen_spinboxModeBodyWeight_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeBodyWeight);
+	}
+}
+void lv_MainScreen_spinboxModeBodyWeight_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeBodyWeight);
+	}
+}
+void lv_MainScreen_spinboxModeInfusionRate_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeInfusionRate);
+	}
+}
+void lv_MainScreen_spinboxModeInfusionRate_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeInfusionRate);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeHour_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeTotalTimeHour);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeHour_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalTimeHour);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeMinute_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeTotalTimeMinute);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeMinute_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalTimeMinute);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeSecond_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeTotalTimeSecond);
+	}
+}
+void lv_MainScreen_spinboxModeTotalTimeSecond_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalTimeSecond);
+	}
+}
+void lv_MainScreen_spinboxModeTotalVolume_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxModeTotalVolume);
+	}
+}
+void lv_MainScreen_spinboxModeTotalVolume_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxModeTotalVolume);
+	}
+}
+void lv_MainScreen_spinboxKVORate_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxKVORate);
+	}
+}
+void lv_MainScreen_spinboxKVORate_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxKVORate);
+	}
+}
+void lv_MainScreen_spinboxIntermittentInfusionRate_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentInfusionRate);
+	}
+}
+void lv_MainScreen_spinboxIntermittentInfusionRate_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentInfusionRate);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationHour_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentDurationHour);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationHour_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentDurationHour);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationMinute_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentDurationMinute);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationMinute_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentDurationMinute);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationSecond_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentDurationSecond);
+	}
+}
+void lv_MainScreen_spinboxIntermittentDurationSecond_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentDurationSecond);
+	}
+}
+void lv_MainScreen_spinboxIntermittentBackgroundRate_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentBackgroundRate);
+	}
+}
+void lv_MainScreen_spinboxIntermittentBackgroundRate_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentBackgroundRate);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepHour_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentSleepHour);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepHour_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentSleepHour);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepMinute_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentSleepMinute);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepMinute_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentSleepMinute);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepSecond_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxIntermittentSleepSecond);
+	}
+}
+void lv_MainScreen_spinboxIntermittentSleepSecond_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxIntermittentSleepSecond);
 	}
 }

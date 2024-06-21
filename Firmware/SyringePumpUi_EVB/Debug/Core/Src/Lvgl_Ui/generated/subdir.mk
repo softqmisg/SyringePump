@@ -7,18 +7,21 @@
 C_SRCS += \
 ../Core/Src/Lvgl_Ui/generated/events_init.c \
 ../Core/Src/Lvgl_Ui/generated/gui_guider.c \
+../Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.c \
 ../Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.c \
 ../Core/Src/Lvgl_Ui/generated/widgets_init.c 
 
 OBJS += \
 ./Core/Src/Lvgl_Ui/generated/events_init.o \
 ./Core/Src/Lvgl_Ui/generated/gui_guider.o \
+./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.o \
 ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.o \
 ./Core/Src/Lvgl_Ui/generated/widgets_init.o 
 
 C_DEPS += \
 ./Core/Src/Lvgl_Ui/generated/events_init.d \
 ./Core/Src/Lvgl_Ui/generated/gui_guider.d \
+./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.d \
 ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.d \
 ./Core/Src/Lvgl_Ui/generated/widgets_init.d 
 
@@ -30,7 +33,7 @@ Core/Src/Lvgl_Ui/generated/%.o Core/Src/Lvgl_Ui/generated/%.su Core/Src/Lvgl_Ui/
 clean: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated
 
 clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated:
-	-$(RM) ./Core/Src/Lvgl_Ui/generated/events_init.cyclo ./Core/Src/Lvgl_Ui/generated/events_init.d ./Core/Src/Lvgl_Ui/generated/events_init.o ./Core/Src/Lvgl_Ui/generated/events_init.su ./Core/Src/Lvgl_Ui/generated/gui_guider.cyclo ./Core/Src/Lvgl_Ui/generated/gui_guider.d ./Core/Src/Lvgl_Ui/generated/gui_guider.o ./Core/Src/Lvgl_Ui/generated/gui_guider.su ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.cyclo ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.d ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.o ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.su ./Core/Src/Lvgl_Ui/generated/widgets_init.cyclo ./Core/Src/Lvgl_Ui/generated/widgets_init.d ./Core/Src/Lvgl_Ui/generated/widgets_init.o ./Core/Src/Lvgl_Ui/generated/widgets_init.su
+	-$(RM) ./Core/Src/Lvgl_Ui/generated/events_init.cyclo ./Core/Src/Lvgl_Ui/generated/events_init.d ./Core/Src/Lvgl_Ui/generated/events_init.o ./Core/Src/Lvgl_Ui/generated/events_init.su ./Core/Src/Lvgl_Ui/generated/gui_guider.cyclo ./Core/Src/Lvgl_Ui/generated/gui_guider.d ./Core/Src/Lvgl_Ui/generated/gui_guider.o ./Core/Src/Lvgl_Ui/generated/gui_guider.su ./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.cyclo ./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.d ./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.o ./Core/Src/Lvgl_Ui/generated/setup_scr_LogoScreen.su ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.cyclo ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.d ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.o ./Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.su ./Core/Src/Lvgl_Ui/generated/widgets_init.cyclo ./Core/Src/Lvgl_Ui/generated/widgets_init.d ./Core/Src/Lvgl_Ui/generated/widgets_init.o ./Core/Src/Lvgl_Ui/generated/widgets_init.su
 
 .PHONY: clean-Core-2f-Src-2f-Lvgl_Ui-2f-generated
 
