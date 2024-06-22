@@ -4,8 +4,8 @@ LVGL/lvgl/src/extra/others/gridnav/lv_gridnav.o: \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/lv_obj.h \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../lv_conf_internal.h \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../lv_conf_kconfig.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/lv_style.h \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/../font/lv_font.h \
  ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/../font/../lv_conf_internal.h \
@@ -88,8 +88,8 @@ LVGL/lvgl/src/extra/others/gridnav/lv_gridnav.o: \
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/lv_obj.h:
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../lv_conf_internal.h:
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../lv_conf_kconfig.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/lv_style.h:
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/../font/lv_font.h:
 ../LVGL/lvgl/src/extra/others/gridnav/../../../core/../misc/../font/../lv_conf_internal.h:

@@ -82,13 +82,15 @@ static void MainScreen_btnMenuSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
-		ui_move_animation(guider_ui.MainScreen_contSyringe, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
 		lv_obj_add_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
 		updateSyringeCompanyList(&guider_ui);
+
+		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		ui_move_animation(guider_ui.MainScreen_contSyringe, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
+
 		break;
 	}
 	default:
@@ -102,9 +104,13 @@ static void MainScreen_btnMenuDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
-		ui_move_animation(guider_ui.MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
-		updateDrugList(&guider_ui);
+		lv_ui *ui=(lv_ui *) lv_event_get_user_data(e);
+		updateDrugList(ui);
+		lv_obj_clear_flag(ui->MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
+
+		ui_move_animation(ui->MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
+		ui_move_animation(ui->MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
+
 		break;
 	}
 	default:
@@ -493,7 +499,7 @@ static void MainScreen_listDrugBrand_event_handler (lv_event_t *e)
 		  lv_ui *ui = (lv_ui *)lv_event_get_user_data(e);
 	  lv_obj_t *obj = lv_event_get_target(e);
 	
-	      if (cur_Drug == 0)
+	  if (cur_Drug == 0)
 	  {
 	      setcontDrugValuesGroup(ui);
 	      lv_obj_add_state(obj, LV_STATE_FOCUS_KEY);

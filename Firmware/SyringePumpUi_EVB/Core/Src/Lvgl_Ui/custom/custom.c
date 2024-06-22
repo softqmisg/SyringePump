@@ -66,7 +66,8 @@ char unitMode_linear[][17] = {
  */
 int randi(int lower_bound, int upper_bound)
 {
-  return rand() % (upper_bound - lower_bound + 1) + lower_bound;
+//  return rand() % (upper_bound - lower_bound + 1) + lower_bound;
+	return lv_rand(lower_bound, upper_bound);
 }
 void LoadDefaults(void)
 {
@@ -915,7 +916,7 @@ void animcontSyringe_ready_callback(lv_anim_t *a)
 }
 void animcontDrug_ready_callback(lv_anim_t *a)
 {
-  setlistDrugBrandGroup(&guider_ui);
+	setlistDrugBrandGroup(&guider_ui);
 }
 void animcontMode_ready_callback(lv_anim_t *a)
 {

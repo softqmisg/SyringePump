@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -145,9 +145,7 @@ RM := rm -rf
 -include LVGL/lvgl/demos/benchmark/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
--include Core/Src/Lvgl_Ui/generated/images/xxx/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/images/subdir.mk
--include Core/Src/Lvgl_Ui/generated/guider_fonts/xx/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/guider_fonts/subdir.mk
 -include Core/Src/Lvgl_Ui/generated/subdir.mk
 -include Core/Src/Lvgl_Ui/custom/subdir.mk
@@ -202,8 +200,8 @@ all: main-build
 main-build: SyringePumpUi_EVB.elf secondary-outputs
 
 # Tool invocations
-SyringePumpUi_EVB.elf SyringePumpUi_EVB.map: $(OBJS) $(USER_OBJS) E:\Designs\Javad_works\SyringePump\Firmware\SyringePumpUi_EVB\STM32H743IITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SyringePumpUi_EVB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\Designs\Javad_works\SyringePump\Firmware\SyringePumpUi_EVB\STM32H743IITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SyringePumpUi_EVB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SyringePumpUi_EVB.elf SyringePumpUi_EVB.map: $(OBJS) $(USER_OBJS) E:\Workspace\SyringePump\Firmware\SyringePumpUi_EVB\STM32H743IITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SyringePumpUi_EVB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"E:\Workspace\SyringePump\Firmware\SyringePumpUi_EVB\STM32H743IITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SyringePumpUi_EVB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

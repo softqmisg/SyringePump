@@ -916,6 +916,7 @@ void animcontSyringe_ready_callback(lv_anim_t *a)
 void animcontDrug_ready_callback(lv_anim_t *a)
 {
   setlistDrugBrandGroup(&guider_ui);
+	updateDrugList(&guider_ui);  
 }
 void animcontMode_ready_callback(lv_anim_t *a)
 {

@@ -4,8 +4,8 @@ LVGL/lvgl/src/draw/renesas/lv_gpu_d2_ra6m3.o: \
  ../LVGL/lvgl/src/draw/renesas/../../misc/lv_color.h \
  ../LVGL/lvgl/src/draw/renesas/../../misc/../lv_conf_internal.h \
  ../LVGL/lvgl/src/draw/renesas/../../misc/../lv_conf_kconfig.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
  ../LVGL/lvgl/src/draw/renesas/../../misc/lv_assert.h \
  ../LVGL/lvgl/src/draw/renesas/../../misc/lv_log.h \
  ../LVGL/lvgl/src/draw/renesas/../../misc/lv_types.h \
@@ -93,8 +93,8 @@ LVGL/lvgl/src/draw/renesas/lv_gpu_d2_ra6m3.o: \
 ../LVGL/lvgl/src/draw/renesas/../../misc/lv_color.h:
 ../LVGL/lvgl/src/draw/renesas/../../misc/../lv_conf_internal.h:
 ../LVGL/lvgl/src/draw/renesas/../../misc/../lv_conf_kconfig.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
 ../LVGL/lvgl/src/draw/renesas/../../misc/lv_assert.h:
 ../LVGL/lvgl/src/draw/renesas/../../misc/lv_log.h:
 ../LVGL/lvgl/src/draw/renesas/../../misc/lv_types.h:

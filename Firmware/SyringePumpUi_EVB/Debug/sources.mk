@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 ELF_SRCS := 
@@ -27,9 +27,7 @@ Core/Src/Lvgl_Porting \
 Core/Src/Lvgl_Ui/custom \
 Core/Src/Lvgl_Ui/generated \
 Core/Src/Lvgl_Ui/generated/guider_fonts \
-Core/Src/Lvgl_Ui/generated/guider_fonts/xx \
 Core/Src/Lvgl_Ui/generated/images \
-Core/Src/Lvgl_Ui/generated/images/xxx \
 Core/Src/Lvgl_Ui \
 Core/Startup \
 Drivers/STM32H7xx_HAL_Driver/Src \

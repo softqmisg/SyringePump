@@ -102,6 +102,8 @@ static void MainScreen_btnMenuDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
+		lv_ui *ui=(lv_ui *) lv_event_get_user_data(e);
+		lv_obj_clear_flag(ui->MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
 		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
 		updateDrugList(&guider_ui);
@@ -452,7 +454,7 @@ static void MainScreen_btnGoMenuDrug_event_handler (lv_event_t *e)
 				{
 					lv_group_t *g=lv_group_get_default();
 					uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
-				  printf("@1id=%d\n",id);
+				  printf("@Drug id=%d\n",id);
 				  if(id<10) 
 				  {
 				    lv_obj_clear_flag(ui->MainScreen_contDrugValues, LV_OBJ_FLAG_CLICKABLE);
@@ -461,6 +463,7 @@ static void MainScreen_btnGoMenuDrug_event_handler (lv_event_t *e)
 				  }
 				  else
 				  {
+					printf("in else\n\r");
 					lv_obj_t *obj=lv_group_get_focused(g);
 					lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
 	                lv_group_set_editing(g,false);
@@ -473,6 +476,7 @@ static void MainScreen_btnGoMenuDrug_event_handler (lv_event_t *e)
 				}
 				else
 				{
+				   printf("in not clickable\n\r");
 				  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 				  ui_move_animation(ui->MainScreen_contDrug,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 	              lv_obj_add_state(ui->MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);		  
