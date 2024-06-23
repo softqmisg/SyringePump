@@ -9,7 +9,7 @@
  * @brief variable define
  */
 
-#define HIGHBYTE    0//224
+#define HIGHBYTE    224 //0
 static lv_indev_t *myencoder;
 static lv_indev_t *mybuttons;
 static bool mybtn_is_pressed(uint8_t id)

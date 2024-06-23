@@ -1163,7 +1163,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btnMenuKVO_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btnMenuKVO, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btnMenuKVO_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btnMenuKVO, 545, 5);
+	lv_obj_set_pos(ui->MainScreen_btnMenuKVO, 540, 5);
 	lv_obj_set_size(ui->MainScreen_btnMenuKVO, 100, 100);
 
 	//Write style for MainScreen_btnMenuKVO, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -1199,7 +1199,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btnMenuIntInf_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btnMenuIntInf, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btnMenuIntInf_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btnMenuIntInf, 675, 5);
+	lv_obj_set_pos(ui->MainScreen_btnMenuIntInf, 673, 5);
 	lv_obj_set_size(ui->MainScreen_btnMenuIntInf, 100, 100);
 
 	//Write style for MainScreen_btnMenuIntInf, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

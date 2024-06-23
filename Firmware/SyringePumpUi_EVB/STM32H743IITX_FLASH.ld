@@ -175,14 +175,14 @@ SECTIONS
   .ARM.attributes 0 : { *(.ARM.attributes) }
   /*(NOLOAD):*/
   
-  .ImageFlashSection (NOLOAD): 
+  .ImageFlashSection /*(NOLOAD)*/: 
   {
   	*(.ImageFlashSection ImageFlashSection.*)
   	*(.gnu.linkonce.r.*)
   	. = ALIGN(0x4);
   } >QUADSPI
   
-  .FontFlashSection (NOLOAD):
+  .FontFlashSection /*(NOLOAD)*/:
   {
   	*(.FontFlashSection FontFlashSection.*)
   	*(.gnu.linkonce.r.*)

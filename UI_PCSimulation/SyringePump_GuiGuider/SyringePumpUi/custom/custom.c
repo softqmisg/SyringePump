@@ -10,13 +10,13 @@
 /*********************
  *      INCLUDES
  *********************/
+#include <Drug.h>
+#include <InfusionMode.h>
+#include <MachineState.h>
 #include <stdio.h>
+#include <Syring.h>
 #include "lvgl.h"
 #include "custom.h"
-#include "Syring.h"
-#include "Drug.h"
-#include "InfusionMode.h"
-#include "MachineState.h"
 /*********************
  *      DEFINES
  *********************/
@@ -66,7 +66,8 @@ char unitMode_linear[][17] = {
  */
 int randi(int lower_bound, int upper_bound)
 {
-  return rand() % (upper_bound - lower_bound + 1) + lower_bound;
+//  return rand() % (upper_bound - lower_bound + 1) + lower_bound;
+	return lv_rand(lower_bound, upper_bound);
 }
 void LoadDefaults(void)
 {
@@ -643,8 +644,8 @@ void updateMain(lv_ui *ui)
     break;
   }
   #endif
-
   lv_bar_set_value(ui->MainScreen_barOcclusionLevel, currentMachineState.OcclusionLevel, LV_ANIM_OFF);
+  lv_label_set_text_fmt(ui->MainScreen_labelPatientKg,"%d kg",currentMachineState.Mode.BodyWeight);
 }
 void updateSyringeCompanyList(lv_ui *ui)
 {
@@ -912,25 +913,34 @@ void animcontMenu_ready_callback(lv_anim_t *a)
 void animcontSyringe_ready_callback(lv_anim_t *a)
 {
   setlistSyringeCompanyGroup(&guider_ui);
+  updateSyringeCompanyList(&guider_ui);
 }
 void animcontDrug_ready_callback(lv_anim_t *a)
 {
-  setlistDrugBrandGroup(&guider_ui);
+	setlistDrugBrandGroup(&guider_ui);
+	updateDrugList(&guider_ui);
 }
 void animcontMode_ready_callback(lv_anim_t *a)
 {
   setlistModeModeGroup(&guider_ui);
+  updateModeModeList(&guider_ui);
+
 }
 void animcontOcclusion_ready_callback(lv_anim_t *a)
 {
   setbarOcclusionOccGroup(&guider_ui);
+  updateOcclusionValues(&guider_ui);
+
 }
 void animcontKVO_ready_callback(lv_anim_t *a)
 {
   setKVOModeGroup(&guider_ui);
+  updateKVOModeValues(&guider_ui);
+
 }
 void animcontIntermittent_ready_callback(lv_anim_t *a)
 {
   setIntermittentGroup(&guider_ui);
+  updateIntermittentValues(&guider_ui);
 }
 /************************************/

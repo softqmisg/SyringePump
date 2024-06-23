@@ -35,11 +35,11 @@ void setup_scr_LogoScreen(lv_ui *ui)
 	//Write codes LogoScreen_img_1
 	ui->LogoScreen_img_1 = lv_img_create(ui->LogoScreen);
 	lv_obj_add_flag(ui->LogoScreen_img_1, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->LogoScreen_img_1, &_lirana_logo_alpha_454x340);
+	lv_img_set_src(ui->LogoScreen_img_1, &_farafan_logo_alpha_600x194);
 	lv_img_set_pivot(ui->LogoScreen_img_1, 0,0);
 	lv_img_set_angle(ui->LogoScreen_img_1, 0);
-	lv_obj_set_pos(ui->LogoScreen_img_1, 182, 70);
-	lv_obj_set_size(ui->LogoScreen_img_1, 454, 340);
+	lv_obj_set_pos(ui->LogoScreen_img_1, 100, 143);
+	lv_obj_set_size(ui->LogoScreen_img_1, 600, 194);
 
 	//Write style for LogoScreen_img_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_img_opa(ui->LogoScreen_img_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);

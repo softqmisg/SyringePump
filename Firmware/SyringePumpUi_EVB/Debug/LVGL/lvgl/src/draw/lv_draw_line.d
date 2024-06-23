@@ -3,8 +3,8 @@ LVGL/lvgl/src/draw/lv_draw_line.o: ../LVGL/lvgl/src/draw/lv_draw_line.c \
  ../LVGL/lvgl/src/draw/../core/lv_obj.h \
  ../LVGL/lvgl/src/draw/../core/../lv_conf_internal.h \
  ../LVGL/lvgl/src/draw/../core/../lv_conf_kconfig.h \
- E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
- E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
  ../LVGL/lvgl/src/draw/../core/../misc/lv_style.h \
  ../LVGL/lvgl/src/draw/../core/../misc/../font/lv_font.h \
  ../LVGL/lvgl/src/draw/../core/../misc/../font/../lv_conf_internal.h \
@@ -88,8 +88,8 @@ LVGL/lvgl/src/draw/lv_draw_line.o: ../LVGL/lvgl/src/draw/lv_draw_line.c \
 ../LVGL/lvgl/src/draw/../core/lv_obj.h:
 ../LVGL/lvgl/src/draw/../core/../lv_conf_internal.h:
 ../LVGL/lvgl/src/draw/../core/../lv_conf_kconfig.h:
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
 ../LVGL/lvgl/src/draw/../core/../misc/lv_style.h:
 ../LVGL/lvgl/src/draw/../core/../misc/../font/lv_font.h:
 ../LVGL/lvgl/src/draw/../core/../misc/../font/../lv_conf_internal.h:

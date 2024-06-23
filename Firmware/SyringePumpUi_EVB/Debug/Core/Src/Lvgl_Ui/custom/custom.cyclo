@@ -1,8 +1,8 @@
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:595:26:lv_color_make	1
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:600:26:lv_color_hex	1
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:696:26:lv_color_white	1
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:700:26:lv_color_black	1
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	1
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:595:26:lv_color_make	1
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:600:26:lv_color_hex	1
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:696:26:lv_color_white	1
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:700:26:lv_color_black	1
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	1
 ../Core/Src/Lvgl_Ui/custom/custom.c:67:5:randi	1
 ../Core/Src/Lvgl_Ui/custom/custom.c:72:6:LoadDefaults	1
 ../Core/Src/Lvgl_Ui/custom/custom.c:79:6:custom_init	1
@@ -36,8 +36,8 @@ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_sli
 ../Core/Src/Lvgl_Ui/custom/custom.c:904:6:animcontMain_ready_callback	1
 ../Core/Src/Lvgl_Ui/custom/custom.c:909:6:animcontMenu_ready_callback	1
 ../Core/Src/Lvgl_Ui/custom/custom.c:913:6:animcontSyringe_ready_callback	1
-../Core/Src/Lvgl_Ui/custom/custom.c:917:6:animcontDrug_ready_callback	1
-../Core/Src/Lvgl_Ui/custom/custom.c:921:6:animcontMode_ready_callback	1
-../Core/Src/Lvgl_Ui/custom/custom.c:925:6:animcontOcclusion_ready_callback	1
-../Core/Src/Lvgl_Ui/custom/custom.c:929:6:animcontKVO_ready_callback	1
-../Core/Src/Lvgl_Ui/custom/custom.c:933:6:animcontIntermittent_ready_callback	1
+../Core/Src/Lvgl_Ui/custom/custom.c:918:6:animcontDrug_ready_callback	1
+../Core/Src/Lvgl_Ui/custom/custom.c:923:6:animcontMode_ready_callback	1
+../Core/Src/Lvgl_Ui/custom/custom.c:929:6:animcontOcclusion_ready_callback	1
+../Core/Src/Lvgl_Ui/custom/custom.c:935:6:animcontKVO_ready_callback	1
+../Core/Src/Lvgl_Ui/custom/custom.c:941:6:animcontIntermittent_ready_callback	1
