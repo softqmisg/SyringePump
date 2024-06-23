@@ -443,7 +443,7 @@ extern lv_ui guider_ui;
 
 void setup_scr_LogoScreen(lv_ui *ui);
 void setup_scr_MainScreen(lv_ui *ui);
-LV_IMG_DECLARE(_farafan_logo_alpha_600x194);
+LV_IMG_DECLARE(_farafan_logo_600x194);
 LV_IMG_DECLARE(_network_64_alpha_64x64);
 LV_IMG_DECLARE(_Serial_64_alpha_64x64);
 LV_IMG_DECLARE(_usb_64_alpha_64x64);

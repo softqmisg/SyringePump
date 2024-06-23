@@ -35,7 +35,7 @@ void setup_scr_LogoScreen(lv_ui *ui)
 	//Write codes LogoScreen_img_1
 	ui->LogoScreen_img_1 = lv_img_create(ui->LogoScreen);
 	lv_obj_add_flag(ui->LogoScreen_img_1, LV_OBJ_FLAG_CLICKABLE);
-	lv_img_set_src(ui->LogoScreen_img_1, &_farafan_logo_alpha_600x194);
+	lv_img_set_src(ui->LogoScreen_img_1, &_farafan_logo_600x194);
 	lv_img_set_pivot(ui->LogoScreen_img_1, 0,0);
 	lv_img_set_angle(ui->LogoScreen_img_1, 0);
 	lv_obj_set_pos(ui->LogoScreen_img_1, 100, 143);

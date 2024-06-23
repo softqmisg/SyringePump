@@ -3664,8 +3664,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contKVO",
@@ -4719,8 +4718,7 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									],
-									"layerName": "MainScreen"
+									]
 								},
 								{
 									"name": "labelswKVOModeEnable",
@@ -4816,8 +4814,7 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									],
-									"layerName": "MainScreen"
+									]
 								},
 								{
 									"name": "swKVOMode",
@@ -6116,8 +6113,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contOcclusion",
@@ -7160,8 +7156,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contMode",
@@ -10497,8 +10492,7 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							],
-							"layerName": "MainScreen"
+							]
 						},
 						{
 							"name": "listModeUnit",
@@ -11323,8 +11317,7 @@
 										"item_index": "widget"
 									}
 								]
-							},
-							"layerName": "MainScreen"
+							}
 						},
 						{
 							"name": "listModeMode",
@@ -12706,8 +12699,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contDrug",
@@ -16965,8 +16957,7 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							],
-							"layerName": "MainScreen"
+							]
 						},
 						{
 							"name": "listDrugBrand",
@@ -18348,8 +18339,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contSyringe",
@@ -21572,8 +21562,7 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							],
-							"layerName": "MainScreen"
+							]
 						},
 						{
 							"name": "listSyringeType",
@@ -22317,8 +22306,7 @@
 										"item_index": "widget"
 									}
 								]
-							},
-							"layerName": "MainScreen"
+							}
 						},
 						{
 							"name": "listSyringeCompany",
@@ -24052,8 +24040,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contMenu",
@@ -30930,8 +30917,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contMain",
@@ -32730,8 +32716,7 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					],
-					"layerName": "MainScreen"
+					]
 				},
 				{
 					"name": "contFooter",
@@ -32775,8 +32760,7 @@
 									"image_opa": 255
 								}
 							],
-							"event": {},
-							"layerName": "MainScreen"
+							"event": {}
 						},
 						{
 							"name": "imgForbidden",
@@ -34073,8 +34057,7 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			],
-			"layerName": "MainScreen"
+			]
 		}
 	],
 	"Application": {

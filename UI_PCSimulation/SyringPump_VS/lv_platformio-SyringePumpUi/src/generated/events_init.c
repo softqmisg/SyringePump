@@ -256,11 +256,11 @@ static void MainScreen_listSyringeCompany_event_handler (lv_event_t *e)
 		lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	lv_obj_t *obj=lv_event_get_target(e);
-	cur_SyringeManufacture=lv_obj_get_child_id(obj);
-	updateSyringeTypeList(ui,cur_SyringeManufacture);
-	setlistSyringeTypeGroup(ui);
-	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
+		lv_obj_t *obj=lv_event_get_target(e);
+		cur_SyringeManufacture=lv_obj_get_child_id(obj);
+		updateSyringeTypeList(ui,cur_SyringeManufacture);
+		setlistSyringeTypeGroup(ui);
+		lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		break;
 	}
 	case LV_EVENT_FOCUSED:
@@ -423,10 +423,12 @@ static void MainScreen_btnDummySyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-						lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			memcpy(&currentMachineState.Syringe,&DefaultSyrings[cur_SyringeManufacture][cur_SyringeType],sizeof(syringe_t));
+			lv_obj_clear_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE);
+			lv_obj_clear_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuSyringe_event_handler(e);
 		break;
 	}
 	default:
@@ -660,10 +662,11 @@ static void MainScreen_btnDummyDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-						lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contDrug,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			memcpy(&currentMachineState.Drug, &DefaultDrugs[cur_Drug], sizeof(drug_t));
+			lv_obj_clear_flag(ui->MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuDrug_event_handler(e);
 		break;
 	}
 	default:
@@ -679,12 +682,12 @@ static void MainScreen_btnGoMenuMode_event_handler (lv_event_t *e)
 	{
 				  lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 			lv_obj_t *obj=lv_event_get_target(e);	
-			if(lv_obj_has_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE))
+		if(lv_obj_has_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE))
 			{
 					lv_group_t *g=lv_group_get_default();
 					uint8_t id=lv_obj_get_child_id(lv_obj_get_parent(lv_group_get_focused(g)));		
 				
-			  printf("@id=%d\n",id);
+			  printf("@Mode id=%d\n",id);
 			  if(id==3) 
 			  {
 			    lv_obj_clear_flag(ui->MainScreen_contModeValues, LV_OBJ_FLAG_CLICKABLE);
@@ -874,10 +877,12 @@ static void MainScreen_btnDummyMode_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-						lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contMode,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			memcpy(&currentMachineState.Mode,&DefaultModes[cur_ModeMode][cur_ModeUnit],sizeof(infusionmode_t));			
+			lv_obj_clear_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE);
+			lv_obj_clear_flag(ui->MainScreen_listModeUnit,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuMode_event_handler(e);
 		break;
 	}
 	default:

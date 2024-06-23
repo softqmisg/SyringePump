@@ -66,7 +66,7 @@
 "./Core/Src/Lvgl_Ui/generated/images/_battery_64_38x64.o"
 "./Core/Src/Lvgl_Ui/generated/images/_batterybg_64_38x64.o"
 "./Core/Src/Lvgl_Ui/generated/images/_droplet_32_alpha_32x32.o"
-"./Core/Src/Lvgl_Ui/generated/images/_farafan_logo_alpha_600x194.o"
+"./Core/Src/Lvgl_Ui/generated/images/_farafan_logo_600x194.o"
 "./Core/Src/Lvgl_Ui/generated/images/_forbidden_64_alpha_64x64.o"
 "./Core/Src/Lvgl_Ui/generated/images/_ledbar_empty_26x132.o"
 "./Core/Src/Lvgl_Ui/generated/images/_ledbar_full_26x132.o"
