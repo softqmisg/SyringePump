@@ -424,6 +424,16 @@ static void MainScreen_btnDummySyringe_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(cur_SyringeManufacture==0)
+			{
+				lv_snprintf(DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].Name,20,"%s",lv_textarea_get_text(ui->MainScreen_taSyringeNameValue));
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].Volume=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeVolume);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].InnerDia10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeInnerDia);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].OuterDia10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeOuterDia);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].BarrelLen10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeBarrelLen);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].PlungerLen10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringePlungerLen);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].DiaTolerance10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeDiaTolerance);
+			}
 			memcpy(&currentMachineState.Syringe,&DefaultSyrings[cur_SyringeManufacture][cur_SyringeType],sizeof(syringe_t));
 			lv_obj_clear_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE);
 			lv_obj_clear_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE);
@@ -663,6 +673,18 @@ static void MainScreen_btnDummyDrug_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(cur_Drug==0)
+			{
+				lv_snprintf(DefaultDrugs[cur_Drug].Name,20,"%s",lv_textarea_get_text(ui->MainScreen_taDrugNameValue));
+				lv_snprintf(DefaultDrugs[cur_Drug].Brand,20,"%s",lv_textarea_get_text(ui->MainScreen_taDrugBrandValue));
+				DefaultDrugs[cur_Drug].Id=lv_dropdown_get_selected(ui->MainScreen_ddlistDrugId);
+				DefaultDrugs[cur_Drug].mg_ml_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDrugmgml);
+				DefaultDrugs[cur_Drug].u_ml_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDruguml);
+				DefaultDrugs[cur_Drug].per_kg_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDrugperkg);
+				DefaultDrugs[cur_Drug].RateMin10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateMin);
+				DefaultDrugs[cur_Drug].RateMax10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateMax);
+				DefaultDrugs[cur_Drug].RateDef10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateDef);
+			}
 			memcpy(&currentMachineState.Drug, &DefaultDrugs[cur_Drug], sizeof(drug_t));
 			lv_obj_clear_flag(ui->MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
 			e->code=LV_EVENT_CLICKED;
@@ -878,7 +900,15 @@ static void MainScreen_btnDummyMode_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-			memcpy(&currentMachineState.Mode,&DefaultModes[cur_ModeMode][cur_ModeUnit],sizeof(infusionmode_t));			
+			DefaultModes[cur_ModeMode][cur_ModeUnit].TotalVolume10=lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalVolume);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].InfusionRate10=lv_spinbox_get_value(ui->MainScreen_spinboxModeInfusionRate);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].TotalTime=lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeSecond);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].BodyWeight=lv_spinbox_get_value(ui->MainScreen_spinboxModeBodyWeight);
+			memcpy(&currentMachineState.Mode,&DefaultModes[cur_ModeMode][cur_ModeUnit],sizeof(infusionmode_t));	
+			if(cur_ModeMode==modeIntermittent)
+				currentMachineState.IntermittentInfusionRateUnit=cur_ModeUnit;
 			lv_obj_clear_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE);
 			lv_obj_clear_flag(ui->MainScreen_listModeUnit,LV_OBJ_FLAG_CLICKABLE);
 			e->code=LV_EVENT_CLICKED;
@@ -1001,10 +1031,16 @@ static void MainScreen_btnDummyKVO_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(lv_obj_has_state(ui->MainScreen_swKVOMode,LV_STATE_CHECKED))
+				currentMachineState.KvoMode=true;
+			else
+				currentMachineState.KvoMode=false;
+			currentMachineState.KvoRate10=lv_spinbox_get_value(ui->MainScreen_spinboxKVORate);
 			ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 			ui_move_animation(ui->MainScreen_contKVO,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 			lv_obj_add_state(ui->MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);	
+		
 		break;
 	}
 	default:
@@ -1052,6 +1088,16 @@ static void MainScreen_btnDummyIntermittent_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			currentMachineState.IntermittentInfusionRate10=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentInfusionRate);
+			currentMachineState.IntermittentDuration=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationSecond);
+			currentMachineState.IntermittentBackgroundRate10=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentBackgroundRate);
+
+			currentMachineState.IntermittentSleep=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepSecond);
+
 			ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 			ui_move_animation(ui->MainScreen_contIntermittent,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 			lv_obj_add_state(ui->MainScreen_btnMenuIntInf,LV_STATE_FOCUS_KEY);	

@@ -4519,7 +4519,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_label_set_text(ui->MainScreen_labelKVORate, "Unit/min");
 	lv_label_set_long_mode(ui->MainScreen_labelKVORate, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->MainScreen_labelKVORate, 416, 150.5);
-	lv_obj_set_size(ui->MainScreen_labelKVORate, 110, 18);
+	lv_obj_set_size(ui->MainScreen_labelKVORate, 140, 18);
 
 	//Write style for MainScreen_labelKVORate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(ui->MainScreen_labelKVORate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);

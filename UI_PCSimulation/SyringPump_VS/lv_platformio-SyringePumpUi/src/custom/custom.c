@@ -515,7 +515,6 @@ void setcontModeValuesGroup(lv_ui *ui)
     }
   }
 }
-
 void setbarOcclusionOccGroup(lv_ui *ui)
 {
   lv_group_t *g;
