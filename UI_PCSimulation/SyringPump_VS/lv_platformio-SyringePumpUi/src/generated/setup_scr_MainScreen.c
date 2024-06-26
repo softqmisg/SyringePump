@@ -5524,6 +5524,7 @@ lv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|
                                                             LV_STATE_FOCUSED);
 
 
+
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);
 lv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);

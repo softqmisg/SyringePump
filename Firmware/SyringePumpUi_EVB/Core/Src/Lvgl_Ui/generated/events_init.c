@@ -10,14 +10,14 @@
 #include "events_init.h"
 #include <stdio.h>
 #include "lvgl.h"
-
+#include <main.h>
 #if LV_USE_FREEMASTER
 #include "freemaster_client.h"
 #endif
 
 
 #include "custom.h"
-#include <MachineState.h>
+#include "MachineState.h"
  uint8_t cur_SyringeManufacture,cur_SyringeType;
  uint8_t cur_Drug;
 
@@ -30,8 +30,11 @@ static void LogoScreen_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_SCREEN_LOADED:
 	{
+
 		ui_load_scr_animation(&guider_ui, &guider_ui.MainScreen, guider_ui.MainScreen_del, &guider_ui.LogoScreen_del, setup_scr_MainScreen, LV_SCR_LOAD_ANIM_FADE_ON, 800, 4000, false, true);
 		lv_obj_fade_in(guider_ui.LogoScreen_img_1,1800,200);
+		HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin, GPIO_PIN_SET);//enable Backlight
+
 	
 		break;
 	}
@@ -81,7 +84,6 @@ static void MainScreen_btnMenuSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-
 		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contSyringe, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
@@ -103,8 +105,7 @@ static void MainScreen_btnMenuDrug_event_handler (lv_event_t *e)
 	{
 		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
-		lv_obj_clear_flag(guider_ui.MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
-
+		lv_obj_clear_flag(guider_ui.MainScreen_contDrugValues, LV_OBJ_FLAG_CLICKABLE);
 		break;
 	}
 	default:
@@ -258,11 +259,11 @@ static void MainScreen_listSyringeCompany_event_handler (lv_event_t *e)
 		lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	lv_obj_t *obj=lv_event_get_target(e);
-	cur_SyringeManufacture=lv_obj_get_child_id(obj);
-	updateSyringeTypeList(ui,cur_SyringeManufacture);
-	setlistSyringeTypeGroup(ui);
-	lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
+		lv_obj_t *obj=lv_event_get_target(e);
+		cur_SyringeManufacture=lv_obj_get_child_id(obj);
+		updateSyringeTypeList(ui,cur_SyringeManufacture);
+		setlistSyringeTypeGroup(ui);
+		lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);
 		break;
 	}
 	case LV_EVENT_FOCUSED:
@@ -425,10 +426,22 @@ static void MainScreen_btnDummySyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-						lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(cur_SyringeManufacture==0)
+			{
+				lv_snprintf(DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].Name,20,"%s",lv_textarea_get_text(ui->MainScreen_taSyringeNameValue));
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].Volume=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeVolume);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].InnerDia10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeInnerDia);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].OuterDia10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeOuterDia);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].BarrelLen10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeBarrelLen);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].PlungerLen10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringePlungerLen);
+				DefaultSyrings[cur_SyringeManufacture][cur_SyringeType].DiaTolerance10=lv_spinbox_get_value(ui->MainScreen_spinboxSyringeDiaTolerance);
+			}
+			memcpy(&currentMachineState.Syringe,&DefaultSyrings[cur_SyringeManufacture][cur_SyringeType],sizeof(syringe_t));
+			lv_obj_clear_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE);
+			lv_obj_clear_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuSyringe_event_handler(e);
 		break;
 	}
 	default:
@@ -489,7 +502,7 @@ static void MainScreen_listDrugBrand_event_handler (lv_event_t *e)
 		  lv_ui *ui = (lv_ui *)lv_event_get_user_data(e);
 	  lv_obj_t *obj = lv_event_get_target(e);
 	
-	  if (cur_Drug == 0)
+	      if (cur_Drug == 0)
 	  {
 	      setcontDrugValuesGroup(ui);
 	      lv_obj_add_state(obj, LV_STATE_FOCUS_KEY);
@@ -662,10 +675,23 @@ static void MainScreen_btnDummyDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-						lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contDrug,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(cur_Drug==0)
+			{
+				lv_snprintf(DefaultDrugs[cur_Drug].Name,20,"%s",lv_textarea_get_text(ui->MainScreen_taDrugNameValue));
+				lv_snprintf(DefaultDrugs[cur_Drug].Brand,20,"%s",lv_textarea_get_text(ui->MainScreen_taDrugBrandValue));
+				DefaultDrugs[cur_Drug].Id=lv_dropdown_get_selected(ui->MainScreen_ddlistDrugId);
+				DefaultDrugs[cur_Drug].mg_ml_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDrugmgml);
+				DefaultDrugs[cur_Drug].u_ml_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDruguml);
+				DefaultDrugs[cur_Drug].per_kg_1000=lv_spinbox_get_value(ui->MainScreen_spinboxDrugperkg);
+				DefaultDrugs[cur_Drug].RateMin10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateMin);
+				DefaultDrugs[cur_Drug].RateMax10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateMax);
+				DefaultDrugs[cur_Drug].RateDef10=lv_spinbox_get_value(ui->MainScreen_spinboxDrugRateDef);
+			}
+			memcpy(&currentMachineState.Drug, &DefaultDrugs[cur_Drug], sizeof(drug_t));
+			lv_obj_clear_flag(ui->MainScreen_contDrugValues,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuDrug_event_handler(e);
 		break;
 	}
 	default:
@@ -681,12 +707,12 @@ static void MainScreen_btnGoMenuMode_event_handler (lv_event_t *e)
 	{
 				  lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 			lv_obj_t *obj=lv_event_get_target(e);	
-			if(lv_obj_has_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE))
+		if(lv_obj_has_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE))
 			{
 					lv_group_t *g=lv_group_get_default();
 					uint8_t id=lv_obj_get_child_id(lv_obj_get_parent(lv_group_get_focused(g)));		
 				
-			  printf("@id=%d\n",id);
+			  printf("@Mode id=%d\n",id);
 			  if(id==3) 
 			  {
 			    lv_obj_clear_flag(ui->MainScreen_contModeValues, LV_OBJ_FLAG_CLICKABLE);
@@ -876,10 +902,20 @@ static void MainScreen_btnDummyMode_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				ui_move_animation(ui->MainScreen_contMode,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-				lv_obj_add_state(ui->MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);	
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].TotalVolume10=lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalVolume);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].InfusionRate10=lv_spinbox_get_value(ui->MainScreen_spinboxModeInfusionRate);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].TotalTime=lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxModeTotalTimeSecond);
+			DefaultModes[cur_ModeMode][cur_ModeUnit].BodyWeight=lv_spinbox_get_value(ui->MainScreen_spinboxModeBodyWeight);
+			memcpy(&currentMachineState.Mode,&DefaultModes[cur_ModeMode][cur_ModeUnit],sizeof(infusionmode_t));	
+			if(cur_ModeMode==modeIntermittent)
+				currentMachineState.IntermittentInfusionRateUnit=cur_ModeUnit;
+			lv_obj_clear_flag(ui->MainScreen_contModeValues,LV_OBJ_FLAG_CLICKABLE);
+			lv_obj_clear_flag(ui->MainScreen_listModeUnit,LV_OBJ_FLAG_CLICKABLE);
+			e->code=LV_EVENT_CLICKED;
+			MainScreen_btnGoMenuMode_event_handler(e);
 		break;
 	}
 	default:
@@ -918,10 +954,9 @@ static void MainScreen_sliderOcclusionOcc_event_handler (lv_event_t *e)
 	}
 	case LV_EVENT_CLICKED:
 	{
-		//printf("deoocused \n\r");
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-		currentMachineState.OcclusionLevel=lv_slider_get_value(ui->MainScreen_sliderOcclusionOcc);
-		MainScreen_btnGoMenuOcclusion_event_handler(e);
+	currentMachineState.OcclusionLevel=lv_slider_get_value(ui->MainScreen_sliderOcclusionOcc);
+	MainScreen_btnGoMenuOcclusion_event_handler(e);
 		break;
 	}
 	default:
@@ -999,10 +1034,16 @@ static void MainScreen_btnDummyKVO_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			if(lv_obj_has_state(ui->MainScreen_swKVOMode,LV_STATE_CHECKED))
+				currentMachineState.KvoMode=true;
+			else
+				currentMachineState.KvoMode=false;
+			currentMachineState.KvoRate10=lv_spinbox_get_value(ui->MainScreen_spinboxKVORate);
 			ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 			ui_move_animation(ui->MainScreen_contKVO,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 			lv_obj_add_state(ui->MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);	
+		
 		break;
 	}
 	default:
@@ -1050,6 +1091,16 @@ static void MainScreen_btnDummyIntermittent_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			currentMachineState.IntermittentInfusionRate10=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentInfusionRate);
+			currentMachineState.IntermittentDuration=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentDurationSecond);
+			currentMachineState.IntermittentBackgroundRate10=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentBackgroundRate);
+
+			currentMachineState.IntermittentSleep=lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepHour)*3600+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepMinute)*60+
+																lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepSecond);
+
 			ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
 			ui_move_animation(ui->MainScreen_contIntermittent,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
 			lv_obj_add_state(ui->MainScreen_btnMenuIntInf,LV_STATE_FOCUS_KEY);	

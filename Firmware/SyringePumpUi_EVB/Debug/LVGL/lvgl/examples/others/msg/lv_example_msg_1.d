@@ -5,8 +5,8 @@ LVGL/lvgl/examples/others/msg/lv_example_msg_1.o: \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_log.h \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/../lv_conf_internal.h \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/../lv_conf_kconfig.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
- E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
+ E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_types.h \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_timer.h \
  ../LVGL/lvgl/examples/others/msg/../../../src/misc/../hal/lv_hal_tick.h \
@@ -279,8 +279,8 @@ LVGL/lvgl/examples/others/msg/lv_example_msg_1.o: \
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_log.h:
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/../lv_conf_internal.h:
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/../lv_conf_kconfig.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_types.h:
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/lv_timer.h:
 ../LVGL/lvgl/examples/others/msg/../../../src/misc/../hal/lv_hal_tick.h:

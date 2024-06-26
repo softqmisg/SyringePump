@@ -70,7 +70,7 @@ void LCD_init()
 		abort();
 
 	/* Initialize the LCD */
-	HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin, GPIO_PIN_SET);//enable Backlight
+	HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin, GPIO_PIN_RESET);//enable Backlight
 
 	lv_disp_draw_buf_init(&disp_buf, (void*)LVGL_BUFFER_ADDR_AT_SDRAM,
 			(void*)LVGL_BUFFER_2_ADDR_AT_SDRAM,

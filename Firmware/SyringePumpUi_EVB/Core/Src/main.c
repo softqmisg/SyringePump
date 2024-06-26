@@ -139,6 +139,7 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   setvbuf(stdout, NULL, _IONBF, 0);
+	HAL_GPIO_WritePin(LCD_BL_GPIO_Port, LCD_BL_Pin, GPIO_PIN_RESET);//enable Backlight
 
   lv_init();
   LCD_init();
@@ -146,6 +147,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   myIndrv();
   setup_ui(&guider_ui);
 printf("hello world\n\r");

@@ -1,6 +1,6 @@
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:600:26:lv_color_hex	24	static
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/core/lv_obj_style.h:205:20:lv_obj_set_style_pad_all	24	static
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	24	static
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:106:20:lv_slider_set_range	24	static
-E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:116:20:lv_slider_set_mode	16	static
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/hal/../draw/../misc/lv_color.h:600:26:lv_color_hex	24	static
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/core/lv_obj_style.h:205:20:lv_obj_set_style_pad_all	24	static
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	24	static
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:106:20:lv_slider_set_range	24	static
+E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:116:20:lv_slider_set_mode	16	static
 ../Core/Src/Lvgl_Ui/generated/setup_scr_MainScreen.c:23:6:setup_scr_MainScreen	88	static
