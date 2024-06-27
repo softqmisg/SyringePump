@@ -64,11 +64,6 @@ char unitMode_linear[][17] = {
 /**
  * Create a demo application
  */
-int randi(int lower_bound, int upper_bound)
-{
-//  return rand() % (upper_bound - lower_bound + 1) + lower_bound;
-	return lv_rand(lower_bound, upper_bound);
-}
 void LoadDefaults(void)
 {
   loadDefaultSyringesValue();

@@ -20,8 +20,6 @@
 #include "MachineState.h"
  uint8_t cur_SyringeManufacture,cur_SyringeType;
  uint8_t cur_Drug;
-
-
  uint8_t cur_ModeMode,cur_ModeUnit;
 static void LogoScreen_event_handler (lv_event_t *e)
 {
@@ -32,7 +30,6 @@ static void LogoScreen_event_handler (lv_event_t *e)
 	{
 		ui_load_scr_animation(&guider_ui, &guider_ui.MainScreen, guider_ui.MainScreen_del, &guider_ui.LogoScreen_del, setup_scr_MainScreen, LV_SCR_LOAD_ANIM_FADE_ON, 800, 4000, false, true);
 		lv_obj_fade_in(guider_ui.LogoScreen_img_1,1800,200);
-	
 		break;
 	}
 	default:
@@ -50,7 +47,8 @@ static void MainScreen_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_SCREEN_LOADED:
 	{
-		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
+		animcontMain_ready_callback(NULL);
+		ui_move_animation(guider_ui.MainScreen_imgFooterDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -516,9 +514,9 @@ static void MainScreen_listDrugBrand_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	lv_obj_t *obj=lv_event_get_target(e);
-	cur_Drug=lv_obj_get_child_id(obj);
-	updateDrugValues(ui,cur_Drug);
+		lv_obj_t *obj=lv_event_get_target(e);
+		cur_Drug=lv_obj_get_child_id(obj);
+		updateDrugValues(ui,cur_Drug);
 		break;
 	}
 	default:
@@ -767,7 +765,7 @@ static void MainScreen_listModeMode_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	lv_label_set_text(ui->MainScreen_labelModeHeader,"Select Operating Mode");
+		lv_label_set_text(ui->MainScreen_labelModeHeader,"Select Operating Mode");
 		break;
 	}
 	default:

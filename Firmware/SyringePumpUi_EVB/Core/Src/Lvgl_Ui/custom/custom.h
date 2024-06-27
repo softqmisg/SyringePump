@@ -57,7 +57,7 @@ void animcontIntermittent_ready_callback(lv_anim_t *a);
 
 
 
-int randi(int lower_bound,int upper_bound);
+
 #ifdef __cplusplus
 }
 #endif

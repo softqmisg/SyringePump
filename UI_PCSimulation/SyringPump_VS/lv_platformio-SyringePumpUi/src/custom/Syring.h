@@ -2,6 +2,8 @@
 #define __SYRING_H__
 #include "lvgl.h"
 typedef struct{
+    uint8_t ManufactureIndex;
+    uint8_t TypeIndex;
     char Manufacture[20];
     char Name[20];
     uint8_t Volume;

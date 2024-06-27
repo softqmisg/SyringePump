@@ -268,7 +268,7 @@
 					"use_fs": false,
 					"fs_type": "flash",
 					"sd_path": "",
-					"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\farafan_logo.png",
+					"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\farafan_logo.png",
 					"rotate": 0,
 					"x": 0,
 					"y": 0,
@@ -663,7 +663,7 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
+				"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetextHeader, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nMainScreen_digital_clockHeader_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
@@ -3664,7 +3664,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contKVO",
@@ -4718,7 +4719,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "labelswKVOModeEnable",
@@ -4814,7 +4816,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "swKVOMode",
@@ -6113,7 +6116,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contOcclusion",
@@ -6161,7 +6165,7 @@
 									"outline_width": 0,
 									"outline_color": "#2195f6",
 									"outline_opa": 0,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -6217,7 +6221,7 @@
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
 									"bg_opa": 255,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -6234,7 +6238,7 @@
 									"bg_main_stop": 0,
 									"bg_grad_stop": 255,
 									"bg_opa": 255,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0,
@@ -7156,7 +7160,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMode",
@@ -10492,7 +10497,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listModeUnit",
@@ -11229,7 +11235,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": " uint8_t cur_ModeMode,cur_ModeUnit;",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nlv_label_set_text(ui->MainScreen_labelModeHeader,\"Select Infusion Type\");\ncur_ModeUnit=lv_obj_get_child_id(obj);\nupdateModeValues(ui,cur_ModeMode,cur_ModeUnit);\n",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nlv_label_set_text(ui->MainScreen_labelModeHeader,\"Select Infusion Type\");\ncur_ModeUnit=lv_obj_get_child_id(obj);\nupdateModeValues(ui,cur_ModeMode,cur_ModeUnit);",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -11317,7 +11323,8 @@
 										"item_index": "widget"
 									}
 								]
-							}
+							},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listModeMode",
@@ -12699,7 +12706,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contDrug",
@@ -16957,7 +16965,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listDrugBrand",
@@ -18339,7 +18348,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contSyringe",
@@ -21562,7 +21572,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeType",
@@ -22306,7 +22317,8 @@
 										"item_index": "widget"
 									}
 								]
-							}
+							},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeCompany",
@@ -23916,7 +23928,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "",
-												"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n        lv_group_t *g=lv_group_get_default();\n        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      \n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n        lv_group_set_editing(g,false);\n\t\tlv_group_focus_prev(g);\n\t\tobj=lv_group_get_focused(g);\n\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);\t\t  \n\t}",
+												"code_c": "\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\tlv_obj_t *obj=lv_event_get_target(e);\t\n\t\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t\t{\n\t        lv_group_t *g=lv_group_get_default();\n\t        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      \n\t\t  printf(\"@1id=%d\\n\",id);\n\t\t  if(id==7) \n\t\t  {\n\t\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t    setlistSyringeTypeGroup(ui);\n\t\t  }\n\t\t  else\n\t\t  {\n\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t        lv_group_set_editing(g,false);\n\t\t\tlv_group_focus_prev(g);\n\t\t\tobj=lv_group_get_focused(g);\n\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\n\t\t  }\n\t\n\t\t}\n\t\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t\t{\n\t\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t  \n\t\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t\t  setlistSyringeCompanyGroup(ui);\n\t\t}\n\t\telse\n\t\t{\n\t\t  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);\t\t  \n\t\t}",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -24040,7 +24052,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMenu",
@@ -24642,7 +24655,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -24676,7 +24689,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -24826,7 +24839,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -24860,7 +24873,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25010,7 +25023,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25044,7 +25057,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25194,7 +25207,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25228,7 +25241,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25378,7 +25391,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25412,7 +25425,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25562,7 +25575,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -25596,7 +25609,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -26097,7 +26110,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -26131,7 +26144,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -26632,7 +26645,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -26666,7 +26679,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -27167,7 +27180,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -27201,7 +27214,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -28056,7 +28069,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -28090,7 +28103,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -28767,7 +28780,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -28801,7 +28814,7 @@
 											"shadow_spread": 0,
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0,
-											"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+											"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 											"bg_img_opa": 255,
 											"bg_img_recolor": "#ffffff",
 											"bg_img_recolor_opa": 0,
@@ -30917,7 +30930,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMain",
@@ -31468,17 +31482,17 @@
 							}
 						},
 						{
-							"name": "labelTotalVolume",
+							"name": "labelMainTotalVolume",
 							"id": "riqlhem1",
 							"type": "label",
-							"left": 88,
+							"left": 19,
 							"top": 225,
 							"visible": true,
 							"flag": [],
-							"width": 100,
-							"height": 19,
+							"width": 240,
+							"height": 23,
 							"default_style": false,
-							"text": "180.0 ml",
+							"text": "Total: 180.0 ml",
 							"long_mode": "LV_LABEL_LONG_WRAP",
 							"custom_attribute": [],
 							"attribute_type": "",
@@ -31564,17 +31578,17 @@
 							]
 						},
 						{
-							"name": "labelPatientKg",
+							"name": "labelMainPatientKg",
 							"id": "zy1729hq",
 							"type": "label",
-							"left": 190,
+							"left": 17,
 							"top": 195,
 							"visible": true,
 							"flag": [],
-							"width": 76,
-							"height": 22,
+							"width": 249,
+							"height": 25,
 							"default_style": false,
-							"text": "120 kg",
+							"text": "Patient Weight: 120 kg",
 							"long_mode": "LV_LABEL_LONG_WRAP",
 							"custom_attribute": [],
 							"attribute_type": "",
@@ -31660,17 +31674,17 @@
 							]
 						},
 						{
-							"name": "labelRemVolume",
+							"name": "labelMainRemVolume",
 							"id": "dg8itpr4",
 							"type": "label",
-							"left": 449,
+							"left": 397,
 							"top": 195,
 							"visible": true,
 							"flag": [],
-							"width": 100,
-							"height": 19,
+							"width": 202,
+							"height": 18,
 							"default_style": false,
-							"text": "180.0 ml",
+							"text": "Rem: 180.0 ml",
 							"long_mode": "LV_LABEL_LONG_WRAP",
 							"custom_attribute": [],
 							"attribute_type": "",
@@ -31756,17 +31770,17 @@
 							]
 						},
 						{
-							"name": "labelTimeLeft",
+							"name": "labelMainTimeLeft",
 							"id": "5o9o04bn",
 							"type": "label",
-							"left": 510,
+							"left": 396,
 							"top": 225,
 							"visible": true,
 							"flag": [],
-							"width": 110,
-							"height": 19,
+							"width": 224,
+							"height": 18,
 							"default_style": false,
-							"text": "00:09:53",
+							"text": "Time Left: 00:09:53",
 							"long_mode": "LV_LABEL_LONG_WRAP",
 							"custom_attribute": [],
 							"attribute_type": "",
@@ -31852,391 +31866,7 @@
 							]
 						},
 						{
-							"name": "label_6",
-							"id": "p94by8pa",
-							"type": "label",
-							"left": 391,
-							"top": 225,
-							"visible": true,
-							"flag": [],
-							"width": 110,
-							"height": 19,
-							"default_style": false,
-							"text": "Time Left:",
-							"long_mode": "LV_LABEL_LONG_WRAP",
-							"custom_attribute": [],
-							"attribute_type": "",
-							"style": [
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DEFAULT",
-									"disable": false,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#2195F6",
-									"font": 20,
-									"text_align": "LV_TEXT_ALIGN_LEFT",
-									"font_family": "Acme_Regular",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								},
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DISABLED",
-									"disable": true,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#000000",
-									"font": 16,
-									"font_family": "montserratMedium",
-									"text_align": "LV_TEXT_ALIGN_CENTER",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								}
-							]
-						},
-						{
-							"name": "label_5",
-							"id": "nfw4vjta",
-							"type": "label",
-							"left": 391,
-							"top": 195,
-							"visible": true,
-							"flag": [],
-							"width": 52,
-							"height": 19,
-							"default_style": false,
-							"text": "Rem:",
-							"long_mode": "LV_LABEL_LONG_WRAP",
-							"custom_attribute": [],
-							"attribute_type": "",
-							"style": [
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DEFAULT",
-									"disable": false,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#2195F6",
-									"font": 20,
-									"text_align": "LV_TEXT_ALIGN_LEFT",
-									"font_family": "Acme_Regular",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								},
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DISABLED",
-									"disable": true,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#000000",
-									"font": 16,
-									"font_family": "montserratMedium",
-									"text_align": "LV_TEXT_ALIGN_CENTER",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								}
-							]
-						},
-						{
-							"name": "label_4",
-							"id": "iqkfxq9k",
-							"type": "label",
-							"left": 18,
-							"top": 225,
-							"visible": true,
-							"flag": [],
-							"width": 65,
-							"height": 19,
-							"default_style": false,
-							"text": "Total:",
-							"long_mode": "LV_LABEL_LONG_WRAP",
-							"custom_attribute": [],
-							"attribute_type": "",
-							"style": [
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DEFAULT",
-									"disable": false,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#2195F6",
-									"font": 20,
-									"text_align": "LV_TEXT_ALIGN_LEFT",
-									"font_family": "Acme_Regular",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								},
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DISABLED",
-									"disable": true,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#000000",
-									"font": 16,
-									"font_family": "montserratMedium",
-									"text_align": "LV_TEXT_ALIGN_CENTER",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								}
-							]
-						},
-						{
-							"name": "label_3",
-							"id": "fqrckdy8",
-							"type": "label",
-							"left": 18,
-							"top": 195,
-							"visible": true,
-							"flag": [],
-							"width": 166,
-							"height": 22,
-							"default_style": false,
-							"text": "Patient Weight:",
-							"long_mode": "LV_LABEL_LONG_WRAP",
-							"custom_attribute": [],
-							"attribute_type": "",
-							"style": [
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DEFAULT",
-									"disable": false,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#2195F6",
-									"font": 20,
-									"text_align": "LV_TEXT_ALIGN_LEFT",
-									"font_family": "Acme_Regular",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								},
-								{
-									"part": "LV_PART_MAIN",
-									"state": "LV_STATE_DISABLED",
-									"disable": true,
-									"border_side": [
-										"LV_BORDER_SIDE_FULL"
-									],
-									"border_width": 0,
-									"border_opa": 255,
-									"border_color": "#2195f6",
-									"radius": 0,
-									"text_color": "#000000",
-									"font": 16,
-									"font_family": "montserratMedium",
-									"text_align": "LV_TEXT_ALIGN_CENTER",
-									"letter_space": 2,
-									"line_space": 0,
-									"bg_color": "#2195f6",
-									"bg_grad_color": "#2195f6",
-									"bg_opa": 0,
-									"bg_grad_dir": "LV_GRAD_DIR_NONE",
-									"bg_dither_mode": "LV_DITHER_NONE",
-									"bg_main_stop": 0,
-									"bg_grad_stop": 255,
-									"padding_top": 0,
-									"padding_right": 0,
-									"padding_bottom": 0,
-									"padding_left": 0,
-									"bg_img_src": "",
-									"bg_img_opa": 255,
-									"bg_img_recolor": "#ffffff",
-									"bg_img_recolor_opa": 0,
-									"shadow_color": "#2195f6",
-									"shadow_opa": 255,
-									"shadow_width": 0,
-									"shadow_spread": 0,
-									"shadow_ofs_x": 0,
-									"shadow_ofs_y": 0
-								}
-							]
-						},
-						{
-							"name": "labelInjectedVolume",
+							"name": "labelMainInjectedVolume",
 							"id": "5jm7xdw7",
 							"type": "label",
 							"left": 0,
@@ -32332,7 +31962,7 @@
 							]
 						},
 						{
-							"name": "label_Error",
+							"name": "labelMainError",
 							"id": "hiyq5a90",
 							"type": "label",
 							"left": 250,
@@ -32428,7 +32058,7 @@
 							]
 						},
 						{
-							"name": "labelInjectionRate",
+							"name": "labelMainInjectionRate",
 							"id": "jpq7vt81",
 							"type": "label",
 							"left": 5,
@@ -32524,7 +32154,7 @@
 							]
 						},
 						{
-							"name": "labelInjectionMode",
+							"name": "labelMainInjectionMode",
 							"id": "hnk0lo1e",
 							"type": "label",
 							"left": 5,
@@ -32620,7 +32250,7 @@
 							]
 						},
 						{
-							"name": "barOcclusionLevel",
+							"name": "barMainOcclusionLevel",
 							"id": "ecbe62q3",
 							"type": "bar",
 							"left": 754,
@@ -32657,7 +32287,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -32674,7 +32304,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 255,
 									"radius": 10,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -32716,7 +32346,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contFooter",
@@ -32732,7 +32363,7 @@
 					"scrollbar_mode": "OFF",
 					"child": [
 						{
-							"name": "imgDroplet",
+							"name": "imgFooterDroplet",
 							"id": "yhwqw44s",
 							"type": "img",
 							"left": 397,
@@ -32745,7 +32376,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -32760,10 +32391,11 @@
 									"image_opa": 255
 								}
 							],
-							"event": {}
+							"event": {},
+							"layerName": "MainScreen"
 						},
 						{
-							"name": "imgForbidden",
+							"name": "imgFooterForbidden",
 							"id": "cys8hfuo",
 							"type": "img",
 							"left": 732,
@@ -32776,7 +32408,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -32793,7 +32425,7 @@
 							]
 						},
 						{
-							"name": "labelSyringeInfo",
+							"name": "labelFooterSyringeInfo",
 							"id": "6ygdah8w",
 							"type": "label",
 							"left": 450,
@@ -32889,7 +32521,7 @@
 							]
 						},
 						{
-							"name": "barSyringeLevel",
+							"name": "barFooterSyringeLevel",
 							"id": "zui1aakg",
 							"type": "bar",
 							"left": 552,
@@ -32951,7 +32583,7 @@
 							]
 						},
 						{
-							"name": "labelDiameter",
+							"name": "labelFooterDiameter",
 							"id": "297dy7g8",
 							"type": "label",
 							"left": 0,
@@ -33047,7 +32679,7 @@
 							]
 						},
 						{
-							"name": "labelSyringe",
+							"name": "labelFooterSyringe",
 							"id": "meuk5ury",
 							"type": "label",
 							"left": 0,
@@ -33143,7 +32775,7 @@
 							]
 						},
 						{
-							"name": "labelDrug",
+							"name": "labelFooterDrug",
 							"id": "38b0yllf",
 							"type": "label",
 							"left": 0,
@@ -33239,7 +32871,7 @@
 							]
 						},
 						{
-							"name": "imgSyringe",
+							"name": "imgFooterSyringe",
 							"id": "jj3hsc7t",
 							"type": "img",
 							"left": 400,
@@ -33252,7 +32884,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -33319,7 +32951,7 @@
 					"scrollbar_mode": "OFF",
 					"child": [
 						{
-							"name": "barBatteryLevel",
+							"name": "barHeaderBatteryLevel",
 							"id": "09oocgw0",
 							"type": "bar",
 							"left": 751,
@@ -33356,7 +32988,7 @@
 									"shadow_spread": 0,
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -33373,7 +33005,7 @@
 									"bg_grad_stop": 255,
 									"bg_opa": 0,
 									"radius": 10,
-									"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
+									"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
 									"bg_img_opa": 255,
 									"bg_img_recolor": "#ffffff",
 									"bg_img_recolor_opa": 0
@@ -33381,7 +33013,7 @@
 							]
 						},
 						{
-							"name": "imgUsbPort",
+							"name": "imgHeaderUsbPort",
 							"id": "mrgw79eq",
 							"type": "img",
 							"left": 490,
@@ -33394,7 +33026,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -33411,7 +33043,7 @@
 							]
 						},
 						{
-							"name": "imgSerialPort",
+							"name": "imgHeaderSerialPort",
 							"id": "nfrrkbdy",
 							"type": "img",
 							"left": 579,
@@ -33424,7 +33056,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -33441,7 +33073,7 @@
 							]
 						},
 						{
-							"name": "imgNetwork",
+							"name": "imgHeaderNetwork",
 							"id": "vbwmd645",
 							"type": "img",
 							"left": 665,
@@ -33454,7 +33086,7 @@
 							"use_fs": false,
 							"fs_type": "flash",
 							"sd_path": "",
-							"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
+							"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
 							"rotate": 0,
 							"x": 50,
 							"y": 50,
@@ -33471,7 +33103,7 @@
 							]
 						},
 						{
-							"name": "labelAlarmPlunger",
+							"name": "labelHeaderAlarmPlunger",
 							"id": "7ttjwb72",
 							"type": "label",
 							"left": 324,
@@ -33567,7 +33199,7 @@
 							]
 						},
 						{
-							"name": "labelAlarmNut",
+							"name": "labelHeaderAlarmNut",
 							"id": "t4dwzqq7",
 							"type": "label",
 							"left": 191,
@@ -33663,7 +33295,7 @@
 							]
 						},
 						{
-							"name": "datetext",
+							"name": "datetextHeader",
 							"id": "mznnsdaw",
 							"type": "datetext",
 							"left": 5,
@@ -33744,7 +33376,7 @@
 							]
 						},
 						{
-							"name": "digital_clock",
+							"name": "digital_clockHeader",
 							"id": "mezwik51",
 							"type": "digital_clock",
 							"left": 5,
@@ -34037,6 +33669,180 @@
 								"path_type": "linear"
 							}
 						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "null",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": false,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": ""
+							},
+							"customer_code": {
+								"ische": true,
+								"inc_c": "",
+								"code_c": "animcontMain_ready_callback(NULL);",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": false,
+								"value": []
+							},
+							"move": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
 					}
 				]
 			},
@@ -34057,7 +33863,8 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			]
+			],
+			"layerName": "MainScreen"
 		}
 	],
 	"Application": {
@@ -34077,7 +33884,7 @@
 			"keyboard_font_type": "SourceHanSerifSC_Regular",
 			"keyboard_font_size": 18
 		},
-		"default_scr": "MainScreen",
+		"default_scr": "LogoScreen",
 		"theme": "LV_THEME_MATERIAL_FLAG_LIGHT",
 		"screen": [
 			{
@@ -34164,7 +33971,7 @@
 							194
 						],
 						"default_style": false,
-						"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\farafan_logo.png",
+						"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\farafan_logo.png",
 						"color_format": "true-color",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -34192,7 +33999,7 @@
 				"version": 171,
 				"scrollbar_mode": "OFF",
 				"customer_code": {
-					"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetext, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nMainScreen_digital_clock_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
+					"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetextHeader, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nMainScreen_digital_clockHeader_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 					"inc_c": "#include \"custom.h\"",
 					"code_py": "",
 					"inc_py": ""
@@ -34206,7 +34013,7 @@
 						{
 							"src": "MainScreen",
 							"trigger": "screen_loaded",
-							"dst": "MainScreen_imgDroplet",
+							"dst": "MainScreen_imgFooterDroplet",
 							"dst_type": "img",
 							"src_screen": "MainScreen",
 							"action": "move",
@@ -34222,6 +34029,18 @@
 							"ready_cb": "",
 							"deleted_cb": "",
 							"path_type": "ease_in"
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "null",
+							"dst_type": "",
+							"src_screen": "MainScreen",
+							"action": "customer_code",
+							"inc_c": "",
+							"code_c": "animcontMain_ready_callback(NULL);",
+							"inc_py": "",
+							"code_py": ""
 						}
 					]
 				},
@@ -34267,7 +34086,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "MainScreen_digital_clock",
+								"name": "MainScreen_digital_clockHeader",
 								"id": "mezwik51",
 								"type": "digital_clock",
 								"visible": true,
@@ -34352,7 +34171,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_datetext",
+								"name": "MainScreen_datetextHeader",
 								"id": "mznnsdaw",
 								"type": "datetext",
 								"visible": true,
@@ -34437,7 +34256,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelAlarmNut",
+								"name": "MainScreen_labelHeaderAlarmNut",
 								"id": "t4dwzqq7",
 								"type": "label",
 								"visible": true,
@@ -34537,7 +34356,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelAlarmPlunger",
+								"name": "MainScreen_labelHeaderAlarmPlunger",
 								"id": "7ttjwb72",
 								"type": "label",
 								"visible": true,
@@ -34637,7 +34456,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_imgNetwork",
+								"name": "MainScreen_imgHeaderNetwork",
 								"id": "vbwmd645",
 								"type": "img",
 								"visible": true,
@@ -34651,7 +34470,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\network_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -34671,7 +34490,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_imgSerialPort",
+								"name": "MainScreen_imgHeaderSerialPort",
 								"id": "nfrrkbdy",
 								"type": "img",
 								"visible": true,
@@ -34685,7 +34504,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Serial_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -34705,7 +34524,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_imgUsbPort",
+								"name": "MainScreen_imgHeaderUsbPort",
 								"id": "mrgw79eq",
 								"type": "img",
 								"visible": true,
@@ -34719,7 +34538,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\usb_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -34739,7 +34558,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_barBatteryLevel",
+								"name": "MainScreen_barHeaderBatteryLevel",
 								"id": "09oocgw0",
 								"type": "bar",
 								"visible": true,
@@ -34786,7 +34605,7 @@
 										"shadow_spread": 0,
 										"shadow_ofs_x": 0,
 										"shadow_ofs_y": 0,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\batterybg_64.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -34803,7 +34622,7 @@
 										"bg_grad_stop": 255,
 										"bg_opa": 0,
 										"radius": 10,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\battery_64.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -34865,7 +34684,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "MainScreen_imgSyringe",
+								"name": "MainScreen_imgFooterSyringe",
 								"id": "jj3hsc7t",
 								"type": "img",
 								"visible": true,
@@ -34879,7 +34698,7 @@
 									100
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\syringe2_512.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -34899,7 +34718,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelDrug",
+								"name": "MainScreen_labelFooterDrug",
 								"id": "38b0yllf",
 								"type": "label",
 								"visible": true,
@@ -34999,7 +34818,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelSyringe",
+								"name": "MainScreen_labelFooterSyringe",
 								"id": "meuk5ury",
 								"type": "label",
 								"visible": true,
@@ -35099,7 +34918,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelDiameter",
+								"name": "MainScreen_labelFooterDiameter",
 								"id": "297dy7g8",
 								"type": "label",
 								"visible": true,
@@ -35199,7 +35018,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_barSyringeLevel",
+								"name": "MainScreen_barFooterSyringeLevel",
 								"id": "zui1aakg",
 								"type": "bar",
 								"visible": true,
@@ -35271,7 +35090,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelSyringeInfo",
+								"name": "MainScreen_labelFooterSyringeInfo",
 								"id": "6ygdah8w",
 								"type": "label",
 								"visible": true,
@@ -35371,7 +35190,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_imgForbidden",
+								"name": "MainScreen_imgFooterForbidden",
 								"id": "cys8hfuo",
 								"type": "img",
 								"visible": true,
@@ -35385,7 +35204,7 @@
 									64
 								],
 								"default_style": false,
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\forbidden_64.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -35405,7 +35224,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_imgDroplet",
+								"name": "MainScreen_imgFooterDroplet",
 								"id": "yhwqw44s",
 								"type": "img",
 								"visible": true,
@@ -35420,7 +35239,7 @@
 								],
 								"default_style": false,
 								"event": {},
-								"img_path": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
+								"img_path": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\droplet_32.png",
 								"color_format": "true-color-alpha",
 								"rotate": 0,
 								"pivot": "50,50",
@@ -35494,7 +35313,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "MainScreen_barOcclusionLevel",
+								"name": "MainScreen_barMainOcclusionLevel",
 								"id": "ecbe62q3",
 								"type": "bar",
 								"visible": true,
@@ -35541,7 +35360,7 @@
 										"shadow_spread": 0,
 										"shadow_ofs_x": 0,
 										"shadow_ofs_y": 0,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -35558,7 +35377,7 @@
 										"bg_grad_stop": 255,
 										"bg_opa": 255,
 										"radius": 10,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0
@@ -35566,7 +35385,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelInjectionMode",
+								"name": "MainScreen_labelMainInjectionMode",
 								"id": "hnk0lo1e",
 								"type": "label",
 								"visible": true,
@@ -35666,7 +35485,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelInjectionRate",
+								"name": "MainScreen_labelMainInjectionRate",
 								"id": "jpq7vt81",
 								"type": "label",
 								"visible": true,
@@ -35766,7 +35585,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_label_Error",
+								"name": "MainScreen_labelMainError",
 								"id": "hiyq5a90",
 								"type": "label",
 								"visible": true,
@@ -35866,7 +35685,7 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelInjectedVolume",
+								"name": "MainScreen_labelMainInjectedVolume",
 								"id": "5jm7xdw7",
 								"type": "label",
 								"visible": true,
@@ -35966,423 +35785,23 @@
 								]
 							},
 							{
-								"name": "MainScreen_label_3",
-								"id": "fqrckdy8",
-								"type": "label",
-								"visible": true,
-								"flag": [],
-								"pos": [
-									18,
-									195
-								],
-								"size": [
-									166,
-									22
-								],
-								"default_style": false,
-								"attribute_type": "",
-								"custom_attribute": [],
-								"text": "Patient Weight:",
-								"long_mode": "LV_LABEL_LONG_WRAP",
-								"style": [
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DEFAULT",
-										"disable": false,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#2195F6",
-										"font": 20,
-										"text_align": "LV_TEXT_ALIGN_LEFT",
-										"font_family": "Acme_Regular",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									},
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DISABLED",
-										"disable": true,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#000000",
-										"font": 16,
-										"font_family": "montserratMedium",
-										"text_align": "LV_TEXT_ALIGN_CENTER",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									}
-								]
-							},
-							{
-								"name": "MainScreen_label_4",
-								"id": "iqkfxq9k",
-								"type": "label",
-								"visible": true,
-								"flag": [],
-								"pos": [
-									18,
-									225
-								],
-								"size": [
-									65,
-									19
-								],
-								"default_style": false,
-								"attribute_type": "",
-								"custom_attribute": [],
-								"text": "Total:",
-								"long_mode": "LV_LABEL_LONG_WRAP",
-								"style": [
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DEFAULT",
-										"disable": false,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#2195F6",
-										"font": 20,
-										"text_align": "LV_TEXT_ALIGN_LEFT",
-										"font_family": "Acme_Regular",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									},
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DISABLED",
-										"disable": true,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#000000",
-										"font": 16,
-										"font_family": "montserratMedium",
-										"text_align": "LV_TEXT_ALIGN_CENTER",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									}
-								]
-							},
-							{
-								"name": "MainScreen_label_5",
-								"id": "nfw4vjta",
-								"type": "label",
-								"visible": true,
-								"flag": [],
-								"pos": [
-									391,
-									195
-								],
-								"size": [
-									52,
-									19
-								],
-								"default_style": false,
-								"attribute_type": "",
-								"custom_attribute": [],
-								"text": "Rem:",
-								"long_mode": "LV_LABEL_LONG_WRAP",
-								"style": [
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DEFAULT",
-										"disable": false,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#2195F6",
-										"font": 20,
-										"text_align": "LV_TEXT_ALIGN_LEFT",
-										"font_family": "Acme_Regular",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									},
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DISABLED",
-										"disable": true,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#000000",
-										"font": 16,
-										"font_family": "montserratMedium",
-										"text_align": "LV_TEXT_ALIGN_CENTER",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									}
-								]
-							},
-							{
-								"name": "MainScreen_label_6",
-								"id": "p94by8pa",
-								"type": "label",
-								"visible": true,
-								"flag": [],
-								"pos": [
-									391,
-									225
-								],
-								"size": [
-									110,
-									19
-								],
-								"default_style": false,
-								"attribute_type": "",
-								"custom_attribute": [],
-								"text": "Time Left:",
-								"long_mode": "LV_LABEL_LONG_WRAP",
-								"style": [
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DEFAULT",
-										"disable": false,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#2195F6",
-										"font": 20,
-										"text_align": "LV_TEXT_ALIGN_LEFT",
-										"font_family": "Acme_Regular",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									},
-									{
-										"part": "LV_PART_MAIN",
-										"state": "LV_STATE_DISABLED",
-										"disable": true,
-										"border_side": [
-											"LV_BORDER_SIDE_FULL"
-										],
-										"border_width": 0,
-										"border_opa": 255,
-										"border_color": "#2195f6",
-										"radius": 0,
-										"text_color": "#000000",
-										"font": 16,
-										"font_family": "montserratMedium",
-										"text_align": "LV_TEXT_ALIGN_CENTER",
-										"letter_space": 2,
-										"line_space": 0,
-										"bg_color": "#2195f6",
-										"bg_grad_color": "#2195f6",
-										"bg_opa": 0,
-										"bg_grad_dir": "LV_GRAD_DIR_NONE",
-										"bg_dither_mode": "LV_DITHER_NONE",
-										"bg_main_stop": 0,
-										"bg_grad_stop": 255,
-										"padding_top": 0,
-										"padding_right": 0,
-										"padding_bottom": 0,
-										"padding_left": 0,
-										"bg_img_src": "",
-										"bg_img_opa": 255,
-										"bg_img_recolor": "#ffffff",
-										"bg_img_recolor_opa": 0,
-										"shadow_color": "#2195f6",
-										"shadow_opa": 255,
-										"shadow_width": 0,
-										"shadow_spread": 0,
-										"shadow_ofs_x": 0,
-										"shadow_ofs_y": 0
-									}
-								]
-							},
-							{
-								"name": "MainScreen_labelTimeLeft",
+								"name": "MainScreen_labelMainTimeLeft",
 								"id": "5o9o04bn",
 								"type": "label",
 								"visible": true,
 								"flag": [],
 								"pos": [
-									510,
+									396,
 									225
 								],
 								"size": [
-									110,
-									19
+									224,
+									18
 								],
 								"default_style": false,
 								"attribute_type": "",
 								"custom_attribute": [],
-								"text": "00:09:53",
+								"text": "Time Left: 00:09:53",
 								"long_mode": "LV_LABEL_LONG_WRAP",
 								"style": [
 									{
@@ -36466,23 +35885,23 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelRemVolume",
+								"name": "MainScreen_labelMainRemVolume",
 								"id": "dg8itpr4",
 								"type": "label",
 								"visible": true,
 								"flag": [],
 								"pos": [
-									449,
+									397,
 									195
 								],
 								"size": [
-									100,
-									19
+									202,
+									18
 								],
 								"default_style": false,
 								"attribute_type": "",
 								"custom_attribute": [],
-								"text": "180.0 ml",
+								"text": "Rem: 180.0 ml",
 								"long_mode": "LV_LABEL_LONG_WRAP",
 								"style": [
 									{
@@ -36566,23 +35985,23 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelPatientKg",
+								"name": "MainScreen_labelMainPatientKg",
 								"id": "zy1729hq",
 								"type": "label",
 								"visible": true,
 								"flag": [],
 								"pos": [
-									190,
+									17,
 									195
 								],
 								"size": [
-									76,
-									22
+									249,
+									25
 								],
 								"default_style": false,
 								"attribute_type": "",
 								"custom_attribute": [],
-								"text": "120 kg",
+								"text": "Patient Weight: 120 kg",
 								"long_mode": "LV_LABEL_LONG_WRAP",
 								"style": [
 									{
@@ -36666,23 +36085,23 @@
 								]
 							},
 							{
-								"name": "MainScreen_labelTotalVolume",
+								"name": "MainScreen_labelMainTotalVolume",
 								"id": "riqlhem1",
 								"type": "label",
 								"visible": true,
 								"flag": [],
 								"pos": [
-									88,
+									19,
 									225
 								],
 								"size": [
-									100,
-									19
+									240,
+									23
 								],
 								"default_style": false,
 								"attribute_type": "",
 								"custom_attribute": [],
-								"text": "180.0 ml",
+								"text": "Total: 180.0 ml",
 								"long_mode": "LV_LABEL_LONG_WRAP",
 								"style": [
 									{
@@ -38314,7 +37733,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -38348,7 +37767,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Syringe_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -38560,7 +37979,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -38594,7 +38013,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Drug_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -38838,7 +38257,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -38872,7 +38291,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Mode_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39072,7 +38491,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39106,7 +38525,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\OCC_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39306,7 +38725,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39340,7 +38759,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\KVO_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39540,7 +38959,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39574,7 +38993,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Intermittent_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39729,7 +39148,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39763,7 +39182,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Rhythmic_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39918,7 +39337,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -39952,7 +39371,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Nurse_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40107,7 +39526,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40141,7 +39560,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Bolus_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40296,7 +39715,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40330,7 +39749,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Purge_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40485,7 +39904,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40519,7 +39938,7 @@
 												"shadow_spread": 0,
 												"shadow_ofs_x": 0,
 												"shadow_ofs_y": 0,
-												"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
+												"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\Setting_100.png",
 												"bg_img_opa": 255,
 												"bg_img_recolor": "#ffffff",
 												"bg_img_recolor_opa": 0,
@@ -40983,7 +40402,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "",
-											"code_c": "\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\tlv_obj_t *obj=lv_event_get_target(e);\t\n\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t{\n        lv_group_t *g=lv_group_get_default();\n        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      \n\t  printf(\"@1id=%d\\n\",id);\n\t  if(id==7) \n\t  {\n\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t    setlistSyringeTypeGroup(ui);\n\t  }\n\t  else\n\t  {\n\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n        lv_group_set_editing(g,false);\n\t\tlv_group_focus_prev(g);\n\t\tobj=lv_group_get_focused(g);\n\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\n\t  }\n\n\t}\n\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t{\n\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t  \n\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t  setlistSyringeCompanyGroup(ui);\n\t}\n\telse\n\t{\n\t  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);\t\t  \n\t}",
+											"code_c": "\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\tlv_obj_t *obj=lv_event_get_target(e);\t\n\t\tif(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))\n\t\t{\n\t        lv_group_t *g=lv_group_get_default();\n\t        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      \n\t\t  printf(\"@1id=%d\\n\",id);\n\t\t  if(id==7) \n\t\t  {\n\t\t    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);\n\t\t    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t\t    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t    setlistSyringeTypeGroup(ui);\n\t\t  }\n\t\t  else\n\t\t  {\n\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t        lv_group_set_editing(g,false);\n\t\t\tlv_group_focus_prev(g);\n\t\t\tobj=lv_group_get_focused(g);\n\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\n\t\t  }\n\t\n\t\t}\n\t\telse if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))\n\t\t{\n\t\t  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);\n\t\t  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);\n\t\t  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\t\t  \n\t\t  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);\n\t\t  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);\n\t\t  setlistSyringeCompanyGroup(ui);\n\t\t}\n\t\telse\n\t\t{\n\t\t  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t\t  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);\t\t  \n\t\t}",
 											"inc_py": "",
 											"code_py": ""
 										}
@@ -49219,7 +48638,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": " uint8_t cur_ModeMode,cur_ModeUnit;",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nlv_label_set_text(ui->MainScreen_labelModeHeader,\"Select Infusion Type\");\ncur_ModeUnit=lv_obj_get_child_id(obj);\nupdateModeValues(ui,cur_ModeMode,cur_ModeUnit);\n",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_obj_t *obj=lv_event_get_target(e);\nlv_label_set_text(ui->MainScreen_labelModeHeader,\"Select Infusion Type\");\ncur_ModeUnit=lv_obj_get_child_id(obj);\nupdateModeValues(ui,cur_ModeMode,cur_ModeUnit);",
 											"inc_py": "",
 											"code_py": ""
 										}
@@ -52296,7 +51715,7 @@
 										"outline_width": 0,
 										"outline_color": "#2195f6",
 										"outline_opa": 0,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_empty.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0,
@@ -52352,7 +51771,7 @@
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
 										"bg_opa": 255,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0,
@@ -52369,7 +51788,7 @@
 										"bg_main_stop": 0,
 										"bg_grad_stop": 255,
 										"bg_opa": 255,
-										"bg_img_src": "E:\\Workspace\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
+										"bg_img_src": "E:\\Designs\\Javad_works\\SyringePump\\UI_PCSimulation\\SyringePump_GuiGuider\\SyringePumpUi\\import\\image\\ledbar_full.png",
 										"bg_img_opa": 255,
 										"bg_img_recolor": "#ffffff",
 										"bg_img_recolor_opa": 0,

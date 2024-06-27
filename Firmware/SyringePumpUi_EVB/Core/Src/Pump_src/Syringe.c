@@ -1,5 +1,4 @@
-#include "Syring.h"
-#include "custom.h"
+#include <Syring.h>
 syringe_t DefaultSyrings[50][20]; //50 Companies,20 Types
 void loadDefaultSyringesValue(void)
 {
@@ -17,12 +16,12 @@ void loadDefaultSyringesValue(void)
                 lv_snprintf(DefaultSyrings[mfg][sy].Manufacture,20,"Company%d",mfg);
                 lv_snprintf(DefaultSyrings[mfg][sy].Name,20,"Syringe%d_%d",mfg,sy+1);
             }
-            DefaultSyrings[mfg][sy].Volume=(uint8_t)randi(0,60);
-            DefaultSyrings[mfg][sy].InnerDia10=(uint16_t)randi(0,500);
-            DefaultSyrings[mfg][sy].OuterDia10=(uint16_t)randi(0,500);
-            DefaultSyrings[mfg][sy].BarrelLen10=(uint16_t)randi(0,2000);
-            DefaultSyrings[mfg][sy].PlungerLen10=(uint16_t)randi(0,600);
-            DefaultSyrings[mfg][sy].DiaTolerance10=(int16_t)randi(-100,100);
+            DefaultSyrings[mfg][sy].Volume=(uint8_t)lv_rand(0,60);
+            DefaultSyrings[mfg][sy].InnerDia10=(uint16_t)lv_rand(0,500);
+            DefaultSyrings[mfg][sy].OuterDia10=(uint16_t)lv_rand(0,500);
+            DefaultSyrings[mfg][sy].BarrelLen10=(uint16_t)lv_rand(0,2000);
+            DefaultSyrings[mfg][sy].PlungerLen10=(uint16_t)lv_rand(0,600);
+            DefaultSyrings[mfg][sy].DiaTolerance10=(int16_t)lv_rand(-100,100);
         }
     }
 }

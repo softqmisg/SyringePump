@@ -50,7 +50,8 @@ static void MainScreen_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_SCREEN_LOADED:
 	{
-		ui_move_animation(guider_ui.MainScreen_imgDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
+		ui_move_animation(guider_ui.MainScreen_imgFooterDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
+		animcontMain_ready_callback(NULL);
 		break;
 	}
 	default:
@@ -195,50 +196,50 @@ static void MainScreen_btnGoMenuSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-			lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-		lv_obj_t *obj=lv_event_get_target(e);	
-		if(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))
-		{
-	        lv_group_t *g=lv_group_get_default();
-	        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      
-		  printf("@1id=%d\n",id);
-		  if(id==7) 
-		  {
-		    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
-		    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
-		    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		    setlistSyringeTypeGroup(ui);
-		  }
-		  else
-		  {
-			lv_obj_t *obj=lv_group_get_focused(g);
-			lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
-	        lv_group_set_editing(g,false);
-			lv_group_focus_prev(g);
-			obj=lv_group_get_focused(g);
-			lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
-	
-		  }
-	
-		}
-		else if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))
-		{
-		  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
-		  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);
-		  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);
-		  
-		  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
-		  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
-		  setlistSyringeCompanyGroup(ui);
-		}
-		else
-		{
-		  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-		  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
-		}
+				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+			lv_obj_t *obj=lv_event_get_target(e);	
+			if(lv_obj_has_flag(ui->MainScreen_contSyringeValues,LV_OBJ_FLAG_CLICKABLE))
+			{
+		        lv_group_t *g=lv_group_get_default();
+		        uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));      
+			  printf("@1id=%d\n",id);
+			  if(id==7) 
+			  {
+			    lv_obj_clear_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICKABLE);
+			    //lv_obj_clear_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+			    lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
+			    //lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+			    setlistSyringeTypeGroup(ui);
+			  }
+			  else
+			  {
+				lv_obj_t *obj=lv_group_get_focused(g);
+				lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+		        lv_group_set_editing(g,false);
+				lv_group_focus_prev(g);
+				obj=lv_group_get_focused(g);
+				lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+		
+			  }
+		
+			}
+			else if (lv_obj_has_flag(ui->MainScreen_listSyringeType,LV_OBJ_FLAG_CLICKABLE))
+			{
+			  lv_obj_clear_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
+			  //lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+			  lv_obj_add_flag(ui->MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICKABLE);
+			  //lv_obj_add_flag(guider_ui.MainScreen_listSyringeCompany, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+			  
+			  lv_obj_add_flag(ui->MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
+			  lv_obj_add_flag(ui->MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
+			  setlistSyringeCompanyGroup(ui);
+			}
+			else
+			{
+			  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
+			  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
+		      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
+			}
 		break;
 	}
 	default:
@@ -795,7 +796,6 @@ static void MainScreen_listModeUnit_event_handler (lv_event_t *e)
 	lv_label_set_text(ui->MainScreen_labelModeHeader,"Select Infusion Type");
 	cur_ModeUnit=lv_obj_get_child_id(obj);
 	updateModeValues(ui,cur_ModeMode,cur_ModeUnit);
-	
 		break;
 	}
 	default:

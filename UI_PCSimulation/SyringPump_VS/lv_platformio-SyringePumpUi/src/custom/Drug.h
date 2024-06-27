@@ -3,6 +3,7 @@
 #include "lvgl.h"
 typedef enum  {ml,ug,mg,unit} Id_t;
 typedef struct{
+    uint8_t Drugindex;
     char Brand[20];
     char Name[20];
     Id_t Id;

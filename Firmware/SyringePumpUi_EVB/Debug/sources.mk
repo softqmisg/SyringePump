@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (12.3.rel1)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 ELF_SRCS := 
@@ -22,13 +22,14 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/Src \
 Core/Src/Lvgl_Porting \
 Core/Src/Lvgl_Ui/custom \
 Core/Src/Lvgl_Ui/generated \
 Core/Src/Lvgl_Ui/generated/guider_fonts \
 Core/Src/Lvgl_Ui/generated/images \
 Core/Src/Lvgl_Ui \
+Core/Src/Pump_src \
+Core/Src \
 Core/Startup \
 Drivers/STM32H7xx_HAL_Driver/Src \
 LVGL/lvgl/demos/benchmark/assets \

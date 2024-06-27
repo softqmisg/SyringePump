@@ -54,10 +54,6 @@ void animcontMode_ready_callback(lv_anim_t * a);
 void animcontOcclusion_ready_callback(lv_anim_t *a);
 void animcontKVO_ready_callback(lv_anim_t *a);
 void animcontIntermittent_ready_callback(lv_anim_t *a);
-
-
-
-int randi(int lower_bound,int upper_bound);
 #ifdef __cplusplus
 }
 #endif

@@ -4,8 +4,8 @@ LVGL/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_rgb565a8.o: \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_log.h \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../lv_conf_internal.h \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../lv_conf_kconfig.h \
- E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
- E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h \
+ E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_types.h \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_timer.h \
  ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../hal/lv_hal_tick.h \
@@ -251,8 +251,8 @@ LVGL/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_rgb565a8.o: \
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_log.h:
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../lv_conf_internal.h:
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../lv_conf_kconfig.h:
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lv_conf.h:
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/Core/Src/Lvgl_Ui/custom/lv_conf_ext.h:
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_types.h:
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/lv_timer.h:
 ../LVGL/lvgl/demos/benchmark/assets/../../../src/misc/../hal/lv_hal_tick.h:

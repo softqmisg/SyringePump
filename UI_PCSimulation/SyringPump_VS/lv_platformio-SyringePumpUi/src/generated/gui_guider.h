@@ -26,37 +26,33 @@ typedef struct
 	bool MainScreen_del;
 	lv_obj_t *g_kb_MainScreen;
 	lv_obj_t *MainScreen_contHeader;
-	lv_obj_t *MainScreen_digital_clock;
-	lv_obj_t *MainScreen_datetext;
-	lv_obj_t *MainScreen_labelAlarmNut;
-	lv_obj_t *MainScreen_labelAlarmPlunger;
-	lv_obj_t *MainScreen_imgNetwork;
-	lv_obj_t *MainScreen_imgSerialPort;
-	lv_obj_t *MainScreen_imgUsbPort;
-	lv_obj_t *MainScreen_barBatteryLevel;
+	lv_obj_t *MainScreen_digital_clockHeader;
+	lv_obj_t *MainScreen_datetextHeader;
+	lv_obj_t *MainScreen_labelHeaderAlarmNut;
+	lv_obj_t *MainScreen_labelHeaderAlarmPlunger;
+	lv_obj_t *MainScreen_imgHeaderNetwork;
+	lv_obj_t *MainScreen_imgHeaderSerialPort;
+	lv_obj_t *MainScreen_imgHeaderUsbPort;
+	lv_obj_t *MainScreen_barHeaderBatteryLevel;
 	lv_obj_t *MainScreen_contFooter;
-	lv_obj_t *MainScreen_imgSyringe;
-	lv_obj_t *MainScreen_labelDrug;
-	lv_obj_t *MainScreen_labelSyringe;
-	lv_obj_t *MainScreen_labelDiameter;
-	lv_obj_t *MainScreen_barSyringeLevel;
-	lv_obj_t *MainScreen_labelSyringeInfo;
-	lv_obj_t *MainScreen_imgForbidden;
-	lv_obj_t *MainScreen_imgDroplet;
+	lv_obj_t *MainScreen_imgFooterSyringe;
+	lv_obj_t *MainScreen_labelFooterDrug;
+	lv_obj_t *MainScreen_labelFooterSyringe;
+	lv_obj_t *MainScreen_labelFooterDiameter;
+	lv_obj_t *MainScreen_barFooterSyringeLevel;
+	lv_obj_t *MainScreen_labelFooterSyringeInfo;
+	lv_obj_t *MainScreen_imgFooterForbidden;
+	lv_obj_t *MainScreen_imgFooterDroplet;
 	lv_obj_t *MainScreen_contMain;
-	lv_obj_t *MainScreen_barOcclusionLevel;
-	lv_obj_t *MainScreen_labelInjectionMode;
-	lv_obj_t *MainScreen_labelInjectionRate;
-	lv_obj_t *MainScreen_label_Error;
-	lv_obj_t *MainScreen_labelInjectedVolume;
-	lv_obj_t *MainScreen_label_3;
-	lv_obj_t *MainScreen_label_4;
-	lv_obj_t *MainScreen_label_5;
-	lv_obj_t *MainScreen_label_6;
-	lv_obj_t *MainScreen_labelTimeLeft;
-	lv_obj_t *MainScreen_labelRemVolume;
-	lv_obj_t *MainScreen_labelPatientKg;
-	lv_obj_t *MainScreen_labelTotalVolume;
+	lv_obj_t *MainScreen_barMainOcclusionLevel;
+	lv_obj_t *MainScreen_labelMainInjectionMode;
+	lv_obj_t *MainScreen_labelMainInjectionRate;
+	lv_obj_t *MainScreen_labelMainError;
+	lv_obj_t *MainScreen_labelMainInjectedVolume;
+	lv_obj_t *MainScreen_labelMainTimeLeft;
+	lv_obj_t *MainScreen_labelMainRemVolume;
+	lv_obj_t *MainScreen_labelMainPatientKg;
+	lv_obj_t *MainScreen_labelMainTotalVolume;
 	lv_obj_t *MainScreen_btnGoMenuMain;
 	lv_obj_t *MainScreen_btnGoMenuMain_label;
 	lv_obj_t *MainScreen_contMenu;
@@ -519,7 +515,6 @@ LV_FONT_DECLARE(lv_font_arial_33)
 LV_FONT_DECLARE(lv_font_arial_35)
 LV_FONT_DECLARE(lv_font_arial_25)
 LV_FONT_DECLARE(lv_font_arial_100)
-LV_FONT_DECLARE(lv_font_Acme_Regular_20)
 LV_FONT_DECLARE(lv_font_Acme_Regular_22)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
 LV_FONT_DECLARE(lv_font_Acme_Regular_26)

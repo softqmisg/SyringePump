@@ -1,6 +1,6 @@
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	24	static
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:130:23:lv_slider_get_value	16	static
-E:/Workspace/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/lv_api_map.h:78:24:lv_obj_get_child_id	16	static
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:84:20:lv_slider_set_value	24	static
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/widgets/lv_slider.h:130:23:lv_slider_get_value	16	static
+E:/Designs/Javad_works/SyringePump/Firmware/SyringePumpUi_EVB/LVGL/lvgl/src/lv_api_map.h:78:24:lv_obj_get_child_id	16	static
 ../Core/Src/Lvgl_Ui/generated/events_init.c:26:13:LogoScreen_event_handler	48	static
 ../Core/Src/Lvgl_Ui/generated/events_init.c:45:6:events_init_LogoScreen	16	static
 ../Core/Src/Lvgl_Ui/generated/events_init.c:49:13:MainScreen_event_handler	64	static

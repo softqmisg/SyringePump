@@ -1,5 +1,4 @@
 #include "Drug.h"
-#include "custom.h"
 drug_t DefaultDrugs[50]; //50 Types
 
 void loadDefaultDrugValue(void)
@@ -17,13 +16,13 @@ void loadDefaultDrugValue(void)
             lv_snprintf(DefaultDrugs[brands].Name,20,"Drug %d",brands);
 
         }
-            DefaultDrugs[brands].Id=(Id_t)randi(0,4);
-            DefaultDrugs[brands].mg_ml_1000=(uint16_t)randi(0,10000);
-            DefaultDrugs[brands].u_ml_1000=(uint16_t)randi(0,10000);
-            DefaultDrugs[brands].per_kg_1000=(uint16_t)randi(0,20000);
-            DefaultDrugs[brands].RateMin10=(uint16_t)randi(0,18000);
-            DefaultDrugs[brands].RateMax10=(uint16_t)randi(0,18000);
-            DefaultDrugs[brands].RateDef10=(uint16_t)randi(0,18000);
+            DefaultDrugs[brands].Id=(Id_t)lv_rand(0,4);
+            DefaultDrugs[brands].mg_ml_1000=(uint16_t)lv_rand(0,10000);
+            DefaultDrugs[brands].u_ml_1000=(uint16_t)lv_rand(0,10000);
+            DefaultDrugs[brands].per_kg_1000=(uint16_t)lv_rand(0,20000);
+            DefaultDrugs[brands].RateMin10=(uint16_t)lv_rand(0,18000);
+            DefaultDrugs[brands].RateMax10=(uint16_t)lv_rand(0,18000);
+            DefaultDrugs[brands].RateDef10=(uint16_t)lv_rand(0,18000);
            
     }
 }
