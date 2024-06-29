@@ -632,7 +632,7 @@ void updateMain(lv_ui *ui)
     break;
   case 3:
     lv_label_set_text(ui->MainScreen_labelMainInjectionMode, "Mode: Intermittent");
-    lv_label_set_text_fmt(ui->MainScreen_labelMainInjectionRate, "Rate: %d.%d %s", currentMachineState.Mode.InfusionRate10/10,currentMachineState.Mode.InfusionRate10%10,
+    lv_label_set_text_fmt(ui->MainScreen_labelMainInjectionRate, "Rate: %d.%d %s", currentMachineState.IntermittentInfusionRate10/10,currentMachineState.IntermittentInfusionRate10%10,
                           unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);
     break;
   case 4:
