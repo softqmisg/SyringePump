@@ -1152,6 +1152,61 @@ static void MainScreen_swNurseCall_event_handler (lv_event_t *e)
 		break;
 	}
 }
+static void MainScreen_btnGoMenuNurseCall_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+					lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+				lv_group_t *g=lv_group_get_default();
+				uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+						
+					  printf("@NurseCall id=%d\n",id);
+					  if(id==2) 
+					  {
+						ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
+						ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
+						lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);		  
+					  }
+					  else
+					  {
+						lv_obj_t *obj=lv_group_get_focused(g);
+						lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+			   			lv_group_set_editing(g,false);
+						lv_group_focus_prev(g);
+						obj=lv_group_get_focused(g);
+						lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+					  }
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnDummyNurseCall_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_FOCUSED:
+	{
+		        lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	        if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))
+	            currentMachineState.NurseCall=true;
+	        else
+	            currentMachineState.NurseCall=false;
+	        currentMachineState.NurseActiveDuration=lv_spinbox_get_value(ui->MainScreen_spinboxNurseCallDuration);
+	        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
+	        ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
+	        lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);	
+		break;
+	}
+	default:
+		break;
+	}
+}
 void events_init_MainScreen(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
@@ -1205,6 +1260,8 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnGOMenuIntermittent, MainScreen_btnGOMenuIntermittent_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyIntermittent, MainScreen_btnDummyIntermittent_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_swNurseCall, MainScreen_swNurseCall_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuNurseCall, MainScreen_btnGoMenuNurseCall_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnDummyNurseCall, MainScreen_btnDummyNurseCall_event_handler, LV_EVENT_ALL, ui);
 }
 
 void events_init(lv_ui *ui)

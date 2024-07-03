@@ -9,14 +9,22 @@ void LoadCurrentMachinValue(void)
     memcpy(&currentMachineState.Syringe,&DefaultSyrings[0][0],sizeof(syringe_t));
     memcpy(&currentMachineState.Drug,&DefaultDrugs[0],sizeof(drug_t));
     memcpy(&currentMachineState.Mode,&DefaultModes[2][3],sizeof(infusionmode_t));
-    currentMachineState.OcclusionLevel=5;
+    currentMachineState.OcclusionLevel=(uint16_t)lv_rand(1,13);;
     currentMachineState.KvoMode=true;
-    currentMachineState.KvoRate10=15;
-    currentMachineState.IntermittentInfusionRate10=60;
-    currentMachineState.IntermittentInfusionRateUnit=1;
-    currentMachineState.IntermittentDuration=(0*3600)+(2*60)+27;
-    currentMachineState.IntermittentBackgroundRate10=2;
-    currentMachineState.IntermittentSleep=(0*3600)+(0*60)+0;
+    currentMachineState.KvoRate10=(uint16_t)lv_rand(0,20);;
+    currentMachineState.IntermittentInfusionRate10=(uint16_t)lv_rand(0,18000);
+    currentMachineState.IntermittentInfusionRateUnit=modeTime;
+    currentMachineState.IntermittentDuration=(uint16_t)lv_rand(0,359999); //99:59:59
+    currentMachineState.IntermittentBackgroundRate10=modeTime;
+    currentMachineState.IntermittentSleep=(uint16_t)lv_rand(0,359999); //99:59:59
+    currentMachineState.NurseCall=true;
+    currentMachineState.NurseActiveDuration=(uint16_t)lv_rand(0,59);;
+    currentMachineState.BolusRate10=(uint16_t)lv_rand(0,18000);
+    currentMachineState.BolusMaxVolume10=(uint16_t)lv_rand(0,50);
+    currentMachineState.BolusIntervalTime=(uint16_t)lv_rand(0,359999); //99:59:59
+    currentMachineState.PurgeRate10=(uint16_t)lv_rand(0,18000);
+    currentMachineState.PurgeMaxVolume10=(uint16_t)lv_rand(0,50);
+    currentMachineState.PurgeIntervalTime=(uint16_t)lv_rand(0,359999); //99:59:59
 
     cur_SyringeManufacture=currentMachineState.Syringe.ManufactureIndex;
     cur_SyringeType=currentMachineState.Syringe.TypeIndex;

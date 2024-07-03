@@ -403,6 +403,22 @@ typedef struct
 	lv_obj_t *MainScreen_btnGOMenuIntermittent_label;
 	lv_obj_t *MainScreen_btnDummyIntermittent;
 	lv_obj_t *MainScreen_btnDummyIntermittent_label;
+	lv_obj_t *MainScreen_contNurseCall;
+	lv_obj_t *MainScreen_label_66;
+	lv_obj_t *MainScreen_contNurseCallValues;
+	lv_obj_t *MainScreen_label_65;
+	lv_obj_t *MainScreen_label_64;
+	lv_obj_t *MainScreen_swNurseCall;
+	lv_obj_t *MainScreen_labelswNurseCallEnable;
+	lv_obj_t *MainScreen_labelswNurseCallDisable;
+	lv_obj_t *MainScreen_label_61;
+	lv_obj_t *MainScreen_spinboxNurseCallDuration;
+	lv_obj_t *MainScreen_spinboxNurseCallDuration_btn;
+	lv_obj_t *MainScreen_spinboxNurseCallDuration_btn_minus;
+	lv_obj_t *MainScreen_btnGoMenuNurseCall;
+	lv_obj_t *MainScreen_btnGoMenuNurseCall_label;
+	lv_obj_t *MainScreen_btnDummyNurseCall;
+	lv_obj_t *MainScreen_btnDummyNurseCall_label;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 

@@ -663,7 +663,7 @@
 			"version": 171,
 			"scrollbar_mode": "OFF",
 			"customer_code": {
-				"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetextHeader, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nlv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration,0,10);\n\nMainScreen_digital_clockHeader_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
+				"code_c": "\t//level style\n\tlv_obj_set_size(ui->g_kb_MainScreen,800,200);\n\tlv_obj_set_parent(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen);\n\tlv_obj_set_style_pad_top(ui->g_kb_MainScreen,50,LV_PART_MAIN|LV_STATE_DEFAULT);\n\tlv_obj_align_to(ui->MainScreen_ta_keybard,ui->g_kb_MainScreen, LV_ALIGN_TOP_MID,0,-50);\n\n\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMain, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMainMenu, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuSyringe, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuDrug, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_clear_flag(ui->MainScreen_btnGoMenuMode, LV_OBJ_FLAG_CLICK_FOCUSABLE);\n\nlv_obj_clear_flag(ui->MainScreen_datetextHeader, LV_OBJ_FLAG_CLICK_FOCUSABLE);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barHeaderBatteryLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_barMainOcclusionLevel,0,LV_PART_INDICATOR|LV_STATE_DEFAULT);\n\n//spinbox styles\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeInnerDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeOuterDia_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeBarrelLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringePlungerLen_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxSyringeDiaTolerance_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeVolume,0,60);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeInnerDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);\nlv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDruguml_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugperkg_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMin_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateMax_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxDrugRateDef_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugmgml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDruguml,0,10000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);\n\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalTimeSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxModeTotalVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxModeBodyWeight,0,300);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeInfusionRate,0,990);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);\n\n\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);\nlv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|\n                                                            LV_STATE_DEFAULT|\n                                                            LV_STATE_FOCUS_KEY|\n                                                            LV_STATE_FOCUSED);\n\n\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentDurationSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentBackgroundRate_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepHour_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxIntermittentSleepSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);\n\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentInfusionRate,0,18000);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentDurationSecond,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);\nlv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);\n\nlv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn,LV_OBJ_FLAG_HIDDEN);\nlv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn_minus,LV_OBJ_FLAG_HIDDEN);\nlv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration,0,59);\n\nMainScreen_digital_clockHeader_timer(NULL);\nMainScreenSetStyle(ui);\nLoadDefaults();\n",
 				"inc_c": "#include \"custom.h\"",
 				"code_py": "",
 				"inc_py": ""
@@ -970,7 +970,185 @@
 									"text_opa": 255,
 									"text_color": "#000000"
 								}
-							]
+							],
+							"event": {
+								"focused": [
+									{
+										"trigger": "focused",
+										"dst": "null",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": true,
+												"inc_c": "",
+												"code_c": "        lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n        if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))\n            currentMachineState.NurseCall=true;\n        else\n            currentMachineState.NurseCall=false;\n        currentMachineState.NurseActiveDuration=lv_spinbox_get_value(ui->MainScreen_spinboxNurseCallDuration);\n        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n        ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n        lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);\t",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": false,
+												"value": "LV_STATE_DEFAULT"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
+									}
+								]
+							}
 						},
 						{
 							"name": "btnGoMenuNurseCall",
@@ -1153,7 +1331,185 @@
 									"text_opa": 255,
 									"text_color": "#000000"
 								}
-							]
+							],
+							"event": {
+								"clicked": [
+									{
+										"trigger": "clicked",
+										"dst": "null",
+										"action": {
+											"load_screen": {
+												"ische": false,
+												"duration": 200,
+												"delay": 200,
+												"scrId": "",
+												"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+												"is_clean": false,
+												"is_del": true
+											},
+											"bg_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"grad_color": {
+												"ische": false,
+												"value": "#000000",
+												"dir": "LV_GRAD_DIR_HOR"
+											},
+											"bg_opa": {
+												"ische": false,
+												"value": 255
+											},
+											"opacity": {
+												"ische": false,
+												"value": 255
+											},
+											"bg_img_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"bg_img_recolor": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"bg_img_recolor_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_side": {
+												"ische": false,
+												"value": []
+											},
+											"border_width": {
+												"ische": false,
+												"value": 0
+											},
+											"border_opa": {
+												"ische": false,
+												"value": 0
+											},
+											"border_color": {
+												"ische": false,
+												"value": "#000000"
+											},
+											"radius": {
+												"ische": false,
+												"value": 0
+											},
+											"width": {
+												"ische": false,
+												"value": 50
+											},
+											"height": {
+												"ische": false,
+												"value": 50
+											},
+											"set_text": {
+												"ische": false,
+												"value": "default",
+												"font": 12,
+												"font_family": "montserratMedium"
+											},
+											"position": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0
+											},
+											"isVisible": {
+												"ische": false,
+												"flag": ""
+											},
+											"customer_code": {
+												"ische": true,
+												"inc_c": "",
+												"code_c": "\t\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\t\tlv_group_t *g=lv_group_get_default();\n\t\t\tuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n\t\t\t\t\t\n\t\t\t\t  printf(\"@NurseCall id=%d\\n\",id);\n\t\t\t\t  if(id==2) \n\t\t\t\t  {\n\t\t\t\t\tui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t\t\t\t\tui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t\t\t\t\tlv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);\t\t  \n\t\t\t\t  }\n\t\t\t\t  else\n\t\t\t\t  {\n\t\t\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\t   \t\t\tlv_group_set_editing(g,false);\n\t\t\t\t\tlv_group_focus_prev(g);\n\t\t\t\t\tobj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\t\t\t  }",
+												"inc_py": "",
+												"code_py": ""
+											},
+											"freemaster": {
+												"ische": false,
+												"variable": "",
+												"address": "",
+												"type": "",
+												"value": "",
+												"isOrigin": false
+											},
+											"add_state": {
+												"ische": false,
+												"value": "LV_STATE_DEFAULT"
+											},
+											"add_flag": {
+												"ische": false,
+												"value": []
+											},
+											"clear_flag": {
+												"ische": false,
+												"value": []
+											},
+											"move": {
+												"ische": false,
+												"value_x": 0,
+												"value_y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"scaleSize": {
+												"ische": false,
+												"width": 0,
+												"height": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"img_zoom": {
+												"ische": false,
+												"zoom": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											},
+											"rotate": {
+												"ische": false,
+												"rotate": 0,
+												"x": 0,
+												"y": 0,
+												"delay": 0,
+												"duration": 1000,
+												"repeat_count": 0,
+												"repeat_delay": 0,
+												"playback_time": 0,
+												"playback_delay": 0,
+												"start_cb": "",
+												"ready_cb": "",
+												"deleted_cb": "",
+												"path_type": "linear"
+											}
+										}
+									}
+								]
+							}
 						},
 						{
 							"name": "contNurseCallValues",
@@ -1799,7 +2155,6 @@
 											{
 												"trigger": "value_changed",
 												"dst": "d9mqpke5",
-												"item_index": "1",
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -1971,12 +2326,12 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": "1"
 											},
 											{
 												"trigger": "value_changed",
 												"dst": "t89t542s",
-												"item_index": "1",
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -2148,12 +2503,12 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": "1"
 											},
 											{
 												"trigger": "value_changed",
 												"dst": "t89t542s",
-												"item_index": 1,
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -2325,12 +2680,12 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": 1
 											},
 											{
 												"trigger": "value_changed",
 												"dst": "d9mqpke5",
-												"item_index": "0",
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -2502,12 +2857,12 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": "0"
 											},
 											{
 												"trigger": "value_changed",
 												"dst": "t89t542s",
-												"item_index": "0",
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -2677,12 +3032,12 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": "0"
 											},
 											{
 												"trigger": "value_changed",
 												"dst": "t89t542s",
-												"item_index": "0",
 												"action": {
 													"load_screen": {
 														"ische": false,
@@ -2854,7 +3209,8 @@
 														"deleted_cb": "",
 														"path_type": "linear"
 													}
-												}
+												},
+												"item_index": "0"
 											}
 										]
 									}
@@ -60063,6 +60419,23 @@
 									44
 								],
 								"default_style": false,
+								"event": {
+									"clicked": [
+										{
+											"src": "MainScreen_btnGoMenuNurseCall",
+											"trigger": "clicked",
+											"dst": "null",
+											"dst_type": "",
+											"src_type": "btn",
+											"src_screen": "MainScreen",
+											"action": "customer_code",
+											"inc_c": "",
+											"code_c": "\t\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\t\tlv_group_t *g=lv_group_get_default();\n\t\t\tuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n\t\t\t\t\t\n\t\t\t\t  printf(\"@NurseCall id=%d\\n\",id);\n\t\t\t\t  if(id==2) \n\t\t\t\t  {\n\t\t\t\t\tui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n\t\t\t\t\tui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n\t\t\t\t\tlv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);\t\t  \n\t\t\t\t  }\n\t\t\t\t  else\n\t\t\t\t  {\n\t\t\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\t   \t\t\tlv_group_set_editing(g,false);\n\t\t\t\t\tlv_group_focus_prev(g);\n\t\t\t\t\tobj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\t\t\t  }",
+											"inc_py": "",
+											"code_py": ""
+										}
+									]
+								},
 								"text_align": "center",
 								"style": [
 									{
@@ -60251,6 +60624,23 @@
 									10
 								],
 								"default_style": false,
+								"event": {
+									"focused": [
+										{
+											"src": "MainScreen_btnDummyNurseCall",
+											"trigger": "focused",
+											"dst": "null",
+											"dst_type": "",
+											"src_type": "btn",
+											"src_screen": "MainScreen",
+											"action": "customer_code",
+											"inc_c": "",
+											"code_c": "        lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n        if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))\n            currentMachineState.NurseCall=true;\n        else\n            currentMachineState.NurseCall=false;\n        currentMachineState.NurseActiveDuration=lv_spinbox_get_value(ui->MainScreen_spinboxNurseCallDuration);\n        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);\n        ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);\n        lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);\t",
+											"inc_py": "",
+											"code_py": ""
+										}
+									]
+								},
 								"text_align": "center",
 								"style": [
 									{

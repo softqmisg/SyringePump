@@ -156,10 +156,16 @@ void MainScreenSetStyle(lv_ui *ui)
   setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepHour);
   setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepMinute);
   setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepSecond);
+  setStyleEdittableObj(ui->MainScreen_spinboxNurseCallDuration);
+
 
   lv_obj_set_style_outline_color(ui->MainScreen_swKVOMode, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
   lv_obj_set_style_outline_pad(ui->MainScreen_swKVOMode, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
   lv_obj_set_style_outline_width(ui->MainScreen_swKVOMode, 4, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
+
+    lv_obj_set_style_outline_color(ui->MainScreen_swNurseCall, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
+  lv_obj_set_style_outline_pad(ui->MainScreen_swNurseCall, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
+  lv_obj_set_style_outline_width(ui->MainScreen_swNurseCall, 4, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
 }
 /************************************************************/
 void setcontMenuGroup(lv_ui *ui)
@@ -601,6 +607,35 @@ void setIntermittentGroup(lv_ui *ui)
     }
   }
 }
+
+void setNurseCallGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
+  lv_group_set_wrap(g, false);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+      lv_group_add_obj(g, ui->MainScreen_swNurseCall);
+      lv_group_add_obj(g, ui->MainScreen_spinboxNurseCallDuration);
+      lv_group_add_obj(g, ui->MainScreen_btnDummyNurseCall);
+      lv_group_focus_obj(ui->MainScreen_swNurseCall);
+    }
+  }
+}
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void updateMain(lv_ui *ui)
@@ -632,7 +667,7 @@ void updateMain(lv_ui *ui)
     break;
   case 3:
     lv_label_set_text(ui->MainScreen_labelMainInjectionMode, "Mode: Intermittent");
-    lv_label_set_text_fmt(ui->MainScreen_labelMainInjectionRate, "Rate: %d.%d %s", currentMachineState.IntermittentInfusionRate10/10,currentMachineState.IntermittentInfusionRate10%10,
+    lv_label_set_text_fmt(ui->MainScreen_labelMainInjectionRate, "Rate: %d.%d %s", currentMachineState.Mode.InfusionRate10/10,currentMachineState.Mode.InfusionRate10%10,
                           unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);
     break;
   case 4:
@@ -939,6 +974,22 @@ void updateIntermittentValues(lv_ui *ui)
   lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepSecond,(currentMachineState.IntermittentSleep%3600)%60);
 
 }
+void updateNurseCallValues(lv_ui *ui)
+{
+  if(currentMachineState.NurseCall)
+  {
+    lv_obj_add_state(ui->MainScreen_swNurseCall, LV_STATE_CHECKED);
+    lv_obj_add_flag(ui->MainScreen_labelswNurseCallDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_clear_flag(ui->MainScreen_labelswNurseCallEnable, LV_OBJ_FLAG_HIDDEN);
+  }
+  else
+  {
+    lv_obj_clear_state(ui->MainScreen_swNurseCall, LV_STATE_CHECKED);
+    lv_obj_clear_flag(ui->MainScreen_labelswNurseCallDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_add_flag(ui->MainScreen_labelswNurseCallEnable, LV_OBJ_FLAG_HIDDEN);    
+  }
+  lv_spinbox_set_value(ui->MainScreen_spinboxNurseCallDuration, currentMachineState.NurseActiveDuration);
+}
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
@@ -984,5 +1035,10 @@ void animcontIntermittent_ready_callback(lv_anim_t *a)
 {
   updateIntermittentValues(&guider_ui);
   setIntermittentGroup(&guider_ui);
+}
+void animcontNurseCall_ready_callback(lv_anim_t *a)
+{
+  updateNurseCallValues(&guider_ui);
+  setNurseCallGroup(&guider_ui);
 }
 /************************************/
