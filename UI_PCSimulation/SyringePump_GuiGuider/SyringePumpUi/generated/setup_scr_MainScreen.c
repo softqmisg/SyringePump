@@ -5282,6 +5282,300 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummyIntermittent, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contNurseCall
+	ui->MainScreen_contNurseCall = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contNurseCall, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contNurseCall, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contNurseCall, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contNurseCall, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contNurseCall, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contNurseCall, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contNurseCall, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contNurseCall, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contNurseCall, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_66
+	ui->MainScreen_label_66 = lv_label_create(ui->MainScreen_contNurseCall);
+	lv_label_set_text(ui->MainScreen_label_66, "Nurse Call");
+	lv_label_set_long_mode(ui->MainScreen_label_66, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_66, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_66, 800, 30);
+
+	//Write style for MainScreen_label_66, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_66, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_66, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_66, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_66, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_66, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_66, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_66, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_66, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_66, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contNurseCallValues
+	ui->MainScreen_contNurseCallValues = lv_obj_create(ui->MainScreen_contNurseCall);
+	lv_obj_set_pos(ui->MainScreen_contNurseCallValues, 89, 32);
+	lv_obj_set_size(ui->MainScreen_contNurseCallValues, 579, 266);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contNurseCallValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contNurseCallValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contNurseCallValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contNurseCallValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contNurseCallValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contNurseCallValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_65
+	ui->MainScreen_label_65 = lv_label_create(ui->MainScreen_contNurseCallValues);
+	lv_label_set_text(ui->MainScreen_label_65, "Nurse Call:");
+	lv_label_set_long_mode(ui->MainScreen_label_65, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_65, 167, 51);
+	lv_obj_set_size(ui->MainScreen_label_65, 155, 21);
+
+	//Write style for MainScreen_label_65, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_65, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_65, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_65, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_65, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_65, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_65, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_64
+	ui->MainScreen_label_64 = lv_label_create(ui->MainScreen_contNurseCallValues);
+	lv_label_set_text(ui->MainScreen_label_64, "Active Duration:");
+	lv_label_set_long_mode(ui->MainScreen_label_64, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_64, 152, 149);
+	lv_obj_set_size(ui->MainScreen_label_64, 175, 21);
+
+	//Write style for MainScreen_label_64, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_64, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_64, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_64, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_64, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_64, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_64, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_swNurseCall
+	ui->MainScreen_swNurseCall = lv_switch_create(ui->MainScreen_contNurseCallValues);
+	lv_obj_set_pos(ui->MainScreen_swNurseCall, 317, 48);
+	lv_obj_set_size(ui->MainScreen_swNurseCall, 110, 27);
+
+	//Write style for MainScreen_swNurseCall, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_swNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_swNurseCall, lv_color_hex(0xe6e2e6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_swNurseCall, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_swNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_swNurseCall, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_swNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_swNurseCall, Part: LV_PART_INDICATOR, State: LV_STATE_CHECKED.
+	lv_obj_set_style_bg_opa(ui->MainScreen_swNurseCall, 255, LV_PART_INDICATOR|LV_STATE_CHECKED);
+	lv_obj_set_style_bg_color(ui->MainScreen_swNurseCall, lv_color_hex(0x1bc52e), LV_PART_INDICATOR|LV_STATE_CHECKED);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_swNurseCall, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_CHECKED);
+	lv_obj_set_style_border_width(ui->MainScreen_swNurseCall, 0, LV_PART_INDICATOR|LV_STATE_CHECKED);
+
+	//Write style for MainScreen_swNurseCall, Part: LV_PART_KNOB, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_swNurseCall, 255, LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_swNurseCall, lv_color_hex(0xffffff), LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_swNurseCall, LV_GRAD_DIR_NONE, LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_swNurseCall, 0, LV_PART_KNOB|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_swNurseCall, 10, LV_PART_KNOB|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelswNurseCallEnable
+	ui->MainScreen_labelswNurseCallEnable = lv_label_create(ui->MainScreen_contNurseCallValues);
+	lv_label_set_text(ui->MainScreen_labelswNurseCallEnable, "Enable");
+	lv_label_set_long_mode(ui->MainScreen_labelswNurseCallEnable, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelswNurseCallEnable, 317, 55);
+	lv_obj_set_size(ui->MainScreen_labelswNurseCallEnable, 110, 27);
+
+	//Write style for MainScreen_labelswNurseCallEnable, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelswNurseCallEnable, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelswNurseCallEnable, &lv_font_Alatsi_Regular_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelswNurseCallEnable, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelswNurseCallEnable, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelswNurseCallEnable, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelswNurseCallEnable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelswNurseCallDisable
+	ui->MainScreen_labelswNurseCallDisable = lv_label_create(ui->MainScreen_contNurseCallValues);
+	lv_label_set_text(ui->MainScreen_labelswNurseCallDisable, "Disable");
+	lv_label_set_long_mode(ui->MainScreen_labelswNurseCallDisable, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelswNurseCallDisable, 317, 55);
+	lv_obj_set_size(ui->MainScreen_labelswNurseCallDisable, 110, 18);
+
+	//Write style for MainScreen_labelswNurseCallDisable, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelswNurseCallDisable, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelswNurseCallDisable, &lv_font_Alatsi_Regular_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelswNurseCallDisable, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelswNurseCallDisable, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelswNurseCallDisable, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelswNurseCallDisable, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_61
+	ui->MainScreen_label_61 = lv_label_create(ui->MainScreen_contNurseCallValues);
+	lv_label_set_text(ui->MainScreen_label_61, "Second");
+	lv_label_set_long_mode(ui->MainScreen_label_61, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_61, 401, 151);
+	lv_obj_set_size(ui->MainScreen_label_61, 140, 18);
+
+	//Write style for MainScreen_label_61, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_61, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_61, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_61, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_61, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_61, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_61, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxNurseCallDuration
+	ui->MainScreen_spinboxNurseCallDuration = lv_spinbox_create(ui->MainScreen_contNurseCallValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxNurseCallDuration, 328, 147);
+	lv_obj_set_width(ui->MainScreen_spinboxNurseCallDuration, 40);
+	lv_obj_set_height(ui->MainScreen_spinboxNurseCallDuration, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxNurseCallDuration, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration, -99, 99);
+	lv_coord_t MainScreen_spinboxNurseCallDuration_h = lv_obj_get_height(ui->MainScreen_spinboxNurseCallDuration);
+	ui->MainScreen_spinboxNurseCallDuration_btn = lv_btn_create(ui->MainScreen_contNurseCallValues);
+	lv_obj_set_size(ui->MainScreen_spinboxNurseCallDuration_btn, MainScreen_spinboxNurseCallDuration_h, MainScreen_spinboxNurseCallDuration_h);
+	lv_obj_align_to(ui->MainScreen_spinboxNurseCallDuration_btn, ui->MainScreen_spinboxNurseCallDuration, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxNurseCallDuration_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxNurseCallDuration_btn, lv_MainScreen_spinboxNurseCallDuration_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxNurseCallDuration_btn_minus = lv_btn_create(ui->MainScreen_contNurseCallValues);
+	lv_obj_set_size(ui->MainScreen_spinboxNurseCallDuration_btn_minus, MainScreen_spinboxNurseCallDuration_h, MainScreen_spinboxNurseCallDuration_h);
+	lv_obj_align_to(ui->MainScreen_spinboxNurseCallDuration_btn_minus, ui->MainScreen_spinboxNurseCallDuration, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxNurseCallDuration_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxNurseCallDuration_btn_minus, lv_MainScreen_spinboxNurseCallDuration_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxNurseCallDuration, 328, 147);
+
+	//Write style for MainScreen_spinboxNurseCallDuration, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxNurseCallDuration, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxNurseCallDuration, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxNurseCallDuration, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxNurseCallDuration, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxNurseCallDuration, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxNurseCallDuration, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxNurseCallDuration, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxNurseCallDuration, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxNurseCallDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxNurseCallDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxNurseCallDuration, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxNurseCallDuration, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxNurseCallDuration, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxNurseCallDuration, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxNurseCallDuration, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxNurseCallDuration, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxNurseCallDuration, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxNurseCallDuration, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxNurseCallDuration, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxNurseCallDuration, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxNurseCallDuration, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxNurseCallDuration, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxNurseCallDuration, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxNurseCallDuration, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoMenuNurseCall
+	ui->MainScreen_btnGoMenuNurseCall = lv_btn_create(ui->MainScreen_contNurseCall);
+	ui->MainScreen_btnGoMenuNurseCall_label = lv_label_create(ui->MainScreen_btnGoMenuNurseCall);
+	lv_label_set_text(ui->MainScreen_btnGoMenuNurseCall_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoMenuNurseCall_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoMenuNurseCall_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoMenuNurseCall, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoMenuNurseCall_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoMenuNurseCall, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoMenuNurseCall, 58, 44);
+
+	//Write style for MainScreen_btnGoMenuNurseCall, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoMenuNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoMenuNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoMenuNurseCall, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoMenuNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoMenuNurseCall, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoMenuNurseCall, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMenuNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoMenuNurseCall, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummyNurseCall
+	ui->MainScreen_btnDummyNurseCall = lv_btn_create(ui->MainScreen_contNurseCall);
+	ui->MainScreen_btnDummyNurseCall_label = lv_label_create(ui->MainScreen_btnDummyNurseCall);
+	lv_label_set_text(ui->MainScreen_btnDummyNurseCall_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummyNurseCall_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummyNurseCall_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyNurseCall, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummyNurseCall_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummyNurseCall, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummyNurseCall, 8, 10);
+
+	//Write style for MainScreen_btnDummyNurseCall, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummyNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummyNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummyNurseCall, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummyNurseCall, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummyNurseCall, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummyNurseCall, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummyNurseCall, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
 	lv_textarea_set_text(ui->MainScreen_ta_keybard, "hckdsjclsd");
@@ -5468,6 +5762,10 @@ lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);
+
+lv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn_minus,LV_OBJ_FLAG_HIDDEN);
+lv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration,0,10);
 
 MainScreen_digital_clockHeader_timer(NULL);
 MainScreenSetStyle(ui);

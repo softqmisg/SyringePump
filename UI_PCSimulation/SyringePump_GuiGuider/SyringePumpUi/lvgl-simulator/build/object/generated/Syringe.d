@@ -246,9 +246,7 @@ build/object/generated/Syringe.o: \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\misc\lv_txt.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\draw\lv_draw.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/extra/widgets/video/lv_video.h \
- e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h \
- e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\custom.h \
- e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\generated\gui_guider.h
+ e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h
 
 e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\Syring.h:
 
@@ -743,7 +741,3 @@ e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvg
 e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/extra/widgets/video/lv_video.h:
 
 e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h:
-
-e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\custom.h:
-
-e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\generated\gui_guider.h:

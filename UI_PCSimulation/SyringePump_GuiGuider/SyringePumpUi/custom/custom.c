@@ -939,6 +939,22 @@ void updateIntermittentValues(lv_ui *ui)
   lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepSecond,(currentMachineState.IntermittentSleep%3600)%60);
 
 }
+void updateNurseCallValues(lv_ui *ui)
+{
+  if(currentMachineState.NurseCall)
+  {
+    lv_obj_add_state(ui->MainScreen_swNurseCall, LV_STATE_CHECKED);
+    lv_obj_add_flag(ui->MainScreen_labelswNurseCallDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_clear_flag(ui->MainScreen_labelswNurseCallEnable, LV_OBJ_FLAG_HIDDEN);
+  }
+  else
+  {
+    lv_obj_clear_state(ui->MainScreen_swNurseCall, LV_STATE_CHECKED);
+    lv_obj_clear_flag(ui->MainScreen_labelswNurseCallDisable, LV_OBJ_FLAG_HIDDEN);
+    lv_obj_add_flag(ui->MainScreen_labelswNurseCallEnable, LV_OBJ_FLAG_HIDDEN);    
+  }
+  lv_spinbox_set_value(ui->MainScreen_spinboxNurseCallDuration, currentMachineState.NurseActiveDuration);
+}
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
@@ -984,5 +1000,10 @@ void animcontIntermittent_ready_callback(lv_anim_t *a)
 {
   updateIntermittentValues(&guider_ui);
   setIntermittentGroup(&guider_ui);
+}
+void animcontNurseCall_ready_callback(lv_anim_t *a)
+{
+  updateNurseCallValues(&guider_ui);
+  // setIntermittentGroup(&guider_ui);
 }
 /************************************/

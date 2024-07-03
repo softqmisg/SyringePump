@@ -1,6 +1,5 @@
-build/object/generated/InfusionMode.o: \
- e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\infusionmode.c \
- e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\InfusionMode.h \
+build/object/generated/lv_font_Alatsi_Regular_20.o: \
+ e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\generated\guider_fonts\lv_font_alatsi_regular_20.c \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\lvgl.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/misc/lv_log.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lv_conf_internal.h \
@@ -247,8 +246,6 @@ build/object/generated/InfusionMode.o: \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\draw\lv_draw.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src/extra/widgets/video/lv_video.h \
  e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\src\lvgl.h
-
-e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\custom\InfusionMode.h:
 
 e:\workspace\syringepump\ui_pcsimulation\syringepump_guiguider\syringepumpui\lvgl\lvgl.h:
 
