@@ -32,6 +32,11 @@ void setcontModeValuesGroup(lv_ui *ui);
 void setbarOcclusionOccGroup(lv_ui *ui);
 void setKVOModeGroup(lv_ui *ui);
 void setIntermittentGroup(lv_ui *ui);
+void setRhythmicGroup(lv_ui *ui);
+void setNurseCallGroup(lv_ui *ui);
+void setBolusGroup(lv_ui *ui);
+void setPurgeGroup(lv_ui *ui);
+void setSettingsGroup(lv_ui *ui);
 
 void updateMain(lv_ui *ui);
 void updateSyringeCompanyList(lv_ui *ui);
@@ -45,6 +50,11 @@ void updateModeValues(lv_ui *ui,uint8_t modeindex,uint8_t unitindex);
 void updateOcclusionValues(lv_ui *ui);
 void updateKVOModeValues(lv_ui *ui);
 void updateIntermittentValues(lv_ui *ui);
+void updateRhythmicValues(lv_ui *ui);
+void updateNurseCallValues(lv_ui *ui);
+void updateBoluseValues(lv_ui *ui);
+void updatePurgeValues(lv_ui *ui);
+void updateSettingsValues(lv_ui *ui);
 
 void animcontMain_ready_callback(lv_anim_t * a);
 void animcontMenu_ready_callback(lv_anim_t * a);
@@ -54,7 +64,24 @@ void animcontMode_ready_callback(lv_anim_t * a);
 void animcontOcclusion_ready_callback(lv_anim_t *a);
 void animcontKVO_ready_callback(lv_anim_t *a);
 void animcontIntermittent_ready_callback(lv_anim_t *a);
+void animcontRhythmic_ready_callback(lv_anim_t *a);
 void animcontNurseCall_ready_callback(lv_anim_t *a);
+void animcontBolus_ready_callback(lv_anim_t *a);
+void animcontPurge_ready_callback(lv_anim_t *a);
+void animcontSettings_ready_callback(lv_anim_t *a);
+
+
+void animcontSyringe_del_callback(lv_anim_t * a);
+void animcontDrug_del_callback(lv_anim_t * a);
+void animcontMode_del_callback(lv_anim_t * a);
+void animcontOcclusion_del_callback(lv_anim_t *a);
+void animcontKVO_del_callback(lv_anim_t *a);
+void animcontIntermittent_del_callback(lv_anim_t *a);
+void animcontRhythmic_del_callback(lv_anim_t *a);
+void animcontNurseCall_del_callback(lv_anim_t *a);
+void animcontBolus_del_callback(lv_anim_t *a);
+void animcontPurge_del_callback(lv_anim_t *a);
+void animcontSettings_del_callback(lv_anim_t *a);
 
 #ifdef __cplusplus
 }

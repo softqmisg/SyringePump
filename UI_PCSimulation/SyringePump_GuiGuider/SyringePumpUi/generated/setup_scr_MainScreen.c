@@ -64,7 +64,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 		lv_timer_create(MainScreen_digital_clockHeader_timer, 1000, NULL);
 		MainScreen_digital_clockHeader_timer_enabled = true;
 	}
-	lv_obj_set_pos(ui->MainScreen_digital_clockHeader, 5, 40);
+	lv_obj_set_pos(ui->MainScreen_digital_clockHeader, 4, 40);
 	lv_obj_set_size(ui->MainScreen_digital_clockHeader, 130, 36);
 
 	//Write style for MainScreen_digital_clockHeader, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -4521,7 +4521,7 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_align(ui->MainScreen_btnDummyKVO_label, LV_ALIGN_CENTER, 0, 0);
 	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyKVO, 0, LV_STATE_DEFAULT);
 	lv_obj_set_width(ui->MainScreen_btnDummyKVO_label, LV_PCT(100));
-	lv_obj_set_pos(ui->MainScreen_btnDummyKVO, 776, 129);
+	lv_obj_set_pos(ui->MainScreen_btnDummyKVO, 775, 129);
 	lv_obj_set_size(ui->MainScreen_btnDummyKVO, 8, 10);
 
 	//Write style for MainScreen_btnDummyKVO, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -5282,6 +5282,94 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyIntermittent, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummyIntermittent, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contRhythmic
+	ui->MainScreen_contRhythmic = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contRhythmic, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contRhythmic, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contRhythmic, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contRhythmic, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contRhythmic, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contRhythmic, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contRhythmic, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contRhythmic, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contRhythmic, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contRhythmic, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contRhythmic, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_72
+	ui->MainScreen_label_72 = lv_label_create(ui->MainScreen_contRhythmic);
+	lv_label_set_text(ui->MainScreen_label_72, "Rhythmic Infusion");
+	lv_label_set_long_mode(ui->MainScreen_label_72, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_72, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_72, 800, 30);
+
+	//Write style for MainScreen_label_72, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_72, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_72, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_72, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_72, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_72, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_72, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_72, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_72, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_72, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoMenuRhythmic
+	ui->MainScreen_btnGoMenuRhythmic = lv_btn_create(ui->MainScreen_contRhythmic);
+	ui->MainScreen_btnGoMenuRhythmic_label = lv_label_create(ui->MainScreen_btnGoMenuRhythmic);
+	lv_label_set_text(ui->MainScreen_btnGoMenuRhythmic_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoMenuRhythmic_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoMenuRhythmic_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoMenuRhythmic, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoMenuRhythmic_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoMenuRhythmic, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoMenuRhythmic, 58, 44);
+
+	//Write style for MainScreen_btnGoMenuRhythmic, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoMenuRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoMenuRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoMenuRhythmic, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoMenuRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoMenuRhythmic, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoMenuRhythmic, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMenuRhythmic, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoMenuRhythmic, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummyRhythmic
+	ui->MainScreen_btnDummyRhythmic = lv_btn_create(ui->MainScreen_contRhythmic);
+	ui->MainScreen_btnDummyRhythmic_label = lv_label_create(ui->MainScreen_btnDummyRhythmic);
+	lv_label_set_text(ui->MainScreen_btnDummyRhythmic_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummyRhythmic_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummyRhythmic_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyRhythmic, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummyRhythmic_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummyRhythmic, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummyRhythmic, 8, 10);
+
+	//Write style for MainScreen_btnDummyRhythmic, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummyRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummyRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummyRhythmic, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummyRhythmic, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummyRhythmic, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummyRhythmic, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyRhythmic, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummyRhythmic, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_contNurseCall
 	ui->MainScreen_contNurseCall = lv_obj_create(ui->MainScreen);
 	lv_obj_set_pos(ui->MainScreen_contNurseCall, 800, 80);
@@ -5576,6 +5664,526 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyNurseCall, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummyNurseCall, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contBolus
+	ui->MainScreen_contBolus = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contBolus, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contBolus, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contBolus, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contBolus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contBolus, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contBolus, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contBolus, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contBolus, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contBolus, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_78
+	ui->MainScreen_label_78 = lv_label_create(ui->MainScreen_contBolus);
+	lv_label_set_text(ui->MainScreen_label_78, "Bolus Mode");
+	lv_label_set_long_mode(ui->MainScreen_label_78, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_78, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_78, 800, 30);
+
+	//Write style for MainScreen_label_78, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_78, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_78, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_78, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_78, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_78, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_78, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_78, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_78, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_78, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_78, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contBolusValues
+	ui->MainScreen_contBolusValues = lv_obj_create(ui->MainScreen_contBolus);
+	lv_obj_set_pos(ui->MainScreen_contBolusValues, 89, 32);
+	lv_obj_set_size(ui->MainScreen_contBolusValues, 579, 266);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contBolusValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contBolusValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contBolusValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contBolusValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contBolusValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contBolusValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_88
+	ui->MainScreen_label_88 = lv_label_create(ui->MainScreen_contBolusValues);
+	lv_label_set_text(ui->MainScreen_label_88, "Bolus Rate:\n");
+	lv_label_set_long_mode(ui->MainScreen_label_88, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_88, 142, 34);
+	lv_obj_set_size(ui->MainScreen_label_88, 155, 21);
+
+	//Write style for MainScreen_label_88, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_88, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_88, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_88, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_88, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_88, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_88, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_86
+	ui->MainScreen_label_86 = lv_label_create(ui->MainScreen_contBolusValues);
+	lv_label_set_text(ui->MainScreen_label_86, "Bolus Max. Volume:");
+	lv_label_set_long_mode(ui->MainScreen_label_86, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_86, 116, 124);
+	lv_obj_set_size(ui->MainScreen_label_86, 207, 20);
+
+	//Write style for MainScreen_label_86, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_86, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_86, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_86, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_86, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_86, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_86, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_85
+	ui->MainScreen_label_85 = lv_label_create(ui->MainScreen_contBolusValues);
+	lv_label_set_text(ui->MainScreen_label_85, "Bolus Interval Time:");
+	lv_label_set_long_mode(ui->MainScreen_label_85, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_85, 72, 213);
+	lv_obj_set_size(ui->MainScreen_label_85, 225, 21);
+
+	//Write style for MainScreen_label_85, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_85, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_85, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_85, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_85, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_85, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_85, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelBolusRateUnit
+	ui->MainScreen_labelBolusRateUnit = lv_label_create(ui->MainScreen_contBolusValues);
+	lv_label_set_text(ui->MainScreen_labelBolusRateUnit, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelBolusRateUnit, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelBolusRateUnit, 417, 35);
+	lv_obj_set_size(ui->MainScreen_labelBolusRateUnit, 115, 21);
+
+	//Write style for MainScreen_labelBolusRateUnit, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelBolusRateUnit, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelBolusRateUnit, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelBolusRateUnit, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelBolusRateUnit, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelBolusRateUnit, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelBolusRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelBolusMaxVolumeUnit
+	ui->MainScreen_labelBolusMaxVolumeUnit = lv_label_create(ui->MainScreen_contBolusValues);
+	lv_label_set_text(ui->MainScreen_labelBolusMaxVolumeUnit, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelBolusMaxVolumeUnit, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelBolusMaxVolumeUnit, 365, 124);
+	lv_obj_set_size(ui->MainScreen_labelBolusMaxVolumeUnit, 115, 21);
+
+	//Write style for MainScreen_labelBolusMaxVolumeUnit, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelBolusMaxVolumeUnit, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelBolusMaxVolumeUnit, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelBolusMaxVolumeUnit, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelBolusMaxVolumeUnit, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelBolusMaxVolumeUnit, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelBolusMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxBolusRate
+	ui->MainScreen_spinboxBolusRate = lv_spinbox_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusRate, 315, 31);
+	lv_obj_set_width(ui->MainScreen_spinboxBolusRate, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxBolusRate, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxBolusRate, 5, 4);
+	lv_spinbox_set_range(ui->MainScreen_spinboxBolusRate, -99999, 99999);
+	lv_coord_t MainScreen_spinboxBolusRate_h = lv_obj_get_height(ui->MainScreen_spinboxBolusRate);
+	ui->MainScreen_spinboxBolusRate_btn = lv_btn_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusRate_btn, MainScreen_spinboxBolusRate_h, MainScreen_spinboxBolusRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusRate_btn, ui->MainScreen_spinboxBolusRate, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusRate_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusRate_btn, lv_MainScreen_spinboxBolusRate_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxBolusRate_btn_minus = lv_btn_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusRate_btn_minus, MainScreen_spinboxBolusRate_h, MainScreen_spinboxBolusRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusRate_btn_minus, ui->MainScreen_spinboxBolusRate, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusRate_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusRate_btn_minus, lv_MainScreen_spinboxBolusRate_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusRate, 315, 31);
+
+	//Write style for MainScreen_spinboxBolusRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusRate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxBolusRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxBolusRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxBolusRate, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxBolusRate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxBolusRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxBolusRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxBolusRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxBolusRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusRate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusRate, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxBolusRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxBolusRate, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxBolusRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxBolusRate, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusRate, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusRate, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusRate, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusRate, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxBolusMaxVolume
+	ui->MainScreen_spinboxBolusMaxVolume = lv_spinbox_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusMaxVolume, 320, 124);
+	lv_obj_set_width(ui->MainScreen_spinboxBolusMaxVolume, 40);
+	lv_obj_set_height(ui->MainScreen_spinboxBolusMaxVolume, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxBolusMaxVolume, 2, 1);
+	lv_spinbox_set_range(ui->MainScreen_spinboxBolusMaxVolume, -99, 99);
+	lv_coord_t MainScreen_spinboxBolusMaxVolume_h = lv_obj_get_height(ui->MainScreen_spinboxBolusMaxVolume);
+	ui->MainScreen_spinboxBolusMaxVolume_btn = lv_btn_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusMaxVolume_btn, MainScreen_spinboxBolusMaxVolume_h, MainScreen_spinboxBolusMaxVolume_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusMaxVolume_btn, ui->MainScreen_spinboxBolusMaxVolume, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusMaxVolume_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusMaxVolume_btn, lv_MainScreen_spinboxBolusMaxVolume_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxBolusMaxVolume_btn_minus = lv_btn_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusMaxVolume_btn_minus, MainScreen_spinboxBolusMaxVolume_h, MainScreen_spinboxBolusMaxVolume_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusMaxVolume_btn_minus, ui->MainScreen_spinboxBolusMaxVolume, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusMaxVolume_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusMaxVolume_btn_minus, lv_MainScreen_spinboxBolusMaxVolume_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusMaxVolume, 320, 124);
+
+	//Write style for MainScreen_spinboxBolusMaxVolume, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusMaxVolume, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusMaxVolume, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxBolusMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxBolusMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxBolusMaxVolume, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxBolusMaxVolume, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxBolusMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxBolusMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxBolusMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxBolusMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusMaxVolume, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusMaxVolume, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxBolusMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxBolusMaxVolume, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxBolusMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxBolusMaxVolume, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusMaxVolume, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusMaxVolume, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusMaxVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusMaxVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusMaxVolume, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusMaxVolume, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contBolusInterVal
+	ui->MainScreen_contBolusInterVal = lv_obj_create(ui->MainScreen_contBolusValues);
+	lv_obj_set_pos(ui->MainScreen_contBolusInterVal, 281, 205.5);
+	lv_obj_set_size(ui->MainScreen_contBolusInterVal, 150, 36);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contBolusInterVal, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contBolusInterVal, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contBolusInterVal, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contBolusInterVal, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contBolusInterVal, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contBolusInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_80
+	ui->MainScreen_label_80 = lv_label_create(ui->MainScreen_contBolusInterVal);
+	lv_label_set_text(ui->MainScreen_label_80, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_80, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_80, 50, 4);
+	lv_obj_set_size(ui->MainScreen_label_80, 7, 25);
+
+	//Write style for MainScreen_label_80, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_80, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_80, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_80, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_80, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_80, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_80, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_80, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_79
+	ui->MainScreen_label_79 = lv_label_create(ui->MainScreen_contBolusInterVal);
+	lv_label_set_text(ui->MainScreen_label_79, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_79, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_79, 100, 6);
+	lv_obj_set_size(ui->MainScreen_label_79, 7, 25);
+
+	//Write style for MainScreen_label_79, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_79, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_79, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_79, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_79, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_79, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_79, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_79, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxBolusIntervalHour
+	ui->MainScreen_spinboxBolusIntervalHour = lv_spinbox_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalHour, 10, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxBolusIntervalHour, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxBolusIntervalHour, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxBolusIntervalHour, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalHour, -99, 99);
+	lv_coord_t MainScreen_spinboxBolusIntervalHour_h = lv_obj_get_height(ui->MainScreen_spinboxBolusIntervalHour);
+	ui->MainScreen_spinboxBolusIntervalHour_btn = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalHour_btn, MainScreen_spinboxBolusIntervalHour_h, MainScreen_spinboxBolusIntervalHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalHour_btn, ui->MainScreen_spinboxBolusIntervalHour, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalHour_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalHour_btn, lv_MainScreen_spinboxBolusIntervalHour_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxBolusIntervalHour_btn_minus = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalHour_btn_minus, MainScreen_spinboxBolusIntervalHour_h, MainScreen_spinboxBolusIntervalHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalHour_btn_minus, ui->MainScreen_spinboxBolusIntervalHour, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalHour_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalHour_btn_minus, lv_MainScreen_spinboxBolusIntervalHour_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalHour, 10, 5);
+
+	//Write style for MainScreen_spinboxBolusIntervalHour, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalHour, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalHour, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxBolusIntervalHour, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxBolusIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxBolusIntervalHour, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxBolusIntervalHour, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxBolusIntervalHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxBolusIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxBolusIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxBolusIntervalHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalHour, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalHour, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxBolusIntervalHour, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxBolusIntervalHour, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxBolusIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxBolusIntervalHour, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalHour, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalHour, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalHour, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalHour, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxBolusIntervalMinute
+	ui->MainScreen_spinboxBolusIntervalMinute = lv_spinbox_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalMinute, 60, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxBolusIntervalMinute, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxBolusIntervalMinute, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxBolusIntervalMinute, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalMinute, -99, 99);
+	lv_coord_t MainScreen_spinboxBolusIntervalMinute_h = lv_obj_get_height(ui->MainScreen_spinboxBolusIntervalMinute);
+	ui->MainScreen_spinboxBolusIntervalMinute_btn = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalMinute_btn, MainScreen_spinboxBolusIntervalMinute_h, MainScreen_spinboxBolusIntervalMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalMinute_btn, ui->MainScreen_spinboxBolusIntervalMinute, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalMinute_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalMinute_btn, lv_MainScreen_spinboxBolusIntervalMinute_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxBolusIntervalMinute_btn_minus = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalMinute_btn_minus, MainScreen_spinboxBolusIntervalMinute_h, MainScreen_spinboxBolusIntervalMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalMinute_btn_minus, ui->MainScreen_spinboxBolusIntervalMinute, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalMinute_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalMinute_btn_minus, lv_MainScreen_spinboxBolusIntervalMinute_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalMinute, 60, 5);
+
+	//Write style for MainScreen_spinboxBolusIntervalMinute, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalMinute, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalMinute, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxBolusIntervalMinute, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxBolusIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxBolusIntervalMinute, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxBolusIntervalMinute, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxBolusIntervalMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxBolusIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxBolusIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxBolusIntervalMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalMinute, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalMinute, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxBolusIntervalMinute, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxBolusIntervalMinute, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxBolusIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxBolusIntervalMinute, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalMinute, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalMinute, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalMinute, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalMinute, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxBolusIntervalSecond
+	ui->MainScreen_spinboxBolusIntervalSecond = lv_spinbox_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalSecond, 110, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxBolusIntervalSecond, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxBolusIntervalSecond, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxBolusIntervalSecond, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalSecond, -99, 99);
+	lv_coord_t MainScreen_spinboxBolusIntervalSecond_h = lv_obj_get_height(ui->MainScreen_spinboxBolusIntervalSecond);
+	ui->MainScreen_spinboxBolusIntervalSecond_btn = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalSecond_btn, MainScreen_spinboxBolusIntervalSecond_h, MainScreen_spinboxBolusIntervalSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalSecond_btn, ui->MainScreen_spinboxBolusIntervalSecond, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalSecond_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalSecond_btn, lv_MainScreen_spinboxBolusIntervalSecond_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxBolusIntervalSecond_btn_minus = lv_btn_create(ui->MainScreen_contBolusInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxBolusIntervalSecond_btn_minus, MainScreen_spinboxBolusIntervalSecond_h, MainScreen_spinboxBolusIntervalSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxBolusIntervalSecond_btn_minus, ui->MainScreen_spinboxBolusIntervalSecond, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxBolusIntervalSecond_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxBolusIntervalSecond_btn_minus, lv_MainScreen_spinboxBolusIntervalSecond_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxBolusIntervalSecond, 110, 5);
+
+	//Write style for MainScreen_spinboxBolusIntervalSecond, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalSecond, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalSecond, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxBolusIntervalSecond, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxBolusIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxBolusIntervalSecond, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxBolusIntervalSecond, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxBolusIntervalSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxBolusIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxBolusIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxBolusIntervalSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalSecond, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalSecond, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxBolusIntervalSecond, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxBolusIntervalSecond, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxBolusIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxBolusIntervalSecond, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxBolusIntervalSecond, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxBolusIntervalSecond, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxBolusIntervalSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxBolusIntervalSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxBolusIntervalSecond, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxBolusIntervalSecond, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoMenuBolus
+	ui->MainScreen_btnGoMenuBolus = lv_btn_create(ui->MainScreen_contBolus);
+	ui->MainScreen_btnGoMenuBolus_label = lv_label_create(ui->MainScreen_btnGoMenuBolus);
+	lv_label_set_text(ui->MainScreen_btnGoMenuBolus_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoMenuBolus_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoMenuBolus_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoMenuBolus, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoMenuBolus_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoMenuBolus, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoMenuBolus, 58, 44);
+
+	//Write style for MainScreen_btnGoMenuBolus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoMenuBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoMenuBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoMenuBolus, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoMenuBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoMenuBolus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoMenuBolus, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMenuBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoMenuBolus, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummyBolus
+	ui->MainScreen_btnDummyBolus = lv_btn_create(ui->MainScreen_contBolus);
+	ui->MainScreen_btnDummyBolus_label = lv_label_create(ui->MainScreen_btnDummyBolus);
+	lv_label_set_text(ui->MainScreen_btnDummyBolus_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummyBolus_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummyBolus_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyBolus, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummyBolus_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummyBolus, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummyBolus, 8, 10);
+
+	//Write style for MainScreen_btnDummyBolus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummyBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummyBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummyBolus, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummyBolus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummyBolus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummyBolus, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummyBolus, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
 	lv_textarea_set_text(ui->MainScreen_ta_keybard, "hckdsjclsd");
@@ -5663,8 +6271,7 @@ lv_spinbox_set_range(ui->MainScreen_spinboxSyringeOuterDia,0,500);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringeBarrelLen,0,2000);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringePlungerLen,0,600);
 lv_spinbox_set_range(ui->MainScreen_spinboxSyringeDiaTolerance,-100,100);
-
-
+/*=====================================================*/
 lv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxDrugmgml_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
@@ -5689,12 +6296,9 @@ lv_spinbox_set_range(ui->MainScreen_spinboxDrugperkg,0,20000);
 lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMin,0,18000);
 lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateMax,0,18000);
 lv_spinbox_set_range(ui->MainScreen_spinboxDrugRateDef,0,18000);
-
-
-
+/*=====================================================*/
 lv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxModeBodyWeight_btn_minus,LV_OBJ_FLAG_HIDDEN);
-
 
 lv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxModeInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
@@ -5717,19 +6321,18 @@ lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeHour,0,99);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeMinute,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalTimeSecond,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxModeTotalVolume,0,18000);
-
-
+/*=====================================================*/
 lv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc, 0, LV_PART_MAIN);
 lv_obj_set_style_radius(ui->MainScreen_sliderOcclusionOcc,0,LV_PART_INDICATOR|
                                                             LV_STATE_DEFAULT|
                                                             LV_STATE_FOCUS_KEY|
                                                             LV_STATE_FOCUSED);
 
-
+/*=====================================================*/
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxKVORate_btn_minus,LV_OBJ_FLAG_HIDDEN);
 lv_spinbox_set_range(ui->MainScreen_spinboxKVORate,0,20);
-
+/*=====================================================*/
 lv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxIntermittentInfusionRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
@@ -5762,10 +6365,32 @@ lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentBackgroundRate,0,50);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepHour,0,99);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepMinute,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxIntermittentSleepSecond,0,59);
-
+/*=====================================================*/
 lv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn,LV_OBJ_FLAG_HIDDEN);
 lv_obj_add_flag(ui->MainScreen_spinboxNurseCallDuration_btn_minus,LV_OBJ_FLAG_HIDDEN);
-lv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration,0,10);
+lv_spinbox_set_range(ui->MainScreen_spinboxNurseCallDuration,0,59);
+/*=====================================================*/
+lv_obj_add_flag(ui->MainScreen_spinboxBolusRate_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxBolusRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxBolusMaxVolume_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxBolusMaxVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalHour_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalHour_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalMinute_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalSecond_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxBolusIntervalSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_spinbox_set_range(ui->MainScreen_spinboxBolusRate,0,18000);
+lv_spinbox_set_range(ui->MainScreen_spinboxBolusMaxVolume,0,50);
+lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalHour,0,99);
+lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalMinute,0,59);
+lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalSecond,0,59);
+/*=====================================================*/
 
 MainScreen_digital_clockHeader_timer(NULL);
 MainScreenSetStyle(ui);

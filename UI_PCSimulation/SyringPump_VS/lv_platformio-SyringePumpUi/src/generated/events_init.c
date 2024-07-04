@@ -48,10 +48,26 @@ static void MainScreen_event_handler (lv_event_t *e)
 	lv_event_code_t code = lv_event_get_code(e);
 
 	switch (code) {
-	case LV_EVENT_SCREEN_LOADED:
+	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_imgFooterDroplet, 1500, 100, 397, 100, &lv_anim_path_ease_in, LV_ANIM_REPEAT_INFINITE, 200, 0, 0, NULL, NULL, NULL);
-		animcontMain_ready_callback(NULL);
+					lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+				lv_group_t *g=lv_group_get_default();
+				uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+						
+					  printf("@KVO id=%d\n",id);
+					  if(id==2) 
+					  {
+						ui_move_animation(ui->MainScreen_contKVO,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontKVO_del_callback);
+					  }
+					  else
+					  {
+						lv_obj_t *obj=lv_group_get_focused(g);
+						lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+			   			lv_group_set_editing(g,false);
+						lv_group_focus_prev(g);
+						obj=lv_group_get_focused(g);
+						lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+					  }
 		break;
 	}
 	default:
@@ -68,7 +84,6 @@ static void MainScreen_btnGoMenuMain_event_handler (lv_event_t *e)
 		
 	
 		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontMenu_ready_callback, NULL);
-		ui_move_animation(guider_ui.MainScreen_contMain, 200, 0, -800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -82,7 +97,6 @@ static void MainScreen_btnMenuSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contSyringe, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
@@ -101,7 +115,6 @@ static void MainScreen_btnMenuDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
 		lv_obj_clear_flag(guider_ui.MainScreen_contDrugValues, LV_OBJ_FLAG_CLICKABLE);
 		break;
@@ -117,7 +130,6 @@ static void MainScreen_btnMenuMode_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contMode, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontMode_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listModeUnit, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_listModeUnit, LV_OBJ_FLAG_CLICKABLE);
@@ -137,7 +149,6 @@ static void MainScreen_btnMenuOCC_event_handler (lv_event_t *e)
 	case LV_EVENT_CLICKED:
 	{
 		ui_move_animation(guider_ui.MainScreen_contOcclusion, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontOcclusion_ready_callback, NULL);
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -152,7 +163,6 @@ static void MainScreen_btnMenuKVO_event_handler (lv_event_t *e)
 	case LV_EVENT_CLICKED:
 	{
 		ui_move_animation(guider_ui.MainScreen_contKVO, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontKVO_ready_callback, NULL);
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -167,7 +177,6 @@ static void MainScreen_btnMenuIntInf_event_handler (lv_event_t *e)
 	case LV_EVENT_CLICKED:
 	{
 		ui_move_animation(guider_ui.MainScreen_contIntermittent, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontIntermittent_ready_callback, NULL);
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		break;
 	}
 	default:
@@ -181,8 +190,21 @@ static void MainScreen_btnMenuNurseCall_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMenu, 200, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, NULL);
 		ui_move_animation(guider_ui.MainScreen_contNurseCall, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontNurseCall_ready_callback, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnMenuBolus_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contBolus, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontBolus_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -251,9 +273,7 @@ static void MainScreen_btnGoMenuSyringe_event_handler (lv_event_t *e)
 			}
 			else
 			{
-			  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-			  ui_move_animation(ui->MainScreen_contSyringe,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-		      lv_obj_add_state(ui->MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
+			  ui_move_animation(ui->MainScreen_contSyringe,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontSyringe_del_callback);
 			}
 		break;
 	}
@@ -495,9 +515,7 @@ static void MainScreen_btnGoMenuDrug_event_handler (lv_event_t *e)
 				}
 				else
 				{
-				  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-				  ui_move_animation(ui->MainScreen_contDrug,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	              lv_obj_add_state(ui->MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);		  
+				  ui_move_animation(ui->MainScreen_contDrug,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontDrug_del_callback);
 				}
 		break;
 	}
@@ -752,9 +770,7 @@ static void MainScreen_btnGoMenuMode_event_handler (lv_event_t *e)
 		}
 		else
 		{
-		  ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-		  ui_move_animation(ui->MainScreen_contMode,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	      lv_obj_add_state(ui->MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);		  
+		  ui_move_animation(ui->MainScreen_contMode,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontMode_del_callback);
 		}
 		break;
 	}
@@ -942,9 +958,7 @@ static void MainScreen_btnGoMenuOcclusion_event_handler (lv_event_t *e)
 	case LV_EVENT_CLICKED:
 	{
 				lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-			ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-			ui_move_animation(ui->MainScreen_contOcclusion,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-			lv_obj_add_state(ui->MainScreen_btnMenuOCC,LV_STATE_FOCUS_KEY);		  
+			ui_move_animation(ui->MainScreen_contOcclusion,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontOcclusion_del_callback);
 		break;
 	}
 	default:
@@ -1013,26 +1027,24 @@ static void MainScreen_btnGoMenuKVO_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-					lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				lv_group_t *g=lv_group_get_default();
-				uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
-						
-					  printf("@KVO id=%d\n",id);
-					  if(id==2) 
-					  {
-						ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-						ui_move_animation(ui->MainScreen_contKVO,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-						lv_obj_add_state(ui->MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);		  
-					  }
-					  else
-					  {
-						lv_obj_t *obj=lv_group_get_focused(g);
-						lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
-			   			lv_group_set_editing(g,false);
-						lv_group_focus_prev(g);
-						obj=lv_group_get_focused(g);
-						lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
-					  }
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@KVO id=%d\n",id);
+	if (lv_obj_has_state(ui->MainScreen_swKVOMode, LV_STATE_FOCUS_KEY)) 
+	{
+	  ui_move_animation(ui->MainScreen_contKVO,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontKVO_del_callback);
+	}
+	else if(id>2)
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
 		break;
 	}
 	default:
@@ -1052,9 +1064,7 @@ static void MainScreen_btnDummyKVO_event_handler (lv_event_t *e)
 	        else
 	            currentMachineState.KvoMode=false;
 	        currentMachineState.KvoRate10=lv_spinbox_get_value(ui->MainScreen_spinboxKVORate);
-	        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-	        ui_move_animation(ui->MainScreen_contKVO,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	        lv_obj_add_state(ui->MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);	
+	        ui_move_animation(ui->MainScreen_contKVO,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontKVO_del_callback);
 		break;
 	}
 	default:
@@ -1075,9 +1085,7 @@ static void MainScreen_btnGOMenuIntermittent_event_handler (lv_event_t *e)
 	      printf("@Intermittent id=%d\n",id);
 	      if(id==6) 
 	      {
-	        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-	        ui_move_animation(ui->MainScreen_contIntermittent,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	        lv_obj_add_state(ui->MainScreen_btnMenuIntInf,LV_STATE_FOCUS_KEY);		  
+	        ui_move_animation(ui->MainScreen_contIntermittent,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontIntermittent_del_callback);
 	      }
 	      else
 	      {
@@ -1112,9 +1120,8 @@ static void MainScreen_btnDummyIntermittent_event_handler (lv_event_t *e)
 	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepMinute)*60+
 	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxIntermittentSleepSecond);
 	
-	ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-	ui_move_animation(ui->MainScreen_contIntermittent,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	lv_obj_add_state(ui->MainScreen_btnMenuIntInf,LV_STATE_FOCUS_KEY);	
+	ui_move_animation(ui->MainScreen_contIntermittent,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontIntermittent_del_callback);
+	
 		break;
 	}
 	default:
@@ -1159,26 +1166,24 @@ static void MainScreen_btnGoMenuNurseCall_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-					lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-				lv_group_t *g=lv_group_get_default();
-				uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
-						
-					  printf("@NurseCall id=%d\n",id);
-					  if(id==2) 
-					  {
-						ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-						ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-						lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);		  
-					  }
-					  else
-					  {
-						lv_obj_t *obj=lv_group_get_focused(g);
-						lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
-			   			lv_group_set_editing(g,false);
-						lv_group_focus_prev(g);
-						obj=lv_group_get_focused(g);
-						lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
-					  }
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@NurseCall id=%d\n",id);
+	if(id==2) 
+	{
+	  ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontNurseCall_del_callback);
+	}
+	else
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
 		break;
 	}
 	default:
@@ -1192,15 +1197,64 @@ static void MainScreen_btnDummyNurseCall_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-		        lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	        if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))
-	            currentMachineState.NurseCall=true;
-	        else
-	            currentMachineState.NurseCall=false;
-	        currentMachineState.NurseActiveDuration=lv_spinbox_get_value(ui->MainScreen_spinboxNurseCallDuration);
-	        ui_move_animation(ui->MainScreen_contMenu,200,0,0,80,&lv_anim_path_linear,0,0,0,0,NULL,animcontMenu_ready_callback,NULL);
-	        ui_move_animation(ui->MainScreen_contNurseCall,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,NULL);
-	        lv_obj_add_state(ui->MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);	
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))
+	    currentMachineState.NurseCall=true;
+	else
+	    currentMachineState.NurseCall=false;
+	currentMachineState.NurseActiveDuration=lv_spinbox_get_value(ui->MainScreen_spinboxNurseCallDuration);
+	ui_move_animation(ui->MainScreen_contNurseCall,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontNurseCall_del_callback);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnGoMenuBolus_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@Bolus id=%d\n",id);
+	if(lv_obj_has_state(ui->MainScreen_spinboxBolusRate,LV_STATE_FOCUS_KEY))
+	{
+	  ui_move_animation(ui->MainScreen_contBolus,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);
+	}
+	else
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnDummyBolus_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_FOCUSED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	currentMachineState.BolusRate10=lv_spinbox_get_value(ui->MainScreen_spinboxBolusRate);
+	currentMachineState.BolusMaxVolume10=lv_spinbox_get_value(ui->MainScreen_spinboxBolusMaxVolume);
+	currentMachineState.BolusIntervalTime=lv_spinbox_get_value(ui->MainScreen_spinboxBolusIntervalHour)*3600+
+	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxBolusIntervalMinute)*60+
+	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxBolusIntervalSecond);
+	ui_move_animation(ui->MainScreen_contBolus,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);
 		break;
 	}
 	default:
@@ -1218,6 +1272,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuKVO, MainScreen_btnMenuKVO_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuIntInf, MainScreen_btnMenuIntInf_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuNurseCall, MainScreen_btnMenuNurseCall_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnMenuBolus, MainScreen_btnMenuBolus_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMainMenu, MainScreen_btnGoMainMenu_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuSyringe, MainScreen_btnGoMenuSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeCompany, MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
@@ -1234,7 +1289,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_listDrugBrand, MainScreen_listDrugBrand_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_taDrugNameValue, MainScreen_taDrugNameValue_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_taDrugBrandValue, MainScreen_taDrugBrandValue_event_handler, LV_EVENT_ALL, ui);
-	lv_obj_add_event_cb(ui->MainScreen_ddlistDrugId, MainScreen_ddlistDrugId_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb((ui->MainScreen_ddlistDrugId), MainScreen_ddlistDrugId_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugmgml, MainScreen_spinboxDrugmgml_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDruguml, MainScreen_spinboxDruguml_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugperkg, MainScreen_spinboxDrugperkg_event_handler, LV_EVENT_ALL, ui);
@@ -1262,6 +1317,8 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_swNurseCall, MainScreen_swNurseCall_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuNurseCall, MainScreen_btnGoMenuNurseCall_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyNurseCall, MainScreen_btnDummyNurseCall_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuBolus, MainScreen_btnGoMenuBolus_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnDummyBolus, MainScreen_btnDummyBolus_event_handler, LV_EVENT_ALL, ui);
 
 	for (int i = 0; i < lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany); i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany, i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);

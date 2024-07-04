@@ -157,7 +157,11 @@ void MainScreenSetStyle(lv_ui *ui)
   setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepMinute);
   setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepSecond);
   setStyleEdittableObj(ui->MainScreen_spinboxNurseCallDuration);
-
+  setStyleEdittableObj(ui->MainScreen_spinboxBolusRate);
+  setStyleEdittableObj(ui->MainScreen_spinboxBolusMaxVolume);
+  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalHour);
+  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalMinute);
+  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalSecond);
 
   lv_obj_set_style_outline_color(ui->MainScreen_swKVOMode, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
   lv_obj_set_style_outline_pad(ui->MainScreen_swKVOMode, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
@@ -569,7 +573,7 @@ void setKVOModeGroup(lv_ui *ui)
       lv_group_add_obj(g, ui->MainScreen_swKVOMode);
       lv_group_add_obj(g, ui->MainScreen_spinboxKVORate);
       lv_group_add_obj(g, ui->MainScreen_btnDummyKVO);
-      lv_group_focus_obj(ui->MainScreen_swKVOMode);
+      // lv_group_focus_obj(ui->MainScreen_swKVOMode);
     }
   }
 }
@@ -603,11 +607,14 @@ void setIntermittentGroup(lv_ui *ui)
       lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentSleepMinute);
       lv_group_add_obj(g, ui->MainScreen_spinboxIntermittentSleepSecond);
       lv_group_add_obj(g, ui->MainScreen_btnDummyIntermittent);
-      lv_group_focus_obj(ui->MainScreen_spinboxIntermittentInfusionRate);
+      // lv_group_focus_obj(ui->MainScreen_spinboxIntermittentInfusionRate);
     }
   }
 }
+void setRhythmicGroup(lv_ui *ui)
+{
 
+}
 void setNurseCallGroup(lv_ui *ui)
 {
   lv_group_t *g;
@@ -632,10 +639,92 @@ void setNurseCallGroup(lv_ui *ui)
       lv_group_add_obj(g, ui->MainScreen_swNurseCall);
       lv_group_add_obj(g, ui->MainScreen_spinboxNurseCallDuration);
       lv_group_add_obj(g, ui->MainScreen_btnDummyNurseCall);
-      lv_group_focus_obj(ui->MainScreen_swNurseCall);
+      // lv_group_focus_obj(ui->MainScreen_swNurseCall);
     }
   }
 }
+void setBolusGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
+  lv_group_set_wrap(g, false);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+      lv_group_add_obj(g, ui->MainScreen_spinboxBolusRate);
+      lv_group_add_obj(g, ui->MainScreen_spinboxBolusMaxVolume);
+      lv_group_add_obj(g, ui->MainScreen_spinboxBolusIntervalHour);
+      lv_group_add_obj(g, ui->MainScreen_spinboxBolusIntervalMinute);
+      lv_group_add_obj(g, ui->MainScreen_spinboxBolusIntervalSecond);
+      lv_group_add_obj(g, ui->MainScreen_btnDummyBolus);
+
+    }
+  }
+}
+void setPurgeGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
+  lv_group_set_wrap(g, false);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+    }
+  }
+  
+}
+void setSettingsGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
+  lv_group_set_wrap(g, false);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+    }
+  }
+  
+}
+
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void updateMain(lv_ui *ui)
@@ -974,6 +1063,11 @@ void updateIntermittentValues(lv_ui *ui)
   lv_spinbox_set_value(ui->MainScreen_spinboxIntermittentSleepSecond,(currentMachineState.IntermittentSleep%3600)%60);
 
 }
+void updateRhythmicValues(lv_ui *ui)
+{
+
+}
+
 void updateNurseCallValues(lv_ui *ui)
 {
   if(currentMachineState.NurseCall)
@@ -990,6 +1084,41 @@ void updateNurseCallValues(lv_ui *ui)
   }
   lv_spinbox_set_value(ui->MainScreen_spinboxNurseCallDuration, currentMachineState.NurseActiveDuration);
 }
+void updateBolusValues(lv_ui *ui)
+{
+  switch(currentMachineState.Mode.mode)
+  {
+    case 0://volume
+    case 3://intermittent
+    case 4://rhythmic
+      lv_label_set_text_fmt(ui->MainScreen_labelBolusRateUnit, "%s", unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);    
+    break;
+    case 1://time
+      lv_label_set_text_fmt(ui->MainScreen_labelBolusRateUnit, "%s", unitMode_time[currentMachineState.Mode.unit]);    
+    break;
+    case 2://weight
+    lv_label_set_text_fmt(ui->MainScreen_labelBolusRateUnit, "%s", unitMode_BodyWeight[currentMachineState.Mode.unit]);    
+    break;
+    case 5://linear
+    lv_label_set_text_fmt(ui->MainScreen_labelBolusRateUnit, "%s", unitMode_linear[currentMachineState.Mode.unit]);    
+    break;
+  }
+  lv_label_set_text_fmt(ui->MainScreen_labelBolusMaxVolumeUnit,"%s",unit_volume[currentMachineState.Mode.unit % 4]);  
+  lv_spinbox_set_value(ui->MainScreen_spinboxBolusRate, currentMachineState.BolusRate10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxBolusMaxVolume, currentMachineState.BolusMaxVolume10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxBolusIntervalHour,currentMachineState.BolusIntervalTime/3600);
+  lv_spinbox_set_value(ui->MainScreen_spinboxBolusIntervalMinute,(currentMachineState.BolusIntervalTime%3600)/60);
+  lv_spinbox_set_value(ui->MainScreen_spinboxBolusIntervalSecond,(currentMachineState.BolusIntervalTime%3600)%60);
+}
+void updatePurgeValues(lv_ui *ui)
+{
+
+}
+void updateSettingsValues(lv_ui *ui)
+{
+
+}
+
 //=======================================//=======================================//=======================================
 //=======================================//=======================================//=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
@@ -1008,11 +1137,21 @@ void animcontSyringe_ready_callback(lv_anim_t *a)
   updateSyringeCompanyList(&guider_ui);
   setlistSyringeCompanyGroup(&guider_ui);
 }
+void animcontSyringe_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
 void animcontDrug_ready_callback(lv_anim_t *a)
 {
   cur_Drug=currentMachineState.Drug.Drugindex;
 	updateDrugList(&guider_ui);
 	setlistDrugBrandGroup(&guider_ui);
+}
+void animcontDrug_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
 }
 void animcontMode_ready_callback(lv_anim_t *a)
 {
@@ -1021,24 +1160,91 @@ void animcontMode_ready_callback(lv_anim_t *a)
   updateModeModeList(&guider_ui);
   setlistModeModeGroup(&guider_ui);
 }
+void animcontMode_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
 void animcontOcclusion_ready_callback(lv_anim_t *a)
 {
   updateOcclusionValues(&guider_ui);
   setbarOcclusionOccGroup(&guider_ui);
+}
+void animcontOcclusion_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuOCC,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
 }
 void animcontKVO_ready_callback(lv_anim_t *a)
 {
   updateKVOModeValues(&guider_ui);
   setKVOModeGroup(&guider_ui);
 }
+void animcontKVO_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
 void animcontIntermittent_ready_callback(lv_anim_t *a)
 {
   updateIntermittentValues(&guider_ui);
   setIntermittentGroup(&guider_ui);
+}
+void animcontIntermittent_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuIntInf,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+
+}
+void animcontRhythmic_ready_callback(lv_anim_t *a)
+{
+  updateRhythmicValues(&guider_ui);
+  setRhythmicGroup(&guider_ui);
+}
+void animcontRhythmic_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuRhyInf,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
 }
 void animcontNurseCall_ready_callback(lv_anim_t *a)
 {
   updateNurseCallValues(&guider_ui);
   setNurseCallGroup(&guider_ui);
 }
+void animcontNurseCall_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontBolus_ready_callback(lv_anim_t *a)
+{
+  updateBolusValues(&guider_ui);
+  setBolusGroup(&guider_ui);
+}
+void animcontBolus_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuBolus,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontPurge_ready_callback(lv_anim_t *a)
+{
+  updatePurgeValues(&guider_ui);
+  setPurgeGroup(&guider_ui);
+}
+void animcontPurge_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuPurge,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontSettings_ready_callback(lv_anim_t *a)
+{
+  updateSettingsValues(&guider_ui);
+  setSettingsGroup(&guider_ui);
+}
+void animcontSettings_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuSetting,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+
 /************************************/

@@ -43,9 +43,29 @@ lv_ui guider_ui;
 //         // lv_obj_set_height(tv, LV_VER_RES);
 //     }
 // }
+#include "time.h"
+
+extern int MainScreen_digital_clockHeader_min_value ;
+extern int MainScreen_digital_clockHeader_hour_value ;
+extern int MainScreen_digital_clockHeader_sec_value;
+extern char MainScreen_digital_clockHeader_meridiem[] ;
+
 
 int main(void)
 {
+
+  time_t rawtime;
+  struct tm * timeinfo;
+
+  time ( &rawtime );
+  timeinfo = localtime ( &rawtime );
+  MainScreen_digital_clockHeader_hour_value=timeinfo->tm_hour%12;    
+  MainScreen_digital_clockHeader_min_value=timeinfo->tm_min;    
+  MainScreen_digital_clockHeader_sec_value=timeinfo->tm_sec;  
+  if(timeinfo->tm_hour>12)
+    lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"PM");
+  else
+    lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"AM");
   lv_init();
 
   hal_setup();

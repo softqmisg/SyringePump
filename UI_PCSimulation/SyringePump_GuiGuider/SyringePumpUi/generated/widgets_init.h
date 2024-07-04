@@ -110,6 +110,21 @@ void lv_MainScreen_spinboxIntermittentSleepSecond_decrement_event_cb(lv_event_t 
 extern lv_obj_t * MainScreen_spinboxNurseCallDuration;
 void lv_MainScreen_spinboxNurseCallDuration_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxNurseCallDuration_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxBolusRate;
+void lv_MainScreen_spinboxBolusRate_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxBolusRate_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxBolusMaxVolume;
+void lv_MainScreen_spinboxBolusMaxVolume_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxBolusMaxVolume_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxBolusIntervalHour;
+void lv_MainScreen_spinboxBolusIntervalHour_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxBolusIntervalHour_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxBolusIntervalMinute;
+void lv_MainScreen_spinboxBolusIntervalMinute_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxBolusIntervalMinute_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxBolusIntervalSecond;
+void lv_MainScreen_spinboxBolusIntervalSecond_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxBolusIntervalSecond_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus
