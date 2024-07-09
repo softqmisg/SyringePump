@@ -13,7 +13,7 @@
 
 #include "main.h"
 #include "demos/lv_demos.h"
-#include "myInputDevice.h"
+// #include "myInputDevice.h"
 #include "custom.h"
 #include "gui_guider.h"
 // #include "demos/lv_demos.h"
@@ -71,7 +71,7 @@ int main(void)
   hal_setup();
 
 
-  myInputDevice();
+  // myInputDevice();
   setup_ui(&guider_ui);
 
 
