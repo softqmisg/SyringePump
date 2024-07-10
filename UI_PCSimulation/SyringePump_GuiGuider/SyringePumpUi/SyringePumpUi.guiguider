@@ -1596,7 +1596,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Purge id=%d\\n\",id);\nif(id==2) \n{\n  ui_move_animation(ui->MainScreen_contPurge,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Purge id=%d\\n\",id);\nif(lv_obj_has_state(ui->MainScreen_spinboxPurgeRate,LV_STATE_FOCUS_KEY))\n{\n  ui_move_animation(ui->MainScreen_contPurge,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -3158,7 +3158,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contBolus",
@@ -3806,7 +3807,7 @@
 											"customer_code": {
 												"ische": true,
 												"inc_c": "",
-												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Bolus id=%d\\n\",id);\nif(id==2) \n{\n  ui_move_animation(ui->MainScreen_contBolus,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
+												"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Bolus id=%d\\n\",id);\nif(lv_obj_has_state(ui->MainScreen_spinboxBolusRate,LV_STATE_FOCUS_KEY))\n{\n  ui_move_animation(ui->MainScreen_contBolus,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
 												"inc_py": "",
 												"code_py": ""
 											},
@@ -5368,7 +5369,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contNurseCall",
@@ -6422,7 +6424,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "labelswNurseCallEnable",
@@ -6518,7 +6521,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "swNurseCall",
@@ -8169,7 +8173,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contRhythmic",
@@ -11571,7 +11576,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contKVO",
@@ -12625,7 +12631,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "labelswKVOModeEnable",
@@ -12721,7 +12728,8 @@
 											"shadow_ofs_x": 0,
 											"shadow_ofs_y": 0
 										}
-									]
+									],
+									"layerName": "MainScreen"
 								},
 								{
 									"name": "swKVOMode",
@@ -14020,7 +14028,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contOcclusion",
@@ -15063,7 +15072,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMode",
@@ -18399,7 +18409,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listModeUnit",
@@ -19224,7 +19235,8 @@
 										"item_index": "widget"
 									}
 								]
-							}
+							},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listModeMode",
@@ -20606,7 +20618,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contDrug",
@@ -24864,7 +24877,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listDrugBrand",
@@ -26246,7 +26260,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contSyringe",
@@ -29469,7 +29484,8 @@
 									"shadow_ofs_x": 0,
 									"shadow_ofs_y": 0
 								}
-							]
+							],
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeType",
@@ -30213,7 +30229,8 @@
 										"item_index": "widget"
 									}
 								]
-							}
+							},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "listSyringeCompany",
@@ -31947,7 +31964,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMenu",
@@ -38311,7 +38329,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contMain",
@@ -39727,7 +39746,8 @@
 							"shadow_ofs_x": 0,
 							"shadow_ofs_y": 0
 						}
-					]
+					],
+					"layerName": "MainScreen"
 				},
 				{
 					"name": "contFooter",
@@ -39771,7 +39791,8 @@
 									"image_opa": 255
 								}
 							],
-							"event": {}
+							"event": {},
+							"layerName": "MainScreen"
 						},
 						{
 							"name": "imgFooterForbidden",
@@ -40875,9 +40896,9 @@
 				}
 			],
 			"event": {
-				"clicked": [
+				"screen_loaded": [
 					{
-						"trigger": "clicked",
+						"trigger": "screen_loaded",
 						"dst": "null",
 						"action": {
 							"load_screen": {
@@ -40964,7 +40985,7 @@
 							"customer_code": {
 								"ische": true,
 								"inc_c": "",
-								"code_c": "\t\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\t\tlv_group_t *g=lv_group_get_default();\n\t\t\tuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n\t\t\t\t\t\n\t\t\t\t  printf(\"@KVO id=%d\\n\",id);\n\t\t\t\t  if(id==2) \n\t\t\t\t  {\n\t\t\t\t\tui_move_animation(ui->MainScreen_contKVO,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontKVO_del_callback);\n\t\t\t\t  }\n\t\t\t\t  else\n\t\t\t\t  {\n\t\t\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\t   \t\t\tlv_group_set_editing(g,false);\n\t\t\t\t\tlv_group_focus_prev(g);\n\t\t\t\t\tobj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\t\t\t  }",
+								"code_c": "animcontMain_ready_callback(NULL);",
 								"inc_py": "",
 								"code_py": ""
 							},
@@ -41049,6 +41070,180 @@
 								"path_type": "linear"
 							}
 						}
+					},
+					{
+						"trigger": "screen_loaded",
+						"dst": "yhwqw44s",
+						"action": {
+							"load_screen": {
+								"ische": false,
+								"duration": 200,
+								"delay": 200,
+								"scrId": "",
+								"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+								"is_clean": false,
+								"is_del": true
+							},
+							"bg_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"grad_color": {
+								"ische": false,
+								"value": "#000000",
+								"dir": "LV_GRAD_DIR_HOR"
+							},
+							"bg_opa": {
+								"ische": false,
+								"value": 255
+							},
+							"opacity": {
+								"ische": false,
+								"value": 255
+							},
+							"bg_img_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"bg_img_recolor": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"bg_img_recolor_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_side": {
+								"ische": false,
+								"value": []
+							},
+							"border_width": {
+								"ische": false,
+								"value": 0
+							},
+							"border_opa": {
+								"ische": false,
+								"value": 0
+							},
+							"border_color": {
+								"ische": false,
+								"value": "#000000"
+							},
+							"radius": {
+								"ische": false,
+								"value": 0
+							},
+							"width": {
+								"ische": false,
+								"value": 50
+							},
+							"height": {
+								"ische": false,
+								"value": 50
+							},
+							"set_text": {
+								"ische": false,
+								"value": "default",
+								"font": 12,
+								"font_family": "montserratMedium"
+							},
+							"position": {
+								"ische": false,
+								"value_x": 0,
+								"value_y": 0
+							},
+							"isVisible": {
+								"ische": false,
+								"flag": ""
+							},
+							"customer_code": {
+								"ische": false,
+								"inc_c": "",
+								"code_c": "",
+								"inc_py": "",
+								"code_py": ""
+							},
+							"freemaster": {
+								"ische": false,
+								"variable": "",
+								"address": "",
+								"type": "",
+								"value": "",
+								"isOrigin": false
+							},
+							"add_state": {
+								"ische": false,
+								"value": "LV_STATE_DEFAULT"
+							},
+							"add_flag": {
+								"ische": false,
+								"value": []
+							},
+							"clear_flag": {
+								"ische": false,
+								"value": []
+							},
+							"move": {
+								"ische": true,
+								"value_x": 397,
+								"value_y": 100,
+								"delay": 100,
+								"duration": 1500,
+								"repeat_count": -1,
+								"repeat_delay": 200,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "ease_in"
+							},
+							"scaleSize": {
+								"ische": false,
+								"width": 0,
+								"height": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"img_zoom": {
+								"ische": false,
+								"zoom": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							},
+							"rotate": {
+								"ische": false,
+								"rotate": 0,
+								"x": 0,
+								"y": 0,
+								"delay": 0,
+								"duration": 1000,
+								"repeat_count": 0,
+								"repeat_delay": 0,
+								"playback_time": 0,
+								"playback_delay": 0,
+								"start_cb": "",
+								"ready_cb": "",
+								"deleted_cb": "",
+								"path_type": "linear"
+							}
+						}
 					}
 				]
 			},
@@ -41069,7 +41264,8 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			]
+			],
+			"layerName": "MainScreen"
 		}
 	],
 	"Application": {
@@ -41214,18 +41410,38 @@
 				"visible": true,
 				"flag": [],
 				"event": {
-					"clicked": [
+					"screen_loaded": [
 						{
 							"src": "MainScreen",
-							"trigger": "clicked",
+							"trigger": "screen_loaded",
 							"dst": "null",
 							"dst_type": "",
 							"src_screen": "MainScreen",
 							"action": "customer_code",
 							"inc_c": "",
-							"code_c": "\t\t\tlv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\n\t\t\tlv_group_t *g=lv_group_get_default();\n\t\t\tuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n\t\t\t\t\t\n\t\t\t\t  printf(\"@KVO id=%d\\n\",id);\n\t\t\t\t  if(id==2) \n\t\t\t\t  {\n\t\t\t\t\tui_move_animation(ui->MainScreen_contKVO,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontKVO_del_callback);\n\t\t\t\t  }\n\t\t\t\t  else\n\t\t\t\t  {\n\t\t\t\t\tlv_obj_t *obj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n\t\t   \t\t\tlv_group_set_editing(g,false);\n\t\t\t\t\tlv_group_focus_prev(g);\n\t\t\t\t\tobj=lv_group_get_focused(g);\n\t\t\t\t\tlv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n\t\t\t\t  }",
+							"code_c": "animcontMain_ready_callback(NULL);",
 							"inc_py": "",
 							"code_py": ""
+						},
+						{
+							"src": "MainScreen",
+							"trigger": "screen_loaded",
+							"dst": "MainScreen_imgFooterDroplet",
+							"dst_type": "img",
+							"src_screen": "MainScreen",
+							"action": "move",
+							"value_x": 397,
+							"value_y": 100,
+							"delay": 100,
+							"duration": 1500,
+							"repeat_count": -1,
+							"repeat_delay": 200,
+							"playback_time": 0,
+							"playback_delay": 0,
+							"start_cb": "",
+							"ready_cb": "",
+							"deleted_cb": "",
+							"path_type": "ease_in"
 						}
 					]
 				},
@@ -66875,7 +67091,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Bolus id=%d\\n\",id);\nif(id==2) \n{\n  ui_move_animation(ui->MainScreen_contBolus,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Bolus id=%d\\n\",id);\nif(lv_obj_has_state(ui->MainScreen_spinboxBolusRate,LV_STATE_FOCUS_KEY))\n{\n  ui_move_animation(ui->MainScreen_contBolus,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontBolus_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
 											"inc_py": "",
 											"code_py": ""
 										}
@@ -68862,7 +69078,7 @@
 											"src_screen": "MainScreen",
 											"action": "customer_code",
 											"inc_c": "",
-											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Purge id=%d\\n\",id);\nif(id==2) \n{\n  ui_move_animation(ui->MainScreen_contPurge,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
+											"code_c": "lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);\nlv_group_t *g=lv_group_get_default();\nuint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));\n  \nprintf(\"@Purge id=%d\\n\",id);\nif(lv_obj_has_state(ui->MainScreen_spinboxPurgeRate,LV_STATE_FOCUS_KEY))\n{\n  ui_move_animation(ui->MainScreen_contPurge,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);\n}\nelse\n{\n  lv_obj_t *obj=lv_group_get_focused(g);\n  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);\n  lv_group_set_editing(g,false);\n  lv_group_focus_prev(g);\n  obj=lv_group_get_focused(g);\n  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);\t\t\n}",
 											"inc_py": "",
 											"code_py": ""
 										}
