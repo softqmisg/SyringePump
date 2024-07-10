@@ -6184,6 +6184,526 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyBolus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummyBolus, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contPurge
+	ui->MainScreen_contPurge = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contPurge, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contPurge, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contPurge, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contPurge, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contPurge, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contPurge, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contPurge, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contPurge, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contPurge, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contPurge, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contPurge, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_96
+	ui->MainScreen_label_96 = lv_label_create(ui->MainScreen_contPurge);
+	lv_label_set_text(ui->MainScreen_label_96, "Purge Mode");
+	lv_label_set_long_mode(ui->MainScreen_label_96, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_96, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_96, 800, 30);
+
+	//Write style for MainScreen_label_96, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_96, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_96, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_96, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_96, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_96, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_96, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_96, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_96, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_96, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_96, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contPurgeValues
+	ui->MainScreen_contPurgeValues = lv_obj_create(ui->MainScreen_contPurge);
+	lv_obj_set_pos(ui->MainScreen_contPurgeValues, 89, 32);
+	lv_obj_set_size(ui->MainScreen_contPurgeValues, 579, 266);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contPurgeValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contPurgeValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contPurgeValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contPurgeValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contPurgeValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contPurgeValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_95
+	ui->MainScreen_label_95 = lv_label_create(ui->MainScreen_contPurgeValues);
+	lv_label_set_text(ui->MainScreen_label_95, "Purge Rate:\n");
+	lv_label_set_long_mode(ui->MainScreen_label_95, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_95, 142, 34);
+	lv_obj_set_size(ui->MainScreen_label_95, 155, 21);
+
+	//Write style for MainScreen_label_95, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_95, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_95, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_95, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_95, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_95, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_95, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_94
+	ui->MainScreen_label_94 = lv_label_create(ui->MainScreen_contPurgeValues);
+	lv_label_set_text(ui->MainScreen_label_94, "Purge Max. Volume:");
+	lv_label_set_long_mode(ui->MainScreen_label_94, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_94, 116, 124);
+	lv_obj_set_size(ui->MainScreen_label_94, 207, 20);
+
+	//Write style for MainScreen_label_94, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_94, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_94, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_94, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_94, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_94, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_94, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_93
+	ui->MainScreen_label_93 = lv_label_create(ui->MainScreen_contPurgeValues);
+	lv_label_set_text(ui->MainScreen_label_93, "Purge Interval Time:");
+	lv_label_set_long_mode(ui->MainScreen_label_93, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_93, 72, 213);
+	lv_obj_set_size(ui->MainScreen_label_93, 225, 21);
+
+	//Write style for MainScreen_label_93, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_93, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_93, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_93, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_93, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_93, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_93, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelPurgeRateUnit
+	ui->MainScreen_labelPurgeRateUnit = lv_label_create(ui->MainScreen_contPurgeValues);
+	lv_label_set_text(ui->MainScreen_labelPurgeRateUnit, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelPurgeRateUnit, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelPurgeRateUnit, 417, 35);
+	lv_obj_set_size(ui->MainScreen_labelPurgeRateUnit, 115, 21);
+
+	//Write style for MainScreen_labelPurgeRateUnit, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelPurgeRateUnit, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelPurgeRateUnit, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelPurgeRateUnit, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelPurgeRateUnit, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelPurgeRateUnit, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelPurgeRateUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_labelPurgeMaxVolumeUnit
+	ui->MainScreen_labelPurgeMaxVolumeUnit = lv_label_create(ui->MainScreen_contPurgeValues);
+	lv_label_set_text(ui->MainScreen_labelPurgeMaxVolumeUnit, "Unit/min");
+	lv_label_set_long_mode(ui->MainScreen_labelPurgeMaxVolumeUnit, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_labelPurgeMaxVolumeUnit, 365, 124);
+	lv_obj_set_size(ui->MainScreen_labelPurgeMaxVolumeUnit, 115, 21);
+
+	//Write style for MainScreen_labelPurgeMaxVolumeUnit, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_labelPurgeMaxVolumeUnit, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_labelPurgeMaxVolumeUnit, &lv_font_Alatsi_Regular_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_labelPurgeMaxVolumeUnit, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_labelPurgeMaxVolumeUnit, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_labelPurgeMaxVolumeUnit, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_labelPurgeMaxVolumeUnit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxPurgeRate
+	ui->MainScreen_spinboxPurgeRate = lv_spinbox_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeRate, 315, 31);
+	lv_obj_set_width(ui->MainScreen_spinboxPurgeRate, 90);
+	lv_obj_set_height(ui->MainScreen_spinboxPurgeRate, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxPurgeRate, 5, 4);
+	lv_spinbox_set_range(ui->MainScreen_spinboxPurgeRate, -99999, 99999);
+	lv_coord_t MainScreen_spinboxPurgeRate_h = lv_obj_get_height(ui->MainScreen_spinboxPurgeRate);
+	ui->MainScreen_spinboxPurgeRate_btn = lv_btn_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeRate_btn, MainScreen_spinboxPurgeRate_h, MainScreen_spinboxPurgeRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeRate_btn, ui->MainScreen_spinboxPurgeRate, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeRate_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeRate_btn, lv_MainScreen_spinboxPurgeRate_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxPurgeRate_btn_minus = lv_btn_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeRate_btn_minus, MainScreen_spinboxPurgeRate_h, MainScreen_spinboxPurgeRate_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeRate_btn_minus, ui->MainScreen_spinboxPurgeRate, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeRate_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeRate_btn_minus, lv_MainScreen_spinboxPurgeRate_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeRate, 315, 31);
+
+	//Write style for MainScreen_spinboxPurgeRate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeRate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeRate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxPurgeRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxPurgeRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxPurgeRate, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxPurgeRate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxPurgeRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxPurgeRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxPurgeRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxPurgeRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeRate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeRate, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeRate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxPurgeRate, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxPurgeRate, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxPurgeRate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxPurgeRate, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeRate, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeRate, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeRate, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeRate, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeRate, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxPurgeMaxVolume
+	ui->MainScreen_spinboxPurgeMaxVolume = lv_spinbox_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeMaxVolume, 320, 124);
+	lv_obj_set_width(ui->MainScreen_spinboxPurgeMaxVolume, 40);
+	lv_obj_set_height(ui->MainScreen_spinboxPurgeMaxVolume, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxPurgeMaxVolume, 2, 1);
+	lv_spinbox_set_range(ui->MainScreen_spinboxPurgeMaxVolume, -99, 99);
+	lv_coord_t MainScreen_spinboxPurgeMaxVolume_h = lv_obj_get_height(ui->MainScreen_spinboxPurgeMaxVolume);
+	ui->MainScreen_spinboxPurgeMaxVolume_btn = lv_btn_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeMaxVolume_btn, MainScreen_spinboxPurgeMaxVolume_h, MainScreen_spinboxPurgeMaxVolume_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeMaxVolume_btn, ui->MainScreen_spinboxPurgeMaxVolume, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeMaxVolume_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeMaxVolume_btn, lv_MainScreen_spinboxPurgeMaxVolume_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxPurgeMaxVolume_btn_minus = lv_btn_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeMaxVolume_btn_minus, MainScreen_spinboxPurgeMaxVolume_h, MainScreen_spinboxPurgeMaxVolume_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeMaxVolume_btn_minus, ui->MainScreen_spinboxPurgeMaxVolume, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeMaxVolume_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeMaxVolume_btn_minus, lv_MainScreen_spinboxPurgeMaxVolume_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeMaxVolume, 320, 124);
+
+	//Write style for MainScreen_spinboxPurgeMaxVolume, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeMaxVolume, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeMaxVolume, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxPurgeMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxPurgeMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxPurgeMaxVolume, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxPurgeMaxVolume, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxPurgeMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxPurgeMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxPurgeMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxPurgeMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeMaxVolume, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeMaxVolume, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeMaxVolume, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxPurgeMaxVolume, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxPurgeMaxVolume, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxPurgeMaxVolume, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxPurgeMaxVolume, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeMaxVolume, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeMaxVolume, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeMaxVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeMaxVolume, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeMaxVolume, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeMaxVolume, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contPurgeInterVal
+	ui->MainScreen_contPurgeInterVal = lv_obj_create(ui->MainScreen_contPurgeValues);
+	lv_obj_set_pos(ui->MainScreen_contPurgeInterVal, 281, 205.5);
+	lv_obj_set_size(ui->MainScreen_contPurgeInterVal, 150, 36);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contPurgeInterVal, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contPurgeInterVal, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contPurgeInterVal, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contPurgeInterVal, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contPurgeInterVal, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contPurgeInterVal, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_90
+	ui->MainScreen_label_90 = lv_label_create(ui->MainScreen_contPurgeInterVal);
+	lv_label_set_text(ui->MainScreen_label_90, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_90, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_90, 50, 4);
+	lv_obj_set_size(ui->MainScreen_label_90, 7, 25);
+
+	//Write style for MainScreen_label_90, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_90, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_90, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_90, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_90, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_90, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_90, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_90, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_89
+	ui->MainScreen_label_89 = lv_label_create(ui->MainScreen_contPurgeInterVal);
+	lv_label_set_text(ui->MainScreen_label_89, ":");
+	lv_label_set_long_mode(ui->MainScreen_label_89, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_89, 100, 6);
+	lv_obj_set_size(ui->MainScreen_label_89, 7, 25);
+
+	//Write style for MainScreen_label_89, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_89, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_89, &lv_font_Alatsi_Regular_21, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_89, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_89, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_89, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_89, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_89, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxPurgeIntervalHour
+	ui->MainScreen_spinboxPurgeIntervalHour = lv_spinbox_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalHour, 10, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxPurgeIntervalHour, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxPurgeIntervalHour, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxPurgeIntervalHour, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalHour, -99, 99);
+	lv_coord_t MainScreen_spinboxPurgeIntervalHour_h = lv_obj_get_height(ui->MainScreen_spinboxPurgeIntervalHour);
+	ui->MainScreen_spinboxPurgeIntervalHour_btn = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalHour_btn, MainScreen_spinboxPurgeIntervalHour_h, MainScreen_spinboxPurgeIntervalHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalHour_btn, ui->MainScreen_spinboxPurgeIntervalHour, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalHour_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalHour_btn, lv_MainScreen_spinboxPurgeIntervalHour_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxPurgeIntervalHour_btn_minus = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalHour_btn_minus, MainScreen_spinboxPurgeIntervalHour_h, MainScreen_spinboxPurgeIntervalHour_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalHour_btn_minus, ui->MainScreen_spinboxPurgeIntervalHour, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalHour_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalHour_btn_minus, lv_MainScreen_spinboxPurgeIntervalHour_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalHour, 10, 5);
+
+	//Write style for MainScreen_spinboxPurgeIntervalHour, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalHour, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalHour, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxPurgeIntervalHour, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxPurgeIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxPurgeIntervalHour, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxPurgeIntervalHour, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxPurgeIntervalHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxPurgeIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxPurgeIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxPurgeIntervalHour, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalHour, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalHour, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalHour, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxPurgeIntervalHour, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxPurgeIntervalHour, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxPurgeIntervalHour, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxPurgeIntervalHour, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalHour, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalHour, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalHour, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalHour, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalHour, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxPurgeIntervalMinute
+	ui->MainScreen_spinboxPurgeIntervalMinute = lv_spinbox_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalMinute, 60, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxPurgeIntervalMinute, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxPurgeIntervalMinute, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxPurgeIntervalMinute, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalMinute, -99, 99);
+	lv_coord_t MainScreen_spinboxPurgeIntervalMinute_h = lv_obj_get_height(ui->MainScreen_spinboxPurgeIntervalMinute);
+	ui->MainScreen_spinboxPurgeIntervalMinute_btn = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalMinute_btn, MainScreen_spinboxPurgeIntervalMinute_h, MainScreen_spinboxPurgeIntervalMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalMinute_btn, ui->MainScreen_spinboxPurgeIntervalMinute, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalMinute_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalMinute_btn, lv_MainScreen_spinboxPurgeIntervalMinute_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus, MainScreen_spinboxPurgeIntervalMinute_h, MainScreen_spinboxPurgeIntervalMinute_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus, ui->MainScreen_spinboxPurgeIntervalMinute, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus, lv_MainScreen_spinboxPurgeIntervalMinute_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalMinute, 60, 5);
+
+	//Write style for MainScreen_spinboxPurgeIntervalMinute, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalMinute, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalMinute, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxPurgeIntervalMinute, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxPurgeIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxPurgeIntervalMinute, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxPurgeIntervalMinute, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxPurgeIntervalMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxPurgeIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxPurgeIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxPurgeIntervalMinute, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalMinute, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalMinute, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalMinute, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxPurgeIntervalMinute, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxPurgeIntervalMinute, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxPurgeIntervalMinute, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxPurgeIntervalMinute, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalMinute, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalMinute, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalMinute, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalMinute, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalMinute, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_spinboxPurgeIntervalSecond
+	ui->MainScreen_spinboxPurgeIntervalSecond = lv_spinbox_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalSecond, 110, 5);
+	lv_obj_set_width(ui->MainScreen_spinboxPurgeIntervalSecond, 30);
+	lv_obj_set_height(ui->MainScreen_spinboxPurgeIntervalSecond, 25);
+	lv_spinbox_set_digit_format(ui->MainScreen_spinboxPurgeIntervalSecond, 2, 2);
+	lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalSecond, -99, 99);
+	lv_coord_t MainScreen_spinboxPurgeIntervalSecond_h = lv_obj_get_height(ui->MainScreen_spinboxPurgeIntervalSecond);
+	ui->MainScreen_spinboxPurgeIntervalSecond_btn = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalSecond_btn, MainScreen_spinboxPurgeIntervalSecond_h, MainScreen_spinboxPurgeIntervalSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalSecond_btn, ui->MainScreen_spinboxPurgeIntervalSecond, LV_ALIGN_OUT_RIGHT_MID, 5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalSecond_btn, LV_SYMBOL_PLUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalSecond_btn, lv_MainScreen_spinboxPurgeIntervalSecond_increment_event_cb, LV_EVENT_ALL, NULL);
+	ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus = lv_btn_create(ui->MainScreen_contPurgeInterVal);
+	lv_obj_set_size(ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus, MainScreen_spinboxPurgeIntervalSecond_h, MainScreen_spinboxPurgeIntervalSecond_h);
+	lv_obj_align_to(ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus, ui->MainScreen_spinboxPurgeIntervalSecond, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+	lv_obj_set_style_bg_img_src(ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus, LV_SYMBOL_MINUS, 0);
+	lv_obj_add_event_cb(ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus, lv_MainScreen_spinboxPurgeIntervalSecond_decrement_event_cb, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_spinboxPurgeIntervalSecond, 110, 5);
+
+	//Write style for MainScreen_spinboxPurgeIntervalSecond, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalSecond, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalSecond, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_spinboxPurgeIntervalSecond, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_spinboxPurgeIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_spinboxPurgeIntervalSecond, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_spinboxPurgeIntervalSecond, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_spinboxPurgeIntervalSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_spinboxPurgeIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_spinboxPurgeIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_spinboxPurgeIntervalSecond, 3, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalSecond, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalSecond, &lv_font_Alatsi_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalSecond, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_spinboxPurgeIntervalSecond, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_spinboxPurgeIntervalSecond, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_spinboxPurgeIntervalSecond, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write style for MainScreen_spinboxPurgeIntervalSecond, Part: LV_PART_CURSOR, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_spinboxPurgeIntervalSecond, lv_color_hex(0x000000), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_spinboxPurgeIntervalSecond, &lv_font_Alatsi_Regular_16, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_spinboxPurgeIntervalSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_spinboxPurgeIntervalSecond, 255, LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_spinboxPurgeIntervalSecond, lv_color_hex(0xffffff), LV_PART_CURSOR|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_spinboxPurgeIntervalSecond, LV_GRAD_DIR_NONE, LV_PART_CURSOR|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoMenuPurge
+	ui->MainScreen_btnGoMenuPurge = lv_btn_create(ui->MainScreen_contPurge);
+	ui->MainScreen_btnGoMenuPurge_label = lv_label_create(ui->MainScreen_btnGoMenuPurge);
+	lv_label_set_text(ui->MainScreen_btnGoMenuPurge_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoMenuPurge_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoMenuPurge_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoMenuPurge, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoMenuPurge_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoMenuPurge, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoMenuPurge, 58, 44);
+
+	//Write style for MainScreen_btnGoMenuPurge, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoMenuPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoMenuPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoMenuPurge, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoMenuPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoMenuPurge, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoMenuPurge, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoMenuPurge, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoMenuPurge, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummyPurge
+	ui->MainScreen_btnDummyPurge = lv_btn_create(ui->MainScreen_contPurge);
+	ui->MainScreen_btnDummyPurge_label = lv_label_create(ui->MainScreen_btnDummyPurge);
+	lv_label_set_text(ui->MainScreen_btnDummyPurge_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummyPurge_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummyPurge_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummyPurge, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummyPurge_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummyPurge, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummyPurge, 8, 10);
+
+	//Write style for MainScreen_btnDummyPurge, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummyPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummyPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummyPurge, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummyPurge, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummyPurge, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummyPurge, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummyPurge, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummyPurge, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
 	lv_textarea_set_text(ui->MainScreen_ta_keybard, "hckdsjclsd");
@@ -6391,7 +6911,27 @@ lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalHour,0,99);
 lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalMinute,0,59);
 lv_spinbox_set_range(ui->MainScreen_spinboxBolusIntervalSecond,0,59);
 /*=====================================================*/
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeRate_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeRate_btn_minus,LV_OBJ_FLAG_HIDDEN);
 
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeMaxVolume_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeMaxVolume_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalHour_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalHour_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalMinute_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalMinute_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalSecond_btn,LV_OBJ_FLAG_HIDDEN);
+lv_obj_add_flag(ui->MainScreen_spinboxPurgeIntervalSecond_btn_minus,LV_OBJ_FLAG_HIDDEN);
+
+lv_spinbox_set_range(ui->MainScreen_spinboxPurgeRate,0,18000);
+lv_spinbox_set_range(ui->MainScreen_spinboxPurgeMaxVolume,0,50);
+lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalHour,0,99);
+lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalMinute,0,59);
+lv_spinbox_set_range(ui->MainScreen_spinboxPurgeIntervalSecond,0,59);
+/*=====================================================*/
 MainScreen_digital_clockHeader_timer(NULL);
 MainScreenSetStyle(ui);
 LoadDefaults();

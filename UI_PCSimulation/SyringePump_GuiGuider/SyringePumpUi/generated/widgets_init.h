@@ -125,6 +125,21 @@ void lv_MainScreen_spinboxBolusIntervalMinute_decrement_event_cb(lv_event_t * ev
 extern lv_obj_t * MainScreen_spinboxBolusIntervalSecond;
 void lv_MainScreen_spinboxBolusIntervalSecond_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxBolusIntervalSecond_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxPurgeRate;
+void lv_MainScreen_spinboxPurgeRate_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxPurgeRate_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxPurgeMaxVolume;
+void lv_MainScreen_spinboxPurgeMaxVolume_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxPurgeMaxVolume_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxPurgeIntervalHour;
+void lv_MainScreen_spinboxPurgeIntervalHour_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxPurgeIntervalHour_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxPurgeIntervalMinute;
+void lv_MainScreen_spinboxPurgeIntervalMinute_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxPurgeIntervalMinute_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxPurgeIntervalSecond;
+void lv_MainScreen_spinboxPurgeIntervalSecond_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxPurgeIntervalSecond_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus

@@ -162,6 +162,11 @@ void MainScreenSetStyle(lv_ui *ui)
   setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalHour);
   setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalMinute);
   setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalSecond);
+  setStyleEdittableObj(ui->MainScreen_spinboxPurgeRate);
+  setStyleEdittableObj(ui->MainScreen_spinboxPurgeMaxVolume);
+  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalHour);
+  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalMinute);
+  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalSecond);  
 
   lv_obj_set_style_outline_color(ui->MainScreen_swKVOMode, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
   lv_obj_set_style_outline_pad(ui->MainScreen_swKVOMode, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
@@ -172,6 +177,15 @@ void MainScreenSetStyle(lv_ui *ui)
   lv_obj_set_style_outline_width(ui->MainScreen_swNurseCall, 4, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
 }
 /************************************************************/
+void setcontMainGroup(lv_ui *ui)
+{
+  lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+}
 void setcontMenuGroup(lv_ui *ui)
 {
   lv_group_t *g;
@@ -210,15 +224,6 @@ void setcontMenuGroup(lv_ui *ui)
       if (!has_stat)
         lv_obj_add_state(lv_obj_get_child(ui->MainScreen_contMenuButtons, 0), LV_STATE_FOCUS_KEY);
     }
-  }
-}
-void setcontMainGroup(lv_ui *ui)
-{
-  lv_group_t *g;
-  g = lv_group_get_default();
-  if (g != NULL)
-  {
-    lv_group_del(g);
   }
 }
 void setlistSyringeCompanyGroup(lv_ui *ui)
@@ -695,6 +700,12 @@ void setPurgeGroup(lv_ui *ui)
     if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
     {
       lv_indev_set_group(cur_dev, g);
+      lv_group_add_obj(g, ui->MainScreen_spinboxPurgeRate);
+      lv_group_add_obj(g, ui->MainScreen_spinboxPurgeMaxVolume);
+      lv_group_add_obj(g, ui->MainScreen_spinboxPurgeIntervalHour);
+      lv_group_add_obj(g, ui->MainScreen_spinboxPurgeIntervalMinute);
+      lv_group_add_obj(g, ui->MainScreen_spinboxPurgeIntervalSecond);
+      lv_group_add_obj(g, ui->MainScreen_btnDummyPurge);      
     }
   }
   
@@ -726,7 +737,7 @@ void setSettingsGroup(lv_ui *ui)
 }
 
 //=======================================//=======================================//=======================================
-//=======================================//=======================================//=======================================
+//=======================================//============Update Value of content when show it===========================//=======================================
 void updateMain(lv_ui *ui)
 {
   ///////////////Middle Panel///////////////
@@ -1067,7 +1078,6 @@ void updateRhythmicValues(lv_ui *ui)
 {
 
 }
-
 void updateNurseCallValues(lv_ui *ui)
 {
   if(currentMachineState.NurseCall)
@@ -1112,15 +1122,36 @@ void updateBolusValues(lv_ui *ui)
 }
 void updatePurgeValues(lv_ui *ui)
 {
-
+ switch(currentMachineState.Mode.mode)
+  {
+    case 0://volume
+    case 3://intermittent
+    case 4://rhythmic
+      lv_label_set_text_fmt(ui->MainScreen_labelPurgeRateUnit, "%s", unitMode_volume_intermittent_rhythmic[currentMachineState.Mode.unit]);    
+    break;
+    case 1://time
+      lv_label_set_text_fmt(ui->MainScreen_labelPurgeRateUnit, "%s", unitMode_time[currentMachineState.Mode.unit]);    
+    break;
+    case 2://weight
+    lv_label_set_text_fmt(ui->MainScreen_labelPurgeRateUnit, "%s", unitMode_BodyWeight[currentMachineState.Mode.unit]);    
+    break;
+    case 5://linear
+    lv_label_set_text_fmt(ui->MainScreen_labelPurgeRateUnit, "%s", unitMode_linear[currentMachineState.Mode.unit]);    
+    break;
+  }
+  lv_label_set_text_fmt(ui->MainScreen_labelPurgeMaxVolumeUnit,"%s",unit_volume[currentMachineState.Mode.unit % 4]);  
+  lv_spinbox_set_value(ui->MainScreen_spinboxPurgeRate, currentMachineState.PurgeRate10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxPurgeMaxVolume, currentMachineState.PurgeMaxVolume10);
+  lv_spinbox_set_value(ui->MainScreen_spinboxPurgeIntervalHour,currentMachineState.PurgeIntervalTime/3600);
+  lv_spinbox_set_value(ui->MainScreen_spinboxPurgeIntervalMinute,(currentMachineState.PurgeIntervalTime%3600)/60);
+  lv_spinbox_set_value(ui->MainScreen_spinboxPurgeIntervalSecond,(currentMachineState.PurgeIntervalTime%3600)%60);
 }
 void updateSettingsValues(lv_ui *ui)
 {
 
 }
-
 //=======================================//=======================================//=======================================
-//=======================================//=======================================//=======================================
+//=======================================//=====ReadyCallabck after loading content animation was called=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
 {
   updateMain(&guider_ui);
@@ -1137,21 +1168,11 @@ void animcontSyringe_ready_callback(lv_anim_t *a)
   updateSyringeCompanyList(&guider_ui);
   setlistSyringeCompanyGroup(&guider_ui);
 }
-void animcontSyringe_del_callback(lv_anim_t *a)
-{
-  lv_obj_add_state(guider_ui.MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
-  animcontMenu_ready_callback(a);
-}
 void animcontDrug_ready_callback(lv_anim_t *a)
 {
   cur_Drug=currentMachineState.Drug.Drugindex;
 	updateDrugList(&guider_ui);
 	setlistDrugBrandGroup(&guider_ui);
-}
-void animcontDrug_del_callback(lv_anim_t *a)
-{
-  lv_obj_add_state(guider_ui.MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);		  
-  animcontMenu_ready_callback(a);
 }
 void animcontMode_ready_callback(lv_anim_t *a)
 {
@@ -1160,35 +1181,71 @@ void animcontMode_ready_callback(lv_anim_t *a)
   updateModeModeList(&guider_ui);
   setlistModeModeGroup(&guider_ui);
 }
-void animcontMode_del_callback(lv_anim_t *a)
-{
-  lv_obj_add_state(guider_ui.MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);		  
-  animcontMenu_ready_callback(a);
-}
 void animcontOcclusion_ready_callback(lv_anim_t *a)
 {
   updateOcclusionValues(&guider_ui);
   setbarOcclusionOccGroup(&guider_ui);
-}
-void animcontOcclusion_del_callback(lv_anim_t *a)
-{
-  lv_obj_add_state(guider_ui.MainScreen_btnMenuOCC,LV_STATE_FOCUS_KEY);		  
-  animcontMenu_ready_callback(a);
 }
 void animcontKVO_ready_callback(lv_anim_t *a)
 {
   updateKVOModeValues(&guider_ui);
   setKVOModeGroup(&guider_ui);
 }
-void animcontKVO_del_callback(lv_anim_t *a)
-{
-  lv_obj_add_state(guider_ui.MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);		  
-  animcontMenu_ready_callback(a);
-}
 void animcontIntermittent_ready_callback(lv_anim_t *a)
 {
   updateIntermittentValues(&guider_ui);
   setIntermittentGroup(&guider_ui);
+}
+void animcontRhythmic_ready_callback(lv_anim_t *a)
+{
+  updateRhythmicValues(&guider_ui);
+  setRhythmicGroup(&guider_ui);
+}
+void animcontNurseCall_ready_callback(lv_anim_t *a)
+{
+  updateNurseCallValues(&guider_ui);
+  setNurseCallGroup(&guider_ui);
+}
+void animcontBolus_ready_callback(lv_anim_t *a)
+{
+  updateBolusValues(&guider_ui);
+  setBolusGroup(&guider_ui);
+}
+void animcontPurge_ready_callback(lv_anim_t *a)
+{
+  updatePurgeValues(&guider_ui);
+  setPurgeGroup(&guider_ui);
+}
+void animcontSettings_ready_callback(lv_anim_t *a)
+{
+  updateSettingsValues(&guider_ui);
+  setSettingsGroup(&guider_ui);
+}
+//=======================================//=====delCallabck after removing content (animation) and coming back to menu was called=======================================
+void animcontSyringe_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuSyringe,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontDrug_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuDrug,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontMode_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuMode,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontOcclusion_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuOCC,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
+}
+void animcontKVO_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnMenuKVO,LV_STATE_FOCUS_KEY);		  
+  animcontMenu_ready_callback(a);
 }
 void animcontIntermittent_del_callback(lv_anim_t *a)
 {
@@ -1196,55 +1253,29 @@ void animcontIntermittent_del_callback(lv_anim_t *a)
   animcontMenu_ready_callback(a);
 
 }
-void animcontRhythmic_ready_callback(lv_anim_t *a)
-{
-  updateRhythmicValues(&guider_ui);
-  setRhythmicGroup(&guider_ui);
-}
 void animcontRhythmic_del_callback(lv_anim_t *a)
 {
   lv_obj_add_state(guider_ui.MainScreen_btnMenuRhyInf,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
-}
-void animcontNurseCall_ready_callback(lv_anim_t *a)
-{
-  updateNurseCallValues(&guider_ui);
-  setNurseCallGroup(&guider_ui);
 }
 void animcontNurseCall_del_callback(lv_anim_t *a)
 {
   lv_obj_add_state(guider_ui.MainScreen_btnMenuNurseCall,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
 }
-void animcontBolus_ready_callback(lv_anim_t *a)
-{
-  updateBolusValues(&guider_ui);
-  setBolusGroup(&guider_ui);
-}
 void animcontBolus_del_callback(lv_anim_t *a)
 {
   lv_obj_add_state(guider_ui.MainScreen_btnMenuBolus,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
-}
-void animcontPurge_ready_callback(lv_anim_t *a)
-{
-  updatePurgeValues(&guider_ui);
-  setPurgeGroup(&guider_ui);
 }
 void animcontPurge_del_callback(lv_anim_t *a)
 {
   lv_obj_add_state(guider_ui.MainScreen_btnMenuPurge,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
 }
-void animcontSettings_ready_callback(lv_anim_t *a)
-{
-  updateSettingsValues(&guider_ui);
-  setSettingsGroup(&guider_ui);
-}
 void animcontSettings_del_callback(lv_anim_t *a)
 {
   lv_obj_add_state(guider_ui.MainScreen_btnMenuSetting,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
 }
-
 /************************************/

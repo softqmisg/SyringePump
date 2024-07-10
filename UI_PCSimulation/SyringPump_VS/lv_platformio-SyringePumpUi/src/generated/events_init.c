@@ -97,7 +97,7 @@ static void MainScreen_btnMenuSyringe_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contSyringe, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contSyringe, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSyringe_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_listSyringeType, LV_OBJ_FLAG_CLICKABLE);
 		lv_obj_add_flag(guider_ui.MainScreen_contSyringeValues, LV_OBJ_FLAG_HIDDEN);
@@ -115,7 +115,7 @@ static void MainScreen_btnMenuDrug_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contDrug, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contDrug, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontDrug_ready_callback, NULL);
 		lv_obj_clear_flag(guider_ui.MainScreen_contDrugValues, LV_OBJ_FLAG_CLICKABLE);
 		break;
 	}
@@ -130,7 +130,7 @@ static void MainScreen_btnMenuMode_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contMode, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontMode_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contMode, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontMode_ready_callback, NULL);
 		lv_obj_add_flag(guider_ui.MainScreen_listModeUnit, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_clear_flag(guider_ui.MainScreen_listModeUnit, LV_OBJ_FLAG_CLICKABLE);
 		lv_obj_add_flag(guider_ui.MainScreen_contModeValues, LV_OBJ_FLAG_HIDDEN);
@@ -148,7 +148,7 @@ static void MainScreen_btnMenuOCC_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contOcclusion, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontOcclusion_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contOcclusion, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontOcclusion_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -162,7 +162,7 @@ static void MainScreen_btnMenuKVO_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contKVO, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontKVO_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contKVO, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontKVO_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -176,7 +176,7 @@ static void MainScreen_btnMenuIntInf_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contIntermittent, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontIntermittent_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contIntermittent, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontIntermittent_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -190,7 +190,7 @@ static void MainScreen_btnMenuNurseCall_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contNurseCall, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontNurseCall_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contNurseCall, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontNurseCall_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -204,7 +204,21 @@ static void MainScreen_btnMenuBolus_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_CLICKED:
 	{
-		ui_move_animation(guider_ui.MainScreen_contBolus, 200, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontBolus_ready_callback, NULL);
+		ui_move_animation(guider_ui.MainScreen_contBolus, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontBolus_ready_callback, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnMenuPurge_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contPurge, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontPurge_ready_callback, NULL);
 		break;
 	}
 	default:
@@ -1198,7 +1212,7 @@ static void MainScreen_btnDummyNurseCall_event_handler (lv_event_t *e)
 	case LV_EVENT_FOCUSED:
 	{
 		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
-	if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_CHECKED))
+	if(lv_obj_has_state(ui->MainScreen_swNurseCall,LV_STATE_FOCUS_KEY))
 	    currentMachineState.NurseCall=true;
 	else
 	    currentMachineState.NurseCall=false;
@@ -1261,6 +1275,57 @@ static void MainScreen_btnDummyBolus_event_handler (lv_event_t *e)
 		break;
 	}
 }
+static void MainScreen_btnGoMenuPurge_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@Purge id=%d\n",id);
+	if(lv_obj_has_state(ui->MainScreen_spinboxPurgeRate,LV_STATE_FOCUS_KEY))
+	{
+	  ui_move_animation(ui->MainScreen_contPurge,200,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);
+	}
+	else
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnDummyPurge_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_FOCUSED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	currentMachineState.PurgeRate10=lv_spinbox_get_value(ui->MainScreen_spinboxPurgeRate);
+	currentMachineState.PurgeMaxVolume10=lv_spinbox_get_value(ui->MainScreen_spinboxPurgeMaxVolume);
+	currentMachineState.PurgeIntervalTime=lv_spinbox_get_value(ui->MainScreen_spinboxPurgeIntervalHour)*3600+
+	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxPurgeIntervalMinute)*60+
+	                                                    lv_spinbox_get_value(ui->MainScreen_spinboxPurgeIntervalSecond);
+	ui_move_animation(ui->MainScreen_contPurge,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);
+		break;
+	}
+	default:
+		break;
+	}
+}
 void events_init_MainScreen(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
@@ -1273,6 +1338,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuIntInf, MainScreen_btnMenuIntInf_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuNurseCall, MainScreen_btnMenuNurseCall_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuBolus, MainScreen_btnMenuBolus_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnMenuPurge, MainScreen_btnMenuPurge_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMainMenu, MainScreen_btnGoMainMenu_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuSyringe, MainScreen_btnGoMenuSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeCompany, MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
@@ -1289,7 +1355,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_listDrugBrand, MainScreen_listDrugBrand_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_taDrugNameValue, MainScreen_taDrugNameValue_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_taDrugBrandValue, MainScreen_taDrugBrandValue_event_handler, LV_EVENT_ALL, ui);
-	lv_obj_add_event_cb((ui->MainScreen_ddlistDrugId), MainScreen_ddlistDrugId_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_ddlistDrugId, MainScreen_ddlistDrugId_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugmgml, MainScreen_spinboxDrugmgml_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDruguml, MainScreen_spinboxDruguml_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_spinboxDrugperkg, MainScreen_spinboxDrugperkg_event_handler, LV_EVENT_ALL, ui);
@@ -1319,6 +1385,8 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyNurseCall, MainScreen_btnDummyNurseCall_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuBolus, MainScreen_btnGoMenuBolus_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyBolus, MainScreen_btnDummyBolus_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuPurge, MainScreen_btnGoMenuPurge_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnDummyPurge, MainScreen_btnDummyPurge_event_handler, LV_EVENT_ALL, ui);
 
 	for (int i = 0; i < lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany); i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany, i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
