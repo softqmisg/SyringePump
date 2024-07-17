@@ -209,6 +209,20 @@ static void MainScreen_btnMenuPurge_event_handler (lv_event_t *e)
 		break;
 	}
 }
+static void MainScreen_btnMenuSetting_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contSettings, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSettings_ready_callback, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
 static void MainScreen_btnGoMainMenu_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -1310,6 +1324,96 @@ static void MainScreen_btnDummyPurge_event_handler (lv_event_t *e)
 		break;
 	}
 }
+static void MainScreen_btnSettingsClock_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contSettingsClock, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSettingsClock_ready_callback, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnGoMenuSettings_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contSettings, 300, 0, 800, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, NULL, animcontSettings_del_callback);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnGoSettingsClock_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@Setting Clock id=%d\n",id);
+	if(lv_obj_has_state(ui->MainScreen_spinboxSettingsClockHour,LV_STATE_FOCUS_KEY))
+	{
+	  ui_move_animation(ui->MainScreen_contSettingsClock,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontPurge_del_callback);
+	}
+	else
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnDummySettingsClock_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_FOCUSED:
+	{
+		extern int MainScreen_digital_clockHeader_hour_value;
+	extern int MainScreen_digital_clockHeader_min_value;
+	extern int MainScreen_digital_clockHeader_sec_value;
+	extern char MainScreen_digital_clockHeader_meridiem[];
+	lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	MainScreen_digital_clockHeader_hour_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockHour);
+	MainScreen_digital_clockHeader_min_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockMinute);    
+	MainScreen_digital_clockHeader_sec_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockHour);  
+	if(MainScreen_digital_clockHeader_hour_value>12)
+	{
+	  lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"PM");
+	  MainScreen_digital_clockHeader_hour_value-=12;
+	}
+	else
+	{
+	  lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"AM");
+	}
+	ui_move_animation(ui->MainScreen_contSettingsClock,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontSettingsClock_del_callback);
+		break;
+	}
+	default:
+		break;
+	}
+}
 void events_init_MainScreen(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->MainScreen, MainScreen_event_handler, LV_EVENT_ALL, ui);
@@ -1323,6 +1427,7 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuNurseCall, MainScreen_btnMenuNurseCall_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuBolus, MainScreen_btnMenuBolus_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnMenuPurge, MainScreen_btnMenuPurge_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnMenuSetting, MainScreen_btnMenuSetting_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMainMenu, MainScreen_btnGoMainMenu_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuSyringe, MainScreen_btnGoMenuSyringe_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_listSyringeCompany, MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);
@@ -1371,6 +1476,10 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyBolus, MainScreen_btnDummyBolus_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuPurge, MainScreen_btnGoMenuPurge_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyPurge, MainScreen_btnDummyPurge_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnSettingsClock, MainScreen_btnSettingsClock_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuSettings, MainScreen_btnGoMenuSettings_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingsClock, MainScreen_btnGoSettingsClock_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnDummySettingsClock, MainScreen_btnDummySettingsClock_event_handler, LV_EVENT_ALL, ui);
 }
 
 void events_init(lv_ui *ui)

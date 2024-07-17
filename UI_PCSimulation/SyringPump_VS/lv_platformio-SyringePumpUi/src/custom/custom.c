@@ -121,52 +121,78 @@ void setStyleEdittableObj(lv_obj_t *obj)
     lv_obj_add_style(obj, &MainScreenStyleCursorEdit, LV_PART_CURSOR | LV_STATE_EDITED);
   }
 }
+void  setEdittableObj(lv_obj_t *obj,uint8_t id)
+{
+  if(lv_obj_check_type(obj,&lv_spinbox_class) || lv_obj_check_type(obj,&lv_textarea_class) ||lv_obj_check_type(obj,&lv_slider_class))
+  {
+    if(lv_obj_has_flag(obj,LV_OBJ_FLAG_CLICK_FOCUSABLE))
+    {
+      setStyleEdittableObj(obj);
+      // printf("@@@ sub child=%d\t",id);      
+    }
+  }
+  else if(lv_obj_get_child_cnt(obj))
+  {
+    // printf("->>>cont child=%d\n\r",id);
+    for(uint8_t i=0;i<lv_obj_get_child_cnt(obj);i++)
+      setEdittableObj(lv_obj_get_child(obj,i),i);
+  }
+}
+
 void MainScreenSetStyle(lv_ui *ui)
 {
-  setStyleEdittableObj(ui->MainScreen_taSyringeNameValue);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringeVolume);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringeInnerDia);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringeOuterDia);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringeBarrelLen);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringePlungerLen);
-  setStyleEdittableObj(ui->MainScreen_spinboxSyringeDiaTolerance);
-  setStyleEdittableObj(ui->MainScreen_taDrugNameValue);
-  setStyleEdittableObj(ui->MainScreen_taDrugBrandValue);
-  setStyleEdittableObj(ui->MainScreen_ddlistDrugId);
-  setStyleEdittableObj(ui->MainScreen_spinboxDrugmgml);
-  setStyleEdittableObj(ui->MainScreen_spinboxDruguml);
-  setStyleEdittableObj(ui->MainScreen_spinboxDrugperkg);
-  setStyleEdittableObj(ui->MainScreen_spinboxDrugRateMin);
-  setStyleEdittableObj(ui->MainScreen_spinboxDrugRateMax);
-  setStyleEdittableObj(ui->MainScreen_spinboxDrugRateDef);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeTotalVolume);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeHour);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeMinute);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeSecond);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeInfusionRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxModeBodyWeight);
-  setStyleEdittableObj(ui->MainScreen_sliderOcclusionOcc);
-  setStyleEdittableObj(ui->MainScreen_spinboxKVORate);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationHour);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationMinute);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationSecond);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentBackgroundRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepHour);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepMinute);
-  setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepSecond);
-  setStyleEdittableObj(ui->MainScreen_spinboxNurseCallDuration);
-  setStyleEdittableObj(ui->MainScreen_spinboxBolusRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxBolusMaxVolume);
-  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalHour);
-  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalMinute);
-  setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalSecond);
-  setStyleEdittableObj(ui->MainScreen_spinboxPurgeRate);
-  setStyleEdittableObj(ui->MainScreen_spinboxPurgeMaxVolume);
-  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalHour);
-  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalMinute);
-  setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalSecond);  
+  for(uint8_t i=0;i<lv_obj_get_child_cnt(ui->MainScreen);i++)
+  {
+    // printf("Main child=%d\n\r",i);
+      setEdittableObj(lv_obj_get_child(ui->MainScreen,i),i);
+  }
+  // setStyleEdittableObj(ui->MainScreen_taSyringeNameValue);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringeVolume);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringeInnerDia);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringeOuterDia);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringeBarrelLen);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringePlungerLen);
+  // setStyleEdittableObj(ui->MainScreen_spinboxSyringeDiaTolerance);
+  // setStyleEdittableObj(ui->MainScreen_taDrugNameValue);
+  // setStyleEdittableObj(ui->MainScreen_taDrugBrandValue);
+  // setStyleEdittableObj(ui->MainScreen_ddlistDrugId);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDrugmgml);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDruguml);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDrugperkg);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDrugRateMin);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDrugRateMax);
+  // setStyleEdittableObj(ui->MainScreen_spinboxDrugRateDef);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeTotalVolume);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeHour);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeMinute);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeTotalTimeSecond);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeInfusionRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxModeBodyWeight);
+  // setStyleEdittableObj(ui->MainScreen_sliderOcclusionOcc);
+  // setStyleEdittableObj(ui->MainScreen_spinboxKVORate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationHour);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationMinute);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentDurationSecond);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentInfusionRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentBackgroundRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepHour);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepMinute);
+  // setStyleEdittableObj(ui->MainScreen_spinboxIntermittentSleepSecond);
+  // setStyleEdittableObj(ui->MainScreen_spinboxNurseCallDuration);
+  // setStyleEdittableObj(ui->MainScreen_spinboxBolusRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxBolusMaxVolume);
+  // setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalHour);
+  // setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalMinute);
+  // setStyleEdittableObj(ui->MainScreen_spinboxBolusIntervalSecond);
+  // setStyleEdittableObj(ui->MainScreen_spinboxPurgeRate);
+  // setStyleEdittableObj(ui->MainScreen_spinboxPurgeMaxVolume);
+  // setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalHour);
+  // setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalMinute);
+  // setStyleEdittableObj(ui->MainScreen_spinboxPurgeIntervalSecond);  
+  // setStyleEdittableObj(ui->MainScreen_spinboxSettingsClockHour);  
+  // setStyleEdittableObj(ui->MainScreen_spinboxSettingsClockMinute);  
+  // setStyleEdittableObj(ui->MainScreen_spinboxSettingsClockSecond);  
 
   lv_obj_set_style_outline_color(ui->MainScreen_swKVOMode, lv_color_hex(0xff6600), LV_PART_MAIN | LV_STATE_FOCUS_KEY);
   lv_obj_set_style_outline_pad(ui->MainScreen_swKVOMode, 2, LV_PART_MAIN | LV_STATE_FOCUS_KEY);
@@ -720,6 +746,48 @@ void setSettingsGroup(lv_ui *ui)
   }
   g = lv_group_create();
   lv_group_set_default(g);
+  lv_group_set_wrap(g, true);
+
+  lv_indev_t *cur_dev = NULL;
+  for (;;)
+  {
+    cur_dev = lv_indev_get_next(cur_dev);
+    if (!cur_dev)
+      break;
+    if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
+    {
+      lv_indev_set_group(cur_dev, g);
+     lv_obj_t *obj_child;
+      bool has_stat = false;
+      for (int i = 0; i < lv_obj_get_child_cnt(ui->MainScreen_contSettingsButtons); i++)
+      {
+        obj_child = lv_obj_get_child(ui->MainScreen_contSettingsButtons, i);
+        if (lv_obj_check_type(obj_child, &lv_btn_class))
+        {
+          lv_group_add_obj(g, obj_child);
+          if (lv_obj_has_state(obj_child, LV_STATE_FOCUS_KEY))
+          {
+            has_stat = true;
+            lv_group_focus_obj(obj_child);
+          }
+        }
+      }
+      if (!has_stat)
+        lv_obj_add_state(lv_obj_get_child(ui->MainScreen_contSettingsButtons, 0), LV_STATE_FOCUS_KEY);
+    }
+  }
+  
+}
+void  setSettingsClockGroup(lv_ui *ui)
+{
+    lv_group_t *g;
+  g = lv_group_get_default();
+  if (g != NULL)
+  {
+    lv_group_del(g);
+  }
+  g = lv_group_create();
+  lv_group_set_default(g);
   lv_group_set_wrap(g, false);
 
   lv_indev_t *cur_dev = NULL;
@@ -731,9 +799,13 @@ void setSettingsGroup(lv_ui *ui)
     if (lv_indev_get_type(cur_dev) == LV_INDEV_TYPE_ENCODER)
     {
       lv_indev_set_group(cur_dev, g);
+      lv_group_add_obj(g, ui->MainScreen_spinboxSettingsClockHour);
+      lv_group_add_obj(g, ui->MainScreen_spinboxSettingsClockMinute);
+      lv_group_add_obj(g, ui->MainScreen_spinboxSettingsClockSecond);
+
+      lv_group_add_obj(g, ui->MainScreen_btnDummySettingsClock);      
     }
   }
-  
 }
 
 //=======================================//=======================================//=======================================
@@ -1150,6 +1222,22 @@ void updateSettingsValues(lv_ui *ui)
 {
 
 }
+
+void updateSettingsClockValues(lv_ui *ui)
+{
+  extern int MainScreen_digital_clockHeader_hour_value;
+  extern int MainScreen_digital_clockHeader_min_value;
+  extern int MainScreen_digital_clockHeader_sec_value;
+  extern char MainScreen_digital_clockHeader_meridiem[];
+  if(!strcmp(MainScreen_digital_clockHeader_meridiem,"PM") && MainScreen_digital_clockHeader_hour_value<12)
+  {
+    lv_spinbox_set_value(ui->MainScreen_spinboxSettingsClockHour,MainScreen_digital_clockHeader_hour_value+12);
+  }
+else
+    lv_spinbox_set_value(ui->MainScreen_spinboxSettingsClockHour,MainScreen_digital_clockHeader_hour_value);    
+  lv_spinbox_set_value(ui->MainScreen_spinboxSettingsClockMinute,MainScreen_digital_clockHeader_min_value);
+  lv_spinbox_set_value(ui->MainScreen_spinboxSettingsClockSecond,MainScreen_digital_clockHeader_sec_value); 
+}
 //=======================================//=======================================//=======================================
 //=======================================//=====ReadyCallabck after loading content animation was called=======================================
 void animcontMain_ready_callback(lv_anim_t *a)
@@ -1221,6 +1309,12 @@ void animcontSettings_ready_callback(lv_anim_t *a)
   updateSettingsValues(&guider_ui);
   setSettingsGroup(&guider_ui);
 }
+void animcontSettingsClock_ready_callback(lv_anim_t *a)
+{
+    updateSettingsClockValues(&guider_ui);
+    setSettingsClockGroup(&guider_ui);
+}
+
 //=======================================//=====delCallabck after removing content (animation) and coming back to menu was called=======================================
 void animcontSyringe_del_callback(lv_anim_t *a)
 {
@@ -1278,4 +1372,10 @@ void animcontSettings_del_callback(lv_anim_t *a)
   lv_obj_add_state(guider_ui.MainScreen_btnMenuSetting,LV_STATE_FOCUS_KEY);		  
   animcontMenu_ready_callback(a);
 }
+void animcontSettingsClock_del_callback(lv_anim_t *a)
+{
+  lv_obj_add_state(guider_ui.MainScreen_btnSettingsClock,LV_STATE_FOCUS_KEY);		  
+  animcontSettings_ready_callback(a);
+}
+
 /************************************/

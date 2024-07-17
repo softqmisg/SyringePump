@@ -59,11 +59,14 @@ int main(void)
 
   time ( &rawtime );
   timeinfo = localtime ( &rawtime );
-  MainScreen_digital_clockHeader_hour_value=timeinfo->tm_hour%12;    
+  MainScreen_digital_clockHeader_hour_value=timeinfo->tm_hour;    
   MainScreen_digital_clockHeader_min_value=timeinfo->tm_min;    
   MainScreen_digital_clockHeader_sec_value=timeinfo->tm_sec;  
-  if(timeinfo->tm_hour>12)
+  if(timeinfo->tm_hour>=12)
+  {
     lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"PM");
+     if(timeinfo->tm_hour>12) MainScreen_digital_clockHeader_hour_value-=12;
+  }
   else
     lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"AM");
   lv_init();

@@ -140,6 +140,15 @@ void lv_MainScreen_spinboxPurgeIntervalMinute_decrement_event_cb(lv_event_t * ev
 extern lv_obj_t * MainScreen_spinboxPurgeIntervalSecond;
 void lv_MainScreen_spinboxPurgeIntervalSecond_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxPurgeIntervalSecond_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSettingsClockHour;
+void lv_MainScreen_spinboxSettingsClockHour_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSettingsClockHour_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSettingsClockMinute;
+void lv_MainScreen_spinboxSettingsClockMinute_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSettingsClockMinute_decrement_event_cb(lv_event_t * event);
+extern lv_obj_t * MainScreen_spinboxSettingsClockSecond;
+void lv_MainScreen_spinboxSettingsClockSecond_increment_event_cb(lv_event_t * event);
+void lv_MainScreen_spinboxSettingsClockSecond_decrement_event_cb(lv_event_t * event);
 
 
 #ifdef __cplusplus

@@ -485,6 +485,50 @@ typedef struct
 	lv_obj_t *MainScreen_btnGoMenuPurge_label;
 	lv_obj_t *MainScreen_btnDummyPurge;
 	lv_obj_t *MainScreen_btnDummyPurge_label;
+	lv_obj_t *MainScreen_contSettings;
+	lv_obj_t *MainScreen_contSettingsButtons;
+	lv_obj_t *MainScreen_label_107;
+	lv_obj_t *MainScreen_label_106;
+	lv_obj_t *MainScreen_label_105;
+	lv_obj_t *MainScreen_label_104;
+	lv_obj_t *MainScreen_label_103;
+	lv_obj_t *MainScreen_label_102;
+	lv_obj_t *MainScreen_label_101;
+	lv_obj_t *MainScreen_btnSettingsClock;
+	lv_obj_t *MainScreen_btnSettingsClock_label;
+	lv_obj_t *MainScreen_btnSettingsCalender;
+	lv_obj_t *MainScreen_btnSettingsCalender_label;
+	lv_obj_t *MainScreen_btnSettingsVolume;
+	lv_obj_t *MainScreen_btnSettingsVolume_label;
+	lv_obj_t *MainScreen_btnSettingsBrightness;
+	lv_obj_t *MainScreen_btnSettingsBrightness_label;
+	lv_obj_t *MainScreen_btnSettingsNightMode;
+	lv_obj_t *MainScreen_btnSettingsNightMode_label;
+	lv_obj_t *MainScreen_btnSettingsChangePassword;
+	lv_obj_t *MainScreen_btnSettingsChangePassword_label;
+	lv_obj_t *MainScreen_btnSettingsSystemOptions;
+	lv_obj_t *MainScreen_btnSettingsSystemOptions_label;
+	lv_obj_t *MainScreen_btnGoMenuSettings;
+	lv_obj_t *MainScreen_btnGoMenuSettings_label;
+	lv_obj_t *MainScreen_contSettingsClock;
+	lv_obj_t *MainScreen_label_115;
+	lv_obj_t *MainScreen_contSettingsClockValues;
+	lv_obj_t *MainScreen_contsettingClockClock;
+	lv_obj_t *MainScreen_label_109;
+	lv_obj_t *MainScreen_label_108;
+	lv_obj_t *MainScreen_spinboxSettingsClockHour;
+	lv_obj_t *MainScreen_spinboxSettingsClockHour_btn;
+	lv_obj_t *MainScreen_spinboxSettingsClockHour_btn_minus;
+	lv_obj_t *MainScreen_spinboxSettingsClockMinute;
+	lv_obj_t *MainScreen_spinboxSettingsClockMinute_btn;
+	lv_obj_t *MainScreen_spinboxSettingsClockMinute_btn_minus;
+	lv_obj_t *MainScreen_spinboxSettingsClockSecond;
+	lv_obj_t *MainScreen_spinboxSettingsClockSecond_btn;
+	lv_obj_t *MainScreen_spinboxSettingsClockSecond_btn_minus;
+	lv_obj_t *MainScreen_btnGoSettingsClock;
+	lv_obj_t *MainScreen_btnGoSettingsClock_label;
+	lv_obj_t *MainScreen_btnDummySettingsClock;
+	lv_obj_t *MainScreen_btnDummySettingsClock_label;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 
@@ -586,6 +630,34 @@ LV_IMG_DECLARE(_ledbar_empty_26x132);
 LV_IMG_DECLARE(_ledbar_full_26x132);
 
 LV_IMG_DECLARE(_ledbar_full_26x132);
+
+LV_IMG_DECLARE(_clock_100_100x100);
+
+LV_IMG_DECLARE(_clock_100_100x100);
+
+LV_IMG_DECLARE(_calendar_100_100x100);
+
+LV_IMG_DECLARE(_calendar_100_100x100);
+
+LV_IMG_DECLARE(_volume_100_100x100);
+
+LV_IMG_DECLARE(_volume_100_100x100);
+
+LV_IMG_DECLARE(_brightness_100_100x100);
+
+LV_IMG_DECLARE(_brightness_100_100x100);
+
+LV_IMG_DECLARE(_nightmode_100_100x100);
+
+LV_IMG_DECLARE(_nightmode_100_100x100);
+
+LV_IMG_DECLARE(_changepaawprd_100_100x100);
+
+LV_IMG_DECLARE(_changepaawprd_100_100x100);
+
+LV_IMG_DECLARE(_systemoptions_100_100x100);
+
+LV_IMG_DECLARE(_systemoptions_100_100x100);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_19)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)

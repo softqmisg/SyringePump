@@ -679,4 +679,46 @@ void lv_MainScreen_spinboxPurgeIntervalSecond_decrement_event_cb(lv_event_t * ev
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxPurgeIntervalSecond);
 	}
 }
+void lv_MainScreen_spinboxSettingsClockHour_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSettingsClockHour);
+	}
+}
+void lv_MainScreen_spinboxSettingsClockHour_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSettingsClockHour);
+	}
+}
+void lv_MainScreen_spinboxSettingsClockMinute_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSettingsClockMinute);
+	}
+}
+void lv_MainScreen_spinboxSettingsClockMinute_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSettingsClockMinute);
+	}
+}
+void lv_MainScreen_spinboxSettingsClockSecond_increment_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_increment(guider_ui.MainScreen_spinboxSettingsClockSecond);
+	}
+}
+void lv_MainScreen_spinboxSettingsClockSecond_decrement_event_cb(lv_event_t * event)
+{
+	lv_event_code_t code = lv_event_get_code(event);
+	if(code == LV_EVENT_SHORT_CLICKED || code == LV_EVENT_LONG_PRESSED_REPEAT){
+	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSettingsClockSecond);
+	}
+}
 
