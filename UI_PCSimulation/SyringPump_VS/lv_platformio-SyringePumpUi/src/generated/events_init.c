@@ -1338,6 +1338,20 @@ static void MainScreen_btnSettingsClock_event_handler (lv_event_t *e)
 		break;
 	}
 }
+static void MainScreen_btnSettingsCalender_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		ui_move_animation(guider_ui.MainScreen_contSettingsCalender, 300, 0, 0, 80, &lv_anim_path_linear, 0, 0, 0, 0, NULL, animcontSettingsCalender_ready_callback, NULL);
+		break;
+	}
+	default:
+		break;
+	}
+}
 static void MainScreen_btnGoMenuSettings_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -1390,11 +1404,11 @@ static void MainScreen_btnDummySettingsClock_event_handler (lv_event_t *e)
 	switch (code) {
 	case LV_EVENT_FOCUSED:
 	{
-extern int MainScreen_digital_clockHeader_hour_value;
-extern int MainScreen_digital_clockHeader_min_value;
-extern int MainScreen_digital_clockHeader_sec_value;
-extern char MainScreen_digital_clockHeader_meridiem[];		
-		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+		extern int MainScreen_digital_clockHeader_hour_value;
+	extern int MainScreen_digital_clockHeader_min_value;
+	extern int MainScreen_digital_clockHeader_sec_value;
+	extern char MainScreen_digital_clockHeader_meridiem[];
+	lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
 	MainScreen_digital_clockHeader_hour_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockHour);
 	MainScreen_digital_clockHeader_min_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockMinute);    
 	MainScreen_digital_clockHeader_sec_value=lv_spinbox_get_value(ui->MainScreen_spinboxSettingsClockSecond);  
@@ -1402,13 +1416,62 @@ extern char MainScreen_digital_clockHeader_meridiem[];
 	{
 	  lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"PM");
 	  if(MainScreen_digital_clockHeader_hour_value>12)
-	  	MainScreen_digital_clockHeader_hour_value-=12;
+	    MainScreen_digital_clockHeader_hour_value-=12;
 	}
 	else
 	{
 	  lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"AM");
 	}
 	ui_move_animation(ui->MainScreen_contSettingsClock,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontSettingsClock_del_callback);
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnGoSettingsCalender_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_CLICKED:
+	{
+		lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+	lv_group_t *g=lv_group_get_default();
+	uint8_t id=lv_obj_get_child_id(lv_group_get_focused(g));
+	  
+	printf("@Setting Calender id=%d\n",id);
+	if(lv_obj_has_state(ui->MainScreen_datetextSettingsCalender,LV_STATE_FOCUS_KEY))
+	{
+	  ui_move_animation(ui->MainScreen_contSettingsCalender,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontSettingsCalender_del_callback);
+	}
+	else
+	{
+	  lv_obj_t *obj=lv_group_get_focused(g);
+	  lv_obj_clear_state(obj,LV_STATE_FOCUS_KEY);
+	  lv_group_set_editing(g,false);
+	  lv_group_focus_prev(g);
+	  obj=lv_group_get_focused(g);
+	  lv_obj_add_state(obj,LV_STATE_FOCUS_KEY);		
+	}
+		break;
+	}
+	default:
+		break;
+	}
+}
+static void MainScreen_btnDummySettingsCalender_event_handler (lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+
+	switch (code) {
+	case LV_EVENT_FOCUSED:
+	{
+		
+	lv_ui *ui=(lv_ui *)lv_event_get_user_data(e);
+
+	lv_label_set_text(ui->MainScreen_datetextHeader, lv_label_get_text(ui->MainScreen_datetextSettingsCalender));  
+	ui_move_animation(ui->MainScreen_contSettingsCalender,300,0,800,80,&lv_anim_path_linear,0,0,0,0,NULL,NULL,animcontSettingsCalender_del_callback);
 		break;
 	}
 	default:
@@ -1478,9 +1541,12 @@ void events_init_MainScreen(lv_ui *ui)
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuPurge, MainScreen_btnGoMenuPurge_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummyPurge, MainScreen_btnDummyPurge_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnSettingsClock, MainScreen_btnSettingsClock_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnSettingsCalender, MainScreen_btnSettingsCalender_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoMenuSettings, MainScreen_btnGoMenuSettings_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingsClock, MainScreen_btnGoSettingsClock_event_handler, LV_EVENT_ALL, ui);
 	lv_obj_add_event_cb(ui->MainScreen_btnDummySettingsClock, MainScreen_btnDummySettingsClock_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnGoSettingsCalender, MainScreen_btnGoSettingsCalender_event_handler, LV_EVENT_ALL, ui);
+	lv_obj_add_event_cb(ui->MainScreen_btnDummySettingsCalender, MainScreen_btnDummySettingsCalender_event_handler, LV_EVENT_ALL, ui);
 
 	for (int i = 0; i < lv_obj_get_child_cnt(ui->MainScreen_listSyringeCompany); i++)
 		lv_obj_add_event_cb(lv_obj_get_child(ui->MainScreen_listSyringeCompany, i), MainScreen_listSyringeCompany_event_handler, LV_EVENT_ALL, ui);

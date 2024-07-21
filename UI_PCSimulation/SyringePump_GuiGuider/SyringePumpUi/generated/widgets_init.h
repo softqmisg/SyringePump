@@ -150,6 +150,9 @@ extern lv_obj_t * MainScreen_spinboxSettingsClockSecond;
 void lv_MainScreen_spinboxSettingsClockSecond_increment_event_cb(lv_event_t * event);
 void lv_MainScreen_spinboxSettingsClockSecond_decrement_event_cb(lv_event_t * event);
 
+void MainScreen_datetextSettingsCalender_event_handler(lv_event_t *e);
+void MainScreen_datetextSettingsCalender_calendar_event_handler(lv_event_t *e);
+void MainScreen_datetextSettingsCalender_init_calendar(lv_obj_t *obj, char * s);
 
 #ifdef __cplusplus
 }

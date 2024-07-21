@@ -529,6 +529,14 @@ typedef struct
 	lv_obj_t *MainScreen_btnGoSettingsClock_label;
 	lv_obj_t *MainScreen_btnDummySettingsClock;
 	lv_obj_t *MainScreen_btnDummySettingsClock_label;
+	lv_obj_t *MainScreen_contSettingsCalender;
+	lv_obj_t *MainScreen_label_118;
+	lv_obj_t *MainScreen_contSettingCalenderValues;
+	lv_obj_t *MainScreen_datetextSettingsCalender;
+	lv_obj_t *MainScreen_btnGoSettingsCalender;
+	lv_obj_t *MainScreen_btnGoSettingsCalender_label;
+	lv_obj_t *MainScreen_btnDummySettingsCalender;
+	lv_obj_t *MainScreen_btnDummySettingsCalender_label;
 	lv_obj_t *MainScreen_ta_keybard;
 }lv_ui;
 

@@ -57,6 +57,18 @@ int main(void)
   time_t rawtime;
   struct tm * timeinfo;
 
+
+
+
+
+  lv_init();
+
+  hal_setup();
+
+
+  // myInputDevice();
+  setup_ui(&guider_ui);
+
   time ( &rawtime );
   timeinfo = localtime ( &rawtime );
   MainScreen_digital_clockHeader_hour_value=timeinfo->tm_hour;    
@@ -69,62 +81,10 @@ int main(void)
   }
   else
     lv_snprintf(MainScreen_digital_clockHeader_meridiem,3,"AM");
-  lv_init();
 
-  hal_setup();
+		char buf[16];
+		lv_snprintf(buf,sizeof(buf),"%d/%02d/%02d",timeinfo->tm_year+1900, timeinfo->tm_mon+1 ,timeinfo->tm_mday);
+		lv_label_set_text(guider_ui.MainScreen_datetextHeader, buf);
 
-
-  // myInputDevice();
-  setup_ui(&guider_ui);
-
-
-
-  // lv_demo_keypad_encoder();  
-    //  lv_obj_t *parent=lv_scr_act();
-    // lv_obj_set_flex_flow(parent, LV_FLEX_FLOW_COLUMN);
-
-    // lv_obj_t * ta1 = lv_textarea_create(parent);
-    // lv_obj_set_width(ta1, LV_PCT(100));
-    // lv_textarea_set_one_line(ta1, true);
-    // lv_textarea_set_placeholder_text(ta1, "Click with an encoder to show a keyboard");
-
-    // lv_obj_t * ta2 = lv_textarea_create(parent);
-    // lv_obj_set_width(ta2, LV_PCT(100));
-    // lv_textarea_set_one_line(ta2, true);
-    // lv_textarea_set_placeholder_text(ta2, "Type something");
-
-    // lv_obj_t * kb = lv_keyboard_create(lv_scr_act());
-    // lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
-    // lv_keyboard_set_popovers(kb,true);
-
-    // lv_obj_add_event_cb(ta1, ta_event_cb, LV_EVENT_ALL, kb);
-    // lv_obj_add_event_cb(ta2, ta_event_cb, LV_EVENT_ALL, kb);
-
-// lv_obj_add_event_cb(guider_ui.MainScreen_ta_1, ta_event_cb, LV_EVENT_ALL, guider_ui.g_kb_MainScreen);
-// MainScreengroup(&guider_ui);
-// static lv_group_t * g;
-
-//    g = lv_group_get_default();
-// 	if(g!=NULL)
-// 	{
-//     lv_group_del(g);
-// 	}
-// 	g= lv_group_create();
-
-//     lv_indev_t * cur_drv = NULL;
-//     for(;;) {
-//         cur_drv = lv_indev_get_next(cur_drv);
-//         if(!cur_drv)       break;
-//         if(cur_drv->driver->type == LV_INDEV_TYPE_KEYPAD) {
-//             lv_indev_set_group(cur_drv, g);
-//         }
-//         if(cur_drv->driver->type == LV_INDEV_TYPE_ENCODER) {
-//             lv_indev_set_group(cur_drv, g);
-//             lv_group_add_obj(g,ta1);
-//             lv_group_add_obj(g,ta2);
-//             lv_group_add_obj(g,kb);
-
-//         }
-//     }
   hal_loop();
 }

@@ -70,6 +70,8 @@ void animcontBolus_ready_callback(lv_anim_t *a);
 void animcontPurge_ready_callback(lv_anim_t *a);
 void animcontSettings_ready_callback(lv_anim_t *a);
 void animcontSettingsClock_ready_callback(lv_anim_t *a);
+void animcontSettingsCalender_ready_callback(lv_anim_t *a);
+
 
 void animcontSyringe_del_callback(lv_anim_t * a);
 void animcontDrug_del_callback(lv_anim_t * a);
@@ -83,6 +85,8 @@ void animcontBolus_del_callback(lv_anim_t *a);
 void animcontPurge_del_callback(lv_anim_t *a);
 void animcontSettings_del_callback(lv_anim_t *a);
 void animcontSettingsClock_del_callback(lv_anim_t *a);
+void animcontSettingsCalender_del_callback(lv_anim_t *a);
+
 #ifdef __cplusplus
 }
 #endif

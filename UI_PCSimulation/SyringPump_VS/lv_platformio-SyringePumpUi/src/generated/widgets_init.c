@@ -750,3 +750,61 @@ void lv_MainScreen_spinboxSettingsClockSecond_decrement_event_cb(lv_event_t * ev
 	  lv_spinbox_decrement(guider_ui.MainScreen_spinboxSettingsClockSecond);
 	}
 }
+static lv_obj_t * MainScreen_datetextSettingsCalender_calendar;
+
+void MainScreen_datetextSettingsCalender_event_handler(lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+	lv_obj_t * btn = lv_event_get_target(e);
+	if(code == LV_EVENT_FOCUSED){
+		char * s = lv_label_get_text(btn);
+		if(MainScreen_datetextSettingsCalender_calendar == NULL){
+			MainScreen_datetextSettingsCalender_init_calendar(btn, s);
+		}
+	}
+}
+
+void MainScreen_datetextSettingsCalender_init_calendar(lv_obj_t *obj, char * s)
+{
+	if (MainScreen_datetextSettingsCalender_calendar == NULL){
+		lv_obj_add_flag(lv_layer_top(), LV_OBJ_FLAG_CLICKABLE);
+		MainScreen_datetextSettingsCalender_calendar = lv_calendar_create(lv_layer_top());
+		lv_obj_t * scr = lv_obj_get_screen(obj);
+		lv_coord_t scr_height = lv_obj_get_height(scr);
+		lv_coord_t scr_width = lv_obj_get_width(scr);
+		lv_obj_set_size(MainScreen_datetextSettingsCalender_calendar, scr_width * 0.4, scr_height * 0.35);
+		char * year = strtok(s, "/");
+		char * month = strtok(NULL, "/");
+		char * day = strtok(NULL, "/");
+		lv_calendar_set_showed_date(MainScreen_datetextSettingsCalender_calendar, atoi(year), atoi(month));
+		lv_calendar_date_t highlighted_days[1];       /*Only its pointer will be saved so should be static*/
+		highlighted_days[0].year = atoi(year);
+		highlighted_days[0].month = atoi(month);
+		highlighted_days[0].day = atoi(day);
+		lv_calendar_set_highlighted_dates(MainScreen_datetextSettingsCalender_calendar, highlighted_days, 1);
+		lv_obj_align_to(MainScreen_datetextSettingsCalender_calendar,obj,LV_ALIGN_OUT_BOTTOM_MID,0,0);
+
+ 
+		lv_obj_add_event_cb(MainScreen_datetextSettingsCalender_calendar, MainScreen_datetextSettingsCalender_calendar_event_handler, LV_EVENT_ALL,NULL);
+		lv_calendar_header_arrow_create(MainScreen_datetextSettingsCalender_calendar);
+		lv_obj_update_layout(scr);
+	}
+}
+
+void MainScreen_datetextSettingsCalender_calendar_event_handler(lv_event_t *e)
+{
+	lv_event_code_t code = lv_event_get_code(e);
+	lv_obj_t * obj = lv_event_get_current_target(e);
+ 
+	if (code == LV_EVENT_VALUE_CHANGED){
+		lv_calendar_date_t date;
+		lv_calendar_get_pressed_date(obj,&date);
+		char buf[16];
+		lv_snprintf(buf,sizeof(buf),"%d/%02d/%02d", date.year, date.month ,date.day);
+		lv_label_set_text(guider_ui.MainScreen_datetextSettingsCalender, buf);
+		lv_obj_clear_flag(lv_layer_top(), LV_OBJ_FLAG_CLICKABLE);
+		lv_obj_set_style_bg_opa(lv_layer_top(), LV_OPA_TRANSP, 0);
+		lv_obj_del(MainScreen_datetextSettingsCalender_calendar);
+		MainScreen_datetextSettingsCalender_calendar = NULL;
+	}
+}

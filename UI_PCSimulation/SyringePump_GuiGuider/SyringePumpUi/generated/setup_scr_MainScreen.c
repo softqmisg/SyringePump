@@ -7488,6 +7488,137 @@ void setup_scr_MainScreen(lv_ui *ui)
 	lv_obj_set_style_text_opa(ui->MainScreen_btnDummySettingsClock, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_align(ui->MainScreen_btnDummySettingsClock, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+	//Write codes MainScreen_contSettingsCalender
+	ui->MainScreen_contSettingsCalender = lv_obj_create(ui->MainScreen);
+	lv_obj_set_pos(ui->MainScreen_contSettingsCalender, 800, 80);
+	lv_obj_set_size(ui->MainScreen_contSettingsCalender, 800, 300);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contSettingsCalender, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contSettingsCalender, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contSettingsCalender, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_opa(ui->MainScreen_contSettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_color(ui->MainScreen_contSettingsCalender, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_side(ui->MainScreen_contSettingsCalender, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contSettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contSettingsCalender, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contSettingsCalender, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_label_118
+	ui->MainScreen_label_118 = lv_label_create(ui->MainScreen_contSettingsCalender);
+	lv_label_set_text(ui->MainScreen_label_118, "Date");
+	lv_label_set_long_mode(ui->MainScreen_label_118, LV_LABEL_LONG_WRAP);
+	lv_obj_set_pos(ui->MainScreen_label_118, 0, 0);
+	lv_obj_set_size(ui->MainScreen_label_118, 800, 30);
+
+	//Write style for MainScreen_label_118, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_label_118, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_label_118, &lv_font_montserratMedium_19, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_label_118, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_label_118, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_line_space(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_label_118, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_label_118, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_label_118, lv_color_hex(0x324e75), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_label_118, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_label_118, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_contSettingCalenderValues
+	ui->MainScreen_contSettingCalenderValues = lv_obj_create(ui->MainScreen_contSettingsCalender);
+	lv_obj_set_pos(ui->MainScreen_contSettingCalenderValues, 110, 32);
+	lv_obj_set_size(ui->MainScreen_contSettingCalenderValues, 580, 260);
+	lv_obj_set_scrollbar_mode(ui->MainScreen_contSettingCalenderValues, LV_SCROLLBAR_MODE_OFF);
+
+	//Write style for MainScreen_contSettingCalenderValues, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_border_width(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_contSettingCalenderValues, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_contSettingCalenderValues, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_contSettingCalenderValues, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_bottom(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_contSettingCalenderValues, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_datetextSettingsCalender
+	ui->MainScreen_datetextSettingsCalender = lv_label_create(ui->MainScreen_contSettingCalenderValues);
+	lv_label_set_text(ui->MainScreen_datetextSettingsCalender, "2023/07/31");
+	lv_obj_set_style_text_align(ui->MainScreen_datetextSettingsCalender, LV_TEXT_ALIGN_CENTER, 0);
+	lv_obj_add_flag(ui->MainScreen_datetextSettingsCalender, LV_OBJ_FLAG_CLICKABLE);
+	lv_obj_add_event_cb(ui->MainScreen_datetextSettingsCalender, MainScreen_datetextSettingsCalender_event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_set_pos(ui->MainScreen_datetextSettingsCalender, 218, 37);
+	lv_obj_set_size(ui->MainScreen_datetextSettingsCalender, 130, 36);
+
+	//Write style for MainScreen_datetextSettingsCalender, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_text_color(ui->MainScreen_datetextSettingsCalender, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_datetextSettingsCalender, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_datetextSettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_letter_space(ui->MainScreen_datetextSettingsCalender, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_datetextSettingsCalender, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_opa(ui->MainScreen_datetextSettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_color(ui->MainScreen_datetextSettingsCalender, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_bg_grad_dir(ui->MainScreen_datetextSettingsCalender, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_datetextSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_datetextSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_top(ui->MainScreen_datetextSettingsCalender, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_right(ui->MainScreen_datetextSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_pad_left(ui->MainScreen_datetextSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_datetextSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnGoSettingsCalender
+	ui->MainScreen_btnGoSettingsCalender = lv_btn_create(ui->MainScreen_contSettingsCalender);
+	ui->MainScreen_btnGoSettingsCalender_label = lv_label_create(ui->MainScreen_btnGoSettingsCalender);
+	lv_label_set_text(ui->MainScreen_btnGoSettingsCalender_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnGoSettingsCalender_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnGoSettingsCalender_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnGoSettingsCalender, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnGoSettingsCalender_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnGoSettingsCalender, 731, 247);
+	lv_obj_set_size(ui->MainScreen_btnGoSettingsCalender, 58, 44);
+
+	//Write style for MainScreen_btnGoSettingsCalender, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnGoSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnGoSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnGoSettingsCalender, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnGoSettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnGoSettingsCalender, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnGoSettingsCalender, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnGoSettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnGoSettingsCalender, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes MainScreen_btnDummySettingsCalender
+	ui->MainScreen_btnDummySettingsCalender = lv_btn_create(ui->MainScreen_contSettingsCalender);
+	ui->MainScreen_btnDummySettingsCalender_label = lv_label_create(ui->MainScreen_btnDummySettingsCalender);
+	lv_label_set_text(ui->MainScreen_btnDummySettingsCalender_label, "");
+	lv_label_set_long_mode(ui->MainScreen_btnDummySettingsCalender_label, LV_LABEL_LONG_WRAP);
+	lv_obj_align(ui->MainScreen_btnDummySettingsCalender_label, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_pad_all(ui->MainScreen_btnDummySettingsCalender, 0, LV_STATE_DEFAULT);
+	lv_obj_set_width(ui->MainScreen_btnDummySettingsCalender_label, LV_PCT(100));
+	lv_obj_set_pos(ui->MainScreen_btnDummySettingsCalender, 776, 129);
+	lv_obj_set_size(ui->MainScreen_btnDummySettingsCalender, 8, 10);
+
+	//Write style for MainScreen_btnDummySettingsCalender, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_bg_opa(ui->MainScreen_btnDummySettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_border_width(ui->MainScreen_btnDummySettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_radius(ui->MainScreen_btnDummySettingsCalender, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->MainScreen_btnDummySettingsCalender, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(ui->MainScreen_btnDummySettingsCalender, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->MainScreen_btnDummySettingsCalender, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_opa(ui->MainScreen_btnDummySettingsCalender, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_align(ui->MainScreen_btnDummySettingsCalender, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 	//Write codes MainScreen_ta_keybard
 	ui->MainScreen_ta_keybard = lv_textarea_create(ui->MainScreen);
 	lv_textarea_set_text(ui->MainScreen_ta_keybard, "hckdsjclsd");
